@@ -2551,8 +2551,8 @@
 		)
 	)
 	(rectangle
-		(start 87.63 55.118)
-		(end 210.82 147.32)
+		(start 86.36 49.53)
+		(end 212.09 147.32)
 		(stroke
 			(width 0)
 			(type solid)
@@ -2791,6 +2791,16 @@
 			(type default)
 		)
 		(uuid "2df13798-a11e-4eec-887b-20efbfbc23cd")
+	)
+	(wire
+		(pts
+			(xy 102.87 74.93) (xy 104.14 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2fcf4362-044b-4614-aed5-f9b86c3997da")
 	)
 	(wire
 		(pts
@@ -3676,7 +3686,7 @@
 	)
 	(hierarchical_label "7SDD_CMD_RX"
 		(shape input)
-		(at 104.14 74.93 180)
+		(at 102.87 74.93 180)
 		(effects
 			(font
 				(size 1.27 1.27)
