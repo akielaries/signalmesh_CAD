@@ -921,107 +921,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:PWR_FLAG"
-			(power)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#FLG"
-				(at 0 1.905 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "PWR_FLAG"
-				(at 0 3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Special symbol for telling ERC where power comes from"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "flag power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "PWR_FLAG_0_0"
-				(pin power_out line
-					(at 0 0 90)
-					(length 0)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "PWR_FLAG_0_1"
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 	)
 	(text "Power Monitor and Supply"
 		(exclude_from_sim no)
@@ -1036,7 +935,7 @@
 		)
 		(uuid "1b570742-3133-47ff-9246-187b7eb043c4")
 	)
-	(text "PMS has an INA219 current sensor\nfor each board/node in on the \nPCB. Each takes in the 5V from it's\nparent board and supplies 5V to said\nboard's circuit (its peripherals)\nthus enabling monitoring"
+	(text "PMS has an INA219 current sensor\nfor each board/node in the \nPCB. Each takes in the 5V from it's\nparent board and supplies 5V to said\nboard's circuit (its peripherals)\nthus enabling monitoring"
 		(exclude_from_sim no)
 		(at 34.29 30.734 0)
 		(effects
@@ -1061,12 +960,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0e08133a-57d4-4e3e-be93-d414f5dedb8f")
-	)
-	(junction
-		(at 121.92 87.63)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2f297944-57f1-42bf-b276-508b527d9b3e")
 	)
 	(junction
 		(at 149.86 95.25)
@@ -1165,16 +1058,6 @@
 			(type default)
 		)
 		(uuid "6f953f0d-18c4-4702-95ad-aa8f3500b015")
-	)
-	(wire
-		(pts
-			(xy 121.92 87.63) (xy 128.27 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "751dd0b6-5044-4be2-a79f-10f0662f9b8a")
 	)
 	(wire
 		(pts
@@ -1288,7 +1171,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 87.63) (xy 121.92 87.63)
+			(xy 119.38 87.63) (xy 128.27 87.63)
 		)
 		(stroke
 			(width 0)
@@ -1715,72 +1598,6 @@
 			(project "APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c/4ce745b1-4412-4127-8e92-31b01ddd3f60"
 					(reference "R28")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 121.92 87.63 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7561fdcb-16cd-43ed-abc4-b7d89d7e4e87")
-		(property "Reference" "#FLG012"
-			(at 121.92 85.725 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 121.92 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 121.92 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 121.92 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 121.92 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "fca25d2b-772c-4d08-bc36-abfa77ceba1e")
-		)
-		(instances
-			(project "APM"
-				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c/4ce745b1-4412-4127-8e92-31b01ddd3f60"
-					(reference "#FLG012")
 					(unit 1)
 				)
 			)
