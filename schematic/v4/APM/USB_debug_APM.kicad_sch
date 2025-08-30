@@ -1766,12 +1766,6 @@
 		(uuid "be013119-10a5-4942-b76f-db1aeed07534")
 	)
 	(junction
-		(at 171.45 83.82)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "22d61e3b-889a-49a2-bf02-7ce750b66e93")
-	)
-	(junction
 		(at 171.45 99.06)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2161,16 +2155,6 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 83.82) (xy 171.45 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a4b1df19-57e4-4663-ba8f-1d7c0464e245")
-	)
-	(wire
-		(pts
 			(xy 123.19 81.28) (xy 146.05 81.28)
 		)
 		(stroke
@@ -2201,7 +2185,7 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 71.12) (xy 171.45 83.82)
+			(xy 171.45 71.12) (xy 171.45 99.06)
 		)
 		(stroke
 			(width 0)
@@ -2319,7 +2303,7 @@
 		)
 		(uuid "53f1c50f-ea81-4f34-914c-2e15027dcf7c")
 	)
-	(label "DBG_RX"
+	(label "APM_DBG_RX"
 		(at 156.21 115.57 0)
 		(effects
 			(font
@@ -2329,7 +2313,7 @@
 		)
 		(uuid "7766b5f0-4055-4143-aa76-5d16bedc913f")
 	)
-	(label "DBG_TX"
+	(label "APM_DBG_TX"
 		(at 156.21 113.03 0)
 		(effects
 			(font
