@@ -38,8 +38,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 2.0,
-          "width": 3.8
+          "height": 1.3,
+          "width": 0.3
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.5
+          "min_clearance": 0.02
         }
       },
       "diff_pair_dimensions": [
@@ -58,20 +58,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        [
-          "clearance|245475000|34759900|cfbda8c0-ae1f-4393-9f07-ef6115f362ce|c2ecf417-a8e5-4922-9955-80bf96212789",
-          ""
-        ],
-        [
-          "clearance|327325000|34975000|fe81dcd2-1ef0-4c3b-9a42-2c505b3db926|e2ad9427-7686-4b12-a841-475d3d6849e9",
-          ""
-        ],
-        [
-          "clearance|461975000|34975000|84a9a688-ce8a-46d5-a890-9c484732cd92|62ad8896-b5b5-4f15-bba1-f3a8e848fac0",
-          ""
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -446,15 +433,15 @@
       "label_multiple_wires": "warning",
       "lib_symbol_issues": "warning",
       "lib_symbol_mismatch": "warning",
-      "missing_bidi_pin": "ignore",
-      "missing_input_pin": "ignore",
-      "missing_power_pin": "ignore",
+      "missing_bidi_pin": "warning",
+      "missing_input_pin": "warning",
+      "missing_power_pin": "error",
       "missing_unit": "warning",
       "multiple_net_names": "warning",
       "net_not_bus_member": "warning",
-      "no_connect_connected": "ignore",
+      "no_connect_connected": "warning",
       "no_connect_dangling": "warning",
-      "pin_not_connected": "ignore",
+      "pin_not_connected": "error",
       "pin_not_driven": "error",
       "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
@@ -477,14 +464,14 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "signalmesh.kicad_pro",
+    "filename": "APM.kicad_pro",
     "version": 3
   },
   "net_settings": {
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.15,
+        "clearance": 0.2,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.3,
@@ -564,7 +551,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "drills/",
+      "plot": "APM_fab_files/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
@@ -637,138 +624,12 @@
           "label": "Datasheet",
           "name": "Datasheet",
           "show": true
-        },
-        {
-          "group_by": false,
-          "label": "Check_prices",
-          "name": "Check_prices",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Description_1",
-          "name": "Description_1",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "DigiKey_Part_Number",
-          "name": "DigiKey_Part_Number",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "MANUFACTURER",
-          "name": "MANUFACTURER",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "MAXIMUM_PACKAGE_HEIGHT",
-          "name": "MAXIMUM_PACKAGE_HEIGHT",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "MF",
-          "name": "MF",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "MP",
-          "name": "MP",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "MPN",
-          "name": "MPN",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "OC_FARNELL",
-          "name": "OC_FARNELL",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "OC_NEWARK",
-          "name": "OC_NEWARK",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "PACKAGE",
-          "name": "PACKAGE",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "PARTREV",
-          "name": "PARTREV",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Package",
-          "name": "Package",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Price",
-          "name": "Price",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "STANDARD",
-          "name": "STANDARD",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "SUPPLIER",
-          "name": "SUPPLIER",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Sim.Pins",
-          "name": "Sim.Pins",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "SnapEDA_Link",
-          "name": "SnapEDA_Link",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Availability",
-          "name": "Availability",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Description",
-          "name": "Description",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "#",
-          "name": "${ITEM_NUMBER}",
-          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": true,
-      "name": "",
+      "name": "Default Editing",
       "sort_asc": true,
       "sort_field": "Reference"
     },
@@ -800,14 +661,6 @@
       "version": 1
     },
     "net_format_name": "",
-    "ngspice": {
-      "fix_include_paths": true,
-      "meta": {
-        "version": 0
-      },
-      "model_mode": 4,
-      "workbook_filename": ""
-    },
     "page_layout_descr_file": "",
     "plot_directory": "",
     "space_save_all_events": true,
@@ -822,88 +675,24 @@
   },
   "sheets": [
     [
-      "fe7b15e9-f0ed-4338-9f03-dd7651dace13",
+      "63e257c1-2fa4-4533-ab9e-932d24befb8c",
       "Root"
     ],
     [
-      "4391c51f-6ab5-4b63-a6de-56382e56f1df",
-      "DSM"
-    ],
-    [
-      "0125ec8c-bf97-4530-be23-1f3b075b267b",
-      "APM"
-    ],
-    [
-      "03344240-0515-4f71-8710-40bd9ead88e4",
-      "7SDD"
-    ],
-    [
-      "611fa31e-8b8a-419f-be1e-27301f4ddd3e",
-      "APM_midi"
-    ],
-    [
-      "5e884b91-e33f-41af-8f06-387ea8f63e1e",
-      "DSM_media"
-    ],
-    [
-      "c5977503-4ab2-47b6-bfc3-7f974cfcf6ea",
-      "ACM"
-    ],
-    [
-      "52eb9806-6870-4745-9578-aa7c5e7ab85b",
-      "ACM_spiflash"
-    ],
-    [
-      "442c7b41-f8c0-48e5-8b80-63d502cac366",
-      "TDM"
-    ],
-    [
-      "c9161959-85ce-4cf5-b3d5-3776fec616f5",
-      "TDM_pwr_mon"
-    ],
-    [
-      "e0c3e94a-d1d6-4c70-a171-e825d34fc315",
-      "UUM"
-    ],
-    [
-      "aec72de0-4b02-4950-b28a-568b29f9c641",
-      "UUM_spiflash"
-    ],
-    [
-      "244b618e-a317-4047-813e-875f0d0163d1",
-      "TDM_crashtable"
-    ],
-    [
-      "efaed419-869d-40eb-a2fb-6d0497919989",
-      "AFFM"
-    ],
-    [
-      "3643ceed-ee0d-41e0-81b5-fe02d10c6311",
-      "AFFM_filters"
-    ],
-    [
-      "4fb93cd5-57a5-4bc3-8c51-81d85b0e2d76",
-      "USB_debug_DSM"
-    ],
-    [
-      "e8034c24-bd87-4fd1-a620-1fb2c370dc15",
-      "LPFs"
-    ],
-    [
-      "ed769519-77fb-471d-b08a-c1ff2f68c1cc",
-      "USB_debug_UUM"
-    ],
-    [
-      "e54f5744-532c-49d4-a48d-395de0127d56",
-      "USB_debug_TDM"
-    ],
-    [
-      "2282e00c-15ba-40dd-9d7d-f6e43d606450",
-      "USB_debug_ACM"
-    ],
-    [
-      "d0ab1b72-de30-4331-867e-c7903921c924",
+      "fe366db2-c203-41e1-8153-079c5491bdc0",
       "USB_debug_APM"
+    ],
+    [
+      "24833ad5-7cda-4ec3-a1f4-7117f67ff722",
+      "USB_MIDI_APM"
+    ],
+    [
+      "4ce745b1-4412-4127-8e92-31b01ddd3f60",
+      "PMS_APM"
+    ],
+    [
+      "4eb69307-56de-478e-81e4-ca72034b7a5b",
+      "THERMISTORS_APM"
     ]
   ],
   "text_variables": {}
