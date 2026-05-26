@@ -511,21 +511,6 @@
         "wire_width": 6
       },
       {
-        "clearance": 0.05,
-        "diff_pair_gap": 0.25,
-        "diff_pair_width": 0.3,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.3,
-        "name": "ADC",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 0,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.3,
-        "tuning_profile": "",
-        "via_diameter": 0.6,
-        "via_drill": 0.3
-      },
-      {
         "clearance": 0.2,
         "diff_pair_gap": 0.25,
         "diff_pair_width": 0.4,
@@ -533,7 +518,7 @@
         "microvia_drill": 0.3,
         "name": "DAC",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 1,
+        "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.4,
         "tuning_profile": "",
@@ -546,7 +531,7 @@
         "microvia_drill": 0.3,
         "name": "PWR",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 2,
+        "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.5,
         "tuning_profile": "",
@@ -734,7 +719,7 @@
         "uuid": "63e257c1-2fa4-4533-ab9e-932d24befb8c"
       }
     ],
-    "used_designators": "J19,U6,#PWR52,#PWR68-69,#PWR72,#PWR74-75,#PWR79-83,#PWR109-114",
+    "used_designators": "R42,D19,J19,U6,#PWR17,#PWR52,#PWR68-69,#PWR72,#PWR74-75,#PWR79-85,#PWR109-114",
     "variants": []
   },
   "sheets": [
