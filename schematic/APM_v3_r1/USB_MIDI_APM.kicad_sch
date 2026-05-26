@@ -2074,16 +2074,6 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 111.76) (xy 158.75 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "55f2a09b-5bbc-4407-af8e-2993fb8a171b")
-	)
-	(wire
-		(pts
 			(xy 91.44 102.87) (xy 91.44 100.33)
 		)
 		(stroke
@@ -2234,7 +2224,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 123.19) (xy 158.75 125.73)
+			(xy 158.75 111.76) (xy 158.75 125.73)
 		)
 		(stroke
 			(width 0)
@@ -3833,110 +3823,6 @@
 			(project "APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c/24833ad5-7cda-4ec3-a1f4-7117f67ff722"
 					(reference "#PWR031")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 158.75 119.38 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9e2fec85-849c-4ec2-9442-9a0c4f91d9d6")
-		(property "Reference" "R11"
-			(at 161.29 118.1099 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "1k5"
-			(at 161.29 120.6499 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
-			(at 160.528 119.38 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 158.75 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 158.75 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DigiKey_Part_Number" "311-10.0KCRCT-ND"
-			(at 158.75 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Price" "0.0129"
-			(at 158.75 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "138b9e80-0bef-4c95-a5d3-58266a021413")
-		)
-		(pin "1"
-			(uuid "7761a369-8201-4028-8b59-45eb45b42a7a")
-		)
-		(instances
-			(project "APM"
-				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c/24833ad5-7cda-4ec3-a1f4-7117f67ff722"
-					(reference "R11")
 					(unit 1)
 				)
 			)

@@ -2187,16 +2187,6 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 110.49) (xy 171.45 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "70442eee-d8cc-4570-a78e-51ea8bea8504")
-	)
-	(wire
-		(pts
 			(xy 124.46 68.58) (xy 124.46 73.66)
 		)
 		(stroke
@@ -2367,7 +2357,7 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 99.06) (xy 171.45 102.87)
+			(xy 171.45 99.06) (xy 171.45 113.03)
 		)
 		(stroke
 			(width 0)
@@ -2691,7 +2681,7 @@
 				)
 			)
 		)
-		(property "Value" "300"
+		(property "Value" "1.2k"
 			(at 149.86 59.69 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4767,110 +4757,6 @@
 			(project "APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c/fe366db2-c203-41e1-8153-079c5491bdc0"
 					(reference "D62")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 171.45 106.68 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fdcb400c-6cab-4bc4-ae0c-7670f226faa4")
-		(property "Reference" "R90"
-			(at 173.99 105.4099 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "1k5"
-			(at 173.99 107.9499 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
-			(at 173.228 106.68 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 171.45 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 171.45 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DigiKey_Part_Number" "311-10.0KCRCT-ND"
-			(at 171.45 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Price" "0.0129"
-			(at 171.45 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "d7c0f459-b805-4aaf-9c60-700b7f0f25b4")
-		)
-		(pin "1"
-			(uuid "2511bc4f-1aea-4a25-9a0d-38e935eab7cf")
-		)
-		(instances
-			(project "APM"
-				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c/fe366db2-c203-41e1-8153-079c5491bdc0"
-					(reference "R90")
 					(unit 1)
 				)
 			)
