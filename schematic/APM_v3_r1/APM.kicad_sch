@@ -13793,10 +13793,6 @@
 		(uuid "1f6c0dfe-7a34-464e-b97e-caa18d8c2604")
 	)
 	(no_connect
-		(at 401.32 128.27)
-		(uuid "2041fd85-643b-43fe-9488-27f043ed4a54")
-	)
-	(no_connect
 		(at 270.51 97.79)
 		(uuid "20a6592e-1e8c-4d12-8f29-2dacf544b137")
 	)
@@ -13915,10 +13911,6 @@
 	(no_connect
 		(at 290.83 95.25)
 		(uuid "40efb869-e2d6-40ad-ac6f-24d7d011f677")
-	)
-	(no_connect
-		(at 401.32 125.73)
-		(uuid "414cbdeb-85b7-4f81-aac3-89a56ac03908")
 	)
 	(no_connect
 		(at 222.25 74.93)
@@ -14087,10 +14079,6 @@
 	(no_connect
 		(at 257.81 92.71)
 		(uuid "6cc6d6a4-02e0-4fd1-80f7-a293e34ef23b")
-	)
-	(no_connect
-		(at 401.32 118.11)
-		(uuid "6d3e0be2-5079-4e5b-ac2d-bba258277489")
 	)
 	(no_connect
 		(at 365.76 107.95)
@@ -14804,10 +14792,6 @@
 		(at 257.81 105.41)
 		(uuid "fd2ec69e-a07b-40cf-8a59-03772f0cfb7a")
 	)
-	(no_connect
-		(at 401.32 115.57)
-		(uuid "ffd51699-8614-4547-ab27-87d237621082")
-	)
 	(wire
 		(pts
 			(xy 299.72 85.09) (xy 314.96 85.09)
@@ -14967,16 +14951,6 @@
 			(type default)
 		)
 		(uuid "1d51cd2f-4fe0-4648-91df-7f28e489491b")
-	)
-	(wire
-		(pts
-			(xy 401.32 120.65) (xy 415.29 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1d9629ce-9170-4025-97fe-f274370fd3b4")
 	)
 	(wire
 		(pts
@@ -36394,16 +36368,6 @@
 		)
 		(uuid "689d7dad-90b1-49e6-81aa-a444cdfc0f4a")
 	)
-	(label "7SDD_CMD_TX"
-		(at 415.29 120.65 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "68d2a747-d80d-4a46-b009-25e22d723c09")
-	)
 	(label "APM_DBG_TX"
 		(at 113.03 29.21 180)
 		(effects
@@ -43536,7 +43500,6 @@
 	(symbol
 		(lib_id "NUCLEO-H753ZI:NUCLEO-H753ZI")
 		(at 383.54 77.47 0)
-		(mirror y)
 		(unit 2)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -43544,7 +43507,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "aa7f005f-244a-4e83-9d50-95a08166ab62")
 		(property "Reference" "U1"
 			(at 383.54 16.51 0)
