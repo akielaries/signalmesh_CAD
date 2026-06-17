@@ -50,7 +50,7 @@
         "silk_text_thickness": 0.095,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.1
+          "min_clearance": 0.3
         }
       },
       "diff_pair_dimensions": [
@@ -719,7 +719,7 @@
         "uuid": "63e257c1-2fa4-4533-ab9e-932d24befb8c"
       }
     ],
-    "used_designators": "#PWR118,J13,J18-19",
+    "used_designators": "RV1,R43-48,C2-3,C9-16,U2,#PWR4,#PWR33-35,#PWR37-43,#PWR52,#PWR72,#PWR118-119,J7,J11-13,J18-19,J22-24",
     "variants": []
   },
   "sheets": [
@@ -746,6 +746,10 @@
     [
       "b23ed626-836e-4d00-b8fc-308f45059771",
       "STORAGE_APM"
+    ],
+    [
+      "298c3c38-2dcb-4443-81e3-86d0bc63c7e1",
+      "AUDIO_APM"
     ]
   ],
   "text_variables": {},
