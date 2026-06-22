@@ -50,7 +50,23 @@
         "silk_text_thickness": 0.095,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.1
+          "border_display_style": 2,
+          "border_hatch_pitch": 0.5,
+          "corner_radius": 0.0,
+          "corner_smoothing": 0,
+          "fill_mode": 0,
+          "hatch_gap": 1.5,
+          "hatch_orientation": 0.0,
+          "hatch_smoothing_level": 0,
+          "hatch_smoothing_value": 0.1,
+          "hatch_thickness": 1.0,
+          "min_clearance": 0.05,
+          "min_island_area": 10.0,
+          "min_thickness": 0.25,
+          "pad_connection": 1,
+          "remove_islands": 0,
+          "thermal_relief_gap": 0.5,
+          "thermal_relief_spoke_width": 0.5
         }
       },
       "diff_pair_dimensions": [
@@ -759,6 +775,10 @@
     [
       "298c3c38-2dcb-4443-81e3-86d0bc63c7e1",
       "AUDIO_APM"
+    ],
+    [
+      "dfeac5e7-d040-4e83-8966-9a2370a6bb45",
+      "FPGA_INTERFACE"
     ]
   ],
   "text_variables": {},
