@@ -47,7 +47,7 @@
         "silk_text_italic": false,
         "silk_text_size_h": 0.4,
         "silk_text_size_v": 0.4,
-        "silk_text_thickness": 0.095,
+        "silk_text_thickness": 0.05,
         "silk_text_upright": false,
         "zones": {
           "border_display_style": 2,
@@ -60,13 +60,13 @@
           "hatch_smoothing_level": 0,
           "hatch_smoothing_value": 0.1,
           "hatch_thickness": 1.0,
-          "min_clearance": 0.05,
+          "min_clearance": 0.1,
           "min_island_area": 10.0,
-          "min_thickness": 0.25,
+          "min_thickness": 0.1,
           "pad_connection": 1,
           "remove_islands": 0,
-          "thermal_relief_gap": 0.5,
-          "thermal_relief_spoke_width": 0.5
+          "thermal_relief_gap": 0.2,
+          "thermal_relief_spoke_width": 0.2
         }
       },
       "diff_pair_dimensions": [
@@ -518,7 +518,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.17,
+        "clearance": 0.15,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.3,
@@ -529,14 +529,14 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2,
+        "track_width": 0.1,
         "tuning_profile": "",
         "via_diameter": 0.3,
         "via_drill": 0.2,
         "wire_width": 6
       },
       {
-        "clearance": 0.2,
+        "clearance": 0.15,
         "diff_pair_gap": 0.25,
         "diff_pair_width": 0.4,
         "microvia_diameter": 0.3,
@@ -545,20 +545,20 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.4,
+        "track_width": 0.2,
         "tuning_profile": "",
         "via_diameter": 0.3,
         "via_drill": 0.2
       },
       {
-        "clearance": 0.25,
+        "clearance": 0.1,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.2,
         "name": "PWR",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.5,
+        "track_width": 0.2,
         "tuning_profile": "",
         "via_diameter": 0.3,
         "via_drill": 0.2
@@ -744,7 +744,7 @@
         "uuid": "63e257c1-2fa4-4533-ab9e-932d24befb8c"
       }
     ],
-    "used_designators": "J1,J3",
+    "used_designators": "R49,D20,#PWR67,#PWR96-99,#PWR102-113,#PWR139,J1,J3",
     "variants": []
   },
   "sheets": [
