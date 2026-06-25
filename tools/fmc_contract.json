@@ -1,0 +1,728 @@
+{
+  "pairs": [
+    "J1<->J5",
+    "J3<->J6"
+  ],
+  "pins": {
+    "J1<->J5|1": {
+      "acm_class": "gnd",
+      "acm_net": "GND",
+      "apm_class": "gnd",
+      "apm_net": "GND"
+    },
+    "J1<->J5|10": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J5-Pin_10-Pad10)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J1-Pin_10-Pad10)"
+    },
+    "J1<->J5|11": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J5-Pin_11-Pad11)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J1-Pin_11-Pad11)"
+    },
+    "J1<->J5|12": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J5-Pin_12-Pad12)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J1-Pin_12-Pad12)"
+    },
+    "J1<->J5|13": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J5-Pin_13-Pad13)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J1-Pin_13-Pad13)"
+    },
+    "J1<->J5|14": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J5-Pin_14-Pad14)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J1-Pin_14-Pad14)"
+    },
+    "J1<->J5|15": {
+      "acm_class": "gnd",
+      "acm_net": "GND",
+      "apm_class": "gnd",
+      "apm_net": "GND"
+    },
+    "J1<->J5|16": {
+      "acm_class": "sig",
+      "acm_net": "G7_IOT68A",
+      "apm_class": "sig",
+      "apm_net": "SPI1_MOSI"
+    },
+    "J1<->J5|17": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J5-Pin_17-Pad17)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J1-Pin_17-Pad17)"
+    },
+    "J1<->J5|18": {
+      "acm_class": "sig",
+      "acm_net": "G8_IOT68B",
+      "apm_class": "sig",
+      "apm_net": "SPI1_MISO"
+    },
+    "J1<->J5|19": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J5-Pin_19-Pad19)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J1-Pin_19-Pad19)"
+    },
+    "J1<->J5|2": {
+      "acm_class": "gnd",
+      "acm_net": "GND",
+      "apm_class": "gnd",
+      "apm_net": "GND"
+    },
+    "J1<->J5|20": {
+      "acm_class": "sig",
+      "acm_net": "F5_IOT72A",
+      "apm_class": "sig",
+      "apm_net": "SPI1_CS"
+    },
+    "J1<->J5|21": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J5-Pin_21-Pad21)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J1-Pin_21-Pad21)"
+    },
+    "J1<->J5|22": {
+      "acm_class": "sig",
+      "acm_net": "G5_IOT72B",
+      "apm_class": "sig",
+      "apm_net": "SPI1_SCK"
+    },
+    "J1<->J5|23": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J5-Pin_23-Pad23)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J1-Pin_23-Pad23)"
+    },
+    "J1<->J5|24": {
+      "acm_class": "pwr",
+      "acm_net": "VCCIO0/1",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J1-Pin_24-Pad24)"
+    },
+    "J1<->J5|25": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J5-Pin_25-Pad25)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J1-Pin_25-Pad25)"
+    },
+    "J1<->J5|26": {
+      "acm_class": "pwr",
+      "acm_net": "VCCIO0/1",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J1-Pin_26-Pad26)"
+    },
+    "J1<->J5|27": {
+      "acm_class": "gnd",
+      "acm_net": "GND",
+      "apm_class": "gnd",
+      "apm_net": "GND"
+    },
+    "J1<->J5|28": {
+      "acm_class": "gnd",
+      "acm_net": "GND",
+      "apm_class": "gnd",
+      "apm_net": "GND"
+    },
+    "J1<->J5|29": {
+      "acm_class": "pwr",
+      "acm_net": "VCCIO6/7",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J1-Pin_29-Pad29)"
+    },
+    "J1<->J5|3": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J5-Pin_3-Pad3)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J1-Pin_3-Pad3)"
+    },
+    "J1<->J5|30": {
+      "acm_class": "sig",
+      "acm_net": "K6_IOT23B_USB_N",
+      "apm_class": "sig",
+      "apm_net": "I2C2_SDA"
+    },
+    "J1<->J5|31": {
+      "acm_class": "pwr",
+      "acm_net": "VCCIO6/7",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J1-Pin_31-Pad31)"
+    },
+    "J1<->J5|32": {
+      "acm_class": "sig",
+      "acm_net": "K7_IOT21A_40P",
+      "apm_class": "sig",
+      "apm_net": "I2C2_SCL"
+    },
+    "J1<->J5|33": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J5-Pin_33-Pad33)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J1-Pin_33-Pad33)"
+    },
+    "J1<->J5|34": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J5-Pin_34-Pad34)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J1-Pin_34-Pad34)"
+    },
+    "J1<->J5|35": {
+      "acm_class": "sig",
+      "acm_net": "J10_IOT1B_40P",
+      "apm_class": "sig",
+      "apm_net": "FMC_NOE"
+    },
+    "J1<->J5|36": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J5-Pin_36-Pad36)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J1-Pin_36-Pad36)"
+    },
+    "J1<->J5|37": {
+      "acm_class": "sig",
+      "acm_net": "H11_IOT3A_S1",
+      "apm_class": "sig",
+      "apm_net": "FMC_NWE"
+    },
+    "J1<->J5|38": {
+      "acm_class": "sig",
+      "acm_net": "L7_IOT19A_40P",
+      "apm_class": "sig",
+      "apm_net": "FMC_A20"
+    },
+    "J1<->J5|39": {
+      "acm_class": "sig",
+      "acm_net": "H10_IOT3B_S2",
+      "apm_class": "sig",
+      "apm_net": "FMC_DA3"
+    },
+    "J1<->J5|4": {
+      "acm_class": "sig",
+      "acm_net": "H5_IOT61A",
+      "apm_class": "sig",
+      "apm_net": "FMC_NL"
+    },
+    "J1<->J5|40": {
+      "acm_class": "sig",
+      "acm_net": "L8_IOT19B_40P",
+      "apm_class": "sig",
+      "apm_net": "FMC_A21"
+    },
+    "J1<->J5|41": {
+      "acm_class": "sig",
+      "acm_net": "G11_IOT7A",
+      "apm_class": "sig",
+      "apm_net": "FMC_DA2"
+    },
+    "J1<->J5|42": {
+      "acm_class": "sig",
+      "acm_net": "L10_IOT15A_40P",
+      "apm_class": "sig",
+      "apm_net": "FMC_A23"
+    },
+    "J1<->J5|43": {
+      "acm_class": "sig",
+      "acm_net": "G10_IOT7B",
+      "apm_class": "sig",
+      "apm_net": "FMC_DA14"
+    },
+    "J1<->J5|44": {
+      "acm_class": "sig",
+      "acm_net": "K10_IOT15B_40P",
+      "apm_class": "sig",
+      "apm_net": "FMC_A22"
+    },
+    "J1<->J5|45": {
+      "acm_class": "gnd",
+      "acm_net": "GND",
+      "apm_class": "gnd",
+      "apm_net": "GND"
+    },
+    "J1<->J5|46": {
+      "acm_class": "sig",
+      "acm_net": "K11_IOT11A",
+      "apm_class": "sig",
+      "apm_net": "FMC_A24"
+    },
+    "J1<->J5|47": {
+      "acm_class": "sig",
+      "acm_net": "D11_IOL9A",
+      "apm_class": "sig",
+      "apm_net": "FMC_DA1"
+    },
+    "J1<->J5|48": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J5-Pin_48-Pad48)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J1-Pin_48-Pad48)"
+    },
+    "J1<->J5|49": {
+      "acm_class": "sig",
+      "acm_net": "D10_IOL9B",
+      "apm_class": "sig",
+      "apm_net": "FMC_DA6"
+    },
+    "J1<->J5|5": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J5-Pin_5-Pad5)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J1-Pin_5-Pad5)"
+    },
+    "J1<->J5|50": {
+      "acm_class": "gnd",
+      "acm_net": "GND",
+      "apm_class": "gnd",
+      "apm_net": "GND"
+    },
+    "J1<->J5|51": {
+      "acm_class": "sig",
+      "acm_net": "C11_IOL5A",
+      "apm_class": "sig",
+      "apm_net": "FMC_DA8"
+    },
+    "J1<->J5|52": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J5-Pin_52-Pad52)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J1-Pin_52-Pad52)"
+    },
+    "J1<->J5|53": {
+      "acm_class": "sig",
+      "acm_net": "C10_IOL5B",
+      "apm_class": "sig",
+      "apm_net": "FMC_DA15"
+    },
+    "J1<->J5|54": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J5-Pin_54-Pad54)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J1-Pin_54-Pad54)"
+    },
+    "J1<->J5|55": {
+      "acm_class": "sig",
+      "acm_net": "B11_IOL12A",
+      "apm_class": "sig",
+      "apm_net": "FMC_DA13"
+    },
+    "J1<->J5|56": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J5-Pin_56-Pad56)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J1-Pin_56-Pad56)"
+    },
+    "J1<->J5|57": {
+      "acm_class": "sig",
+      "acm_net": "B10_IOL12B",
+      "apm_class": "sig",
+      "apm_net": "FMC_NWAIT"
+    },
+    "J1<->J5|58": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J5-Pin_58-Pad58)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J1-Pin_58-Pad58)"
+    },
+    "J1<->J5|59": {
+      "acm_class": "gnd",
+      "acm_net": "GND",
+      "apm_class": "gnd",
+      "apm_net": "GND"
+    },
+    "J1<->J5|6": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J5-Pin_6-Pad6)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J1-Pin_6-Pad6)"
+    },
+    "J1<->J5|60": {
+      "acm_class": "gnd",
+      "acm_net": "GND",
+      "apm_class": "gnd",
+      "apm_net": "GND"
+    },
+    "J1<->J5|7": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J5-Pin_7-Pad7)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J1-Pin_7-Pad7)"
+    },
+    "J1<->J5|8": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J5-Pin_8-Pad8)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J1-Pin_8-Pad8)"
+    },
+    "J1<->J5|9": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J5-Pin_9-Pad9)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J1-Pin_9-Pad9)"
+    },
+    "J3<->J6|1": {
+      "acm_class": "gnd",
+      "acm_net": "GND",
+      "apm_class": "gnd",
+      "apm_net": "GND"
+    },
+    "J3<->J6|10": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J6-Pin_10-Pad10)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J3-Pin_10-Pad10)"
+    },
+    "J3<->J6|11": {
+      "acm_class": "sig",
+      "acm_net": "A1_IOB24A_40P",
+      "apm_class": "sig",
+      "apm_net": "FMC_DA7"
+    },
+    "J3<->J6|12": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J6-Pin_12-Pad12)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J3-Pin_12-Pad12)"
+    },
+    "J3<->J6|13": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J6-Pin_13-Pad13)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J3-Pin_13-Pad13)"
+    },
+    "J3<->J6|14": {
+      "acm_class": "sig",
+      "acm_net": "J4_IOR22A_40P",
+      "apm_class": "sig",
+      "apm_net": "FMC_DA9"
+    },
+    "J3<->J6|15": {
+      "acm_class": "sig",
+      "acm_net": "E1_IOB12B_40P",
+      "apm_class": "sig",
+      "apm_net": "FMC_DA11"
+    },
+    "J3<->J6|16": {
+      "acm_class": "sig",
+      "acm_net": "K4_IOR22B_40P",
+      "apm_class": "sig",
+      "apm_net": "FPGA_UART_RX"
+    },
+    "J3<->J6|17": {
+      "acm_class": "sig",
+      "acm_net": "D1_IOB14B_40P",
+      "apm_class": "sig",
+      "apm_net": "FMC_DA12"
+    },
+    "J3<->J6|18": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J6-Pin_18-Pad18)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J3-Pin_18-Pad18)"
+    },
+    "J3<->J6|19": {
+      "acm_class": "gnd",
+      "acm_net": "GND",
+      "apm_class": "gnd",
+      "apm_net": "GND"
+    },
+    "J3<->J6|2": {
+      "acm_class": "pwr",
+      "acm_net": "VCCIO2/3",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J3-Pin_2-Pad2)"
+    },
+    "J3<->J6|20": {
+      "acm_class": "sig",
+      "acm_net": "G1_IOR24B_40P",
+      "apm_class": "sig",
+      "apm_net": "FPGA_UART_TX"
+    },
+    "J3<->J6|21": {
+      "acm_class": "sig",
+      "acm_net": "C1_JTAG_TCK",
+      "apm_class": "sig",
+      "apm_net": "C1_JTAG_TCK"
+    },
+    "J3<->J6|22": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J6-Pin_22-Pad22)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J3-Pin_22-Pad22)"
+    },
+    "J3<->J6|23": {
+      "acm_class": "sig",
+      "acm_net": "B1_JTAG_TMS",
+      "apm_class": "sig",
+      "apm_net": "B1_JTAG_TMS"
+    },
+    "J3<->J6|24": {
+      "acm_class": "sig",
+      "acm_net": "L3_IOR31B_40P",
+      "apm_class": "sig",
+      "apm_net": "FMC_A18"
+    },
+    "J3<->J6|25": {
+      "acm_class": "sig",
+      "acm_net": "A2_JTAG_TDO",
+      "apm_class": "sig",
+      "apm_net": "A2_JTAG_TDO"
+    },
+    "J3<->J6|26": {
+      "acm_class": "sig",
+      "acm_net": "J1_IOR33A_40P",
+      "apm_class": "sig",
+      "apm_net": "FMC_A17"
+    },
+    "J3<->J6|27": {
+      "acm_class": "sig",
+      "acm_net": "A3_JTAG_TDI",
+      "apm_class": "sig",
+      "apm_net": "A3_JTAG_TDI"
+    },
+    "J3<->J6|28": {
+      "acm_class": "sig",
+      "acm_net": "J2_IOR33B_40P",
+      "apm_class": "sig",
+      "apm_net": "FMC_A16"
+    },
+    "J3<->J6|29": {
+      "acm_class": "gnd",
+      "acm_net": "GND",
+      "apm_class": "gnd",
+      "apm_net": "GND"
+    },
+    "J3<->J6|3": {
+      "acm_class": "sig",
+      "acm_net": "B2_IOB4A_40P",
+      "apm_class": "sig",
+      "apm_net": "FMC_DA10"
+    },
+    "J3<->J6|30": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J6-Pin_30-Pad30)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J3-Pin_30-Pad30)"
+    },
+    "J3<->J6|31": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J6-Pin_31-Pad31)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J3-Pin_31-Pad31)"
+    },
+    "J3<->J6|32": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J6-Pin_32-Pad32)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J3-Pin_32-Pad32)"
+    },
+    "J3<->J6|33": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J6-Pin_33-Pad33)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J3-Pin_33-Pad33)"
+    },
+    "J3<->J6|34": {
+      "acm_class": "sig",
+      "acm_net": "H1_IOB91A_40P",
+      "apm_class": "sig",
+      "apm_net": "FMC_CLK"
+    },
+    "J3<->J6|35": {
+      "acm_class": "gnd",
+      "acm_net": "GND",
+      "apm_class": "gnd",
+      "apm_net": "GND"
+    },
+    "J3<->J6|36": {
+      "acm_class": "sig",
+      "acm_net": "H2_IOB91B_40P",
+      "apm_class": "sig",
+      "apm_net": "FMC_DA0"
+    },
+    "J3<->J6|37": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J6-Pin_37-Pad37)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J3-Pin_37-Pad37)"
+    },
+    "J3<->J6|38": {
+      "acm_class": "pwr",
+      "acm_net": "VDD_1V8",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J3-Pin_38-Pad38)"
+    },
+    "J3<->J6|39": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J6-Pin_39-Pad39)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J3-Pin_39-Pad39)"
+    },
+    "J3<->J6|4": {
+      "acm_class": "pwr",
+      "acm_net": "VCCIO2/3",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J3-Pin_4-Pad4)"
+    },
+    "J3<->J6|40": {
+      "acm_class": "pwr",
+      "acm_net": "VDD_1V8",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J3-Pin_40-Pad40)"
+    },
+    "J3<->J6|41": {
+      "acm_class": "gnd",
+      "acm_net": "GND",
+      "apm_class": "gnd",
+      "apm_net": "GND"
+    },
+    "J3<->J6|42": {
+      "acm_class": "pwr",
+      "acm_net": "VDD_2V5",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J3-Pin_42-Pad42)"
+    },
+    "J3<->J6|43": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J6-Pin_43-Pad43)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J3-Pin_43-Pad43)"
+    },
+    "J3<->J6|44": {
+      "acm_class": "pwr",
+      "acm_net": "VDD_2V5",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J3-Pin_44-Pad44)"
+    },
+    "J3<->J6|45": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J6-Pin_45-Pad45)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J3-Pin_45-Pad45)"
+    },
+    "J3<->J6|46": {
+      "acm_class": "pwr",
+      "acm_net": "VDD_3V3",
+      "apm_class": "pwr",
+      "apm_net": "FPGA_3V3"
+    },
+    "J3<->J6|47": {
+      "acm_class": "gnd",
+      "acm_net": "GND",
+      "apm_class": "gnd",
+      "apm_net": "GND"
+    },
+    "J3<->J6|48": {
+      "acm_class": "pwr",
+      "acm_net": "VDD_3V3",
+      "apm_class": "pwr",
+      "apm_net": "FPGA_3V3"
+    },
+    "J3<->J6|49": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J6-Pin_49-Pad49)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J3-Pin_49-Pad49)"
+    },
+    "J3<->J6|5": {
+      "acm_class": "sig",
+      "acm_net": "C2_IOB4B_40P",
+      "apm_class": "sig",
+      "apm_net": "FMC_DA5"
+    },
+    "J3<->J6|50": {
+      "acm_class": "pwr",
+      "acm_net": "VDD_3V3",
+      "apm_class": "pwr",
+      "apm_net": "FPGA_3V3"
+    },
+    "J3<->J6|51": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J6-Pin_51-Pad51)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J3-Pin_51-Pad51)"
+    },
+    "J3<->J6|52": {
+      "acm_class": "pwr",
+      "acm_net": "+5V",
+      "apm_class": "pwr",
+      "apm_net": "FPGA_5V"
+    },
+    "J3<->J6|53": {
+      "acm_class": "gnd",
+      "acm_net": "GND",
+      "apm_class": "gnd",
+      "apm_net": "GND"
+    },
+    "J3<->J6|54": {
+      "acm_class": "pwr",
+      "acm_net": "+5V",
+      "apm_class": "pwr",
+      "apm_net": "FPGA_5V"
+    },
+    "J3<->J6|55": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J6-Pin_55-Pad55)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J3-Pin_55-Pad55)"
+    },
+    "J3<->J6|56": {
+      "acm_class": "pwr",
+      "acm_net": "+5V",
+      "apm_class": "pwr",
+      "apm_net": "FPGA_5V"
+    },
+    "J3<->J6|57": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J6-Pin_57-Pad57)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J3-Pin_57-Pad57)"
+    },
+    "J3<->J6|58": {
+      "acm_class": "pwr",
+      "acm_net": "+5V",
+      "apm_class": "pwr",
+      "apm_net": "FPGA_5V"
+    },
+    "J3<->J6|59": {
+      "acm_class": "gnd",
+      "acm_net": "GND",
+      "apm_class": "gnd",
+      "apm_net": "GND"
+    },
+    "J3<->J6|6": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J6-Pin_6-Pad6)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J3-Pin_6-Pad6)"
+    },
+    "J3<->J6|60": {
+      "acm_class": "pwr",
+      "acm_net": "+5V",
+      "apm_class": "pwr",
+      "apm_net": "FPGA_5V"
+    },
+    "J3<->J6|7": {
+      "acm_class": "sig",
+      "acm_net": "F2_IOB26A_40P",
+      "apm_class": "sig",
+      "apm_net": "FMC_DA4"
+    },
+    "J3<->J6|8": {
+      "acm_class": "nc",
+      "acm_net": "unconnected-(J6-Pin_8-Pad8)",
+      "apm_class": "nc",
+      "apm_net": "unconnected-(J3-Pin_8-Pad8)"
+    },
+    "J3<->J6|9": {
+      "acm_class": "sig",
+      "acm_net": "F1_IOB26B_40P",
+      "apm_class": "sig",
+      "apm_net": "FMC_NE1"
+    }
+  }
+}
