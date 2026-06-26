@@ -2436,6 +2436,12 @@
 		(uuid "7f147fc4-13e4-4445-ae65-42b344ecb91e")
 	)
 	(junction
+		(at 95.25 80.01)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8e03be44-02b7-4a04-9be0-ed3c34996989")
+	)
+	(junction
 		(at 182.88 125.73)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2454,20 +2460,34 @@
 		(uuid "bb8f68a5-5caa-4c0a-bf6a-1ec08955bb87")
 	)
 	(junction
-		(at 95.25 80.01)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "cf8b02c3-0a78-44ff-8098-4ae577ea6484")
-	)
-	(junction
 		(at 182.88 120.65)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ff2fd70c-c8bd-4658-8355-f8f81ebc433e")
 	)
 	(no_connect
+		(at 195.58 92.71)
+		(uuid "0632d201-af47-4b87-901e-e2a30a3dd8bb")
+	)
+	(no_connect
+		(at 195.58 97.79)
+		(uuid "0bb9598a-8a6b-41c1-9169-ee2ea344b90f")
+	)
+	(no_connect
+		(at 195.58 115.57)
+		(uuid "131922cf-915d-4a83-b287-b81fe9fe24f0")
+	)
+	(no_connect
+		(at 195.58 107.95)
+		(uuid "16dff787-4aad-4a1a-9a57-f48660cbdbb4")
+	)
+	(no_connect
 		(at 223.52 82.55)
 		(uuid "1b251218-ae63-4a38-bfbc-8c9aa64be142")
+	)
+	(no_connect
+		(at 83.82 80.01)
+		(uuid "1f85ce95-4bcf-45df-9c27-7e420d6b445a")
 	)
 	(no_connect
 		(at 223.52 77.47)
@@ -2478,6 +2498,18 @@
 		(uuid "2580a43b-7cd3-4a86-a771-733f32bd90c7")
 	)
 	(no_connect
+		(at 195.58 105.41)
+		(uuid "25d3ad55-86d5-459a-a8b1-e88c7be45fa1")
+	)
+	(no_connect
+		(at 195.58 120.65)
+		(uuid "3506784a-d01b-4e3c-b86e-28005dd91eee")
+	)
+	(no_connect
+		(at 182.88 87.63)
+		(uuid "3960805d-d2c0-477c-8b6e-86ad88b27c40")
+	)
+	(no_connect
 		(at 195.58 85.09)
 		(uuid "3d157d8a-d563-4078-9873-0f54f74c1a6d")
 	)
@@ -2486,8 +2518,44 @@
 		(uuid "3f5f7082-0379-4f29-bd58-3a73fa30e734")
 	)
 	(no_connect
+		(at 170.18 99.06)
+		(uuid "47d23016-1a39-40b6-a7fa-167f79d40a3e")
+	)
+	(no_connect
+		(at 170.18 102.87)
+		(uuid "5a128c9f-9bf6-4fc6-afc9-29f9c0c9e809")
+	)
+	(no_connect
+		(at 195.58 123.19)
+		(uuid "61b4c2ef-0333-4a04-a2b1-65e45b812150")
+	)
+	(no_connect
+		(at 119.38 90.17)
+		(uuid "6a16b093-dd21-47c2-8986-6e606a3cefe6")
+	)
+	(no_connect
+		(at 170.18 125.73)
+		(uuid "868a39aa-897e-47e7-98a8-b66e8177d861")
+	)
+	(no_connect
+		(at 195.58 90.17)
+		(uuid "954e3061-054f-4eb4-9749-fcdcfebb16d5")
+	)
+	(no_connect
 		(at 195.58 77.47)
 		(uuid "96455a57-7604-4225-8349-645bff2e0ad6")
+	)
+	(no_connect
+		(at 170.18 107.95)
+		(uuid "98d6ce6b-6f3a-4a17-88f3-16335a2f199a")
+	)
+	(no_connect
+		(at 182.88 90.17)
+		(uuid "9d383768-e539-4895-b731-53e0083ab97a")
+	)
+	(no_connect
+		(at 195.58 100.33)
+		(uuid "a1c3bdfa-7b1c-4db5-b23e-dd87310f6434")
 	)
 	(no_connect
 		(at 195.58 82.55)
@@ -2496,6 +2564,14 @@
 	(no_connect
 		(at 195.58 80.01)
 		(uuid "f9f5ca13-13e5-44cc-bd87-6163b04b9dd8")
+	)
+	(no_connect
+		(at 195.58 113.03)
+		(uuid "fa7d1e2c-af26-450d-9d08-a3f2ce6495ab")
+	)
+	(no_connect
+		(at 171.45 52.07)
+		(uuid "fd83480c-75c8-4c61-9ff1-2e09d1fde2af")
 	)
 	(wire
 		(pts
@@ -2569,7 +2645,7 @@
 	)
 	(polyline
 		(pts
-			(xy 144.145 106.68) (xy 144.145 90.17)
+			(xy 144.1821 106.68) (xy 144.1821 91.7377)
 		)
 		(stroke
 			(width 0)
@@ -2677,16 +2753,6 @@
 		)
 		(uuid "290099cd-a93b-47f0-98c9-88e20221d0ab")
 	)
-	(wire
-		(pts
-			(xy 81.28 87.63) (xy 95.25 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "310f8252-70c3-49ae-9eb2-8e1a00d4d6b8")
-	)
 	(polyline
 		(pts
 			(xy 146.05 95.25) (xy 178.435 95.25)
@@ -2786,6 +2852,16 @@
 			(type default)
 		)
 		(uuid "43ff61f8-8c2f-421b-b8a9-21afa5c4ec57")
+	)
+	(wire
+		(pts
+			(xy 81.28 92.71) (xy 95.25 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "44034fbb-0231-41f5-9439-f68cda92275d")
 	)
 	(polyline
 		(pts
@@ -2899,7 +2975,7 @@
 	)
 	(wire
 		(pts
-			(xy 84.455 80.01) (xy 95.25 80.01)
+			(xy 83.82 80.01) (xy 95.25 80.01)
 		)
 		(stroke
 			(width 0)
@@ -2929,7 +3005,7 @@
 	)
 	(polyline
 		(pts
-			(xy 116.205 90.17) (xy 144.145 90.17)
+			(xy 116.2421 91.7377) (xy 144.1821 91.7377)
 		)
 		(stroke
 			(width 0)
@@ -3029,7 +3105,7 @@
 	)
 	(polyline
 		(pts
-			(xy 116.205 90.17) (xy 116.205 106.68)
+			(xy 116.2421 91.7377) (xy 116.2421 106.68)
 		)
 		(stroke
 			(width 0)
@@ -3076,6 +3152,16 @@
 			(type dash)
 		)
 		(uuid "87fe4220-e9e4-4a02-b4da-3cbef94cc516")
+	)
+	(wire
+		(pts
+			(xy 81.28 90.17) (xy 95.25 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c5edc20-0929-47a0-a278-b03c6337a53f")
 	)
 	(wire
 		(pts
@@ -3259,7 +3345,7 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 90.17) (xy 118.745 90.17)
+			(xy 107.95 90.17) (xy 119.38 90.17)
 		)
 		(stroke
 			(width 0)
@@ -3597,16 +3683,6 @@
 		)
 		(uuid "fe1c2bc3-0a22-4f62-8e30-96dcbea30d7e")
 	)
-	(wire
-		(pts
-			(xy 81.28 90.17) (xy 95.25 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fe5255d2-b236-4843-af61-261ac2277c66")
-	)
 	(label "A3_JTAG_TDI"
 		(at 208.915 85.09 0)
 		(effects
@@ -3708,7 +3784,7 @@
 		(uuid "eeebdeb0-9022-4446-9f07-b4396f501a79")
 	)
 	(label "VCCIO0{slash}1"
-		(at 84.455 80.01 0)
+		(at 83.82 80.01 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3761,17 +3837,6 @@
 		)
 		(uuid "265be089-22ed-42f5-a216-c6e0cf1dc3f9")
 	)
-	(hierarchical_label "FPGA_I2C2_SCL"
-		(shape input)
-		(at 81.28 90.17 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "297f9cca-029c-44ec-97e2-e74d6b6df583")
-	)
 	(hierarchical_label "FPGA_SPI1_SCK"
 		(shape input)
 		(at 80.01 77.47 180)
@@ -3782,6 +3847,17 @@
 			(justify right)
 		)
 		(uuid "330b9d4f-c1b9-4650-8889-5bd7f35cf278")
+	)
+	(hierarchical_label "FPGA_I2C2_SCL"
+		(shape input)
+		(at 81.28 92.71 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3d300a2c-0a90-48df-bdd9-cef6fa1f8574")
 	)
 	(hierarchical_label "FPGA_FMC_A16"
 		(shape input)
@@ -4102,17 +4178,6 @@
 		)
 		(uuid "ecf8a4d8-f077-4a0b-a0e1-3e2aa1ba5889")
 	)
-	(hierarchical_label "FPGA_I2C2_SDA"
-		(shape input)
-		(at 81.28 87.63 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "f038b771-ae98-4064-a409-7b6f4bacb07a")
-	)
 	(hierarchical_label "APM_FPGA_UART_TX"
 		(shape input)
 		(at 171.45 74.93 180)
@@ -4134,6 +4199,17 @@
 			(justify right)
 		)
 		(uuid "f26b3d50-bb3f-4261-bb9e-a5528ccdf6f9")
+	)
+	(hierarchical_label "FPGA_I2C2_SDA"
+		(shape input)
+		(at 81.28 90.17 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "fbd7b608-37f7-4498-8b9e-7ccefa4ccb48")
 	)
 	(symbol
 		(lib_id "power:GND")
