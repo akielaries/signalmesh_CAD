@@ -7874,7 +7874,7 @@
 	)
 	(rectangle
 		(start 248.92 135.89)
-		(end 294.64 222.25)
+		(end 294.64 224.79)
 		(stroke
 			(width 0)
 			(type solid)
@@ -9043,6 +9043,16 @@
 	)
 	(wire
 		(pts
+			(xy 259.08 205.74) (xy 276.86 205.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24507515-1c0b-4697-80df-978ce81ca0ba")
+	)
+	(wire
+		(pts
 			(xy 62.23 234.95) (xy 77.47 234.95)
 		)
 		(stroke
@@ -9543,7 +9553,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 215.9) (xy 276.86 215.9)
+			(xy 259.08 218.44) (xy 276.86 218.44)
 		)
 		(stroke
 			(width 0)
@@ -9633,7 +9643,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 210.82) (xy 276.86 210.82)
+			(xy 259.08 213.36) (xy 276.86 213.36)
 		)
 		(stroke
 			(width 0)
@@ -9713,7 +9723,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 220.98) (xy 276.86 220.98)
+			(xy 259.08 223.52) (xy 276.86 223.52)
 		)
 		(stroke
 			(width 0)
@@ -9803,7 +9813,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 208.28) (xy 276.86 208.28)
+			(xy 259.08 210.82) (xy 276.86 210.82)
 		)
 		(stroke
 			(width 0)
@@ -9823,7 +9833,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 205.74) (xy 276.86 205.74)
+			(xy 259.08 208.28) (xy 276.86 208.28)
 		)
 		(stroke
 			(width 0)
@@ -10393,7 +10403,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 213.36) (xy 276.86 213.36)
+			(xy 259.08 215.9) (xy 276.86 215.9)
 		)
 		(stroke
 			(width 0)
@@ -30458,7 +30468,7 @@
 		(uuid "02064e9a-ad98-4f35-9943-bbd684a2ab0c")
 	)
 	(label "APM_FMC_A24"
-		(at 259.08 215.9 0)
+		(at 259.08 218.44 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -30618,7 +30628,7 @@
 		(uuid "17f06eb7-88ec-4e32-8adb-bfd74a55be50")
 	)
 	(label "APM_FMC_A21"
-		(at 259.08 208.28 0)
+		(at 259.08 210.82 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -31478,7 +31488,7 @@
 		(uuid "96c3065c-a219-46b4-9665-89c200c44b75")
 	)
 	(label "APM_FMC_CLK"
-		(at 259.08 220.98 0)
+		(at 259.08 223.52 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -31798,7 +31808,7 @@
 		(uuid "bddf88d7-8f1f-4f0b-afd7-e2fcef85c915")
 	)
 	(label "APM_FMC_A23"
-		(at 259.08 213.36 0)
+		(at 259.08 215.9 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -32007,6 +32017,16 @@
 		)
 		(uuid "d68b0115-f453-43df-9545-97b4febd236e")
 	)
+	(label "APM_FMC_A19"
+		(at 259.08 205.74 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d8594c23-893a-49e6-837d-0ab8d8e500bf")
+	)
 	(label "APM_FMC_NWE"
 		(at 260.35 148.59 0)
 		(effects
@@ -32078,7 +32098,7 @@
 		(uuid "e004b1dd-823a-4fce-9f72-136dc7c48078")
 	)
 	(label "APM_FMC_A22"
-		(at 259.08 210.82 0)
+		(at 259.08 213.36 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -32088,7 +32108,7 @@
 		(uuid "e1a2eb05-05d4-4f37-aff0-214708593214")
 	)
 	(label "APM_FMC_A20"
-		(at 259.08 205.74 0)
+		(at 259.08 208.28 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -32187,7 +32207,7 @@
 		)
 		(uuid "ee5568b0-d4d7-400b-86eb-a6a157614409")
 	)
-	(label "APM_FMC_19"
+	(label "APM_FMC_A19"
 		(at 360.68 82.55 180)
 		(effects
 			(font
@@ -39275,7 +39295,7 @@
 			)
 		)
 		(pin "FPGA_FMC_A20" input
-			(at 276.86 205.74 180)
+			(at 276.86 208.28 180)
 			(uuid "465901ca-29b1-4bfc-b4d5-c679945063ee")
 			(effects
 				(font
@@ -39285,7 +39305,7 @@
 			)
 		)
 		(pin "FPGA_FMC_A21" input
-			(at 276.86 208.28 180)
+			(at 276.86 210.82 180)
 			(uuid "84a0160d-bff9-4799-8c3e-ae5c2f6ba007")
 			(effects
 				(font
@@ -39295,7 +39315,7 @@
 			)
 		)
 		(pin "FPGA_FMC_A22" input
-			(at 276.86 210.82 180)
+			(at 276.86 213.36 180)
 			(uuid "b0718ce2-9876-431f-8833-7cb12d9fc561")
 			(effects
 				(font
@@ -39305,7 +39325,7 @@
 			)
 		)
 		(pin "FPGA_FMC_A23" input
-			(at 276.86 213.36 180)
+			(at 276.86 215.9 180)
 			(uuid "8802e629-bf6c-41da-8806-30dd7504683c")
 			(effects
 				(font
@@ -39315,7 +39335,7 @@
 			)
 		)
 		(pin "FPGA_FMC_A24" input
-			(at 276.86 215.9 180)
+			(at 276.86 218.44 180)
 			(uuid "145ff3ed-ca86-495c-af55-e9299139d021")
 			(effects
 				(font
@@ -39325,8 +39345,18 @@
 			)
 		)
 		(pin "FPGA_FMC_CLK" input
-			(at 276.86 220.98 180)
+			(at 276.86 223.52 180)
 			(uuid "a852876e-46b0-4c96-a7d3-94caaacfdb11")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "FPGA_FMC_A19" input
+			(at 276.86 205.74 180)
+			(uuid "0b7fe909-efae-4e14-889f-acae0e08a520")
 			(effects
 				(font
 					(size 1.27 1.27)

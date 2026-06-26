@@ -5402,7 +5402,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 115.57) (xy 68.58 115.57)
+			(xy 86.36 118.11) (xy 68.58 118.11)
 		)
 		(stroke
 			(width 0)
@@ -5762,7 +5762,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 125.73) (xy 68.58 125.73)
+			(xy 86.36 128.27) (xy 68.58 128.27)
 		)
 		(stroke
 			(width 0)
@@ -6062,7 +6062,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 118.11) (xy 68.58 118.11)
+			(xy 86.36 120.65) (xy 68.58 120.65)
 		)
 		(stroke
 			(width 0)
@@ -6172,7 +6172,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 123.19) (xy 68.58 123.19)
+			(xy 86.36 125.73) (xy 68.58 125.73)
 		)
 		(stroke
 			(width 0)
@@ -6432,6 +6432,16 @@
 	)
 	(wire
 		(pts
+			(xy 86.36 115.57) (xy 68.58 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b68afb7b-ac82-4f3d-9bb3-628a458f76b1")
+	)
+	(wire
+		(pts
 			(xy 86.36 133.35) (xy 68.58 133.35)
 		)
 		(stroke
@@ -6642,7 +6652,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 120.65) (xy 68.58 120.65)
+			(xy 86.36 123.19) (xy 68.58 123.19)
 		)
 		(stroke
 			(width 0)
@@ -7231,7 +7241,7 @@
 		(uuid "23707c87-c416-47c0-a546-df7e428e4bca")
 	)
 	(label "K11_IOT11A"
-		(at 86.36 125.73 180)
+		(at 86.36 128.27 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7511,7 +7521,7 @@
 		(uuid "5c5de65f-a3b9-4b9c-b65e-8037579b7701")
 	)
 	(label "K10_IOT15B_40P"
-		(at 86.36 120.65 180)
+		(at 86.36 123.19 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7531,7 +7541,7 @@
 		(uuid "5e20c8e9-1465-4904-acaf-e6c0e33b563c")
 	)
 	(label "L8_IOT19B_40P"
-		(at 86.36 118.11 180)
+		(at 86.36 120.65 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7561,7 +7571,7 @@
 		(uuid "610a5e91-9dcd-46bd-8644-93c72a0d0a0a")
 	)
 	(label "L7_IOT19A_40P"
-		(at 86.36 115.57 180)
+		(at 86.36 118.11 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8011,7 +8021,7 @@
 		(uuid "afe9e8fe-3ce3-4612-9aeb-c9acb246a278")
 	)
 	(label "L10_IOT15A_40P"
-		(at 86.36 123.19 180)
+		(at 86.36 125.73 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8219,6 +8229,16 @@
 			(justify left bottom)
 		)
 		(uuid "dd21233b-4380-4354-af8d-0fe712660642")
+	)
+	(label "L4_IOR31A_40P"
+		(at 86.36 115.57 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ddac7f38-3a13-40d1-a460-46dffdfc6494")
 	)
 	(label "H7_IOT66B"
 		(at 111.76 43.18 0)
@@ -14276,7 +14296,7 @@
 			)
 		)
 		(pin "FPGA_FMC_A20" input
-			(at 68.58 115.57 0)
+			(at 68.58 118.11 0)
 			(uuid "d946dbb6-c7f3-4b85-acdf-c71214c5a828")
 			(effects
 				(font
@@ -14286,7 +14306,7 @@
 			)
 		)
 		(pin "FPGA_FMC_A21" input
-			(at 68.58 118.11 0)
+			(at 68.58 120.65 0)
 			(uuid "21325671-cd77-4646-a49b-1e7677652bb8")
 			(effects
 				(font
@@ -14296,7 +14316,7 @@
 			)
 		)
 		(pin "FPGA_FMC_A22" input
-			(at 68.58 120.65 0)
+			(at 68.58 123.19 0)
 			(uuid "8e427ed8-e7fd-4059-9ff9-fddb4e738aa0")
 			(effects
 				(font
@@ -14306,7 +14326,7 @@
 			)
 		)
 		(pin "FPGA_FMC_A23" input
-			(at 68.58 123.19 0)
+			(at 68.58 125.73 0)
 			(uuid "15a6806c-f42e-4d83-afc2-0b07703c2715")
 			(effects
 				(font
@@ -14316,7 +14336,7 @@
 			)
 		)
 		(pin "FPGA_FMC_A24" input
-			(at 68.58 125.73 0)
+			(at 68.58 128.27 0)
 			(uuid "b0cb0996-9526-422d-8f90-0b6d4aae41ef")
 			(effects
 				(font
@@ -14488,6 +14508,16 @@
 		(pin "FPGA_FMC_CLK" input
 			(at 68.58 133.35 0)
 			(uuid "2f414b0c-5bba-49b0-ac71-ab7c404f0233")
+			(effects
+				(font
+					(size 0.889 0.889)
+				)
+				(justify right)
+			)
+		)
+		(pin "FPGA_FMC_A19" input
+			(at 68.58 115.57 0)
+			(uuid "8da84784-eb67-4f35-944d-9183c8f160e1")
 			(effects
 				(font
 					(size 0.889 0.889)

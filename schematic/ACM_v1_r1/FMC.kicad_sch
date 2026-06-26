@@ -2805,6 +2805,16 @@
 	)
 	(wire
 		(pts
+			(xy 171.45 77.47) (xy 182.88 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b3452d6-c891-4e50-bfee-aeb630ed7fea")
+	)
+	(wire
+		(pts
 			(xy 182.88 123.19) (xy 182.88 125.73)
 		)
 		(stroke
@@ -3869,6 +3879,17 @@
 			(justify right)
 		)
 		(uuid "3d841a7d-6f36-4ee2-92ce-f4e58f7fd909")
+	)
+	(hierarchical_label "FPGA_FMC_A19"
+		(shape input)
+		(at 171.45 77.47 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "477f2fcd-2e82-45ff-ae10-97d714b02d76")
 	)
 	(hierarchical_label "FPGA_FMC_A17"
 		(shape input)
