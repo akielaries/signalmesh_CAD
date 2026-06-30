@@ -2066,6 +2066,16 @@
 	)
 	(wire
 		(pts
+			(xy 151.13 135.89) (xy 137.16 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "19ea4ed7-b441-4ae0-b693-86d79bb8d9d1")
+	)
+	(wire
+		(pts
 			(xy 101.6 73.66) (xy 114.3 73.66)
 		)
 		(stroke
@@ -2106,6 +2116,16 @@
 	)
 	(wire
 		(pts
+			(xy 151.13 130.81) (xy 137.16 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d151383-5756-4580-8f8d-61a1c812da0b")
+	)
+	(wire
+		(pts
 			(xy 101.6 86.36) (xy 114.3 86.36)
 		)
 		(stroke
@@ -2136,6 +2156,36 @@
 	)
 	(wire
 		(pts
+			(xy 100.33 138.43) (xy 116.84 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "464e98af-b247-4d01-9816-c1b70ee37eba")
+	)
+	(wire
+		(pts
+			(xy 151.13 133.35) (xy 137.16 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5fbbd015-eb49-4e9a-b8a7-dd6bfe298f2d")
+	)
+	(wire
+		(pts
+			(xy 151.13 138.43) (xy 137.16 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6de2517e-3faa-4551-8e63-bf8917bbaf51")
+	)
+	(wire
+		(pts
 			(xy 78.74 151.13) (xy 64.77 151.13)
 		)
 		(stroke
@@ -2156,6 +2206,16 @@
 	)
 	(wire
 		(pts
+			(xy 100.33 125.73) (xy 116.84 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7aab1cd9-2c0c-417c-970b-2228fcb832e1")
+	)
+	(wire
+		(pts
 			(xy 101.6 83.82) (xy 114.3 83.82)
 		)
 		(stroke
@@ -2163,6 +2223,16 @@
 			(type default)
 		)
 		(uuid "864fd70b-81ce-432d-bb9a-8f77d92c5e05")
+	)
+	(wire
+		(pts
+			(xy 151.13 125.73) (xy 137.16 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f2e3b02-3edc-409b-b268-cc73dfa54329")
 	)
 	(wire
 		(pts
@@ -2183,6 +2253,26 @@
 			(type default)
 		)
 		(uuid "afe493a7-dd45-4b05-bc4c-6a10b96ba737")
+	)
+	(wire
+		(pts
+			(xy 100.33 130.81) (xy 116.84 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "babd0f2d-657b-4730-89ca-6231f2c2f0ad")
+	)
+	(wire
+		(pts
+			(xy 151.13 128.27) (xy 137.16 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bdd2896e-a28f-4fab-b0d8-db44ccfaf658")
 	)
 	(wire
 		(pts
@@ -2975,6 +3065,198 @@
 			(justify left bottom)
 		)
 		(uuid "b0841a07-4a4f-4eda-b5a2-6cc9a5124dc5")
+	)
+	(label "GPIO_595_SER"
+		(at 100.33 125.73 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "d0000001-1111-4aaa-8bbb-000000000001")
+	)
+	(label "GPIO_595_SCLK"
+		(at 100.33 130.81 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "d0000001-1111-4aaa-8bbb-000000000002")
+	)
+	(label "GPIO_595_RCLK"
+		(at 100.33 138.43 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "d0000001-1111-4aaa-8bbb-000000000003")
+	)
+	(label "OSC1_WAVE0"
+		(at 151.13 125.73 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify right bottom)
+		)
+		(uuid "d0000001-1111-4aaa-8bbb-000000000004")
+	)
+	(label "OSC1_WAVE1"
+		(at 151.13 128.27 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify right bottom)
+		)
+		(uuid "d0000001-1111-4aaa-8bbb-000000000005")
+	)
+	(label "OSC1_WAVE2"
+		(at 151.13 130.81 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify right bottom)
+		)
+		(uuid "d0000001-1111-4aaa-8bbb-000000000006")
+	)
+	(label "OSC2_WAVE0"
+		(at 151.13 133.35 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify right bottom)
+		)
+		(uuid "d0000001-1111-4aaa-8bbb-000000000007")
+	)
+	(label "OSC2_WAVE1"
+		(at 151.13 135.89 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify right bottom)
+		)
+		(uuid "d0000001-1111-4aaa-8bbb-000000000008")
+	)
+	(label "OSC2_WAVE2"
+		(at 151.13 138.43 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify right bottom)
+		)
+		(uuid "d0000001-1111-4aaa-8bbb-000000000009")
+	)
+	(label "OSC1_WAVE0"
+		(at 17.78 53.34 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify right bottom)
+		)
+		(uuid "d0000002-1111-4aaa-8bbb-000000000001")
+	)
+	(label "OSC1_WAVE1"
+		(at 17.78 55.88 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify right bottom)
+		)
+		(uuid "d0000002-1111-4aaa-8bbb-000000000002")
+	)
+	(label "OSC1_WAVE2"
+		(at 17.78 58.42 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify right bottom)
+		)
+		(uuid "d0000002-1111-4aaa-8bbb-000000000003")
+	)
+	(label "OSC2_WAVE0"
+		(at 17.78 113.03 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify right bottom)
+		)
+		(uuid "d0000002-1111-4aaa-8bbb-000000000004")
+	)
+	(label "OSC2_WAVE1"
+		(at 17.78 115.57 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify right bottom)
+		)
+		(uuid "d0000002-1111-4aaa-8bbb-000000000005")
+	)
+	(label "OSC2_WAVE2"
+		(at 17.78 118.11 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify right bottom)
+		)
+		(uuid "d0000002-1111-4aaa-8bbb-000000000006")
+	)
+	(label "GPIO_595_SENSE"
+		(at 50.8 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "d0000002-1111-4aaa-8bbb-000000000007")
 	)
 	(label "STM32_ADC_10"
 		(at 153.67 68.58 180)
