@@ -8853,6 +8853,16 @@
 	)
 	(wire
 		(pts
+			(xy 175.26 46.99) (xy 189.23 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1992576b-3eeb-4d20-8577-c936983efa1d")
+	)
+	(wire
+		(pts
 			(xy 260.35 138.43) (xy 276.86 138.43)
 		)
 		(stroke
@@ -8860,6 +8870,16 @@
 			(type default)
 		)
 		(uuid "1a4d4d8c-8480-4184-b456-fad967178fd9")
+	)
+	(wire
+		(pts
+			(xy 379.73 87.63) (xy 377.19 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1a662435-6e21-488f-8921-c0d12b7830e4")
 	)
 	(wire
 		(pts
@@ -9463,7 +9483,7 @@
 	)
 	(wire
 		(pts
-			(xy 361.95 87.63) (xy 346.71 87.63)
+			(xy 369.57 87.63) (xy 346.71 87.63)
 		)
 		(stroke
 			(width 0)
@@ -9613,7 +9633,7 @@
 	)
 	(wire
 		(pts
-			(xy 361.95 90.17) (xy 346.71 90.17)
+			(xy 381 90.17) (xy 346.71 90.17)
 		)
 		(stroke
 			(width 0)
@@ -10533,6 +10553,16 @@
 	)
 	(wire
 		(pts
+			(xy 237.49 67.31) (xy 224.79 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3504135-5ee0-444c-b3ed-24461d8a580f")
+	)
+	(wire
+		(pts
 			(xy 67.31 81.28) (xy 67.31 78.74)
 		)
 		(stroke
@@ -10780,6 +10810,16 @@
 			(type default)
 		)
 		(uuid "d946f01a-6dea-4529-adc0-a30dfc023d8b")
+	)
+	(wire
+		(pts
+			(xy 388.62 90.17) (xy 393.7 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d9897d0a-1f54-42fb-9fd8-921a7c8015cc")
 	)
 	(wire
 		(pts
@@ -30567,6 +30607,16 @@
 		)
 		(uuid "0dabd544-39fa-4218-843e-40b8dca687d4")
 	)
+	(label "APM_USER_RX"
+		(at 175.26 46.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0eb6a857-957c-4a84-9b44-6d2eb262d007")
+	)
 	(label "APM_SPI1_CS"
 		(at 354.33 149.86 180)
 		(effects
@@ -30847,7 +30897,7 @@
 		)
 		(uuid "3855e91a-c0a5-45f0-8c88-62811f1a5290")
 	)
-	(label "APM_DBG_RX"
+	(label "APM_USER_TX"
 		(at 237.49 57.15 180)
 		(effects
 			(font
@@ -32256,6 +32306,16 @@
 			(justify right bottom)
 		)
 		(uuid "f2feb5e8-d412-4d0c-9ced-7a0db1293c12")
+	)
+	(label "APM_DBG_RX"
+		(at 237.49 67.31 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "f3726d17-9cd9-4027-be44-378537fafa93")
 	)
 	(label "APM_EEPROM_EN"
 		(at 294.64 77.47 0)
@@ -34230,6 +34290,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 393.7 90.17 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5b2c613a-ad80-4d1a-9891-468610e2b79b")
+		(property "Reference" "#PWR0117"
+			(at 393.7 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "3V3_APM"
+			(at 393.7 85.09 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 393.7 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 393.7 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 393.7 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "37f53838-f290-41b9-8140-2d6c36c3e3ce")
+		)
+		(instances
+			(project "APM"
+				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
+					(reference "#PWR0117")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 48.26 184.15 180)
 		(unit 1)
@@ -34566,6 +34704,84 @@
 			(project "APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "GND1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 379.73 87.63 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6aa3bdba-fad4-4a8d-a6cd-8d627133d51a")
+		(property "Reference" "#PWR0116"
+			(at 379.73 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "3V3_APM"
+			(at 379.73 82.55 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 379.73 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 379.73 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 379.73 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7e0f6b07-b653-4816-8833-f4dfeb70d537")
+		)
+		(instances
+			(project "APM"
+				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
+					(reference "#PWR0116")
 					(unit 1)
 				)
 			)
@@ -35827,6 +36043,108 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 373.38 87.63 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8da0d960-342b-4445-9f9f-8f181095623e")
+		(property "Reference" "R49"
+			(at 373.38 81.28 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "2.2k"
+			(at 373.38 83.82 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+			(at 373.38 89.408 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 373.38 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 373.38 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigiKey_Part_Number" "311-10.0KCRCT-ND"
+			(at 373.38 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" "0.0129"
+			(at 373.38 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "8ca0853c-5c09-4c7d-a2be-e8e4771c96dc")
+		)
+		(pin "1"
+			(uuid "edfede52-f350-4ea1-944a-9b5710809684")
+		)
+		(instances
+			(project "APM"
+				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
+					(reference "R49")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 293.37 97.79 0)
 		(unit 1)
@@ -36358,6 +36676,108 @@
 			(project "APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "R38")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 384.81 90.17 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a81b4828-f25d-411d-99f9-99f5d8fb61da")
+		(property "Reference" "R50"
+			(at 384.81 83.82 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "2.2k"
+			(at 384.81 86.36 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+			(at 384.81 91.948 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 384.81 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 384.81 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DigiKey_Part_Number" "311-10.0KCRCT-ND"
+			(at 384.81 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" "0.0129"
+			(at 384.81 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "26263d1a-b4a3-4121-8891-43aa901aaf26")
+		)
+		(pin "1"
+			(uuid "daf244f4-b030-438b-bc84-0e793c6d483b")
+		)
+		(instances
+			(project "APM"
+				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
+					(reference "R50")
 					(unit 1)
 				)
 			)
@@ -37546,7 +37966,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 367.03 85.09 0)
+		(at 367.03 85.09 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -37554,10 +37974,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "cafaf905-e350-418d-b55b-03acce1c2bf1")
 		(property "Reference" "#PWR079"
-			(at 367.03 91.44 0)
+			(at 367.03 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -37568,14 +37987,14 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 369.57 86.3599 0)
+			(at 362.204 85.09 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" ""
