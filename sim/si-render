@@ -1,0 +1,120 @@
+#!/home/akiel/opt/openEMS/venv/bin/python3
+# render the board field visuals from a finished gerber2ems run.
+#   python si-render <board> [--layer In1_Cu] [--anim]
+# produces: a flat field-over-copper heatmap and the cinematic blender render
+# (dark PCB with the field glowing on it). field frames are generated straight
+# from the vtr via board_heatmap's reader (no ems2png dependency), so extents
+# and orientation stay consistent with the flat heatmap.
+
+import sys
+import os
+import glob
+import argparse
+import subprocess
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from si import config, kicad
+
+BLENDER = "/home/akiel/Downloads/blender-5.1.2-linux-x64/blender"
+HERE = os.path.dirname(os.path.abspath(__file__))
+
+
+def field_frames(vtr_files, dst_dir, border_frac=0.06):
+    """read every vtr -> |E| map, normalize to a global max, border-mask, and
+    write 16-bit grayscale PNGs. returns (extent_mm, peak_frame_index)."""
+    import numpy as np
+    from PIL import Image
+    import board_heatmap as bh
+    os.makedirs(dst_dir, exist_ok=True)
+    frames, extent = [], None
+    gmax = 0.0
+    for f in vtr_files:
+        res = bh.read_vtr(f)
+        if res is None:
+            frames.append(None)
+            continue
+        top, extent = res
+        frames.append(top)
+        gmax = max(gmax, float(np.nanmax(top)))
+    if gmax <= 0:
+        sys.exit("field is all zero -- the excitation port did not inject "
+                 "(check the -s log for 'CalcVoltageIntegral' errors; ports may be sub-cell)")
+    peak = (0, -1)
+    for i, top in enumerate(frames):
+        if top is None:
+            continue
+        img = np.flipud(np.clip(top / gmax, 0, 1))     # flip so row0 = ymax (top)
+        h, w = img.shape
+        my, mx = int(h * border_frac), int(w * border_frac)
+        img[:my, :] = 0; img[-my:, :] = 0; img[:, :mx] = 0; img[:, -mx:] = 0
+        Image.fromarray((img * 65535).astype("uint16")).save(
+            os.path.join(dst_dir, "f_%04d.png" % i))
+        s = float(img.sum())
+        if s > peak[0]:
+            peak = (s, i)
+    ex_mm = tuple(v * 1e3 for v in extent)
+    return ex_mm, peak[1]
+
+
+def main():
+    ap = argparse.ArgumentParser(description="render board field visuals from a gerber2ems run")
+    ap.add_argument("board")
+    ap.add_argument("--layer", default="In1_Cu")
+    ap.add_argument("--anim", action="store_true")
+    ap.add_argument("--out", default="out")
+    args = ap.parse_args()
+
+    cfg = config.load(args.board)
+    ems = cfg.ems_dir
+    if not ems:
+        sys.exit("board %s has no ems_dir" % cfg.name)
+    vtr = sorted(glob.glob(os.path.join(ems, "ems/simulation/0/e_field_%s_*.vtr" % args.layer)),
+                 key=lambda p: int("".join(filter(str.isdigit, os.path.basename(p)))))
+    if not vtr:
+        sys.exit("no e_field_%s vtr in %s; run gerber2ems -g --export-field / -s first"
+                 % (args.layer, ems))
+    copper = os.path.join(ems, "ems/geometry/%s.png" % args.layer)
+    os.makedirs(args.out, exist_ok=True)
+
+    # 1. flat heatmap (matplotlib), rms over frames -- the reliable one
+    flat = os.path.join(args.out, "%s_field_flat.png" % cfg.name)
+    subprocess.run([sys.executable, os.path.join(HERE, "board_heatmap.py"),
+                    "--field", "%s/ems/simulation/0/e_field_%s_*.vtr" % (ems, args.layer),
+                    "--copper", copper, "--agg", "rms", "--out", flat], check=True)
+    print("wrote", flat)
+
+    # 2. field frames -> blender cinematic
+    fdir = os.path.join(ems, "field_frames_%s" % args.layer)
+    fext, peak = field_frames(vtr, fdir)
+    b = kicad.load(cfg.kicad_pcb)
+    x0, x1, y0, y1 = b.outline
+    bext = (0.0, x1 - x0, 0.0, y1 - y0)
+
+    def blender(extra, out):
+        cmd = [BLENDER, "-b", "-P", os.path.join(ems, "blender_field.py"), "--",
+               "--copper", copper, "--field-dir", fdir,
+               "--board-extent", ",".join("%.2f" % v for v in bext),
+               "--field-extent", ",".join("%.2f" % v for v in fext),
+               "--out", os.path.relpath(out, ems)] + extra
+        subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL)
+
+    still = os.path.join(args.out, "%s_field_blender.png" % cfg.name)
+    print("blender still (peak frame %d) ..." % peak)
+    blender(["--still", str(peak)], still)
+    print("wrote", still)
+
+    if args.anim:
+        adir = os.path.join(args.out, "%s_anim" % cfg.name)
+        os.makedirs(adir, exist_ok=True)
+        print("blender animation ...")
+        blender(["--anim"], os.path.join(adir, "frame_"))
+        mp4 = os.path.join(args.out, "%s_field.mp4" % cfg.name)
+        subprocess.run(["ffmpeg", "-y", "-framerate", "20", "-i",
+                        os.path.join(adir, "frame_%04d.png"),
+                        "-pix_fmt", "yuv420p", "-crf", "18", mp4],
+                       check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        print("wrote", mp4)
+
+
+if __name__ == "__main__":
+    main()

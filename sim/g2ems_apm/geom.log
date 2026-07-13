@@ -1,20 +1,29 @@
 Parsing config
 Loading config from /home/akiel/trunk/pub/signalmesh_CAD/sim/g2ems_apm/simulation.json
-[13:27:56][INFO] Creating geometry
-[13:27:56][INFO] Processing gerber files (may take a while for larger boards)
-[13:28:13][INFO] Adding copper from gerber files
-[13:28:23][INFO] Adding metal mesh for F_Cu
-[13:28:23][INFO] Adding metal mesh for In1_Cu
-[13:28:23][INFO] Adding metal mesh for In2_Cu
-[13:28:24][INFO] Adding metal mesh for B_Cu
-[13:28:24][INFO] Parsing gerber file: /home/akiel/trunk/pub/signalmesh_CAD/sim/g2ems_apm/fab/APM-Edge_Cuts.gbr
-[13:28:24][INFO] Adding ports grid
-[13:28:24][INFO] Compiling grid
-[13:28:24][INFO] Parsing gerber file: /home/akiel/trunk/pub/signalmesh_CAD/sim/g2ems_apm/fab/APM-B_Cu.gbr
-[13:28:24][INFO] Parsing gerber file: /home/akiel/trunk/pub/signalmesh_CAD/sim/g2ems_apm/fab/APM-In2_Cu.gbr
-[13:28:24][INFO] Parsing gerber file: /home/akiel/trunk/pub/signalmesh_CAD/sim/g2ems_apm/fab/APM-In1_Cu.gbr
-[13:28:24][INFO] Parsing gerber file: /home/akiel/trunk/pub/signalmesh_CAD/sim/g2ems_apm/fab/APM-F_Cu.gbr
-[13:28:24][INFO] ### Grid Generator: get nets of interest ###
-[13:28:24][WARN] File with nets under test not found! (/home/akiel/trunk/pub/signalmesh_CAD/sim/g2ems_apm/netinfo.json)
-[13:28:24][INFO] ### Grid Generator: parse gerber files ###
-[13:28:24][INFO] ### Grid Generator: generate X axis ###
+[14:13:07][INFO] Creating geometry
+[14:13:07][INFO] Processing gerber files (may take a while for larger boards)
+[14:13:08][INFO] Adding copper from gerber files
+[14:13:11][INFO] Adding metal mesh for F_Cu
+[14:13:11][INFO] Adding metal mesh for In1_Cu
+[14:13:11][INFO] Adding metal mesh for In2_Cu
+[14:13:12][INFO] Adding metal mesh for B_Cu
+[14:13:12][INFO] Parsing gerber file: /home/akiel/trunk/pub/signalmesh_CAD/sim/g2ems_apm/fab/APM-Edge_Cuts.gbr
+[14:13:12][INFO] Adding ports grid
+[14:13:12][INFO] Compiling grid
+[14:13:12][INFO] Parsing gerber file: /home/akiel/trunk/pub/signalmesh_CAD/sim/g2ems_apm/fab/APM-B_Cu.gbr
+[14:13:13][INFO] Parsing gerber file: /home/akiel/trunk/pub/signalmesh_CAD/sim/g2ems_apm/fab/APM-In2_Cu.gbr
+[14:13:13][INFO] Parsing gerber file: /home/akiel/trunk/pub/signalmesh_CAD/sim/g2ems_apm/fab/APM-In1_Cu.gbr
+[14:13:13][INFO] Parsing gerber file: /home/akiel/trunk/pub/signalmesh_CAD/sim/g2ems_apm/fab/APM-F_Cu.gbr
+[14:13:13][INFO] ### Grid Generator: get nets of interest ###
+[14:13:13][INFO] ### Grid Generator: parse gerber files ###
+[14:13:13][INFO] ### Grid Generator: generate X axis ###
+[14:13:13][INFO] ### Grid Generator: generate Y axis ###
+[14:13:13][INFO] ### Grid Generator: generate Z axis ###
+[14:13:13][INFO] Grid line count, x: 203, y: 270 z: 31. Total number of cells: ~1.70M
+[14:13:13][INFO] Minimal cell size, x: 150.000000, y: 150.000000 z: 63.800000 [um]
+[14:13:13][INFO] Max cell size ratio, x: 219.867333, y: 500.000000 z: 2.277987 
+[14:13:13][INFO] Adding substrates
+[14:13:13][INFO] Adding MUR boundary condition
+[14:13:13][INFO] Adding vias from excellon file
+[14:13:13][INFO] Adding ports
+[14:13:13][INFO] Saving geometry to /home/akiel/trunk/pub/signalmesh_CAD/sim/g2ems_apm/ems/geometry/geometry.xml

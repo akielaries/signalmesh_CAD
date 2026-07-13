@@ -1,0 +1,30 @@
+#!/home/akiel/opt/openEMS/venv/bin/python3
+# tier 0/1 SI audit: python si-audit <board> [--plot] [--out DIR]
+# board is a name under boards/ (APM_v5_r2, ACM_v1_r2) or a path to a yaml.
+
+import sys
+import os
+import argparse
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from si import config, kicad, audit, report
+
+
+def main():
+    ap = argparse.ArgumentParser(description="signalmesh tier-1 SI audit")
+    ap.add_argument("board", help="board name (boards/<name>.yaml) or yaml path")
+    ap.add_argument("--plot", action="store_true", help="also write skew + impedance plots")
+    ap.add_argument("--out", default="out/audit", help="output dir for plots")
+    args = ap.parse_args()
+
+    cfg = config.load(args.board)
+    board = kicad.load(cfg.kicad_pcb)
+    res = audit.run(cfg, board)
+    print(report.text(res))
+    if args.plot:
+        for f in report.plots(res, args.out):
+            print("wrote", f)
+
+
+if __name__ == "__main__":
+    main()

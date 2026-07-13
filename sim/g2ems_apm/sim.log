@@ -1,0 +1,23 @@
+nohup: ignoring input
+Parsing config
+Loading config from /home/akiel/trunk/pub/signalmesh_CAD/sim/g2ems_apm/simulation.json
+[16:39:36][INFO] Running simulation
+[16:39:37][INFO] Simulating with excitation on port #0
+[16:39:37][INFO] Loading geometry from /home/akiel/trunk/pub/signalmesh_CAD/sim/g2ems_apm/ems/geometry/geometry.xml
+[16:39:38][INFO] Setting up ports
+[16:39:38][INFO] Starting simulation
+ ---------------------------------------------------------------------- 
+ | openEMS 64bit -- version v0.37.0-rc1-2-g7b051bb
+ | (C) 2010-2026 Thorsten Liebig <thorsten.liebig@gmx.de>  GPL license
+ ---------------------------------------------------------------------- 
+	Used external libraries:
+		CSXCAD -- Version: v0.7.0-rc1-1-g5115701
+		hdf5   -- Version: 1.14.6
+		          compiled against: HDF5 library version: 1.14.6
+		tinyxml -- compiled against: 2.6.2
+		fparser
+		boost  -- compiled against: 1_90
+		vtk -- Version: 9.5.2
+		       compiled against: 9.5.2
+
+Create FDTD operator (compressed SSE + multi-threading)

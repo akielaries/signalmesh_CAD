@@ -1,0 +1,103 @@
+{
+  "net_settings": {
+    "classes": [
+      {
+        "name": "power_main",
+        "clearance": 0.25,
+        "track_width": 0.525,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "diff_pair_width": 0.525,
+        "diff_pair_gap": 0.25
+      },
+      {
+        "name": "power_local",
+        "clearance": 0.2,
+        "track_width": 0.115,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "diff_pair_width": 0.115,
+        "diff_pair_gap": 0.2
+      },
+      {
+        "name": "hs_50",
+        "clearance": 0.2,
+        "track_width": 0.128,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "diff_pair_width": 0.128,
+        "diff_pair_gap": 0.2
+      },
+      {
+        "name": "audio_analog",
+        "clearance": 0.3,
+        "track_width": 0.2,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "diff_pair_width": 0.2,
+        "diff_pair_gap": 0.3
+      },
+      {
+        "name": "usb_diff",
+        "clearance": 0.2,
+        "track_width": 0.162,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "diff_pair_width": 0.162,
+        "diff_pair_gap": 0.2
+      },
+      {
+        "name": "slow",
+        "clearance": 0.15,
+        "track_width": 0.2,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "diff_pair_width": 0.2,
+        "diff_pair_gap": 0.15
+      },
+      {
+        "name": "default",
+        "clearance": 0.15,
+        "track_width": 0.128,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "diff_pair_width": 0.128,
+        "diff_pair_gap": 0.15
+      }
+    ],
+    "net_class_patterns": [
+      {
+        "pattern": "*MIDI_FS_D*",
+        "netclass": "usb_diff"
+      },
+      {
+        "pattern": "/.*(I2C|_SCL|_SDA).*/",
+        "netclass": "slow"
+      },
+      {
+        "pattern": "/.*(UART|_RX|_TX|DBG_).*/",
+        "netclass": "slow"
+      },
+      {
+        "pattern": "/.*(MIDI(?!_FS)).*/",
+        "netclass": "slow"
+      },
+      {
+        "pattern": "/.*(SPI\\d?_(SCK|MISO|MOSI|NSS)).*/",
+        "netclass": "slow"
+      },
+      {
+        "pattern": "/.*(DAC|AUDIO|OUT_[LR]|VOL_).*/",
+        "netclass": "audio_analog"
+      },
+      {
+        "pattern": "/.*(FMC_(DA\\d+|A\\d+|N\\w+|CLK)).*/",
+        "netclass": "hs_50"
+      },
+      {
+        "pattern": "*QSPI*",
+        "netclass": "hs_50"
+      }
+    ]
+  }
+}

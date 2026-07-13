@@ -1,0 +1,34 @@
+# APM v5 r2 (audio peripheral module, STM32H755 host)
+name: APM_v5_r2
+kicad_pcb: ../../schematic/APM_v5_r2/APM.kicad_pcb
+stackup: default
+netclasses: default
+
+# tier-3 crosstalk: gerber2ems working dir with staged gerbers (fab/)
+ems_dir: ../g2ems_apm
+
+# driver edge rate used for the critical-length rule (STM32H7 FMC GPIO ~1 ns)
+rise_ps: 1000
+
+# explicit net -> class assignment (first match wins, before the heuristics).
+# this is where you tell the audit which nets actually need controlled impedance.
+class_map:
+  - {match: "MIDI_FS_D", class: usb_diff}      # USB full-speed pair, 90 ohm diff
+  - {match: "I2C|_SCL|_SDA", class: slow}       # 400 kHz-1 MHz, impedance N/A
+  - {match: "UART|_RX|_TX|DBG_", class: slow}
+  - {match: "MIDI(?!_FS)", class: slow}         # MIDI current loop, slow
+  - {match: "SPI\\d?_(SCK|MISO|MOSI|NSS)", class: slow}  # a few MHz; relax unless you clock it fast
+  - {match: "DAC|AUDIO|OUT_[LR]|VOL_", class: audio_analog}
+
+# high-speed buses to audit for skew + impedance. match is a regex over net names.
+groups:
+  - name: FMC bus
+    match: "FMC_(DA\\d+|A\\d+|N\\w+|CLK)"
+    clock: /APM_FMC_CLK
+    z_target: 50
+    clock_mhz: 125
+  - name: QSPI
+    match: "QSPI"
+    clock: /QSPI_SCK2
+    z_target: 50
+    clock_mhz: 133

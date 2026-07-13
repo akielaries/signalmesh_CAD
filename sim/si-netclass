@@ -1,0 +1,36 @@
+#!/home/akiel/opt/openEMS/venv/bin/python3
+# emit KiCad net-class rules (stackup-derived widths + net->class patterns)
+# for the re-route:  python si-netclass <board> [--out FILE]
+
+import sys
+import os
+import argparse
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from si import config, kicad_export
+
+
+def main():
+    ap = argparse.ArgumentParser(description="emit KiCad net-class rules from SI constraints")
+    ap.add_argument("board")
+    ap.add_argument("--out", default=None, help="output json (default out/netclasses_<board>.json)")
+    args = ap.parse_args()
+
+    cfg = config.load(args.board)
+    out = args.out or "out/netclasses/%s.json" % cfg.name
+    os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
+    ns, summary, path = kicad_export.write(cfg, out)
+
+    print("net classes for %s (widths derived from the %s stackup):\n" % (cfg.name, cfg.stackup.name))
+    print("  %-13s %8s %8s  %s" % ("class", "width", "Z0", "note"))
+    for name, w, z, kind, note in summary:
+        ztxt = ("%.0f ohm" % z) if z else ("%-6s" % kind)
+        print("  %-13s %6.3fmm %8s  %s" % (name, w, ztxt, note))
+    print("\n%d net->class patterns written." % len(ns["net_class_patterns"]))
+    print("wrote %s" % path)
+    print("\nto apply: KiCad > File > Board Setup > Net Classes, or merge the")
+    print("net_settings block from that json into the .kicad_pro, then re-route.")
+
+
+if __name__ == "__main__":
+    main()

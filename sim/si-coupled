@@ -1,0 +1,150 @@
+#!/home/akiel/opt/openEMS/venv/bin/python3
+# coupled-line crosstalk (the trustworthy path):
+#   python si-coupled <board> <aggressor> [victim] [--auto 1] [--field]
+# pulls the real width/gap/length from the routed geometry, runs a clean
+# openEMS coupled-microstrip FDTD, reports through/NEXT/FEXT, and renders a
+# clean coupling field + S-param plot.
+
+import sys
+import os
+import argparse
+import numpy as np
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from si import config, kicad, crosstalk, coupled
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+
+
+def resolve(board, name):
+    if name in board.nets:
+        return name
+    hits = [n for n in board.nets if name in n]
+    if len(hits) == 1:
+        return hits[0]
+    exact = [n for n in hits if n.split("/")[-1] == name]
+    if len(exact) == 1:
+        return exact[0]
+    sys.exit("net %r -> %s" % (name, hits[:6] or "no match"))
+
+
+def db(x):
+    return 20 * np.log10(np.clip(np.abs(x), 1e-12, None))
+
+
+def main():
+    ap = argparse.ArgumentParser(description="coupled-line crosstalk (openEMS)")
+    ap.add_argument("board")
+    ap.add_argument("aggressor")
+    ap.add_argument("victim", nargs="?")
+    ap.add_argument("--auto", type=int, default=0, help="auto-pick worst victim")
+    ap.add_argument("--field", action="store_true", help="render the coupling field")
+    ap.add_argument("--fmax", type=float, default=3e9)
+    ap.add_argument("--out", default="out/crosstalk")
+    args = ap.parse_args()
+
+    # openEMS chdir's into the sim dir during Run, so resolve outputs now
+    args.out = os.path.abspath(args.out)
+    cfg = config.load(args.board)
+    board = kicad.load(cfg.kicad_pcb)
+    agg = resolve(board, args.aggressor)
+    if args.victim:
+        vic = resolve(board, args.victim)
+    elif args.auto:
+        found = crosstalk.find_victims(board, agg, 1)
+        if not found:
+            sys.exit("no coupled victim found for %s" % agg)
+        vic = found[0][1]
+    else:
+        sys.exit("give a victim or --auto 1")
+
+    g = crosstalk.coupled_geometry(board, agg, vic)
+    print("coupled section: %s (aggressor) vs %s (victim)" % (agg, vic))
+    print("  length %.1f mm  gap %.3f mm (center-center)  widths %.3f / %.3f mm"
+          % (g["length_mm"], g["gap_mm"], g["agg_w_mm"], g["vic_w_mm"]))
+    if g["length_mm"] < 2:
+        sys.exit("coupled length < 2 mm; these nets barely run together")
+
+    outdir = os.path.join(HERE, "out", "coupled")
+    s = coupled.run(outdir, g["length_mm"], g["gap_mm"], g["agg_w_mm"], g["vic_w_mm"],
+                    cfg.stackup, f_max=args.fmax, dump=args.field)
+
+    f = s["f"]
+    print("\n  %6s %8s %9s %9s %9s" % ("f_GHz", "thru_dB", "NEXT_dB", "FEXT_dB", "Z0"))
+    for i in range(0, len(f), 50):
+        print("  %6.2f %8.1f %9.1f %9.1f %9.1f" % (
+            f[i] / 1e9, db(s["s21"][i]), db(s["s31"][i]), db(s["s41"][i]), s["z0"][i]))
+    print("\nworst-case over band:  NEXT %+.1f dB   FEXT %+.1f dB   (higher = more coupling)"
+          % (db(s["s31"]).max(), db(s["s41"]).max()))
+    print("Z0 (low f): %.1f ohm" % s["z0"][1])
+
+    os.makedirs(args.out, exist_ok=True)
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    fig, ax = plt.subplots(figsize=(9, 5))
+    ax.plot(f / 1e9, db(s["s21"]), label="through (S21)")
+    ax.plot(f / 1e9, db(s["s31"]), label="NEXT near-end (S31)")
+    ax.plot(f / 1e9, db(s["s41"]), label="FEXT far-end (S41)")
+    ax.set_xlabel("frequency (GHz)"); ax.set_ylabel("dB")
+    ax.set_title("%s -> %s crosstalk  (%.0f mm, %.2f mm gap)"
+                 % (agg.split("/")[-1], vic.split("/")[-1], g["length_mm"], g["gap_mm"]))
+    ax.legend(); ax.grid(alpha=0.3)
+    sp = os.path.join(args.out, "%s_xtalk_sparams.png" % cfg.name)
+    fig.tight_layout(); fig.savefig(sp, dpi=120); plt.close(fig)
+    print("wrote", sp)
+
+    if args.field:
+        render_field(outdir, g, args.out, cfg.name, agg, vic)
+
+
+def render_field(outdir, g, out, board_name, agg, vic):
+    import glob
+    import vtk
+    from vtk.util.numpy_support import vtk_to_numpy
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    from matplotlib.colors import LogNorm
+    frames = sorted(glob.glob(os.path.join(outdir, "Et_*.vtr")))
+    if not frames:
+        print("no field frames"); return
+
+    def read(p):
+        r = vtk.vtkXMLRectilinearGridReader(); r.SetFileName(p); r.Update(); d = r.GetOutput()
+        nx, ny, nz = d.GetDimensions()
+        xc = vtk_to_numpy(d.GetXCoordinates()); yc = vtk_to_numpy(d.GetYCoordinates())
+        E = vtk_to_numpy(d.GetPointData().GetArray(0))
+        mag = np.linalg.norm(E, axis=1).reshape(nz, ny, nx).max(axis=0)
+        return mag, xc, yc
+    best = None
+    for p in frames:
+        m, xc, yc = read(p)
+        if best is None or m.sum() > best[0]:
+            best = (m.sum(), m, xc, yc)
+    _, mag, xc, yc = best
+    ext = [xc.min() * 1e3, xc.max() * 1e3, yc.min() * 1e3, yc.max() * 1e3]  # mm
+    fig, ax = plt.subplots(figsize=(12, 4))
+    fig.patch.set_facecolor("black"); ax.set_facecolor("black")
+    vmax = np.percentile(mag, 99.9)
+    ax.imshow(mag, extent=ext, origin="lower", aspect="auto", cmap="turbo",
+              norm=LogNorm(vmin=vmax * 1e-3, vmax=vmax))
+    sep = g["gap_mm"]
+    ax.axhline(+sep / 2, color="white", lw=0.6, alpha=0.5)
+    ax.axhline(-sep / 2, color="white", lw=0.6, alpha=0.5)
+    ax.text(ext[0], +sep / 2, " aggressor %s " % agg.split("/")[-1], color="white",
+            va="bottom", fontsize=9)
+    ax.text(ext[0], -sep / 2, " victim %s " % vic.split("/")[-1], color="cyan",
+            va="top", fontsize=9)
+    ax.set_title("|E| coupling: %s driven, energy spilling onto %s"
+                 % (agg.split("/")[-1], vic.split("/")[-1]), color="white")
+    ax.set_xlabel("along the parallel run (mm)", color="white")
+    ax.set_ylabel("across (mm)", color="white")
+    ax.tick_params(colors="white")
+    f = os.path.join(out, "%s_xtalk_field.png" % board_name)
+    fig.tight_layout(); fig.savefig(f, dpi=130, facecolor="black"); plt.close(fig)
+    print("wrote", f)
+
+
+if __name__ == "__main__":
+    main()
