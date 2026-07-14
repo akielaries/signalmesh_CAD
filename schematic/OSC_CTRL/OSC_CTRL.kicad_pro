@@ -150,7 +150,7 @@
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.5,
         "min_groove_width": 0.0,
-        "min_hole_clearance": 0.25,
+        "min_hole_clearance": 0.1356,
         "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
@@ -158,10 +158,10 @@
         "min_silk_clearance": 0.0,
         "min_text_height": 0.7,
         "min_text_thickness": 0.08,
-        "min_through_hole_diameter": 0.3,
+        "min_through_hole_diameter": 0.2,
         "min_track_width": 0.0,
-        "min_via_annular_width": 0.1,
-        "min_via_diameter": 0.5,
+        "min_via_annular_width": 0.049999,
+        "min_via_diameter": 0.3,
         "solder_mask_to_copper_clearance": 0.005,
         "use_height_for_length_calcs": true
       },
@@ -508,7 +508,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.15,
+        "clearance": 0.1356,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.3,
@@ -526,7 +526,7 @@
         "wire_width": 6
       },
       {
-        "clearance": 0.2,
+        "clearance": 0.1356,
         "diff_pair_gap": 0.25,
         "diff_pair_width": 0.4,
         "microvia_diameter": 0.3,
@@ -535,13 +535,13 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.4,
+        "track_width": 0.2,
         "tuning_profile": "",
         "via_diameter": 0.3,
         "via_drill": 0.2
       },
       {
-        "clearance": 0.15,
+        "clearance": 0.1356,
         "diff_pair_gap": 0.25,
         "diff_pair_width": 0.3,
         "microvia_diameter": 0.3,
@@ -550,10 +550,10 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.5,
+        "track_width": 0.2,
         "tuning_profile": "",
-        "via_diameter": 0.5,
-        "via_drill": 0.25
+        "via_diameter": 0.3,
+        "via_drill": 0.2
       }
     ],
     "meta": {
@@ -724,7 +724,7 @@
         "uuid": "f48c9b16-466a-451c-a18e-f0696896ad19"
       }
     ],
-    "used_designators": "#PWR62",
+    "used_designators": "TP3-4,#PWR62-64",
     "variants": []
   },
   "sheets": [
