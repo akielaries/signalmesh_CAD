@@ -128,193 +128,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector_Generic:Conn_01x03"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at 0 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_01x03"
-				(at 0 -5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Conn_01x03_1_1"
-				(rectangle
-					(start -1.27 3.81)
-					(end 1.27 -3.81)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Connector_Generic:Conn_01x04"
 			(pin_names
 				(offset 1.016)
@@ -5045,10 +4858,6 @@
 		(uuid "e5179757-cbc2-4b48-bd2c-8228bb27da43")
 	)
 	(no_connect
-		(at 189.23 107.95)
-		(uuid "071a35ea-6a36-4333-95fe-4dfcc7ce0bfa")
-	)
-	(no_connect
 		(at 311.15 52.07)
 		(uuid "07d1f8de-c619-43a3-9725-866c768c678b")
 	)
@@ -5093,20 +4902,12 @@
 		(uuid "63fe50ef-dece-4a5c-b7c0-e5d66a32f5f6")
 	)
 	(no_connect
-		(at 189.23 110.49)
-		(uuid "6e173f18-5d5a-4a27-8d67-07d86350f7bb")
-	)
-	(no_connect
 		(at 307.34 54.61)
 		(uuid "79365ab5-fda2-4084-9d1b-31edf721b7f2")
 	)
 	(no_connect
 		(at 346.71 67.31)
 		(uuid "7b115a8f-3805-4c2c-949b-0a94fc9d3d9c")
-	)
-	(no_connect
-		(at 189.23 105.41)
-		(uuid "895a38f2-4a07-45ce-8ca8-9f6b96e03025")
 	)
 	(no_connect
 		(at 311.15 36.83)
@@ -5304,6 +5105,16 @@
 	)
 	(wire
 		(pts
+			(xy 176.53 44.45) (xy 189.23 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "173ea0b5-5de6-4d23-ad9f-90446a386e9a")
+	)
+	(wire
+		(pts
 			(xy 236.22 39.37) (xy 224.79 39.37)
 		)
 		(stroke
@@ -5471,16 +5282,6 @@
 			(type default)
 		)
 		(uuid "21f827ca-96d3-4c6d-ad8e-f0578d5e6e2e")
-	)
-	(wire
-		(pts
-			(xy 361.95 39.37) (xy 346.71 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "22198959-44f0-44d7-866e-44be76073246")
 	)
 	(wire
 		(pts
@@ -5674,16 +5475,6 @@
 	)
 	(wire
 		(pts
-			(xy 361.95 44.45) (xy 346.71 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "31f852b9-048c-42e2-870f-bf9bf1012267")
-	)
-	(wire
-		(pts
 			(xy 24.13 182.88) (xy 39.37 182.88)
 		)
 		(stroke
@@ -5714,6 +5505,16 @@
 	)
 	(wire
 		(pts
+			(xy 237.49 62.23) (xy 224.79 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "35b0e676-652f-4ce2-a2ea-493bd361f721")
+	)
+	(wire
+		(pts
 			(xy 177.8 67.31) (xy 189.23 67.31)
 		)
 		(stroke
@@ -5731,16 +5532,6 @@
 			(type default)
 		)
 		(uuid "3671715b-ac91-41fb-bf37-8edb222f9cfb")
-	)
-	(wire
-		(pts
-			(xy 234.95 41.91) (xy 224.79 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "36b8d940-6c12-43e5-a57e-be617e309e37")
 	)
 	(wire
 		(pts
@@ -5914,13 +5705,13 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 167.64) (xy 63.5 167.64)
+			(xy 173.99 105.41) (xy 189.23 105.41)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "50e3f063-78a6-4339-a76c-cd23ec9a2fcd")
+		(uuid "51d51374-394a-407b-959e-00f10a5825bd")
 	)
 	(wire
 		(pts
@@ -5951,16 +5742,6 @@
 			(type default)
 		)
 		(uuid "53d2cad0-a14c-43bd-97b6-cfff3f52b48f")
-	)
-	(wire
-		(pts
-			(xy 49.53 170.18) (xy 63.5 170.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "54005202-3ee0-4cba-ac62-034178fd179e")
 	)
 	(wire
 		(pts
@@ -6014,6 +5795,16 @@
 	)
 	(wire
 		(pts
+			(xy 237.49 44.45) (xy 224.79 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5c79bbe2-bf82-4f74-9e0c-e0be954c31f4")
+	)
+	(wire
+		(pts
 			(xy 259.08 218.44) (xy 276.86 218.44)
 		)
 		(stroke
@@ -6021,6 +5812,16 @@
 			(type default)
 		)
 		(uuid "5cad81ff-286d-4651-b2f7-489764d8eeed")
+	)
+	(wire
+		(pts
+			(xy 173.99 110.49) (xy 189.23 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5de1c03d-1848-4a6d-8545-3eea6ecb4de5")
 	)
 	(wire
 		(pts
@@ -6211,6 +6012,16 @@
 			(type default)
 		)
 		(uuid "6f9395c0-d9a7-4119-ad4e-0a8ab62677f2")
+	)
+	(wire
+		(pts
+			(xy 237.49 46.99) (xy 224.79 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ff1ab4f-e974-444c-ade4-dfa54e4d1ac7")
 	)
 	(wire
 		(pts
@@ -6484,6 +6295,16 @@
 	)
 	(wire
 		(pts
+			(xy 176.53 100.33) (xy 189.23 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8625984c-44ca-4df8-9ccc-514b8c9150d8")
+	)
+	(wire
+		(pts
 			(xy 193.04 160.02) (xy 210.82 160.02)
 		)
 		(stroke
@@ -6531,6 +6352,16 @@
 			(type default)
 		)
 		(uuid "88ad9686-c6b6-47b5-9143-72d35814a901")
+	)
+	(wire
+		(pts
+			(xy 177.8 54.61) (xy 189.23 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8970b497-4bc1-49ba-bae7-cb58e0600de2")
 	)
 	(wire
 		(pts
@@ -6674,6 +6505,16 @@
 	)
 	(wire
 		(pts
+			(xy 237.49 41.91) (xy 224.79 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9e6bfcce-4221-49d4-898d-c00ff22a14bf")
+	)
+	(wire
+		(pts
 			(xy 259.08 198.12) (xy 276.86 198.12)
 		)
 		(stroke
@@ -6794,6 +6635,16 @@
 	)
 	(wire
 		(pts
+			(xy 173.99 107.95) (xy 189.23 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae1adcff-47f7-4519-948f-7770f18b03de")
+	)
+	(wire
+		(pts
 			(xy 344.17 149.86) (xy 325.12 149.86)
 		)
 		(stroke
@@ -6831,16 +6682,6 @@
 			(type default)
 		)
 		(uuid "b39fb9d3-5227-41ed-9952-b99f02ea1c92")
-	)
-	(wire
-		(pts
-			(xy 49.53 165.1) (xy 68.58 165.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b3faa810-ba06-4a65-b86c-23f07b979aa3")
 	)
 	(wire
 		(pts
@@ -7114,16 +6955,6 @@
 	)
 	(wire
 		(pts
-			(xy 361.95 41.91) (xy 346.71 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d3d3f904-9bdf-416e-ad0f-08288f4c8e42")
-	)
-	(wire
-		(pts
 			(xy 48.26 129.54) (xy 48.26 132.08)
 		)
 		(stroke
@@ -7304,6 +7135,16 @@
 	)
 	(wire
 		(pts
+			(xy 237.49 59.69) (xy 224.79 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e40f64d4-d701-4db3-ba90-210f6438fa6c")
+	)
+	(wire
+		(pts
 			(xy 238.76 80.01) (xy 224.79 80.01)
 		)
 		(stroke
@@ -7451,16 +7292,6 @@
 			(type default)
 		)
 		(uuid "f7ee8b30-ee93-49c4-8534-42ddc14501f3")
-	)
-	(wire
-		(pts
-			(xy 234.95 44.45) (xy 224.79 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fbec11d4-9221-4c34-ab39-a1bc1e3a4d24")
 	)
 	(wire
 		(pts
@@ -26888,6 +26719,18 @@
 		)
 		(uuid "042c2e6f-ade1-4158-a1e1-e8d3da16c059")
 	)
+	(label "SEL_A_BIT_0"
+		(at 237.49 59.69 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify right bottom)
+		)
+		(uuid "057506ed-30bf-4c9f-ae9b-955e06e8e8dc")
+	)
 	(label "APM_FMC_DA3"
 		(at 361.95 92.71 180)
 		(effects
@@ -26919,6 +26762,18 @@
 			(justify left bottom)
 		)
 		(uuid "09c544f7-aa91-450d-acab-abe5cee714bd")
+	)
+	(label "SEL_B_BIT_2"
+		(at 237.49 41.91 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify right bottom)
+		)
+		(uuid "0ac6094e-9bfe-485a-8843-8139133eafb4")
 	)
 	(label "APM_FMC_A23"
 		(at 297.18 80.01 0)
@@ -27052,26 +26907,6 @@
 		)
 		(uuid "19060a43-f623-4101-8dfd-cb5aadedd4b6")
 	)
-	(label "APM_LED_FAIL"
-		(at 361.95 39.37 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "195478ff-e80f-49f8-be21-691eb1884cff")
-	)
-	(label "SR_GPIO1"
-		(at 234.95 41.91 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "1a03006a-82b1-441c-abf3-73c495a5c686")
-	)
 	(label "APM_I2C2_SCL"
 		(at 344.17 142.24 180)
 		(effects
@@ -27174,6 +27009,18 @@
 		)
 		(uuid "28600a94-9919-48c8-ae9d-09f0cbfc663b")
 	)
+	(label "SEL_B_BIT_3"
+		(at 237.49 44.45 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify right bottom)
+		)
+		(uuid "29513fba-a405-422b-aaa6-e1a9eabf3e77")
+	)
 	(label "QSPI_IO_3"
 		(at 342.9 213.36 180)
 		(effects
@@ -27184,15 +27031,15 @@
 		)
 		(uuid "2a89ef49-9375-4070-b6a6-be254c5e4df4")
 	)
-	(label "APM_CAN_TD"
-		(at 63.5 170.18 180)
+	(label "APM_LED_OK"
+		(at 173.99 110.49 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
-		(uuid "2d4ac34a-5cd6-4493-848e-0ef7de415246")
+		(uuid "35bb1883-5d04-49cb-b9a4-e4b712bb2695")
 	)
 	(label "FPGA_UART_RX"
 		(at 344.17 162.56 180)
@@ -27264,6 +27111,30 @@
 		)
 		(uuid "3d363e60-9ef9-493a-ad43-181c54598d13")
 	)
+	(label "SEL_B_BIT_0"
+		(at 176.53 44.45 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "407308fb-e9c5-4e60-90af-75162de6e81a")
+	)
+	(label "SEL_B_BIT_1"
+		(at 176.53 100.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "40ff3e3f-7fbd-45c6-adfd-7cf970c40c83")
+	)
 	(label "APM_FMC_NWAIT"
 		(at 172.72 29.21 0)
 		(effects
@@ -27285,26 +27156,6 @@
 		(uuid "44d2467a-f79a-4535-b155-72e25cf6ef4c")
 	)
 	(label "APM_LED_WARN"
-		(at 361.95 44.45 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "44fdd99e-b019-4af1-8f6f-129b230c8542")
-	)
-	(label "APM_LED_OK"
-		(at 361.95 41.91 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "47bf466e-4f3a-4dc6-b116-ca0575eac9e5")
-	)
-	(label "APM_LED_FAIL"
 		(at 83.82 234.95 0)
 		(effects
 			(font
@@ -27404,7 +27255,7 @@
 		)
 		(uuid "54c93012-55a0-4adb-b7ed-122f99f7516e")
 	)
-	(label "APM_LED_WARN"
+	(label "APM_LED_FAIL"
 		(at 62.23 234.95 0)
 		(effects
 			(font
@@ -27433,6 +27284,16 @@
 			(justify right bottom)
 		)
 		(uuid "58cd08cd-169d-4cba-8427-3f7a5b3c793c")
+	)
+	(label "APM_LED_WARN"
+		(at 173.99 105.41 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "58e57e37-47f3-4efc-81ec-4dfa06462ed5")
 	)
 	(label "APM_FMC_A21"
 		(at 297.18 85.09 0)
@@ -27646,16 +27507,6 @@
 		)
 		(uuid "80dd4fde-7fa6-462f-aac6-b06e039d1678")
 	)
-	(label "APM_CAN_RD"
-		(at 63.5 167.64 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "811c8404-6b51-43fb-a720-b6c76da3718f")
-	)
 	(label "THRM_C"
 		(at 120.65 80.01 0)
 		(effects
@@ -27695,6 +27546,18 @@
 			(justify right bottom)
 		)
 		(uuid "8490c521-c860-4c79-b835-f4446cf78086")
+	)
+	(label "SEL_A_BIT_1"
+		(at 237.49 62.23 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify right bottom)
+		)
+		(uuid "84d3b03c-19f4-4448-b1e6-e8cfdd8e1484")
 	)
 	(label "APM_I2C2_SCL"
 		(at 24.13 185.42 0)
@@ -28192,6 +28055,16 @@
 		)
 		(uuid "c4d6601a-9b0b-4fa2-b88c-70e26167b8d0")
 	)
+	(label "APM_LED_FAIL"
+		(at 173.99 107.95 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c6e27cb4-87a7-4686-8697-1ee1a6f7a4a6")
+	)
 	(label "NC"
 		(at 307.34 54.61 0)
 		(effects
@@ -28261,16 +28134,6 @@
 			(justify right bottom)
 		)
 		(uuid "cea697df-37ba-4d00-95d4-0586d00d3b62")
-	)
-	(label "SR_GPIO2"
-		(at 234.95 44.45 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "d49e2cc6-8535-4856-97d0-afeceb8f3598")
 	)
 	(label "APM_FMC_DA14"
 		(at 259.08 189.23 0)
@@ -28424,6 +28287,18 @@
 		)
 		(uuid "e4b91f3a-dd3b-40d5-ac4f-023173048c62")
 	)
+	(label "SEL_A_BIT_3"
+		(at 237.49 46.99 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify right bottom)
+		)
+		(uuid "e4f8a2f3-e9f3-4ba1-9890-31c460497173")
+	)
 	(label "APM_FMC_DA1"
 		(at 259.08 156.21 0)
 		(effects
@@ -28535,6 +28410,18 @@
 			(justify left bottom)
 		)
 		(uuid "f1829ed6-18bd-40cd-b855-2f93e3f53a8b")
+	)
+	(label "SEL_A_BIT_2"
+		(at 177.8 54.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "f1ae7bb9-a15d-4810-8b72-1a8ac8831366")
 	)
 	(label "NC"
 		(at 350.52 57.15 180)
@@ -28729,7 +28616,7 @@
 			(uuid "61e5a6f1-1e94-43ab-95b6-0d01a17cd96f")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#FLG02")
 					(unit 1)
@@ -28808,7 +28695,7 @@
 			(uuid "332bfd09-cef8-4291-b3ce-72851f766b30")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "TP4")
 					(unit 1)
@@ -28912,7 +28799,7 @@
 			(uuid "a8395a8a-a369-44b5-9f98-568ecbf84298")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "R41")
 					(unit 1)
@@ -28991,7 +28878,7 @@
 			(uuid "2f4ac25e-9ca0-4a16-af59-0f5bcb092a62")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR088")
 					(unit 1)
@@ -29267,7 +29154,7 @@
 			(uuid "d87aacbb-2904-4e1f-93b3-59e9b50e863a")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "J6")
 					(unit 1)
@@ -29346,7 +29233,7 @@
 			(uuid "87012cc8-684b-4345-a9ea-30edb2de231b")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR0163")
 					(unit 1)
@@ -29425,7 +29312,7 @@
 			(uuid "063a6fdf-3093-4b82-b570-ae61c1059945")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR093")
 					(unit 1)
@@ -29467,7 +29354,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_1.5x1.5mm"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 107.95 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -29504,7 +29391,7 @@
 			(uuid "2f12f57d-aea4-488b-bc33-04a2ecc73174")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "TP3")
 					(unit 1)
@@ -29597,7 +29484,7 @@
 			(uuid "db0b3e3c-5055-48ec-9d79-6af5541c60db")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "D15")
 					(unit 1)
@@ -29676,7 +29563,7 @@
 			(uuid "cb59b173-22e0-4bce-96fc-468dfe8caec8")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR0139")
 					(unit 1)
@@ -29753,7 +29640,7 @@
 			(uuid "988f43b8-9869-43f4-9084-37c083a9f806")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR017")
 					(unit 1)
@@ -29839,7 +29726,7 @@
 			(uuid "0340b864-6f89-4c4f-8bd4-06380e521160")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "J4")
 					(unit 1)
@@ -29880,7 +29767,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_1.5x1.5mm"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 107.95 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -29917,7 +29804,7 @@
 			(uuid "32c2a51f-2a7a-4091-b389-5322014fad16")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "TP5")
 					(unit 1)
@@ -29996,7 +29883,7 @@
 			(uuid "ee6463e8-3ef1-40e5-a4cb-df52c8e07c84")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR094")
 					(unit 1)
@@ -30075,7 +29962,7 @@
 			(uuid "3c5aa2f4-89b9-4d98-9129-480cddda40cb")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR0114")
 					(unit 1)
@@ -30154,7 +30041,7 @@
 			(uuid "cd103f6c-24de-4461-a3c1-ef4fb20aae55")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR0101")
 					(unit 1)
@@ -30233,7 +30120,7 @@
 			(uuid "3885e19d-6fb2-4f71-95ca-5363d1b538a0")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR092")
 					(unit 1)
@@ -30312,7 +30199,7 @@
 			(uuid "71257dfe-c985-4cd3-b200-1fdb3800143e")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR095")
 					(unit 1)
@@ -30391,7 +30278,7 @@
 			(uuid "2d673295-ca42-43a4-96eb-2c59d18a38e2")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR090")
 					(unit 1)
@@ -30470,7 +30357,7 @@
 			(uuid "62cf9b88-1548-440c-b07d-d66602866c30")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR0148")
 					(unit 1)
@@ -30548,7 +30435,7 @@
 			(uuid "f315dfee-be65-40eb-96ce-15eb0ccf9182")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR015")
 					(unit 1)
@@ -30625,7 +30512,7 @@
 			(uuid "3b4f4a78-a33b-4bb3-a010-9d64c598c994")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "5v1")
 					(unit 1)
@@ -30703,7 +30590,7 @@
 			(uuid "37f53838-f290-41b9-8140-2d6c36c3e3ce")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR0117")
 					(unit 1)
@@ -30785,7 +30672,7 @@
 			(uuid "00ae6e6a-d246-460d-9e53-a136f61fc2b1")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "C17")
 					(unit 1)
@@ -30864,7 +30751,7 @@
 			(uuid "58469a7b-9c1d-4219-9ef0-f5550b767cdb")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR02")
 					(unit 1)
@@ -30941,7 +30828,7 @@
 			(uuid "15ebb5aa-df2a-4964-ad03-187c6e3ba76b")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "GND1")
 					(unit 1)
@@ -31019,7 +30906,7 @@
 			(uuid "7e0f6b07-b653-4816-8833-f4dfeb70d537")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR0116")
 					(unit 1)
@@ -31098,7 +30985,7 @@
 			(uuid "85ca02bf-0e76-432d-94d9-ff03603618db")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR074")
 					(unit 1)
@@ -31177,7 +31064,7 @@
 			(uuid "ec1ac987-6991-4bbe-aa17-47cb2eb3a6b7")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR0161")
 					(unit 1)
@@ -31256,7 +31143,7 @@
 			(uuid "9c4464e8-26e4-4039-812a-6e11ee43d926")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "TP9")
 					(unit 1)
@@ -31335,7 +31222,7 @@
 			(uuid "92d80aed-cffc-4473-9231-6794cf98363a")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR0130")
 					(unit 1)
@@ -31414,7 +31301,7 @@
 			(uuid "49a3884f-24ac-49d8-b2d5-aff3000ac3de")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR0100")
 					(unit 1)
@@ -31493,7 +31380,7 @@
 			(uuid "b14f9264-ef71-4d86-87d7-cf35e9d54f4f")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR086")
 					(unit 1)
@@ -31571,7 +31458,7 @@
 			(uuid "711e4d3d-13c1-47b6-8bfd-3154c23e5a16")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR0118")
 					(unit 1)
@@ -31861,7 +31748,7 @@
 			(uuid "e3bcc6ef-1357-480a-9c75-25dbabc18a43")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "U1")
 					(unit 1)
@@ -31940,7 +31827,7 @@
 			(uuid "13345355-c30b-4d6f-aaa4-d31abeb0a6c1")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR054")
 					(unit 1)
@@ -32033,7 +31920,7 @@
 			(uuid "8dca44c9-ce9c-4137-85cb-8d84535d7cba")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "D18")
 					(unit 1)
@@ -32111,7 +31998,7 @@
 			(uuid "f1e17680-1d37-4c01-9238-7ddc076a768c")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR068")
 					(unit 1)
@@ -32213,7 +32100,7 @@
 			(uuid "edfede52-f350-4ea1-944a-9b5710809684")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "R49")
 					(unit 1)
@@ -32291,7 +32178,7 @@
 			(uuid "e7a53ff7-5f1f-4d04-b01c-a99bf0b034d3")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR0115")
 					(unit 1)
@@ -32395,7 +32282,7 @@
 			(uuid "1a1145c6-275a-4a51-9725-877defb0c184")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "R39")
 					(unit 1)
@@ -32488,7 +32375,7 @@
 			(uuid "fe5fa84c-e704-40f0-b259-cee835fe1239")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "D17")
 					(unit 1)
@@ -32567,88 +32454,9 @@
 			(uuid "4ae5a00b-ecf1-4d66-9b34-cab45676cdcb")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR084")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 68.58 165.1 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a528d246-bd69-4e1b-a8ff-4bb089f8a090")
-		(property "Reference" "#PWR08"
-			(at 68.58 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 71.12 166.3699 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 68.58 165.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 68.58 165.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 68.58 165.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "74c10fd8-5f12-45c5-acf9-63bfa2a73035")
-		)
-		(instances
-			(project "APM"
-				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
-					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -32750,7 +32558,7 @@
 			(uuid "3f986a1f-a283-487a-8cb5-6f77bf6f3b48")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "R38")
 					(unit 1)
@@ -32852,7 +32660,7 @@
 			(uuid "daf244f4-b030-438b-bc84-0e793c6d483b")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "R50")
 					(unit 1)
@@ -33142,92 +32950,9 @@
 			(uuid "39a7dd1e-f485-4247-9123-f75e89539d91")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "U10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x03")
-		(at 44.45 167.64 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "adeefdf4-d8e9-4f98-940d-a406f999306f")
-		(property "Reference" "J2"
-			(at 44.45 158.75 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "CAN"
-			(at 44.45 161.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
-			(at 44.45 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 44.45 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 44.45 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d1d53421-45bf-4218-bd18-f3d0a0d15bd4")
-		)
-		(pin "2"
-			(uuid "72daf94a-f1b2-45ed-9e17-7d08fc0d3228")
-		)
-		(pin "3"
-			(uuid "cad80492-1810-4a20-990e-539fe75bc48d")
-		)
-		(instances
-			(project "APM"
-				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
-					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -33304,7 +33029,7 @@
 			(uuid "6353189b-eec4-402c-80a6-f2cb30620ed3")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR083")
 					(unit 1)
@@ -33383,7 +33108,7 @@
 			(uuid "355f1341-c966-4de4-9adb-9482153d28a3")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR081")
 					(unit 1)
@@ -33462,7 +33187,7 @@
 			(uuid "4a64c70a-6ac3-4eac-838d-641ee12331a8")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR01")
 					(unit 1)
@@ -33566,7 +33291,7 @@
 			(uuid "bf301fd8-dd10-4e1b-ade9-7dbf69cb85d4")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "R40")
 					(unit 1)
@@ -33645,7 +33370,7 @@
 			(uuid "23f93d7b-a533-4a76-a527-3676eab61d80")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR082")
 					(unit 1)
@@ -33724,7 +33449,7 @@
 			(uuid "165067f6-2b94-4dfb-9387-4ef1d578cb9b")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR0164")
 					(unit 1)
@@ -33802,7 +33527,7 @@
 			(uuid "cafc9a60-f665-49e7-9519-50d1eef85b4f")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR03")
 					(unit 1)
@@ -33880,7 +33605,7 @@
 			(uuid "326fcf05-23ab-42c8-a219-61ec11417a36")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR079")
 					(unit 1)
@@ -33920,7 +33645,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_1.5x1.5mm"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 107.95 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -33957,7 +33682,7 @@
 			(uuid "c90c9cca-68ea-488e-bd27-ef99eaa4c6f9")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "TP7")
 					(unit 1)
@@ -34036,7 +33761,7 @@
 			(uuid "233854cc-34a4-4e31-ad16-d0656564cd17")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR0120")
 					(unit 1)
@@ -34115,7 +33840,7 @@
 			(uuid "2ce4d355-499d-4820-8506-c3a08a925e71")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR0149")
 					(unit 1)
@@ -34192,7 +33917,7 @@
 			(uuid "116c5e6e-ed25-47dc-b6a7-f242bb6d78a2")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "3v3")
 					(unit 1)
@@ -34271,7 +33996,7 @@
 			(uuid "7c47ff7d-598c-4cd0-9d32-a87d05970c7e")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR0160")
 					(unit 1)
@@ -34350,7 +34075,7 @@
 			(uuid "8e5da09c-af88-484d-8cbf-f33feab11502")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR0162")
 					(unit 1)
@@ -34429,7 +34154,7 @@
 			(uuid "9274fcaf-939f-48b1-be9c-6ba6ec5fb48a")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR0131")
 					(unit 1)
@@ -34507,7 +34232,7 @@
 			(uuid "ff0b2ce9-edbe-418f-8fe2-0347ae2b833b")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR016")
 					(unit 1)
@@ -34586,7 +34311,7 @@
 			(uuid "2e3aa7f9-1b78-48a4-b3bd-e69d1add9ab8")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR091")
 					(unit 1)
@@ -34665,7 +34390,7 @@
 			(uuid "f5fa0d56-a2d8-4c93-83a1-47dfda923212")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR020")
 					(unit 1)
@@ -34758,7 +34483,7 @@
 			(uuid "d66c8550-d289-4a44-aad6-6d05cf916362")
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "D16")
 					(unit 1)
@@ -34825,7 +34550,7 @@
 			)
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(page "3")
 				)
@@ -34901,7 +34626,7 @@
 			)
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(page "7")
 				)
@@ -34987,7 +34712,7 @@
 			)
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(page "4")
 				)
@@ -35063,7 +34788,7 @@
 			)
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(page "5")
 				)
@@ -35299,7 +35024,7 @@
 			)
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(page "6")
 				)
@@ -35815,7 +35540,7 @@
 			)
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(page "8")
 				)
@@ -35881,7 +35606,7 @@
 			)
 		)
 		(instances
-			(project "APM"
+			(project "kicadrt_analysis_APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(page "2")
 				)
