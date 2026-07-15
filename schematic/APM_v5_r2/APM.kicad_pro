@@ -252,6 +252,10 @@
         {
           "diameter": 0.0,
           "drill": 0.0
+        },
+        {
+          "diameter": 0.5,
+          "drill": 0.3
         }
       ],
       "zones_allow_external_fillets": false
@@ -519,7 +523,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.0917,
+        "clearance": 0.15,
         "diff_pair_gap": 0.1,
         "diff_pair_via_gap": 0.1,
         "diff_pair_width": 0.1,
@@ -530,14 +534,14 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.0762,
+        "track_width": 0.2,
         "tuning_profile": "",
-        "via_diameter": 0.25,
-        "via_drill": 0.15,
+        "via_diameter": 0.3,
+        "via_drill": 0.2,
         "wire_width": 6
       },
       {
-        "clearance": 0.0917,
+        "clearance": 0.15,
         "diff_pair_gap": 0.1,
         "diff_pair_width": 0.1,
         "microvia_diameter": 0.3,
@@ -546,23 +550,23 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.0762,
+        "track_width": 0.2,
         "tuning_profile": "",
         "via_diameter": 0.25,
         "via_drill": 0.15
       },
       {
-        "clearance": 0.0917,
+        "clearance": 0.15,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.2,
         "name": "PWR",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.0762,
+        "track_width": 0.5,
         "tuning_profile": "",
-        "via_diameter": 0.25,
-        "via_drill": 0.15
+        "via_diameter": 0.5,
+        "via_drill": 0.3
       }
     ],
     "meta": {
