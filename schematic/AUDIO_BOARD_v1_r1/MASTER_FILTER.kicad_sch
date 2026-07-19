@@ -1,0 +1,3198 @@
+(kicad_sch
+	(version 20260306) (generator "eeschema") (generator_version "10.0")
+	(uuid "5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f") (paper "A3")
+	(lib_symbols
+(symbol "Amplifier_Operational:OPA1678"
+			(pin_names
+				(offset 0.127)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "OPA1678"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa1678.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Low-Distortion Audio Operational Amplifiers, SOIC-8/VSSOP-8"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "dual opamp"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "OPA1678_1_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "OPA1678_2_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "OPA1678_3_1"
+				(pin power_in line
+					(at -2.54 -7.62 90)
+					(length 3.81)
+					(name "V-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 7.62 270)
+					(length 3.81)
+					(name "V+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "Device:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "power:GND"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "power:+5V"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "+5V"
+				(at 0 3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+5V\""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "+5V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+5V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "power:-5V"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "-5V"
+				(at 0 3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"-5V\""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "-5V_0_0"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "-5V_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy 0.762 1.27) (xy 0 2.54) (xy -0.762 1.27) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "Amplifier_Operational:LM13700"
+			(pin_names
+				(offset 0.127)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 3.81 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LM13700"
+				(at 5.08 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -7.62 0.635 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm13700.pdf"
+				(at -7.62 0.635 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Dual Operational Transconductance Amplifiers with Linearizing Diodes and Buffers, DIP-16/SOIC-16"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "operational transconductance amplifier OTA"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SOIC*3.9x9.9mm*P1.27mm* DIP*W7.62mm*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "LM13700_1_1"
+				(polyline
+					(pts
+						(xy 3.81 -0.635) (xy 3.81 -2.54) (xy 5.08 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08) (xy 5.08 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "DIODE_BIAS"
+						(effects
+							(font
+								(size 0.508 0.508)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "LM13700_2_0"
+				(polyline
+					(pts
+						(xy -1.905 2.54) (xy -3.175 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "LM13700_2_1"
+				(polyline
+					(pts
+						(xy -3.81 1.27) (xy -3.81 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 0.635) (xy -2.54 1.27) (xy -2.54 1.905) (xy -2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 -0.635) (xy -2.54 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -2.54 1.905)
+					(radius 0.254)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 0) (xy -2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -0.635) (xy -1.27 0) (xy -1.27 1.905) (xy -2.54 1.905)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -1.27) (xy -3.175 -0.635) (xy -3.175 -1.27) (xy -2.54 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -1.905) (xy -1.27 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -2.54) (xy -1.905 -1.905) (xy -1.905 -2.54) (xy -1.27 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(text "V+"
+					(at -2.54 3.81 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(pin output line
+					(at 2.54 -2.54 180)
+					(length 3.81)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 0 0)
+					(length 3.81)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "LM13700_3_1"
+				(polyline
+					(pts
+						(xy 3.81 -0.635) (xy 3.81 -2.54) (xy 5.08 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08) (xy 5.08 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "DIODE_BIAS"
+						(effects
+							(font
+								(size 0.508 0.508)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "LM13700_4_0"
+				(polyline
+					(pts
+						(xy -3.175 2.54) (xy -1.905 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(text "V+"
+					(at -2.54 3.81 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(symbol "LM13700_4_1"
+				(polyline
+					(pts
+						(xy -3.81 1.27) (xy -3.81 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 0.635) (xy -2.54 1.27) (xy -2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 -0.635) (xy -2.54 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -2.54 1.905)
+					(radius 0.254)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 0) (xy -2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -0.635) (xy -1.27 0) (xy -1.27 1.905) (xy -2.54 1.905)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -1.27) (xy -3.175 -0.635) (xy -3.175 -1.27) (xy -2.54 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -1.905) (xy -1.27 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -2.54) (xy -1.905 -1.905) (xy -1.905 -2.54) (xy -1.27 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(pin input line
+					(at -7.62 0 0)
+					(length 3.81)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 2.54 -2.54 180)
+					(length 3.81)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "LM13700_5_1"
+				(pin power_in line
+					(at -2.54 -7.62 90)
+					(length 3.81)
+					(name "V-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 7.62 270)
+					(length 3.81)
+					(name "V+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "Device:C_Small"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.254 1.778 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_Small"
+				(at 0.254 -2.032 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Unpolarized capacitor, small symbol"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "capacitor cap"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C_Small_0_1"
+				(polyline
+					(pts
+						(xy -1.524 0.508) (xy 1.524 0.508)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
+					)
+					(stroke
+						(width 0.3302)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_Small_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 2.032)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.032)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "4xxx:4052"
+		(pin_names
+			(offset 1.016)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at -7.62 19.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4052"
+			(at -7.62 -19.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4051bms-52bms-53bms.pdf"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Dual Analog Multiplexer 4 to 1 line"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_locked" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "CMOS MUX MUX4"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "DIP?16*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "4052_1_0"
+			(pin passive line
+				(at -12.7 5.08 0)
+				(length 5.08)
+				(name "Y0"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -12.7 0 0)
+				(length 5.08)
+				(name "Y2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 12.7 5.08 180)
+				(length 5.08)
+				(name "Y"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -12.7 -2.54 0)
+				(length 5.08)
+				(name "Y3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -12.7 2.54 0)
+				(length 5.08)
+				(name "Y1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -12.7 -7.62 0)
+				(length 5.08)
+				(name "Inh"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 2.54 -22.86 90)
+				(length 5.08)
+				(name "VEE"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 -22.86 90)
+				(length 5.08)
+				(name "VSS"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -12.7 -15.24 0)
+				(length 5.08)
+				(name "B"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -12.7 -12.7 0)
+				(length 5.08)
+				(name "A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -12.7 7.62 0)
+				(length 5.08)
+				(name "X3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "11"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -12.7 15.24 0)
+				(length 5.08)
+				(name "X0"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "12"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 12.7 15.24 180)
+				(length 5.08)
+				(name "X"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "13"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -12.7 12.7 0)
+				(length 5.08)
+				(name "X1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "14"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -12.7 10.16 0)
+				(length 5.08)
+				(name "X2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "15"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 22.86 270)
+				(length 5.08)
+				(name "VDD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "16"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "4052_1_1"
+			(rectangle
+				(start -7.62 17.78)
+				(end 7.62 -17.78)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	)
+	(text "MASTER FILTER (stereo)  -  VC state-variable filter 2-pole: LP/HP/BP/notch; CV cutoff + CV resonance; mode-select mux" (exclude_from_sim no) (at 16 14 0) (effects (font (size 2.0 2.0) ) (justify left bottom)) (uuid "b983fe66-d179-446d-90bd-77406a3f2df0"))
+	(text "NOTE: OTA VC-SVF + OTA resonance VCA - prototype/verify levels, Iabc, buffer bias vs LM13700 datasheet before fab. ORDER_SEL reserved for the 2/4-pole cascade." (exclude_from_sim no) (at 16 288 0) (effects (font (size 1.35 1.35) ) (justify left bottom)) (uuid "00b8919a-0b0b-4829-b2f7-dc710e96679d"))
+	(text "CHANNEL L" (exclude_from_sim no) (at 16 30 0) (effects (font (size 2.0 2.0) ) (justify left bottom)) (uuid "c4d6d767-49ce-476c-8e42-3e790a340ea0"))
+	(symbol (lib_id "Amplifier_Operational:OPA1678") (at 54.61 69.85 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "9ba23bcc-404f-4ed0-a353-78e194075541")
+		(property "Reference" "U30" (at 56.61 67.85 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "OPA1678" (at 56.61 71.85 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Package_DIP:DIP-8_W7.62mm_SMDSocket_SmallPads" (at 54.61 69.85 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "U30") (unit 1)))))
+	(wire (pts (xy 40.64 72.39) (xy 46.99 72.39)) (stroke (width 0) (type default)) (uuid "fe2355a0-5ebd-4fff-9147-d62ba90db01f"))
+	(junction (at 40.64 72.39) (diameter 0) (color 0 0 0 0) (uuid "69c97c41-dc54-4dcb-9b6a-fda33f0e2b33"))
+	(symbol (lib_id "Device:R") (at 25.4 72.39 90) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "4cba6548-3c60-4036-a58c-c22f92575b86")
+		(property "Reference" "R100" (at 27.4 68.39 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100k" (at 27.4 76.39 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 25.4 72.39 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R100") (unit 1)))))
+	(wire (pts (xy 29.21 72.39) (xy 40.64 72.39)) (stroke (width 0) (type default)) (uuid "aa812912-9b8b-4887-a6b5-62d990f79097"))
+	(wire (pts (xy 21.59 72.39) (xy 15.24 72.39)) (stroke (width 0) (type default)) (uuid "4bc51a7a-9c7b-4dfa-a61e-9770916ce03e"))
+	(hierarchical_label "AUDIO_L_IN" (shape input) (at 15.24 72.39 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "4837a3dc-0b25-4d92-bf22-30ce1be36902"))
+	(symbol (lib_id "Device:R") (at 25.4 64.77 90) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "e1c1ba21-f88e-41a2-9457-7834072d2de4")
+		(property "Reference" "R101" (at 27.4 60.769999999999996 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100k" (at 27.4 68.77 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 25.4 64.77 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R101") (unit 1)))))
+	(wire (pts (xy 29.21 64.77) (xy 40.64 64.77)) (stroke (width 0) (type default)) (uuid "e3836401-3d3c-4707-a40f-8f874e8d1ce8"))
+	(wire (pts (xy 40.64 64.77) (xy 40.64 72.39)) (stroke (width 0) (type default)) (uuid "a43cdc87-23c6-40f8-a1db-c5809a21cdf6"))
+	(wire (pts (xy 21.59 64.77) (xy 15.24 64.77)) (stroke (width 0) (type default)) (uuid "19738793-6835-4449-bdba-08dd5418fdf2"))
+	(label "LPL" (at 15.24 64.77 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "6059f58a-c614-4a80-a1f5-1b7ad15748e2"))
+	(symbol (lib_id "Device:R") (at 25.4 80.01 90) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "95745fd5-4ad0-490d-9fd2-684394646ddd")
+		(property "Reference" "R102" (at 27.4 76.01 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100k" (at 27.4 84.01 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 25.4 80.01 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R102") (unit 1)))))
+	(wire (pts (xy 29.21 80.01) (xy 40.64 80.01)) (stroke (width 0) (type default)) (uuid "432b218c-e019-4c66-bbae-e59596fcfa99"))
+	(wire (pts (xy 40.64 80.01) (xy 40.64 72.39)) (stroke (width 0) (type default)) (uuid "0960433b-1056-4d1c-bcf0-65a3b86f4585"))
+	(wire (pts (xy 21.59 80.01) (xy 15.24 80.01)) (stroke (width 0) (type default)) (uuid "6322fcfe-a494-49e1-8943-ac7b83a34a77"))
+	(label "RESFBL" (at 15.24 80.01 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "4da53d9b-515f-45a8-9f0d-4eb0fd2ea273"))
+	(symbol (lib_id "Device:R") (at 52.07 58.42 90) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "a2783695-eebd-414c-be80-b559490969fa")
+		(property "Reference" "R103" (at 54.07 54.42 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100k" (at 54.07 62.42 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 52.07 58.42 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R103") (unit 1)))))
+	(wire (pts (xy 40.64 72.39) (xy 40.64 58.42)) (stroke (width 0) (type default)) (uuid "735ae760-2cdf-4f63-9c30-bebb3ccd9736"))
+	(wire (pts (xy 40.64 58.42) (xy 48.26 58.42)) (stroke (width 0) (type default)) (uuid "981925a9-e066-4250-934f-88fecf7de56e"))
+	(wire (pts (xy 55.88 58.42) (xy 62.23 58.42)) (stroke (width 0) (type default)) (uuid "015ac7e9-a719-49ed-a9e0-0ac451877668"))
+	(wire (pts (xy 62.23 58.42) (xy 62.23 69.85)) (stroke (width 0) (type default)) (uuid "af8cc17f-b418-4557-bd33-fe883f55624f"))
+	(junction (at 62.23 69.85) (diameter 0) (color 0 0 0 0) (uuid "1b82dbde-f2c6-428d-8a81-5d9dd6081064"))
+	(wire (pts (xy 46.99 67.31) (xy 44.45 67.31)) (stroke (width 0) (type default)) (uuid "86a5ae90-e031-4dd0-9038-0805d37aed4f"))
+	(symbol (lib_id "power:GND") (at 44.45 67.31 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "5aead72a-8a02-47ce-a026-063d372a0372")
+		(property "Reference" "#PWR501" (at 44.45 70.31 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 44.45 64.31 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR501") (unit 1)))))
+	(wire (pts (xy 62.23 69.85) (xy 69.85 69.85)) (stroke (width 0) (type default)) (uuid "db6519b0-023c-4b50-9a38-3641bbdbed0f"))
+	(label "HPL" (at 69.85 69.85 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "58cef0a7-40d4-4b7c-936c-f3abf8be37a3"))
+	(wire (pts (xy 52.07 62.23) (xy 52.07 58.42)) (stroke (width 0) (type default)) (uuid "e1b99fe8-63a5-448d-a780-27e993e836a1"))
+	(symbol (lib_id "power:+5V") (at 52.07 58.42 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "4e4f1c04-7322-4816-a543-f59107fb41e0")
+		(property "Reference" "#PWR502" (at 52.07 61.42 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "+5V" (at 52.07 55.42 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR502") (unit 1)))))
+	(wire (pts (xy 52.07 77.47) (xy 52.07 81.28)) (stroke (width 0) (type default)) (uuid "4e614659-5440-4db1-b0bb-8808d25ef5da"))
+	(symbol (lib_id "power:-5V") (at 52.07 81.28 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "595b7429-610a-49a0-8922-4cba7165b03b")
+		(property "Reference" "#PWR503" (at 52.07 84.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "-5V" (at 52.07 78.28 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR503") (unit 1)))))
+	(symbol (lib_id "Amplifier_Operational:OPA1678") (at 54.61 39.37 0) (unit 2)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "a5503183-2c89-4c45-a6cb-36b381b067d0")
+		(property "Reference" "U30" (at 56.61 37.37 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "OPA1678" (at 56.61 41.37 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "U30") (unit 2)))))
+	(wire (pts (xy 40.64 41.91) (xy 46.99 41.91)) (stroke (width 0) (type default)) (uuid "64ca2ce3-0823-4297-83af-ea41c161754a"))
+	(junction (at 40.64 41.91) (diameter 0) (color 0 0 0 0) (uuid "a22fa129-2d09-48d4-a2bb-091381092acd"))
+	(symbol (lib_id "Device:R") (at 25.4 41.91 90) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "d854173b-60aa-41e8-816d-b1f6817e0a38")
+		(property "Reference" "R104" (at 27.4 37.91 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100k" (at 27.4 45.91 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 25.4 41.91 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R104") (unit 1)))))
+	(wire (pts (xy 29.21 41.91) (xy 40.64 41.91)) (stroke (width 0) (type default)) (uuid "dbd2fa59-394f-443f-ae6b-1314988a0c4d"))
+	(wire (pts (xy 21.59 41.91) (xy 15.24 41.91)) (stroke (width 0) (type default)) (uuid "31f710cf-b753-4b45-b057-d8a3b8bdeac8"))
+	(label "HPL" (at 15.24 41.91 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "8cb6e87a-60fc-4130-b3c8-a86525c1a0bd"))
+	(symbol (lib_id "Device:R") (at 25.4 34.29 90) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "cd31f0ca-3eb0-4f39-810b-00e22f17c6b0")
+		(property "Reference" "R105" (at 27.4 30.29 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100k" (at 27.4 38.29 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 25.4 34.29 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R105") (unit 1)))))
+	(wire (pts (xy 29.21 34.29) (xy 40.64 34.29)) (stroke (width 0) (type default)) (uuid "b83174de-fee8-4e94-80f1-e50842861399"))
+	(wire (pts (xy 40.64 34.29) (xy 40.64 41.91)) (stroke (width 0) (type default)) (uuid "cd84cbb3-097b-43ac-8df4-9707df7122b0"))
+	(wire (pts (xy 21.59 34.29) (xy 15.24 34.29)) (stroke (width 0) (type default)) (uuid "4bd92a11-582f-48cf-93b2-c5360e019975"))
+	(label "LPL" (at 15.24 34.29 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "050cd6e6-710d-49fb-8ea9-298fb6eb29a6"))
+	(symbol (lib_id "Device:R") (at 52.07 53.34 90) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "56bbee1a-6463-4c21-ab14-215b5b820798")
+		(property "Reference" "R106" (at 54.07 49.34 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100k" (at 54.07 57.34 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 52.07 53.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R106") (unit 1)))))
+	(wire (pts (xy 40.64 41.91) (xy 40.64 53.34)) (stroke (width 0) (type default)) (uuid "c84c5dca-7dbf-44bd-81d3-2c6e0700ce1d"))
+	(wire (pts (xy 40.64 53.34) (xy 48.26 53.34)) (stroke (width 0) (type default)) (uuid "ceb80c8d-2581-41f5-8715-0cc865c93a55"))
+	(wire (pts (xy 55.88 53.34) (xy 62.23 53.34)) (stroke (width 0) (type default)) (uuid "0993b82b-5861-4581-87f2-efc2d81aa4d9"))
+	(wire (pts (xy 62.23 53.34) (xy 62.23 39.37)) (stroke (width 0) (type default)) (uuid "08a7a1cb-897e-49c7-94ab-d900930f3b15"))
+	(junction (at 62.23 39.37) (diameter 0) (color 0 0 0 0) (uuid "1e315b25-d6e3-4a59-a9f0-c96063fd00d2"))
+	(wire (pts (xy 46.99 36.83) (xy 44.45 36.83)) (stroke (width 0) (type default)) (uuid "2f292436-ea16-4dcb-809d-f517a9b33ae2"))
+	(symbol (lib_id "power:GND") (at 44.45 36.83 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "044fd2e0-c08b-41d7-a124-9fc9b79a4e30")
+		(property "Reference" "#PWR504" (at 44.45 39.83 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 44.45 33.83 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR504") (unit 1)))))
+	(wire (pts (xy 62.23 39.37) (xy 69.85 39.37)) (stroke (width 0) (type default)) (uuid "d38ed805-d5f0-45a4-aaaa-b5ece24b2b1e"))
+	(label "NOTCHL" (at 69.85 39.37 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "8e38fd52-1173-4dc3-b564-7180806fb1a0"))
+	(symbol (lib_id "Amplifier_Operational:LM13700") (at 110.49 58.42 0) (unit 3)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "b0c36a29-fad8-4f1e-8df0-6e5d307e0991")
+		(property "Reference" "U31" (at 112.49 56.42 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LM13700" (at 112.49 60.42 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" (at 110.49 58.42 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "U31") (unit 3)))))
+	(symbol (lib_id "Device:R") (at 86.36 60.96 90) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "b1b9ce97-65d7-4fe0-82ff-d63d5ca37c27")
+		(property "Reference" "R110" (at 88.36 56.96 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "22k" (at 88.36 64.96000000000001 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 86.36 60.96 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R110") (unit 1)))))
+	(wire (pts (xy 90.17 60.96) (xy 102.87 60.96)) (stroke (width 0) (type default)) (uuid "f7bee4ec-e949-48a2-bdf5-bbbbf8672452"))
+	(wire (pts (xy 82.55 60.96) (xy 76.2 60.96)) (stroke (width 0) (type default)) (uuid "1d7aa1fd-8726-403d-b708-4a12ec14cf55"))
+	(label "HPL" (at 76.2 60.96 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "1140402b-e617-4b5d-a0e7-30a4adfe089c"))
+	(symbol (lib_id "Device:R") (at 82.55 68.58 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "84f4dbf3-d031-411b-8b00-ea8b520d8233")
+		(property "Reference" "R111" (at 84.55 66.58 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "220R" (at 84.55 70.58 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 82.55 68.58 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R111") (unit 1)))))
+	(wire (pts (xy 82.55 60.96) (xy 82.55 64.77)) (stroke (width 0) (type default)) (uuid "fb12448b-d4c1-4e89-9e87-79401d1b7291"))
+	(junction (at 82.55 60.96) (diameter 0) (color 0 0 0 0) (uuid "6608d609-6544-417c-be2f-be579e76af29"))
+	(wire (pts (xy 82.55 72.39) (xy 82.55 76.2)) (stroke (width 0) (type default)) (uuid "3fdccbc3-0f9a-45c6-997a-a16f2772cde6"))
+	(symbol (lib_id "power:GND") (at 82.55 76.2 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "c4e562d1-5139-4f7f-ac48-f1b85006da82")
+		(property "Reference" "#PWR505" (at 82.55 79.2 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 82.55 73.2 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR505") (unit 1)))))
+	(wire (pts (xy 102.87 55.88) (xy 99.06 55.88)) (stroke (width 0) (type default)) (uuid "67ec70cb-6c96-4922-9a46-c5a85f5806ac"))
+	(symbol (lib_id "power:GND") (at 99.06 55.88 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "5ffee9c1-3059-4a30-ac42-ac07a771f5d0")
+		(property "Reference" "#PWR506" (at 99.06 58.88 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 99.06 52.88 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR506") (unit 1)))))
+	(wire (pts (xy 118.11 60.96) (xy 118.11 67.31)) (stroke (width 0) (type default)) (uuid "567f4896-109e-4a1d-b756-28224cabc22e"))
+	(symbol (lib_id "Device:R") (at 134.62 67.31 90) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "1cfc3a87-2274-491f-a78d-e294ff50ee9c")
+		(property "Reference" "R112" (at 136.62 63.31 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100k" (at 136.62 71.31 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 134.62 67.31 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R112") (unit 1)))))
+	(wire (pts (xy 118.11 67.31) (xy 130.81 67.31)) (stroke (width 0) (type default)) (uuid "9618be1c-1fb2-4a7c-b43a-b8b770bca962"))
+	(wire (pts (xy 138.43 67.31) (xy 144.78 67.31)) (stroke (width 0) (type default)) (uuid "827c2126-fdd8-48c6-8b56-0b9963ab7e95"))
+	(hierarchical_label "CV_CUTOFF" (shape input) (at 144.78 67.31 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "241d4a95-1dbf-4026-a69c-2259483d5c3c"))
+	(symbol (lib_id "Device:C_Small") (at 124.46 66.04 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "46434312-f5e4-49b3-b9fc-c2f5a12a0a20")
+		(property "Reference" "C110" (at 126.46 64.04 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "1nF" (at 126.46 68.04 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 124.46 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "C110") (unit 1)))))
+	(wire (pts (xy 118.11 58.42) (xy 124.46 58.42)) (stroke (width 0) (type default)) (uuid "468f7afb-d1a7-4fa6-b343-fd3846252fe4"))
+	(wire (pts (xy 124.46 58.42) (xy 124.46 63.5)) (stroke (width 0) (type default)) (uuid "f8ea32c9-ee0b-43a6-a69d-d2ccf456ac1c"))
+	(junction (at 124.46 58.42) (diameter 0) (color 0 0 0 0) (uuid "9ea36779-a159-4b9c-8b93-93c8035822a7"))
+	(wire (pts (xy 124.46 68.58) (xy 124.46 72.39)) (stroke (width 0) (type default)) (uuid "a46b5ae7-1b97-4430-a0d4-71520ec57cd0"))
+	(symbol (lib_id "power:GND") (at 124.46 72.39 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "b0f3456a-517e-49ee-b554-48d4cf2da8cd")
+		(property "Reference" "#PWR507" (at 124.46 75.39 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 124.46 69.39 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR507") (unit 1)))))
+	(symbol (lib_id "Amplifier_Operational:LM13700") (at 139.7 58.42 0) (unit 4)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "cf72ee2c-9978-4cfa-ba40-4c80848f3e04")
+		(property "Reference" "U31" (at 141.7 56.42 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LM13700" (at 141.7 60.42 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "U31") (unit 4)))))
+	(wire (pts (xy 118.11 58.42) (xy 132.08 58.42)) (stroke (width 0) (type default)) (uuid "e106e984-c10e-4ff2-8818-9047730579fb"))
+	(wire (pts (xy 132.08 58.42) (xy 132.08 58.42)) (stroke (width 0) (type default)) (uuid "3f75a8ad-2fef-4639-a80b-da6874fb11fd"))
+	(wire (pts (xy 132.08 58.42) (xy 132.08 58.42)) (stroke (width 0) (type default)) (uuid "b934a434-e6cf-41f4-a399-c9e8ad393f86"))
+	(symbol (lib_id "Device:R") (at 148.59 68.58 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "25d2cbbe-d303-4f22-8ad3-8f3a7715530c")
+		(property "Reference" "R113" (at 150.59 66.58 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "10k" (at 150.59 70.58 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 148.59 68.58 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R113") (unit 1)))))
+	(wire (pts (xy 142.24 60.96) (xy 148.59 60.96)) (stroke (width 0) (type default)) (uuid "bced5a92-5d2f-4326-96c7-3cedf23c2fe6"))
+	(wire (pts (xy 148.59 60.96) (xy 148.59 64.77)) (stroke (width 0) (type default)) (uuid "2c9466e9-d3f2-4638-8327-bfdfcd676066"))
+	(junction (at 142.24 60.96) (diameter 0) (color 0 0 0 0) (uuid "1b2b5e39-807b-4a88-bfe9-547a7fce3b9a"))
+	(wire (pts (xy 148.59 72.39) (xy 148.59 76.2)) (stroke (width 0) (type default)) (uuid "6761e87c-c8e8-448e-8e14-e1027bc24352"))
+	(symbol (lib_id "power:-5V") (at 148.59 76.2 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "25200e91-3f0b-487d-8cdb-e9a30c573f23")
+		(property "Reference" "#PWR508" (at 148.59 79.2 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "-5V" (at 148.59 73.2 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR508") (unit 1)))))
+	(wire (pts (xy 142.24 60.96) (xy 151.13 60.96)) (stroke (width 0) (type default)) (uuid "f6b02344-67f0-4b41-887c-4cc7a7bcc77e"))
+	(label "BPL" (at 151.13 60.96 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "f55722ea-e67e-4924-9909-e536b774bc99"))
+	(symbol (lib_id "Amplifier_Operational:LM13700") (at 110.49 86.36 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "cb14c9a2-d9c4-4cb2-b79b-464e87fb3f05")
+		(property "Reference" "U31" (at 112.49 84.36 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LM13700" (at 112.49 88.36 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+		(property "Footprint" "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" (at 110.49 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "U31") (unit 1)))))
+	(symbol (lib_id "Device:R") (at 86.36 88.9 90) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "88319953-8549-4535-8360-e6bc746b0096")
+		(property "Reference" "R114" (at 88.36 84.9 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "22k" (at 88.36 92.9 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 86.36 88.9 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R114") (unit 1)))))
+	(wire (pts (xy 90.17 88.9) (xy 102.87 88.9)) (stroke (width 0) (type default)) (uuid "fd9bb330-e96a-4078-b8cf-092e4248b8b5"))
+	(wire (pts (xy 82.55 88.9) (xy 76.2 88.9)) (stroke (width 0) (type default)) (uuid "9ee2e87e-a50f-402f-87ae-ed3854888a8c"))
+	(label "BPL" (at 76.2 88.9 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "b806a50a-c8e1-4304-9cce-88e6f9464ba9"))
+	(symbol (lib_id "Device:R") (at 82.55 96.52 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "6b498118-eb27-4cc7-9aae-bd6297db8cb5")
+		(property "Reference" "R115" (at 84.55 94.52 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "220R" (at 84.55 98.52 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 82.55 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R115") (unit 1)))))
+	(wire (pts (xy 82.55 88.9) (xy 82.55 92.71)) (stroke (width 0) (type default)) (uuid "d39031da-1c3d-4abc-98e7-33ec36ab8ab1"))
+	(junction (at 82.55 88.9) (diameter 0) (color 0 0 0 0) (uuid "7b0dddb7-4e42-4072-ab9e-375597959c73"))
+	(wire (pts (xy 82.55 100.33) (xy 82.55 104.14)) (stroke (width 0) (type default)) (uuid "08a3c835-cafb-4eb6-b7f3-10c29e5c93e3"))
+	(symbol (lib_id "power:GND") (at 82.55 104.14 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "a6d7e218-9303-4d46-8619-8e3131148276")
+		(property "Reference" "#PWR509" (at 82.55 107.14 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 82.55 101.14 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR509") (unit 1)))))
+	(wire (pts (xy 102.87 83.82) (xy 99.06 83.82)) (stroke (width 0) (type default)) (uuid "ee484a94-ae38-4e96-beab-53299d2671f7"))
+	(symbol (lib_id "power:GND") (at 99.06 83.82 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "c59ec45c-0631-427c-9bbf-9969b6240a22")
+		(property "Reference" "#PWR510" (at 99.06 86.82 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 99.06 80.82 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR510") (unit 1)))))
+	(wire (pts (xy 118.11 88.9) (xy 118.11 95.25)) (stroke (width 0) (type default)) (uuid "ae82487f-83c2-4fda-9799-b8d108ae4467"))
+	(symbol (lib_id "Device:R") (at 134.62 95.25 90) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "dbe4c1ba-c2dc-422f-b879-1fd33a26c4bd")
+		(property "Reference" "R116" (at 136.62 91.25 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100k" (at 136.62 99.25 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 134.62 95.25 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R116") (unit 1)))))
+	(wire (pts (xy 118.11 95.25) (xy 130.81 95.25)) (stroke (width 0) (type default)) (uuid "175b3bf8-346b-4687-9592-83910625fdfd"))
+	(wire (pts (xy 138.43 95.25) (xy 144.78 95.25)) (stroke (width 0) (type default)) (uuid "504565c0-8802-4f10-a9f9-4ded428f6154"))
+	(hierarchical_label "CV_CUTOFF" (shape input) (at 144.78 95.25 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "7dd4ba34-8ce9-4729-9467-58a670d9c713"))
+	(symbol (lib_id "Device:C_Small") (at 124.46 93.98 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "e7611894-76af-47c7-9549-4b2f6839cb69")
+		(property "Reference" "C114" (at 126.46 91.98 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "1nF" (at 126.46 95.98 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 124.46 93.98 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "C114") (unit 1)))))
+	(wire (pts (xy 118.11 86.36) (xy 124.46 86.36)) (stroke (width 0) (type default)) (uuid "28cd0971-6c3a-439f-b16b-51b1adda82df"))
+	(wire (pts (xy 124.46 86.36) (xy 124.46 91.44)) (stroke (width 0) (type default)) (uuid "d93145f5-1e7f-4726-b105-8659ba43e43a"))
+	(junction (at 124.46 86.36) (diameter 0) (color 0 0 0 0) (uuid "81f956cf-1daa-49f4-baec-18f02de7ff9c"))
+	(wire (pts (xy 124.46 96.52) (xy 124.46 100.33)) (stroke (width 0) (type default)) (uuid "f76f58b8-23d3-47ba-8a12-fe67828a82f2"))
+	(symbol (lib_id "power:GND") (at 124.46 100.33 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "190504ea-7156-48dd-bdd0-e3f197975880")
+		(property "Reference" "#PWR511" (at 124.46 103.33 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 124.46 97.33 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR511") (unit 1)))))
+	(symbol (lib_id "Amplifier_Operational:LM13700") (at 139.7 86.36 0) (unit 2)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "93bd3de9-e142-4389-ba19-375c6be4859b")
+		(property "Reference" "U31" (at 141.7 84.36 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LM13700" (at 141.7 88.36 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "U31") (unit 2)))))
+	(wire (pts (xy 118.11 86.36) (xy 132.08 86.36)) (stroke (width 0) (type default)) (uuid "05ed9eca-fbc7-4762-8661-f805407e5dce"))
+	(wire (pts (xy 132.08 86.36) (xy 132.08 86.36)) (stroke (width 0) (type default)) (uuid "5768eaef-14d9-46b3-bfeb-09c14d5579b5"))
+	(wire (pts (xy 132.08 86.36) (xy 132.08 86.36)) (stroke (width 0) (type default)) (uuid "9b0c21c2-a0d8-4cec-9c7a-9245d3d3f296"))
+	(symbol (lib_id "Device:R") (at 148.59 96.52 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "1d5b1202-4c84-4495-a592-0c7760d59604")
+		(property "Reference" "R117" (at 150.59 94.52 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "10k" (at 150.59 98.52 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 148.59 96.52 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R117") (unit 1)))))
+	(wire (pts (xy 142.24 88.9) (xy 148.59 88.9)) (stroke (width 0) (type default)) (uuid "05b4184d-19d5-441d-a923-213562144d6f"))
+	(wire (pts (xy 148.59 88.9) (xy 148.59 92.71)) (stroke (width 0) (type default)) (uuid "3141e9d3-61d9-40c6-85e2-ec5462a0b707"))
+	(junction (at 142.24 88.9) (diameter 0) (color 0 0 0 0) (uuid "14e1f6c3-2292-41bf-abf3-37f69e9a3cc6"))
+	(wire (pts (xy 148.59 100.33) (xy 148.59 104.14)) (stroke (width 0) (type default)) (uuid "e25b7210-bf49-48d1-a183-188c0f421320"))
+	(symbol (lib_id "power:-5V") (at 148.59 104.14 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "7eda42c5-bc9c-45a8-973b-e2695a7edf84")
+		(property "Reference" "#PWR512" (at 148.59 107.14 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "-5V" (at 148.59 101.14 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR512") (unit 1)))))
+	(wire (pts (xy 142.24 88.9) (xy 151.13 88.9)) (stroke (width 0) (type default)) (uuid "0b422c46-e979-4d0d-9156-e860dd988ca9"))
+	(label "LPL" (at 151.13 88.9 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "ec4b582f-d6f4-493c-9782-684a1c7ce995"))
+	(symbol (lib_id "Amplifier_Operational:LM13700") (at 167.64 72.39 0) (unit 5)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "6a8a47d4-1747-4dd4-844b-07551af3827a")
+		(property "Reference" "U31" (at 169.64 70.39 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LM13700" (at 169.64 74.39 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "U31") (unit 5)))))
+	(wire (pts (xy 165.1 64.77) (xy 165.1 60.96)) (stroke (width 0) (type default)) (uuid "177b4f17-2569-4e9c-8e6b-2ad8c2c8121e"))
+	(symbol (lib_id "power:+5V") (at 165.1 60.96 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "e227c476-2507-4f4f-a546-66929f4e6b54")
+		(property "Reference" "#PWR513" (at 165.1 63.96 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "+5V" (at 165.1 57.96 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR513") (unit 1)))))
+	(wire (pts (xy 165.1 80.01) (xy 165.1 83.82)) (stroke (width 0) (type default)) (uuid "f4a6f390-9463-40b0-81af-ee5e23216428"))
+	(symbol (lib_id "power:-5V") (at 165.1 83.82 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "71b982e2-4066-4f45-93c4-b3be6aed9699")
+		(property "Reference" "#PWR514" (at 165.1 86.82 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "-5V" (at 165.1 80.82 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR514") (unit 1)))))
+	(symbol (lib_id "Amplifier_Operational:LM13700") (at 54.61 111.76 0) (unit 3)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "b3cc0ab5-aab3-4080-a366-a6c7bdc5d2ae")
+		(property "Reference" "U32" (at 56.61 109.76 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LM13700" (at 56.61 113.76 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+		(property "Footprint" "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" (at 54.61 111.76 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "U32") (unit 3)))))
+	(symbol (lib_id "Device:R") (at 30.48 114.3 90) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "77c4f754-9b65-42b3-b28e-15f64082cd09")
+		(property "Reference" "R118" (at 32.480000000000004 110.3 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "22k" (at 32.480000000000004 118.3 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 30.48 114.3 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R118") (unit 1)))))
+	(wire (pts (xy 34.29 114.3) (xy 46.99 114.3)) (stroke (width 0) (type default)) (uuid "ed013bd2-4c70-4163-847a-f85165434267"))
+	(wire (pts (xy 26.67 114.3) (xy 20.32 114.3)) (stroke (width 0) (type default)) (uuid "c6cc64c1-95cf-4020-a625-fb936bfdcb32"))
+	(label "BPL" (at 20.32 114.3 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "ffaa0e2c-38e8-42e4-919c-ef5d29427833"))
+	(symbol (lib_id "Device:R") (at 26.67 121.92 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "fb6c0c78-50c3-4559-a114-a23432550ef9")
+		(property "Reference" "R119" (at 28.67 119.92 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "220R" (at 28.67 123.92 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 26.67 121.92 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R119") (unit 1)))))
+	(wire (pts (xy 26.67 114.3) (xy 26.67 118.11)) (stroke (width 0) (type default)) (uuid "01053186-2223-414f-8aaa-b8cbe3cf22ec"))
+	(junction (at 26.67 114.3) (diameter 0) (color 0 0 0 0) (uuid "b8dcc697-306f-4902-9202-93f65eca63b9"))
+	(wire (pts (xy 26.67 125.73) (xy 26.67 129.54)) (stroke (width 0) (type default)) (uuid "f104a885-514a-4431-a390-59fe5b3a0f4d"))
+	(symbol (lib_id "power:GND") (at 26.67 129.54 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "a165fc7e-1d5b-45f1-8274-8eb290ce38db")
+		(property "Reference" "#PWR515" (at 26.67 132.54 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 26.67 126.53999999999999 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR515") (unit 1)))))
+	(wire (pts (xy 46.99 109.22) (xy 43.18 109.22)) (stroke (width 0) (type default)) (uuid "c773c849-2ca5-478b-8152-7cdc81a940ed"))
+	(symbol (lib_id "power:GND") (at 43.18 109.22 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "d322c20e-256e-4c09-97a9-5758a8bbf1d7")
+		(property "Reference" "#PWR516" (at 43.18 112.22 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 43.18 106.22 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR516") (unit 1)))))
+	(symbol (lib_id "Device:R") (at 78.74 114.3 90) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "c1f3a782-5826-4a11-8a4f-49bb984edd72")
+		(property "Reference" "R120" (at 80.74 110.3 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100k" (at 80.74 118.3 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 78.74 114.3 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R120") (unit 1)))))
+	(wire (pts (xy 62.23 114.3) (xy 74.93 114.3)) (stroke (width 0) (type default)) (uuid "598d0699-dde4-48bb-b30c-8f747e502ae8"))
+	(wire (pts (xy 82.55 114.3) (xy 88.9 114.3)) (stroke (width 0) (type default)) (uuid "fdad3abc-0c2d-4061-9b78-440a84b64ddc"))
+	(hierarchical_label "CV_RES" (shape input) (at 88.9 114.3 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "341365d4-18eb-4acf-aba9-fc36acc33153"))
+	(symbol (lib_id "Device:R") (at 68.58 119.38 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "d876a1cc-a626-4a37-b1b7-1ce8501d01ac")
+		(property "Reference" "R121" (at 70.58 117.38 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "47k" (at 70.58 121.38 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 68.58 119.38 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R121") (unit 1)))))
+	(wire (pts (xy 62.23 111.76) (xy 68.58 111.76)) (stroke (width 0) (type default)) (uuid "d27b75fd-62a2-4d08-b86c-505d2b79eadb"))
+	(wire (pts (xy 68.58 111.76) (xy 68.58 115.57)) (stroke (width 0) (type default)) (uuid "62b37bbc-cf90-4b42-9973-1483ca3afcdd"))
+	(junction (at 62.23 111.76) (diameter 0) (color 0 0 0 0) (uuid "940aa70b-fa25-4efe-950e-060536ce1415"))
+	(wire (pts (xy 68.58 123.19) (xy 68.58 127.0)) (stroke (width 0) (type default)) (uuid "7dd532be-9f14-40a8-83fb-ec75be7030df"))
+	(symbol (lib_id "power:GND") (at 68.58 127.0 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "69c33ac3-59c6-4f1c-9695-e15fba371085")
+		(property "Reference" "#PWR517" (at 68.58 130.0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 68.58 124.0 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR517") (unit 1)))))
+	(symbol (lib_id "Amplifier_Operational:LM13700") (at 91.44 111.76 0) (unit 4)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "0450242a-f192-4589-96d7-47e771824e14")
+		(property "Reference" "U32" (at 93.44 109.76 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LM13700" (at 93.44 113.76 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "U32") (unit 4)))))
+	(wire (pts (xy 62.23 111.76) (xy 83.82 111.76)) (stroke (width 0) (type default)) (uuid "343c5617-f82b-4dc4-b425-0e54fc47a8ba"))
+	(wire (pts (xy 83.82 111.76) (xy 83.82 111.76)) (stroke (width 0) (type default)) (uuid "81a93ed6-79a2-4a4a-b798-42c92739dff7"))
+	(wire (pts (xy 83.82 111.76) (xy 83.82 111.76)) (stroke (width 0) (type default)) (uuid "f598185c-9aac-443f-94a2-8db3eba934c2"))
+	(wire (pts (xy 93.98 114.3) (xy 102.87 114.3)) (stroke (width 0) (type default)) (uuid "84b5d7c4-b853-4048-a3a4-081cf2074da8"))
+	(label "RESFBL" (at 102.87 114.3 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "0babf731-3256-40ec-a75a-7095d7a70246"))
+	(symbol (lib_id "Amplifier_Operational:LM13700") (at 124.46 111.76 0) (unit 5)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "1572adb1-450a-45c0-b270-972912f6a874")
+		(property "Reference" "U32" (at 126.46 109.76 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LM13700" (at 126.46 113.76 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "U32") (unit 5)))))
+	(wire (pts (xy 121.92 104.14) (xy 121.92 100.33)) (stroke (width 0) (type default)) (uuid "b9d7f04a-6ab3-4db7-a25d-6f08a64c63a2"))
+	(symbol (lib_id "power:+5V") (at 121.92 100.33 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "8290bf1f-7e35-4866-9400-807466186572")
+		(property "Reference" "#PWR518" (at 121.92 103.33 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "+5V" (at 121.92 97.33 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR518") (unit 1)))))
+	(wire (pts (xy 121.92 119.38) (xy 121.92 123.19)) (stroke (width 0) (type default)) (uuid "9d35db71-c3bf-4127-93fb-f1946e757c8c"))
+	(symbol (lib_id "power:-5V") (at 121.92 123.19 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "412e0665-6e76-4fff-a32f-829bf4f15ea7")
+		(property "Reference" "#PWR519" (at 121.92 126.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "-5V" (at 121.92 120.19 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR519") (unit 1)))))
+	(symbol (lib_id "4xxx:4052") (at 214.63 69.85 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "024d21c6-4a78-46a6-9e3d-6eccb412d038")
+		(property "Reference" "U33" (at 216.63 67.85 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "4052" (at 216.63 71.85 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" (at 214.63 69.85 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "U33") (unit 1)))))
+	(wire (pts (xy 201.93 54.61) (xy 194.31 54.61)) (stroke (width 0) (type default)) (uuid "5b2732c3-3319-460f-80b8-a7295b5b63bc"))
+	(label "LPL" (at 194.31 54.61 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "5912cf4f-1e10-4a65-afa1-c75c56e4c421"))
+	(wire (pts (xy 201.93 57.15) (xy 194.31 57.15)) (stroke (width 0) (type default)) (uuid "d1964336-a72c-4728-a219-e1735d71613a"))
+	(label "BPL" (at 194.31 57.15 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "0b1b8d34-74f3-4d6f-8935-893920e7601a"))
+	(wire (pts (xy 201.93 59.69) (xy 194.31 59.69)) (stroke (width 0) (type default)) (uuid "bfe4f379-7a26-490a-87a0-3d49abd57ea9"))
+	(label "HPL" (at 194.31 59.69 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "b99600f2-8650-4ac5-82dc-49b733d8fe65"))
+	(wire (pts (xy 201.93 62.23) (xy 194.31 62.23)) (stroke (width 0) (type default)) (uuid "efa80b2f-7caa-4413-9e19-4e995403ef9f"))
+	(label "NOTCHL" (at 194.31 62.23 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "c7ecf892-a5d6-4809-b6aa-7bdfaf4d773a"))
+	(wire (pts (xy 227.33 54.61) (xy 234.95 54.61)) (stroke (width 0) (type default)) (uuid "cde3c301-9a80-4acd-a50a-203681691b76"))
+	(hierarchical_label "AUDIO_L_OUT" (shape output) (at 234.95 54.61 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "3f8d1f08-24ed-4f11-bad7-c9a9760c6a66"))
+	(wire (pts (xy 201.93 82.55) (xy 191.77 82.55)) (stroke (width 0) (type default)) (uuid "9841d724-79e7-4bc3-89b1-3d371d08a31e"))
+	(hierarchical_label "MODE_A" (shape input) (at 191.77 82.55 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "8f9c098a-e030-4d1b-a639-04189cb4f065"))
+	(wire (pts (xy 201.93 85.09) (xy 187.96 85.09)) (stroke (width 0) (type default)) (uuid "74024841-8066-47ed-9575-2d4b0d94a3d4"))
+	(hierarchical_label "MODE_B" (shape input) (at 187.96 85.09 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "1f086d44-d669-42b6-b666-ddb810339012"))
+	(wire (pts (xy 201.93 77.47) (xy 195.58 77.47)) (stroke (width 0) (type default)) (uuid "2181516f-017d-4c1f-9dd7-ff8b1ba94b53"))
+	(symbol (lib_id "power:GND") (at 195.58 77.47 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "f84c44a7-1c84-4f78-8c84-e6b50a66e27c")
+		(property "Reference" "#PWR520" (at 195.58 80.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 195.58 74.47 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR520") (unit 1)))))
+	(wire (pts (xy 214.63 46.99) (xy 214.63 43.18)) (stroke (width 0) (type default)) (uuid "0f6c4ce0-e9c0-45d4-8468-2c1dd9e05413"))
+	(symbol (lib_id "power:+5V") (at 214.63 43.18 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "997082e8-0336-44bf-a58e-1777d34c7ddd")
+		(property "Reference" "#PWR521" (at 214.63 46.18 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "+5V" (at 214.63 40.18 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR521") (unit 1)))))
+	(wire (pts (xy 214.63 92.71) (xy 212.09 96.52)) (stroke (width 0) (type default)) (uuid "68a6daf4-5604-4b2e-8ed9-204f9a211a88"))
+	(symbol (lib_id "power:GND") (at 212.09 96.52 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "83afcd7d-01ce-48bf-a862-b0914a076c2e")
+		(property "Reference" "#PWR522" (at 212.09 99.52 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 212.09 93.52 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR522") (unit 1)))))
+	(wire (pts (xy 217.17 92.71) (xy 220.98 96.52)) (stroke (width 0) (type default)) (uuid "04a5217d-9b1f-442a-b320-115c2fc428fd"))
+	(symbol (lib_id "power:-5V") (at 220.98 96.52 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "d90f4f98-e13b-4d0e-9405-8e43f05a5aad")
+		(property "Reference" "#PWR523" (at 220.98 99.52 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "-5V" (at 220.98 93.52 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR523") (unit 1)))))
+	(text "CHANNEL R" (exclude_from_sim no) (at 16 160 0) (effects (font (size 2.0 2.0) ) (justify left bottom)) (uuid "32b1a9df-eea6-4251-8723-96c05768a546"))
+	(symbol (lib_id "Amplifier_Operational:OPA1678") (at 54.61 199.39 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "1f3dec3c-214b-4399-8e0a-f2280c55b957")
+		(property "Reference" "U34" (at 56.61 197.39 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "OPA1678" (at 56.61 201.39 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Package_DIP:DIP-8_W7.62mm_SMDSocket_SmallPads" (at 54.61 199.39 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "U34") (unit 1)))))
+	(wire (pts (xy 40.64 201.93) (xy 46.99 201.93)) (stroke (width 0) (type default)) (uuid "5d11669c-e53c-46dd-a0ec-b7f3208b32b2"))
+	(junction (at 40.64 201.93) (diameter 0) (color 0 0 0 0) (uuid "1342fbfe-23eb-47c3-bf5c-bd0561f3b2c9"))
+	(symbol (lib_id "Device:R") (at 25.4 201.93 90) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "b4cfacc7-2328-4410-9609-daaefd4187d2")
+		(property "Reference" "R200" (at 27.4 197.93 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100k" (at 27.4 205.93 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 25.4 201.93 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R200") (unit 1)))))
+	(wire (pts (xy 29.21 201.93) (xy 40.64 201.93)) (stroke (width 0) (type default)) (uuid "31ee3522-0f5f-4481-b413-5b6513cd9dcf"))
+	(wire (pts (xy 21.59 201.93) (xy 15.24 201.93)) (stroke (width 0) (type default)) (uuid "d3e8d37b-611d-4f0d-8e17-3f683e729da4"))
+	(hierarchical_label "AUDIO_R_IN" (shape input) (at 15.24 201.93 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "ee0447a2-7742-432e-a36d-fddfb12b2b9b"))
+	(symbol (lib_id "Device:R") (at 25.4 194.31 90) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "3d0d15e2-7299-44f7-ab5e-0c7bb974009c")
+		(property "Reference" "R201" (at 27.4 190.31 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100k" (at 27.4 198.31 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 25.4 194.31 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R201") (unit 1)))))
+	(wire (pts (xy 29.21 194.31) (xy 40.64 194.31)) (stroke (width 0) (type default)) (uuid "a3cc49f4-43ae-4adc-ac6e-733d00d457fd"))
+	(wire (pts (xy 40.64 194.31) (xy 40.64 201.93)) (stroke (width 0) (type default)) (uuid "5594f798-b5bf-4767-bfa0-519d5f6cd4c8"))
+	(wire (pts (xy 21.59 194.31) (xy 15.24 194.31)) (stroke (width 0) (type default)) (uuid "fd1298bf-9d5e-4674-9eb3-5ac12b71acdb"))
+	(label "LPR" (at 15.24 194.31 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "2a461a35-8fb5-4fdb-ae32-eac112733c0c"))
+	(symbol (lib_id "Device:R") (at 25.4 209.55 90) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "64cb4c1b-68b1-4e87-af3a-c6a948144bb2")
+		(property "Reference" "R202" (at 27.4 205.55 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100k" (at 27.4 213.55 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 25.4 209.55 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R202") (unit 1)))))
+	(wire (pts (xy 29.21 209.55) (xy 40.64 209.55)) (stroke (width 0) (type default)) (uuid "6a18bba7-c591-487e-a645-970d2d88b1f5"))
+	(wire (pts (xy 40.64 209.55) (xy 40.64 201.93)) (stroke (width 0) (type default)) (uuid "3db54051-92ab-4781-a7e0-fe0bc4bf113e"))
+	(wire (pts (xy 21.59 209.55) (xy 15.24 209.55)) (stroke (width 0) (type default)) (uuid "ab65a36c-1bbb-4aab-885b-0fd11b3e20fc"))
+	(label "RESFBR" (at 15.24 209.55 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "6deef466-214f-4230-a043-e92af80b665a"))
+	(symbol (lib_id "Device:R") (at 52.07 187.96 90) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "400dbd25-59d7-4c4b-aedc-179a0438fb62")
+		(property "Reference" "R203" (at 54.07 183.96 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100k" (at 54.07 191.96 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 52.07 187.96 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R203") (unit 1)))))
+	(wire (pts (xy 40.64 201.93) (xy 40.64 187.96)) (stroke (width 0) (type default)) (uuid "7136a891-26d4-47e9-ae9a-1c78ce4372a7"))
+	(wire (pts (xy 40.64 187.96) (xy 48.26 187.96)) (stroke (width 0) (type default)) (uuid "8dad77bf-63a3-44f8-9c65-03e2d15ed2bc"))
+	(wire (pts (xy 55.88 187.96) (xy 62.23 187.96)) (stroke (width 0) (type default)) (uuid "2a730cbe-221f-4a57-b3a8-ebdf991b5cbd"))
+	(wire (pts (xy 62.23 187.96) (xy 62.23 199.39)) (stroke (width 0) (type default)) (uuid "3e68c94a-5578-46a5-b1ad-1a1911c63932"))
+	(junction (at 62.23 199.39) (diameter 0) (color 0 0 0 0) (uuid "6c653686-2cba-4452-b849-07be68ba3b19"))
+	(wire (pts (xy 46.99 196.85) (xy 44.45 196.85)) (stroke (width 0) (type default)) (uuid "337aaf09-a5dd-4ffd-8e17-e898a2bd4d7a"))
+	(symbol (lib_id "power:GND") (at 44.45 196.85 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "f491ce39-fcbf-4880-a517-bea410b80956")
+		(property "Reference" "#PWR524" (at 44.45 199.85 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 44.45 193.85 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR524") (unit 1)))))
+	(wire (pts (xy 62.23 199.39) (xy 69.85 199.39)) (stroke (width 0) (type default)) (uuid "bc360c3e-06e7-4db6-8992-4971b7d1e838"))
+	(label "HPR" (at 69.85 199.39 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "05a472b7-1cb0-4b7d-aac9-302a00a764e2"))
+	(wire (pts (xy 52.07 191.77) (xy 52.07 187.96)) (stroke (width 0) (type default)) (uuid "afba29b2-8098-41b1-a928-1247b89a32e3"))
+	(symbol (lib_id "power:+5V") (at 52.07 187.96 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "8d069bb8-4e07-4f93-ad55-d8a0872ae5e0")
+		(property "Reference" "#PWR525" (at 52.07 190.96 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "+5V" (at 52.07 184.96 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR525") (unit 1)))))
+	(wire (pts (xy 52.07 207.01) (xy 52.07 210.82)) (stroke (width 0) (type default)) (uuid "ef08f1fb-fee4-4371-bda0-1c7f4aa37e31"))
+	(symbol (lib_id "power:-5V") (at 52.07 210.82 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "1bdf5f7d-745d-4d1b-b73f-150a7dabf602")
+		(property "Reference" "#PWR526" (at 52.07 213.82 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "-5V" (at 52.07 207.82 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR526") (unit 1)))))
+	(symbol (lib_id "Amplifier_Operational:OPA1678") (at 54.61 170.18 0) (unit 2)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "9d99681e-7371-4381-b25a-932d2e89e3ff")
+		(property "Reference" "U34" (at 56.61 168.18 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "OPA1678" (at 56.61 172.18 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "U34") (unit 2)))))
+	(wire (pts (xy 40.64 172.72) (xy 46.99 172.72)) (stroke (width 0) (type default)) (uuid "fc3c817d-b19a-49de-96f0-d2824a347ba8"))
+	(junction (at 40.64 172.72) (diameter 0) (color 0 0 0 0) (uuid "9df410f6-4e89-47d1-9943-61d93664fbed"))
+	(symbol (lib_id "Device:R") (at 25.4 172.72 90) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "b42ebf14-3a38-4624-a8eb-e52acebf69a5")
+		(property "Reference" "R204" (at 27.4 168.72 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100k" (at 27.4 176.72 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 25.4 172.72 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R204") (unit 1)))))
+	(wire (pts (xy 29.21 172.72) (xy 40.64 172.72)) (stroke (width 0) (type default)) (uuid "560643c0-02f4-4fbb-9f74-12a3cd6e39b7"))
+	(wire (pts (xy 21.59 172.72) (xy 15.24 172.72)) (stroke (width 0) (type default)) (uuid "5d9c3264-0517-45ed-8769-6a0502bda3fd"))
+	(label "HPR" (at 15.24 172.72 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "a74046be-ca90-42fb-b173-fe488084c2f9"))
+	(symbol (lib_id "Device:R") (at 25.4 165.1 90) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "3de26829-e4ab-4ab0-a33e-4e1caf8ac47e")
+		(property "Reference" "R205" (at 27.4 161.1 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100k" (at 27.4 169.1 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 25.4 165.1 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R205") (unit 1)))))
+	(wire (pts (xy 29.21 165.1) (xy 40.64 165.1)) (stroke (width 0) (type default)) (uuid "e7a0ee3c-4e4e-4917-8066-7550bb570e86"))
+	(wire (pts (xy 40.64 165.1) (xy 40.64 172.72)) (stroke (width 0) (type default)) (uuid "533f412a-6b61-459f-970a-b945c4cf7736"))
+	(wire (pts (xy 21.59 165.1) (xy 15.24 165.1)) (stroke (width 0) (type default)) (uuid "d7f0a378-c4b8-4020-98fa-f378870c2ce1"))
+	(label "LPR" (at 15.24 165.1 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "346a2d0e-d0d5-4572-8919-a3ef0d88a1a0"))
+	(symbol (lib_id "Device:R") (at 52.07 184.15 90) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "cc820b9f-8858-4b9e-a41c-4fef89f35368")
+		(property "Reference" "R206" (at 54.07 180.15 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100k" (at 54.07 188.15 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 52.07 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R206") (unit 1)))))
+	(wire (pts (xy 40.64 172.72) (xy 40.64 184.15)) (stroke (width 0) (type default)) (uuid "684fc5a1-415c-473a-bd26-9737a5a054a9"))
+	(wire (pts (xy 40.64 184.15) (xy 48.26 184.15)) (stroke (width 0) (type default)) (uuid "097fd235-f8b1-4913-bfe0-35249bb87e56"))
+	(wire (pts (xy 55.88 184.15) (xy 62.23 184.15)) (stroke (width 0) (type default)) (uuid "2c6988a1-89bb-4aa4-8109-96b9f9335024"))
+	(wire (pts (xy 62.23 184.15) (xy 62.23 170.18)) (stroke (width 0) (type default)) (uuid "31a125e6-66f2-43c9-91cc-8a42de90642a"))
+	(junction (at 62.23 170.18) (diameter 0) (color 0 0 0 0) (uuid "220681ba-8dcb-45ad-b976-f7c8434f5982"))
+	(wire (pts (xy 46.99 167.64) (xy 44.45 167.64)) (stroke (width 0) (type default)) (uuid "a1f4700a-e2f9-4a02-befa-9501af1fb7dc"))
+	(symbol (lib_id "power:GND") (at 44.45 167.64 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "ce0e6442-c443-4bbf-a282-fb067ffe2f66")
+		(property "Reference" "#PWR527" (at 44.45 170.64 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 44.45 164.64 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR527") (unit 1)))))
+	(wire (pts (xy 62.23 170.18) (xy 69.85 170.18)) (stroke (width 0) (type default)) (uuid "c95cf9f5-f76e-4af7-8df7-361bd3f265b7"))
+	(label "NOTCHR" (at 69.85 170.18 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "10013112-8615-474b-8132-eea68088ce62"))
+	(symbol (lib_id "Amplifier_Operational:LM13700") (at 110.49 187.96 0) (unit 3)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "9a773727-c7da-4b48-9fd2-f3f6425ff1f0")
+		(property "Reference" "U35" (at 112.49 185.96 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LM13700" (at 112.49 189.96 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" (at 110.49 187.96 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "U35") (unit 3)))))
+	(symbol (lib_id "Device:R") (at 86.36 190.5 90) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "be9cacd6-e91e-4baa-b23a-d63d00d015e3")
+		(property "Reference" "R210" (at 88.36 186.5 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "22k" (at 88.36 194.5 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 86.36 190.5 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R210") (unit 1)))))
+	(wire (pts (xy 90.17 190.5) (xy 102.87 190.5)) (stroke (width 0) (type default)) (uuid "50cdbc3c-3bcc-48dd-81b7-05658996496a"))
+	(wire (pts (xy 82.55 190.5) (xy 76.2 190.5)) (stroke (width 0) (type default)) (uuid "969e781b-3c3b-4f91-a415-4a06c33799dc"))
+	(label "HPR" (at 76.2 190.5 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "3e8dc7c1-66f9-48f4-ae23-00bb7840d599"))
+	(symbol (lib_id "Device:R") (at 82.55 198.12 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "b806f801-f0c5-4033-8021-328928856b23")
+		(property "Reference" "R211" (at 84.55 196.12 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "220R" (at 84.55 200.12 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 82.55 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R211") (unit 1)))))
+	(wire (pts (xy 82.55 190.5) (xy 82.55 194.31)) (stroke (width 0) (type default)) (uuid "25bfec74-d9b3-4a4b-b7b9-458f5ceda978"))
+	(junction (at 82.55 190.5) (diameter 0) (color 0 0 0 0) (uuid "4c2aa293-eb1f-4f7c-a310-dfc3602a8e66"))
+	(wire (pts (xy 82.55 201.93) (xy 82.55 205.74)) (stroke (width 0) (type default)) (uuid "0ab5c8fc-ca31-4c27-b412-4c5a6f51bae4"))
+	(symbol (lib_id "power:GND") (at 82.55 205.74 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "9d28a04b-2694-45c1-851c-ca71658fca0e")
+		(property "Reference" "#PWR528" (at 82.55 208.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 82.55 202.74 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR528") (unit 1)))))
+	(wire (pts (xy 102.87 185.42) (xy 99.06 185.42)) (stroke (width 0) (type default)) (uuid "6b03c677-3d55-489e-a890-f9dfb508c578"))
+	(symbol (lib_id "power:GND") (at 99.06 185.42 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "398efb3d-cfa9-4fd2-bd5f-f94037f201bc")
+		(property "Reference" "#PWR529" (at 99.06 188.42 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 99.06 182.42 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR529") (unit 1)))))
+	(wire (pts (xy 118.11 190.5) (xy 118.11 196.85)) (stroke (width 0) (type default)) (uuid "fee6f3a0-096a-4491-916f-97d1e2c1dc7a"))
+	(symbol (lib_id "Device:R") (at 134.62 196.85 90) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "4a11dbb9-72de-45c6-91a5-014b8f24e871")
+		(property "Reference" "R212" (at 136.62 192.85 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100k" (at 136.62 200.85 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 134.62 196.85 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R212") (unit 1)))))
+	(wire (pts (xy 118.11 196.85) (xy 130.81 196.85)) (stroke (width 0) (type default)) (uuid "79027c4e-1d85-4e56-9665-6c9f33e5dfa6"))
+	(wire (pts (xy 138.43 196.85) (xy 144.78 196.85)) (stroke (width 0) (type default)) (uuid "18b30cb9-5fa2-4ecc-8edb-b8ea03617dc0"))
+	(hierarchical_label "CV_CUTOFF" (shape input) (at 144.78 196.85 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "3f6eba1a-5f9f-4843-a787-7a97ec6f1b59"))
+	(symbol (lib_id "Device:C_Small") (at 124.46 195.58 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "4e5bdc2b-d01b-4524-a0cc-65b57166fdb6")
+		(property "Reference" "C210" (at 126.46 193.58 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "1nF" (at 126.46 197.58 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 124.46 195.58 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "C210") (unit 1)))))
+	(wire (pts (xy 118.11 187.96) (xy 124.46 187.96)) (stroke (width 0) (type default)) (uuid "6f4bc0d9-dfb6-46da-a76b-2baa6c3ee5f8"))
+	(wire (pts (xy 124.46 187.96) (xy 124.46 193.04)) (stroke (width 0) (type default)) (uuid "cecd9641-f109-4850-80b3-86e531d7a626"))
+	(junction (at 124.46 187.96) (diameter 0) (color 0 0 0 0) (uuid "c1c7723a-32c4-45f7-a7bc-3a9210063e9c"))
+	(wire (pts (xy 124.46 198.12) (xy 124.46 201.93)) (stroke (width 0) (type default)) (uuid "443729cd-f623-40ec-9c12-b99a6c4225fb"))
+	(symbol (lib_id "power:GND") (at 124.46 201.93 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "83a47368-5131-46fd-b4a8-d306ce69b230")
+		(property "Reference" "#PWR530" (at 124.46 204.93 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 124.46 198.93 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR530") (unit 1)))))
+	(symbol (lib_id "Amplifier_Operational:LM13700") (at 139.7 187.96 0) (unit 4)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "7c6bc9ae-589e-413e-9540-b6c336ae92ea")
+		(property "Reference" "U35" (at 141.7 185.96 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LM13700" (at 141.7 189.96 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "U35") (unit 4)))))
+	(wire (pts (xy 118.11 187.96) (xy 132.08 187.96)) (stroke (width 0) (type default)) (uuid "9572f9c3-7eb4-472d-9780-dc1ab0b84887"))
+	(wire (pts (xy 132.08 187.96) (xy 132.08 187.96)) (stroke (width 0) (type default)) (uuid "5172bde3-20b4-4c17-8b7f-7780b5f060a9"))
+	(wire (pts (xy 132.08 187.96) (xy 132.08 187.96)) (stroke (width 0) (type default)) (uuid "779011e7-24be-40d6-9b07-7d38b63af0b7"))
+	(symbol (lib_id "Device:R") (at 148.59 198.12 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "f853769f-0c26-4dab-b817-2995f6ef35e3")
+		(property "Reference" "R213" (at 150.59 196.12 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "10k" (at 150.59 200.12 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 148.59 198.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R213") (unit 1)))))
+	(wire (pts (xy 142.24 190.5) (xy 148.59 190.5)) (stroke (width 0) (type default)) (uuid "8037a947-727b-45ba-bc4a-1081679593ea"))
+	(wire (pts (xy 148.59 190.5) (xy 148.59 194.31)) (stroke (width 0) (type default)) (uuid "9a070f3e-b946-4659-910b-be3c83d66f4c"))
+	(junction (at 142.24 190.5) (diameter 0) (color 0 0 0 0) (uuid "35bfeb6f-662a-4699-94da-0b64b8ca8f70"))
+	(wire (pts (xy 148.59 201.93) (xy 148.59 205.74)) (stroke (width 0) (type default)) (uuid "f6709bcd-1d88-4d65-bcf4-50aa0e219fbb"))
+	(symbol (lib_id "power:-5V") (at 148.59 205.74 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "4e00eb78-17b1-4bc6-af7e-748baae9dfb8")
+		(property "Reference" "#PWR531" (at 148.59 208.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "-5V" (at 148.59 202.74 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR531") (unit 1)))))
+	(wire (pts (xy 142.24 190.5) (xy 151.13 190.5)) (stroke (width 0) (type default)) (uuid "0ccc0106-c680-429f-92a2-331ed2944ad5"))
+	(label "BPR" (at 151.13 190.5 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "337e062b-38cb-41c2-8d06-42f930f1c33d"))
+	(symbol (lib_id "Amplifier_Operational:LM13700") (at 110.49 215.9 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "9056c4b9-8468-4ddf-8ead-6d6af35b09c2")
+		(property "Reference" "U35" (at 112.49 213.9 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LM13700" (at 112.49 217.9 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+		(property "Footprint" "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" (at 110.49 215.9 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "U35") (unit 1)))))
+	(symbol (lib_id "Device:R") (at 86.36 218.44 90) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "d06633b1-2799-4f4b-a95e-ec0d113c8713")
+		(property "Reference" "R214" (at 88.36 214.44 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "22k" (at 88.36 222.44 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 86.36 218.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R214") (unit 1)))))
+	(wire (pts (xy 90.17 218.44) (xy 102.87 218.44)) (stroke (width 0) (type default)) (uuid "661b23a7-d5f0-41bd-a547-11a90f07db14"))
+	(wire (pts (xy 82.55 218.44) (xy 76.2 218.44)) (stroke (width 0) (type default)) (uuid "ee50d217-eced-4a18-abe2-b9391a8118ee"))
+	(label "BPR" (at 76.2 218.44 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "59ad4edf-19d6-4e89-bb99-3bb49c44c368"))
+	(symbol (lib_id "Device:R") (at 82.55 226.06 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "db5c7229-90e7-4d03-898c-85cd7ba58c63")
+		(property "Reference" "R215" (at 84.55 224.06 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "220R" (at 84.55 228.06 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 82.55 226.06 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R215") (unit 1)))))
+	(wire (pts (xy 82.55 218.44) (xy 82.55 222.25)) (stroke (width 0) (type default)) (uuid "d5ff6ab3-78b6-4788-9a33-d63c202b8041"))
+	(junction (at 82.55 218.44) (diameter 0) (color 0 0 0 0) (uuid "79129bcf-c813-4289-bfd7-72953792f875"))
+	(wire (pts (xy 82.55 229.87) (xy 82.55 233.68)) (stroke (width 0) (type default)) (uuid "f75c9239-c93e-4435-ba89-e09671bc930b"))
+	(symbol (lib_id "power:GND") (at 82.55 233.68 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "4f9d485b-d37e-4cfd-a321-d2c16cc744a5")
+		(property "Reference" "#PWR532" (at 82.55 236.68 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 82.55 230.68 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR532") (unit 1)))))
+	(wire (pts (xy 102.87 213.36) (xy 99.06 213.36)) (stroke (width 0) (type default)) (uuid "739e2c58-1197-4c91-a1a6-6df8e4cfc6ff"))
+	(symbol (lib_id "power:GND") (at 99.06 213.36 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "01e099d2-63fd-440e-a343-9c7079582428")
+		(property "Reference" "#PWR533" (at 99.06 216.36 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 99.06 210.36 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR533") (unit 1)))))
+	(wire (pts (xy 118.11 218.44) (xy 118.11 224.79)) (stroke (width 0) (type default)) (uuid "d9b13f98-ebd5-4a51-b6d2-7c247ad5a81e"))
+	(symbol (lib_id "Device:R") (at 134.62 224.79 90) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "2c6f2ea4-7c74-4981-9071-dd6694642b96")
+		(property "Reference" "R216" (at 136.62 220.79 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100k" (at 136.62 228.79 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 134.62 224.79 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R216") (unit 1)))))
+	(wire (pts (xy 118.11 224.79) (xy 130.81 224.79)) (stroke (width 0) (type default)) (uuid "297bdd3e-d2a9-461f-a924-3fbe7efbd6c2"))
+	(wire (pts (xy 138.43 224.79) (xy 144.78 224.79)) (stroke (width 0) (type default)) (uuid "cf0d86fc-71b7-4313-a80e-3de1301108f2"))
+	(hierarchical_label "CV_CUTOFF" (shape input) (at 144.78 224.79 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "16cc0906-5ecd-4e69-9c8d-244567b77be8"))
+	(symbol (lib_id "Device:C_Small") (at 124.46 223.52 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "22a526e1-55c8-4313-8b06-6af6ec698735")
+		(property "Reference" "C214" (at 126.46 221.52 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "1nF" (at 126.46 225.52 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 124.46 223.52 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "C214") (unit 1)))))
+	(wire (pts (xy 118.11 215.9) (xy 124.46 215.9)) (stroke (width 0) (type default)) (uuid "d4eabca1-8057-447c-9078-88cc2e812f26"))
+	(wire (pts (xy 124.46 215.9) (xy 124.46 220.98)) (stroke (width 0) (type default)) (uuid "8515b37d-c145-4d08-97d9-1621452b2ca0"))
+	(junction (at 124.46 215.9) (diameter 0) (color 0 0 0 0) (uuid "1919c3c2-b292-4700-a17d-2c876f4727e0"))
+	(wire (pts (xy 124.46 226.06) (xy 124.46 229.87)) (stroke (width 0) (type default)) (uuid "5713a349-50be-49f5-a5f2-004ab4ba29fd"))
+	(symbol (lib_id "power:GND") (at 124.46 229.87 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "b1b22b44-87b1-40a3-825e-7a2eed2d3706")
+		(property "Reference" "#PWR534" (at 124.46 232.87 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 124.46 226.87 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR534") (unit 1)))))
+	(symbol (lib_id "Amplifier_Operational:LM13700") (at 139.7 215.9 0) (unit 2)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "59bb25a2-4920-41c0-96e3-9934e7ee6012")
+		(property "Reference" "U35" (at 141.7 213.9 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LM13700" (at 141.7 217.9 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "U35") (unit 2)))))
+	(wire (pts (xy 118.11 215.9) (xy 132.08 215.9)) (stroke (width 0) (type default)) (uuid "90c42a97-5219-44a4-8843-7891c5902712"))
+	(wire (pts (xy 132.08 215.9) (xy 132.08 215.9)) (stroke (width 0) (type default)) (uuid "2e55384b-38fb-429e-89ca-06e4b54175e6"))
+	(wire (pts (xy 132.08 215.9) (xy 132.08 215.9)) (stroke (width 0) (type default)) (uuid "3077104e-be2f-42b2-a004-3e4f119c5f81"))
+	(symbol (lib_id "Device:R") (at 148.59 226.06 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "8f268713-592b-475f-be70-63c419058b18")
+		(property "Reference" "R217" (at 150.59 224.06 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "10k" (at 150.59 228.06 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 148.59 226.06 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R217") (unit 1)))))
+	(wire (pts (xy 142.24 218.44) (xy 148.59 218.44)) (stroke (width 0) (type default)) (uuid "103d7e5d-2b58-40e3-8ee5-9817c0e3f49f"))
+	(wire (pts (xy 148.59 218.44) (xy 148.59 222.25)) (stroke (width 0) (type default)) (uuid "2e31776b-c9f8-4d4c-b4ab-70839b208be0"))
+	(junction (at 142.24 218.44) (diameter 0) (color 0 0 0 0) (uuid "4fffe832-7032-4947-8e7b-e0a127269067"))
+	(wire (pts (xy 148.59 229.87) (xy 148.59 233.68)) (stroke (width 0) (type default)) (uuid "e3240239-fad9-4034-80ae-904436baaaf6"))
+	(symbol (lib_id "power:-5V") (at 148.59 233.68 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "4dee1c96-7719-41f6-bf65-3cc6df8b1d98")
+		(property "Reference" "#PWR535" (at 148.59 236.68 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "-5V" (at 148.59 230.68 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR535") (unit 1)))))
+	(wire (pts (xy 142.24 218.44) (xy 151.13 218.44)) (stroke (width 0) (type default)) (uuid "21e539aa-a70b-4e12-bf95-c912b1cde923"))
+	(label "LPR" (at 151.13 218.44 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "6dd88d6a-af64-41e8-9683-85b7f4e5f736"))
+	(symbol (lib_id "Amplifier_Operational:LM13700") (at 167.64 201.93 0) (unit 5)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "4d7f16a7-63ba-4b61-a330-b4e1867ae9d6")
+		(property "Reference" "U35" (at 169.64 199.93 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LM13700" (at 169.64 203.93 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "U35") (unit 5)))))
+	(wire (pts (xy 165.1 194.31) (xy 165.1 190.5)) (stroke (width 0) (type default)) (uuid "fe06f815-aee6-48b1-b2dc-d0fff27f0a6a"))
+	(symbol (lib_id "power:+5V") (at 165.1 190.5 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "f82d7a7a-4541-4bda-a60e-564e74987225")
+		(property "Reference" "#PWR536" (at 165.1 193.5 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "+5V" (at 165.1 187.5 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR536") (unit 1)))))
+	(wire (pts (xy 165.1 209.55) (xy 165.1 213.36)) (stroke (width 0) (type default)) (uuid "24382fc8-271a-414e-b4f8-7a813271ff9b"))
+	(symbol (lib_id "power:-5V") (at 165.1 213.36 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "73fff984-dd13-420f-91ca-34daf7ef851d")
+		(property "Reference" "#PWR537" (at 165.1 216.36 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "-5V" (at 165.1 210.36 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR537") (unit 1)))))
+	(symbol (lib_id "Amplifier_Operational:LM13700") (at 54.61 242.57 0) (unit 3)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "1d5b8ce4-f6db-4918-8e6f-c177a84f7542")
+		(property "Reference" "U36" (at 56.61 240.57 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LM13700" (at 56.61 244.57 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+		(property "Footprint" "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" (at 54.61 242.57 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "U36") (unit 3)))))
+	(symbol (lib_id "Device:R") (at 30.48 245.11 90) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "4cb7867f-bafc-45af-bd9a-5033eaa1b74c")
+		(property "Reference" "R218" (at 32.480000000000004 241.11 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "22k" (at 32.480000000000004 249.11 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 30.48 245.11 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R218") (unit 1)))))
+	(wire (pts (xy 34.29 245.11) (xy 46.99 245.11)) (stroke (width 0) (type default)) (uuid "40d997eb-aaa2-4c02-a818-69d84225a21d"))
+	(wire (pts (xy 26.67 245.11) (xy 20.32 245.11)) (stroke (width 0) (type default)) (uuid "3d189e9d-245b-4657-b821-87e83846d75a"))
+	(label "BPR" (at 20.32 245.11 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "aff58280-5a1c-4602-aaef-9cdac5c47d4e"))
+	(symbol (lib_id "Device:R") (at 26.67 252.73 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "88ce9a71-681c-4ff1-b750-0e3260e83401")
+		(property "Reference" "R219" (at 28.67 250.73 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "220R" (at 28.67 254.73 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 26.67 252.73 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R219") (unit 1)))))
+	(wire (pts (xy 26.67 245.11) (xy 26.67 248.92)) (stroke (width 0) (type default)) (uuid "d2b7fa8d-6441-40c1-9cb2-049f8c088f70"))
+	(junction (at 26.67 245.11) (diameter 0) (color 0 0 0 0) (uuid "b00cd95f-081c-4c05-ba1e-bc416752f6b8"))
+	(wire (pts (xy 26.67 256.54) (xy 26.67 260.35)) (stroke (width 0) (type default)) (uuid "19c73741-522f-410a-84aa-61f8bb5a3063"))
+	(symbol (lib_id "power:GND") (at 26.67 260.35 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "6103c769-c6ed-4066-9e66-11a31d082fbc")
+		(property "Reference" "#PWR538" (at 26.67 263.35 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 26.67 257.35 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR538") (unit 1)))))
+	(wire (pts (xy 46.99 240.03) (xy 43.18 240.03)) (stroke (width 0) (type default)) (uuid "d5dc711b-faa4-47ba-a66b-8949fb140002"))
+	(symbol (lib_id "power:GND") (at 43.18 240.03 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "e2a63b55-20d1-46a0-838b-d1920563d41e")
+		(property "Reference" "#PWR539" (at 43.18 243.03 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 43.18 237.03 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR539") (unit 1)))))
+	(symbol (lib_id "Device:R") (at 78.74 245.11 90) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "7f60f2c8-357a-4682-9363-77d0b61c8a1e")
+		(property "Reference" "R220" (at 80.74 241.11 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100k" (at 80.74 249.11 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 78.74 245.11 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R220") (unit 1)))))
+	(wire (pts (xy 62.23 245.11) (xy 74.93 245.11)) (stroke (width 0) (type default)) (uuid "2e4424da-0637-4178-91fb-4440776396a3"))
+	(wire (pts (xy 82.55 245.11) (xy 88.9 245.11)) (stroke (width 0) (type default)) (uuid "fbc06f26-a455-4112-835e-a4f9dac8c998"))
+	(hierarchical_label "CV_RES" (shape input) (at 88.9 245.11 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "de582dc4-dd41-4e87-8cd0-dd34c2539d12"))
+	(symbol (lib_id "Device:R") (at 68.58 250.19 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "8137286b-ab9f-4b42-9c97-9d3db373216d")
+		(property "Reference" "R221" (at 70.58 248.19 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "47k" (at 70.58 252.19 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 68.58 250.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "R221") (unit 1)))))
+	(wire (pts (xy 62.23 242.57) (xy 68.58 242.57)) (stroke (width 0) (type default)) (uuid "58ad0ef3-3580-4d34-a0fb-4dde6d924a2c"))
+	(wire (pts (xy 68.58 242.57) (xy 68.58 246.38)) (stroke (width 0) (type default)) (uuid "8b5ace71-e5ea-4ee4-92f7-2c000087ad05"))
+	(junction (at 62.23 242.57) (diameter 0) (color 0 0 0 0) (uuid "5d651d2e-c8c7-4ee0-93c8-462b24b53162"))
+	(wire (pts (xy 68.58 254.0) (xy 68.58 257.81)) (stroke (width 0) (type default)) (uuid "5dc19dd8-5858-4a22-a8e5-2614a3322a8e"))
+	(symbol (lib_id "power:GND") (at 68.58 257.81 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "440062ce-26e4-4663-a8d3-48787ec58aa7")
+		(property "Reference" "#PWR540" (at 68.58 260.81 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 68.58 254.81 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR540") (unit 1)))))
+	(symbol (lib_id "Amplifier_Operational:LM13700") (at 91.44 242.57 0) (unit 4)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "20a6c6ac-5b86-4d30-b290-3c461a628e0e")
+		(property "Reference" "U36" (at 93.44 240.57 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LM13700" (at 93.44 244.57 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "U36") (unit 4)))))
+	(wire (pts (xy 62.23 242.57) (xy 83.82 242.57)) (stroke (width 0) (type default)) (uuid "ad6a62a7-0e41-4002-bb15-729f8d1649bf"))
+	(wire (pts (xy 83.82 242.57) (xy 83.82 242.57)) (stroke (width 0) (type default)) (uuid "6443a07f-a529-4d3a-932e-36d0baf7be48"))
+	(wire (pts (xy 83.82 242.57) (xy 83.82 242.57)) (stroke (width 0) (type default)) (uuid "023eae9e-a441-4140-9f47-7df02974a7e0"))
+	(wire (pts (xy 93.98 245.11) (xy 102.87 245.11)) (stroke (width 0) (type default)) (uuid "b945cf93-ae57-41e3-bc04-bfc8cca2c40d"))
+	(label "RESFBR" (at 102.87 245.11 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "eea9dc2e-34be-4c26-919f-c02e41c12526"))
+	(symbol (lib_id "Amplifier_Operational:LM13700") (at 124.46 242.57 0) (unit 5)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "de72372c-4e51-4a0a-9180-7c856eae1c96")
+		(property "Reference" "U36" (at 126.46 240.57 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LM13700" (at 126.46 244.57 0) (effects (font (size 1.27 1.27)) (justify left) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "U36") (unit 5)))))
+	(wire (pts (xy 121.92 234.95) (xy 121.92 231.14)) (stroke (width 0) (type default)) (uuid "4d0110ce-2d32-4c15-84b2-c2caad2a4410"))
+	(symbol (lib_id "power:+5V") (at 121.92 231.14 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "9fb2262d-a426-415a-8dc3-2e6a7ad68ce3")
+		(property "Reference" "#PWR541" (at 121.92 234.14 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "+5V" (at 121.92 228.14 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR541") (unit 1)))))
+	(wire (pts (xy 121.92 250.19) (xy 121.92 254.0)) (stroke (width 0) (type default)) (uuid "ffe710f4-207a-4c36-b924-c25aa9c77c03"))
+	(symbol (lib_id "power:-5V") (at 121.92 254.0 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "95f11581-223b-424a-ab46-82e382d77f5e")
+		(property "Reference" "#PWR542" (at 121.92 257.0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "-5V" (at 121.92 251.0 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR542") (unit 1)))))
+	(symbol (lib_id "4xxx:4052") (at 214.63 199.39 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "9f5e1dad-778a-4cae-8944-6965805c4c35")
+		(property "Reference" "U37" (at 216.63 197.39 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "4052" (at 216.63 201.39 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" (at 214.63 199.39 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "U37") (unit 1)))))
+	(wire (pts (xy 201.93 184.15) (xy 194.31 184.15)) (stroke (width 0) (type default)) (uuid "37ce425c-7ffb-4a5f-8237-face977e3fcc"))
+	(label "LPR" (at 194.31 184.15 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "a8b2fdbe-f495-4fb5-b805-6331e3bc6511"))
+	(wire (pts (xy 201.93 186.69) (xy 194.31 186.69)) (stroke (width 0) (type default)) (uuid "382958b9-ee95-43f1-ae80-c2e6701fc658"))
+	(label "BPR" (at 194.31 186.69 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "9046be07-cd8c-471e-8cc3-25eceaa2732e"))
+	(wire (pts (xy 201.93 189.23) (xy 194.31 189.23)) (stroke (width 0) (type default)) (uuid "0b49a471-be3d-477d-98da-f59be3a52ed7"))
+	(label "HPR" (at 194.31 189.23 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "f0c2e5c6-b52e-4971-92d2-fab920df96f4"))
+	(wire (pts (xy 201.93 191.77) (xy 194.31 191.77)) (stroke (width 0) (type default)) (uuid "ec87dd86-3cf2-4f4a-b86f-7e7337316608"))
+	(label "NOTCHR" (at 194.31 191.77 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "34920707-d1e6-4758-962b-07af5e2ee8ea"))
+	(wire (pts (xy 227.33 184.15) (xy 234.95 184.15)) (stroke (width 0) (type default)) (uuid "6e9aa3c2-7836-4717-902f-563e05d0707c"))
+	(hierarchical_label "AUDIO_R_OUT" (shape output) (at 234.95 184.15 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "10ae5a79-fb1c-4600-a608-e331d5e71f51"))
+	(wire (pts (xy 201.93 212.09) (xy 191.77 212.09)) (stroke (width 0) (type default)) (uuid "f842e8b2-49c7-43ca-8862-6ac2f0f73da9"))
+	(hierarchical_label "MODE_A" (shape input) (at 191.77 212.09 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "14596822-a43b-4b1e-8a57-17a5f90a57bc"))
+	(wire (pts (xy 201.93 214.63) (xy 187.96 214.63)) (stroke (width 0) (type default)) (uuid "6cc673d7-562b-4647-bea4-6ab2d715dc78"))
+	(hierarchical_label "MODE_B" (shape input) (at 187.96 214.63 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "0704ce96-b538-436f-97d4-79809a6d871b"))
+	(wire (pts (xy 201.93 207.01) (xy 195.58 207.01)) (stroke (width 0) (type default)) (uuid "112042f9-25bc-4471-8f20-44f9bffb4b78"))
+	(symbol (lib_id "power:GND") (at 195.58 207.01 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "7a50af15-eeae-449e-b85d-487a336372db")
+		(property "Reference" "#PWR543" (at 195.58 210.01 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 195.58 204.01 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR543") (unit 1)))))
+	(wire (pts (xy 214.63 176.53) (xy 214.63 172.72)) (stroke (width 0) (type default)) (uuid "fc49061a-ad3e-46fd-a8ff-6a76f56713f4"))
+	(symbol (lib_id "power:+5V") (at 214.63 172.72 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "e53991e0-fc2f-42f2-b975-b0d0df742474")
+		(property "Reference" "#PWR544" (at 214.63 175.72 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "+5V" (at 214.63 169.72 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR544") (unit 1)))))
+	(wire (pts (xy 214.63 222.25) (xy 212.09 226.06)) (stroke (width 0) (type default)) (uuid "c8746fec-eb07-4a53-aaee-4228b855f39d"))
+	(symbol (lib_id "power:GND") (at 212.09 226.06 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "7a6175ab-e38e-4534-a3fc-236e874b6fa5")
+		(property "Reference" "#PWR545" (at 212.09 229.06 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 212.09 223.06 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR545") (unit 1)))))
+	(wire (pts (xy 217.17 222.25) (xy 220.98 226.06)) (stroke (width 0) (type default)) (uuid "a797c993-0d94-4e6e-bab9-92b5fda98d1d"))
+	(symbol (lib_id "power:-5V") (at 220.98 226.06 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "db042277-4d9a-40d3-b086-a77b21d1d5a8")
+		(property "Reference" "#PWR546" (at 220.98 229.06 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "-5V" (at 220.98 223.06 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR546") (unit 1)))))
+	(hierarchical_label "ORDER_SEL" (shape input) (at 299.72 149.86 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "5e167061-9c64-4c09-8877-5d180a5ca746"))
+	(label "ORDER_SEL" (at 299.72 149.86 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "92719bbc-d182-49a6-843d-47853f25c7f1"))
+	(text "DECOUPLING  -  100nF at each IC's supply pins (+5V and -5V)" (exclude_from_sim no) (at 30 262 0) (effects (font (size 1.5 1.5) ) (justify left bottom)) (uuid "acb5cfc2-8bdf-4935-9cc3-8c7ebcaa4bc2"))
+	(symbol (lib_id "Device:C_Small") (at 39.37 271.78 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "10bafd26-632e-4f77-a094-89241c703908")
+		(property "Reference" "C500" (at 41.37 269.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 41.37 273.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 39.37 271.78 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "C500") (unit 1)))))
+	(symbol (lib_id "power:+5V") (at 39.37 265.43 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "482037d6-982c-4a92-b4ab-073cc2376cbf")
+		(property "Reference" "#PWR547" (at 39.37 268.43 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "+5V" (at 39.37 262.43 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR547") (unit 1)))))
+	(wire (pts (xy 39.37 269.24) (xy 39.37 265.43)) (stroke (width 0) (type default)) (uuid "47f21360-3f88-4883-998e-813f0ce91261"))
+	(symbol (lib_id "power:GND") (at 39.37 278.13 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "970ab586-a974-4883-aa20-5c122da8f6d2")
+		(property "Reference" "#PWR548" (at 39.37 281.13 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 39.37 275.13 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR548") (unit 1)))))
+	(wire (pts (xy 39.37 274.32) (xy 39.37 278.13)) (stroke (width 0) (type default)) (uuid "0567f585-81d7-4abe-9b18-de8c53f4882d"))
+	(symbol (lib_id "Device:C_Small") (at 49.53 271.78 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "8e3999be-5cb7-4359-98aa-ddc466080e23")
+		(property "Reference" "C501" (at 51.53 269.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 51.53 273.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 49.53 271.78 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "C501") (unit 1)))))
+	(symbol (lib_id "power:-5V") (at 49.53 265.43 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "063ce4ee-102b-4e7b-b573-0007a2ffe231")
+		(property "Reference" "#PWR549" (at 49.53 268.43 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "-5V" (at 49.53 262.43 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR549") (unit 1)))))
+	(wire (pts (xy 49.53 269.24) (xy 49.53 265.43)) (stroke (width 0) (type default)) (uuid "1cd08bca-c0f5-4b26-a435-d0e13886cf34"))
+	(symbol (lib_id "power:GND") (at 49.53 278.13 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "7524f473-8bc2-49c2-8423-f10562f04b23")
+		(property "Reference" "#PWR550" (at 49.53 281.13 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 49.53 275.13 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR550") (unit 1)))))
+	(wire (pts (xy 49.53 274.32) (xy 49.53 278.13)) (stroke (width 0) (type default)) (uuid "ccdb67fd-7663-4702-93f6-4f5366cf5fc6"))
+	(symbol (lib_id "Device:C_Small") (at 58.42 271.78 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "fb6f59e3-369d-473a-b57c-9645c588fd9a")
+		(property "Reference" "C502" (at 60.42 269.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 60.42 273.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 58.42 271.78 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "C502") (unit 1)))))
+	(symbol (lib_id "power:+5V") (at 58.42 265.43 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "b78802fb-1eab-4d9e-8790-73dbc8ebed24")
+		(property "Reference" "#PWR551" (at 58.42 268.43 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "+5V" (at 58.42 262.43 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR551") (unit 1)))))
+	(wire (pts (xy 58.42 269.24) (xy 58.42 265.43)) (stroke (width 0) (type default)) (uuid "abbd40e3-9187-4753-8340-f6f36e831e04"))
+	(symbol (lib_id "power:GND") (at 58.42 278.13 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "3996b1be-918b-4dec-a297-e0674e2cb42f")
+		(property "Reference" "#PWR552" (at 58.42 281.13 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 58.42 275.13 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR552") (unit 1)))))
+	(wire (pts (xy 58.42 274.32) (xy 58.42 278.13)) (stroke (width 0) (type default)) (uuid "f379fbbd-01bf-4ace-84a6-4c6898267f80"))
+	(symbol (lib_id "Device:C_Small") (at 67.31 271.78 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "0661a83c-1a75-4911-959a-08ca0e351a4d")
+		(property "Reference" "C503" (at 69.31 269.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 69.31 273.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 67.31 271.78 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "C503") (unit 1)))))
+	(symbol (lib_id "power:-5V") (at 67.31 265.43 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "87d1beaa-6e3d-4c3c-8090-7b5c09a9c1d6")
+		(property "Reference" "#PWR553" (at 67.31 268.43 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "-5V" (at 67.31 262.43 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR553") (unit 1)))))
+	(wire (pts (xy 67.31 269.24) (xy 67.31 265.43)) (stroke (width 0) (type default)) (uuid "532aa75c-cb04-4dad-91e1-0d610dc61a5a"))
+	(symbol (lib_id "power:GND") (at 67.31 278.13 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "1bbf5ab4-20b8-4255-99ec-9d6beda56350")
+		(property "Reference" "#PWR554" (at 67.31 281.13 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 67.31 275.13 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR554") (unit 1)))))
+	(wire (pts (xy 67.31 274.32) (xy 67.31 278.13)) (stroke (width 0) (type default)) (uuid "a46f275f-e35f-4a6f-919b-d666c4d487c1"))
+	(symbol (lib_id "Device:C_Small") (at 76.2 271.78 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "4ff1fb3f-b7cc-4296-8632-3b5d822c6f65")
+		(property "Reference" "C504" (at 78.2 269.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 78.2 273.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 76.2 271.78 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "C504") (unit 1)))))
+	(symbol (lib_id "power:+5V") (at 76.2 265.43 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "163fd098-4e22-4864-8d77-5f50b5785654")
+		(property "Reference" "#PWR555" (at 76.2 268.43 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "+5V" (at 76.2 262.43 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR555") (unit 1)))))
+	(wire (pts (xy 76.2 269.24) (xy 76.2 265.43)) (stroke (width 0) (type default)) (uuid "5bf45ca5-c895-408c-b8ec-e66336678393"))
+	(symbol (lib_id "power:GND") (at 76.2 278.13 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "ba9d0723-74bf-4655-bd1f-4b56e16a7c89")
+		(property "Reference" "#PWR556" (at 76.2 281.13 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 76.2 275.13 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR556") (unit 1)))))
+	(wire (pts (xy 76.2 274.32) (xy 76.2 278.13)) (stroke (width 0) (type default)) (uuid "313abd99-3ef2-4543-bfa1-45ce87b17bee"))
+	(symbol (lib_id "Device:C_Small") (at 85.09 271.78 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "1d0ec88e-ccd9-4f7b-bb90-dc32647c0d2f")
+		(property "Reference" "C505" (at 87.09 269.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 87.09 273.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 85.09 271.78 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "C505") (unit 1)))))
+	(symbol (lib_id "power:-5V") (at 85.09 265.43 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "73b2e9a2-6698-41e2-8140-9b19c269b202")
+		(property "Reference" "#PWR557" (at 85.09 268.43 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "-5V" (at 85.09 262.43 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR557") (unit 1)))))
+	(wire (pts (xy 85.09 269.24) (xy 85.09 265.43)) (stroke (width 0) (type default)) (uuid "95d98717-22ee-4ee7-93ff-dd1c97b5adc3"))
+	(symbol (lib_id "power:GND") (at 85.09 278.13 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "8b7e70a4-fd23-4954-91f9-29c6f15e8c27")
+		(property "Reference" "#PWR558" (at 85.09 281.13 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 85.09 275.13 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR558") (unit 1)))))
+	(wire (pts (xy 85.09 274.32) (xy 85.09 278.13)) (stroke (width 0) (type default)) (uuid "f2ddc35f-8773-49a3-8382-59686c6214c6"))
+	(symbol (lib_id "Device:C_Small") (at 93.98 271.78 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "1203a55c-9657-4f66-8d02-59fe9bff1899")
+		(property "Reference" "C506" (at 95.98 269.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 95.98 273.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 93.98 271.78 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "C506") (unit 1)))))
+	(symbol (lib_id "power:+5V") (at 93.98 265.43 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "2e45e71b-9315-42a0-8b2f-634e170da403")
+		(property "Reference" "#PWR559" (at 93.98 268.43 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "+5V" (at 93.98 262.43 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR559") (unit 1)))))
+	(wire (pts (xy 93.98 269.24) (xy 93.98 265.43)) (stroke (width 0) (type default)) (uuid "1e6ae958-4b2e-4ca6-813f-fc06af348db8"))
+	(symbol (lib_id "power:GND") (at 93.98 278.13 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "4dca4934-3f3b-43c2-8bfc-4269bc0cb379")
+		(property "Reference" "#PWR560" (at 93.98 281.13 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 93.98 275.13 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR560") (unit 1)))))
+	(wire (pts (xy 93.98 274.32) (xy 93.98 278.13)) (stroke (width 0) (type default)) (uuid "87e35b74-710e-4745-bb87-897f504630ab"))
+	(symbol (lib_id "Device:C_Small") (at 102.87 271.78 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "6df19119-b4d7-48f1-bec8-bb1085d97b19")
+		(property "Reference" "C507" (at 104.87 269.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 104.87 273.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 102.87 271.78 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "C507") (unit 1)))))
+	(symbol (lib_id "power:-5V") (at 102.87 265.43 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "d780bd31-78be-472e-bd02-2ef1c4dc17e6")
+		(property "Reference" "#PWR561" (at 102.87 268.43 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "-5V" (at 102.87 262.43 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR561") (unit 1)))))
+	(wire (pts (xy 102.87 269.24) (xy 102.87 265.43)) (stroke (width 0) (type default)) (uuid "93ba8c11-b263-452f-9bb1-2f10426c9439"))
+	(symbol (lib_id "power:GND") (at 102.87 278.13 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "cb08a556-ae27-4121-8286-8aea8430a38c")
+		(property "Reference" "#PWR562" (at 102.87 281.13 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 102.87 275.13 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR562") (unit 1)))))
+	(wire (pts (xy 102.87 274.32) (xy 102.87 278.13)) (stroke (width 0) (type default)) (uuid "65dea5f8-5380-4d67-be3f-332ba625e4e5"))
+	(symbol (lib_id "Device:C_Small") (at 111.76 271.78 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "bff5b38a-9b78-4817-b717-a28b521a8bc5")
+		(property "Reference" "C508" (at 113.76 269.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 113.76 273.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 111.76 271.78 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "C508") (unit 1)))))
+	(symbol (lib_id "power:+5V") (at 111.76 265.43 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "759a91b5-9cbe-4186-92fc-5c5cdd903ff3")
+		(property "Reference" "#PWR563" (at 111.76 268.43 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "+5V" (at 111.76 262.43 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR563") (unit 1)))))
+	(wire (pts (xy 111.76 269.24) (xy 111.76 265.43)) (stroke (width 0) (type default)) (uuid "815f5651-6ef3-4800-afdc-a3bbd4d548c9"))
+	(symbol (lib_id "power:GND") (at 111.76 278.13 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "e7a186e9-529f-4b3e-8be1-40c49d868f23")
+		(property "Reference" "#PWR564" (at 111.76 281.13 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 111.76 275.13 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR564") (unit 1)))))
+	(wire (pts (xy 111.76 274.32) (xy 111.76 278.13)) (stroke (width 0) (type default)) (uuid "33244280-7ba6-4ecc-9ac6-5a2fdc867000"))
+	(symbol (lib_id "Device:C_Small") (at 120.65 271.78 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "824787d9-250b-49a1-a2e5-71b89ad418af")
+		(property "Reference" "C509" (at 122.65 269.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 122.65 273.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 120.65 271.78 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "C509") (unit 1)))))
+	(symbol (lib_id "power:-5V") (at 120.65 265.43 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "60915ac9-c769-4e0a-bbdf-28ea4987538b")
+		(property "Reference" "#PWR565" (at 120.65 268.43 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "-5V" (at 120.65 262.43 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR565") (unit 1)))))
+	(wire (pts (xy 120.65 269.24) (xy 120.65 265.43)) (stroke (width 0) (type default)) (uuid "b737eb2c-4773-4b41-abf5-d0e88585149e"))
+	(symbol (lib_id "power:GND") (at 120.65 278.13 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "73de782d-3102-4298-b467-91ffe7757b42")
+		(property "Reference" "#PWR566" (at 120.65 281.13 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 120.65 275.13 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR566") (unit 1)))))
+	(wire (pts (xy 120.65 274.32) (xy 120.65 278.13)) (stroke (width 0) (type default)) (uuid "1935c5cc-b8b9-4973-aad9-26ef995862dd"))
+	(symbol (lib_id "Device:C_Small") (at 129.54 271.78 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "dacbbc1f-07c6-4f98-bbf8-32bedf7afa2c")
+		(property "Reference" "C510" (at 131.54 269.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 131.54 273.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 129.54 271.78 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "C510") (unit 1)))))
+	(symbol (lib_id "power:+5V") (at 129.54 265.43 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "49905255-aa7b-4dc4-9f11-a0b1d33e2691")
+		(property "Reference" "#PWR567" (at 129.54 268.43 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "+5V" (at 129.54 262.43 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR567") (unit 1)))))
+	(wire (pts (xy 129.54 269.24) (xy 129.54 265.43)) (stroke (width 0) (type default)) (uuid "e288e5e4-c001-4a83-a32b-0e61bb7f329c"))
+	(symbol (lib_id "power:GND") (at 129.54 278.13 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "dc0b0d0b-661b-4a87-8b7b-54e7482660db")
+		(property "Reference" "#PWR568" (at 129.54 281.13 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 129.54 275.13 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR568") (unit 1)))))
+	(wire (pts (xy 129.54 274.32) (xy 129.54 278.13)) (stroke (width 0) (type default)) (uuid "84a3cde7-fb53-4432-897d-ed6f410e27ce"))
+	(symbol (lib_id "Device:C_Small") (at 138.43 271.78 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "ea4dfaad-c908-4079-b252-182dbd139c73")
+		(property "Reference" "C511" (at 140.43 269.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 140.43 273.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 138.43 271.78 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "C511") (unit 1)))))
+	(symbol (lib_id "power:-5V") (at 138.43 265.43 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "8d59f9f9-b4b4-453a-843e-583b9786e156")
+		(property "Reference" "#PWR569" (at 138.43 268.43 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "-5V" (at 138.43 262.43 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR569") (unit 1)))))
+	(wire (pts (xy 138.43 269.24) (xy 138.43 265.43)) (stroke (width 0) (type default)) (uuid "68bed0e1-43d2-46b0-be5b-6a013960f8d2"))
+	(symbol (lib_id "power:GND") (at 138.43 278.13 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "82587b4a-43d1-43b5-849e-50e6291f32f2")
+		(property "Reference" "#PWR570" (at 138.43 281.13 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 138.43 275.13 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR570") (unit 1)))))
+	(wire (pts (xy 138.43 274.32) (xy 138.43 278.13)) (stroke (width 0) (type default)) (uuid "75610da8-212b-413b-ae8c-c226028f7439"))
+	(symbol (lib_id "Device:C_Small") (at 148.59 271.78 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "fcfb3b58-0221-46ad-ae01-a6155408b701")
+		(property "Reference" "C512" (at 150.59 269.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 150.59 273.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 148.59 271.78 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "C512") (unit 1)))))
+	(symbol (lib_id "power:+5V") (at 148.59 265.43 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "b5acd710-34b1-4844-8d8b-1f22c7eb7eb4")
+		(property "Reference" "#PWR571" (at 148.59 268.43 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "+5V" (at 148.59 262.43 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR571") (unit 1)))))
+	(wire (pts (xy 148.59 269.24) (xy 148.59 265.43)) (stroke (width 0) (type default)) (uuid "8cd539c8-5862-4abf-b0aa-2575fe4244b0"))
+	(symbol (lib_id "power:GND") (at 148.59 278.13 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "431280ba-8292-4498-86cd-1a84ea9c58aa")
+		(property "Reference" "#PWR572" (at 148.59 281.13 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 148.59 275.13 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR572") (unit 1)))))
+	(wire (pts (xy 148.59 274.32) (xy 148.59 278.13)) (stroke (width 0) (type default)) (uuid "c9191900-46d6-4efd-8f91-80cf19ed61ca"))
+	(symbol (lib_id "Device:C_Small") (at 157.48 271.78 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "04ceabaf-d339-4f7a-a069-af1300d036bb")
+		(property "Reference" "C513" (at 159.48 269.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 159.48 273.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 157.48 271.78 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "C513") (unit 1)))))
+	(symbol (lib_id "power:-5V") (at 157.48 265.43 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "72cb0a40-efc0-4e15-9e95-47688911fc32")
+		(property "Reference" "#PWR573" (at 157.48 268.43 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "-5V" (at 157.48 262.43 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR573") (unit 1)))))
+	(wire (pts (xy 157.48 269.24) (xy 157.48 265.43)) (stroke (width 0) (type default)) (uuid "a6b17082-9728-4b0e-b75e-84a6f0777619"))
+	(symbol (lib_id "power:GND") (at 157.48 278.13 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "c073d21a-cf3f-41a4-aa56-17c3f7904e94")
+		(property "Reference" "#PWR574" (at 157.48 281.13 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 157.48 275.13 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR574") (unit 1)))))
+	(wire (pts (xy 157.48 274.32) (xy 157.48 278.13)) (stroke (width 0) (type default)) (uuid "025767d3-4c52-4116-a054-111f06fbef65"))
+	(symbol (lib_id "Device:C_Small") (at 166.37 271.78 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "3223bae8-c6cd-4d42-95a0-44fff725b859")
+		(property "Reference" "C514" (at 168.37 269.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 168.37 273.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 166.37 271.78 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "C514") (unit 1)))))
+	(symbol (lib_id "power:+5V") (at 166.37 265.43 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "ab451e6c-f440-4b47-b1e6-7cc00f6919b1")
+		(property "Reference" "#PWR575" (at 166.37 268.43 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "+5V" (at 166.37 262.43 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR575") (unit 1)))))
+	(wire (pts (xy 166.37 269.24) (xy 166.37 265.43)) (stroke (width 0) (type default)) (uuid "2ad78f68-f61f-4a17-bb89-03d48397afd8"))
+	(symbol (lib_id "power:GND") (at 166.37 278.13 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "a11d7562-a3a7-40f8-b1b1-80b576b3c0d4")
+		(property "Reference" "#PWR576" (at 166.37 281.13 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 166.37 275.13 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR576") (unit 1)))))
+	(wire (pts (xy 166.37 274.32) (xy 166.37 278.13)) (stroke (width 0) (type default)) (uuid "6517e3a3-e2c4-4676-ba7b-7bdfab9d1227"))
+	(symbol (lib_id "Device:C_Small") (at 175.26 271.78 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "d90a32bd-ff08-49bb-940c-271245e5ba0c")
+		(property "Reference" "C515" (at 177.26 269.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "100nF" (at 177.26 273.78 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 175.26 271.78 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "C515") (unit 1)))))
+	(symbol (lib_id "power:-5V") (at 175.26 265.43 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "986bfc22-025e-4023-8e13-fc1ce7a8b5fa")
+		(property "Reference" "#PWR577" (at 175.26 268.43 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "-5V" (at 175.26 262.43 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR577") (unit 1)))))
+	(wire (pts (xy 175.26 269.24) (xy 175.26 265.43)) (stroke (width 0) (type default)) (uuid "d1b6ad93-718f-440f-b476-5ab175f8c767"))
+	(symbol (lib_id "power:GND") (at 175.26 278.13 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "7271cc49-14fb-483d-8c30-ac3673386e4e")
+		(property "Reference" "#PWR578" (at 175.26 281.13 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 175.26 275.13 0) (effects (font (size 1.27 1.27))))
+		(instances (project "AUDIO_BOARD" (path "/ba93534c-f2e3-4dc0-9a76-585fdc68cf39/a1b2c3d4-e5f6-7788-99aa-bbccddee0003" (reference "#PWR578") (unit 1)))))
+	(wire (pts (xy 175.26 274.32) (xy 175.26 278.13)) (stroke (width 0) (type default)) (uuid "c29ecb72-2f75-402b-b52b-8ad9d496455f"))
+	(embedded_fonts no)
+)
