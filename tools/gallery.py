@@ -42,8 +42,11 @@ def card(name, rel, files):
     for label, f in (("top", top), ("bottom", bottom)):
         if f:
             src = html.escape(f"{rel}/{f}")
-            imgs += (f'<figure><img loading="lazy" src="{src}" '
-                     f'alt="{html.escape(name)} {label}">'
+            # link the thumbnail to the full-resolution image
+            imgs += (f'<figure><a href="{src}" target="_blank" rel="noopener" '
+                     f'title="open full resolution">'
+                     f'<img loading="lazy" src="{src}" '
+                     f'alt="{html.escape(name)} {label}"></a>'
                      f'<figcaption>{label}</figcaption></figure>')
 
     links = ""
