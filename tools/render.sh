@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # render design pictures (schematic pdf, pcb layer pdf, 3d front/back png)
-# for every kicad board under schematic/, skipping .history and archive copies
+# for the allowlisted boards below, skipping .history and archive copies
 #
 # usage:
-#   tools/render.sh              render all designs
-#   tools/render.sh APM_v5_r1    render only matching design(s)
+#   tools/render.sh              render all allowlisted designs
+#   tools/render.sh APM_v5_r2    render only matching allowlisted design(s)
 set -euo pipefail
 
 cd "$(dirname "$0")/.."
@@ -16,6 +16,15 @@ PCB_LAYERS="F.Cu,B.Cu,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts"
 # override like: RENDER_W=2560 RENDER_H=1440 tools/render.sh
 RENDER_W="${RENDER_W:-3840}"
 RENDER_H="${RENDER_H:-2160}"
+
+# only the newest revision of each active board is rendered; update the entry
+# when you spin a new revision so old revs stop consuming render time
+RENDER_DIRS=(
+  schematic/APM_v5_r2
+  schematic/ACM_v1_r2
+  schematic/OSC_CTRL
+  schematic/AUDIO_BOARD_v1_r1
+)
 
 filter="${1:-}"
 count=0
@@ -29,6 +38,13 @@ while IFS= read -r pcb; do
   base="$(basename "$pcb" .kicad_pcb)"
   sch="$dir/$base.kicad_sch"
   [ -f "$sch" ] || continue
+
+  # skip anything not in the render allowlist
+  keep=0
+  for d in "${RENDER_DIRS[@]}"; do
+    [ "$dir" = "$d" ] && keep=1 && break
+  done
+  [ "$keep" = 1 ] || continue
 
   if [ -n "$filter" ] && [[ "$dir" != *"$filter"* ]]; then
     continue
