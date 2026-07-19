@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     # pin to the kicad-cli version you render with locally (10.0.x)
     container:
-      image: kicad/kicad:10.0
+      image: kicad/kicad:10.0-full
       options: --user root
     permissions:
       contents: write
