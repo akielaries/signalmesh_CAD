@@ -1,0 +1,96 @@
+name: render designs
+
+# render schematic/pcb pdfs and 3d pngs whenever a kicad design changes,
+# then commit the output back so it is viewable on github.
+# the renders/ paths are excluded so the bot commit does not retrigger this.
+on:
+  push:
+    paths:
+      - 'schematic/**'
+      - '!schematic/**/renders/**'
+      - 'tools/render.sh'
+      - '.github/workflows/render.yml'
+
+# avoid overlapping runs racing on the same commit-back
+concurrency:
+  group: render-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    # pin to the kicad-cli version you render with locally (10.0.x)
+    container:
+      image: kicad/kicad:10.0
+      options: --user root
+    permissions:
+      contents: write
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          # need history so we can diff against the previous commit
+          fetch-depth: 0
+
+      - name: mark workspace safe for git
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
+      - name: install xvfb
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends xvfb
+
+      - name: find changed designs
+        id: changed
+        run: |
+          before='${{ github.event.before }}'
+          # unborn/zero sha (first push, force push): render everything
+          if [ -z "$before" ] || [ "$before" = "0000000000000000000000000000000000000000" ] \
+             || ! git cat-file -e "$before^{commit}" 2>/dev/null; then
+            echo "designs=" >>"$GITHUB_OUTPUT"
+            echo "all=1" >>"$GITHUB_OUTPUT"
+            exit 0
+          fi
+          # top-level design dirs with non-renders changes, deduped
+          designs=$(git diff --name-only "$before" '${{ github.sha }}' -- schematic \
+            | grep -v '/renders/' \
+            | awk -F/ 'NF>=2 {print $2}' \
+            | sort -u)
+          echo "changed designs:"; echo "$designs"
+          echo "all=0" >>"$GITHUB_OUTPUT"
+          {
+            echo "designs<<EOF"
+            echo "$designs"
+            echo "EOF"
+          } >>"$GITHUB_OUTPUT"
+
+      - name: render changed designs
+        # 3d render needs a display; run under a virtual one
+        run: |
+          if [ '${{ steps.changed.outputs.all }}' = '1' ]; then
+            echo "rendering all designs"
+            xvfb-run -a bash tools/render.sh
+            exit 0
+          fi
+          if [ -z '${{ steps.changed.outputs.designs }}' ]; then
+            echo "no design changes to render"
+            exit 0
+          fi
+          while IFS= read -r d; do
+            [ -n "$d" ] || continue
+            xvfb-run -a bash tools/render.sh "$d"
+          done <<'EOF'
+          ${{ steps.changed.outputs.designs }}
+          EOF
+
+      - name: commit renders
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add schematic/**/renders/
+          if git diff --cached --quiet; then
+            echo "no render changes"
+            exit 0
+          fi
+          git commit -m "ci: update renders [skip ci]"
+          git push
