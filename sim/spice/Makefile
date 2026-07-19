@@ -2,15 +2,18 @@
 # Run from this directory:  make sim   (or a specific target below)
 PY := python3
 
-.PHONY: sim sim-all sim-svf sim-phaser sim-chorus sim-real sim-svf-real sim-phaser-real clean help
+.PHONY: sim sim-all sim-svf sim-phaser sim-chorus sim-real sim-svf-real sim-phaser-real sim-chain clean help
 
 sim: sim-all              ## default: run every check
 
-sim-all: sim-svf sim-phaser sim-chorus sim-real   ## run all checks (behavioral + from-schematic)
+sim-all: sim-svf sim-phaser sim-chorus sim-real sim-chain   ## run all checks (behavioral + from-schematic)
 	@echo "-------------------------------------------"
 	@echo "all sim checks done"
 
 sim-real: sim-svf-real sim-phaser-real   ## sims built from the ACTUAL schematic netlist (real wiring)
+
+sim-chain:                ## FULL chain from AUDIO_BOARD.kicad_sch: verify every stage (input->VCF/VCA->SVF->drive/trem->phaser->out)
+	@$(PY) test_chain_real.py
 
 sim-svf-real:             ## SVF simulated from MASTER_FILTER.kicad_sch (real wiring + behavioral models)
 	@$(PY) test_svf_real.py

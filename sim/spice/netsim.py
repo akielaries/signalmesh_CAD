@@ -23,6 +23,17 @@ def parse(path):
 def san(net):
     return re.sub(r'[^A-Za-z0-9_]', '_', net)
 
+def parse_res(v):
+    """resistor value -> ohms string, handling european notation (4k7=4700, 220R=220)"""
+    v = (v or "").strip()
+    m = re.match(r'^([\d.]*)\s*([RrkKMG]?)\s*([\d.]*)$', v)
+    if not m or not (m.group(1) or m.group(3)):
+        return "1k"
+    a, mult, b = m.group(1), m.group(2), m.group(3)
+    scale = {"": 1, "R": 1, "r": 1, "k": 1e3, "K": 1e3, "M": 1e6, "G": 1e9}[mult]
+    num = float(f"{a or 0}.{b}") if b else float(a or 0)
+    return repr(num * scale)
+
 def N(pinnet, ref, pin):
     return san(pinnet.get((ref, pin), f"nc_{ref}_{pin}"))
 
@@ -41,11 +52,16 @@ def build(netlist, cfg):
         return san(raw)
     for net, v in cfg.get("dc", {}).items():
         L.append(f"V_{san(net)} {san(net)} 0 {v}")
-    L.append(f"Vin {san(cfg['in'])} 0 dc 0 ac 1")
+    analysis = cfg.get("analysis", "ac")
+    if analysis == "ac":
+        L.append(f"Vin {san(cfg['in'])} 0 dc 0 ac 1")
+    else:
+        amp = cfg.get("amp", 0.5); freq = cfg.get("freq", 1000.0)
+        L.append(f"Vin {san(cfg['in'])} 0 dc 0 sin(0 {amp} {freq})")
     # emit devices
     for ref, val in comps.items():
         if ref.startswith("R") and not ref.startswith("RV"):
-            L.append(f"{ref} {n(ref,'1')} {n(ref,'2')} {val.replace('R','').replace('k','e3').replace('M','e6') or '1k'}")
+            L.append(f"{ref} {n(ref,'1')} {n(ref,'2')} {parse_res(val)}")
         elif ref.startswith("C"):
             v = val.replace("nF","n").replace("uF","u").replace("pF","p").replace("F","")
             L.append(f"{ref} {n(ref,'1')} {n(ref,'2')} {v}")
@@ -59,9 +75,23 @@ def build(netlist, cfg):
             # mux: connect the selected channel to the common (per cfg[mux])
             for com, ch in cfg.get("mux", {}).get(ref, []):
                 L.append(f"Rmux_{ref}_{com} {n(ref,com)} {n(ref,ch)} 1")
-    L.append(f".control")
-    L.append(f"ac dec 30 20 20k")
-    L.append(f"wrdata {cfg['out_file']} " + " ".join(f"db(v({san(o)}))" for o in cfg['probe']))
+        elif val == "MN3207" and cfg.get("bbd"):
+            # BBD approximated as a lossless-line delay (delay only; no companding/noise -> bench)
+            td = cfg["bbd"]; bin_ = n(ref, "3"); o1 = n(ref, "7"); o2 = n(ref, "8")
+            L.append(f"R{ref}s {bin_} {ref}_bi 1k")
+            L.append(f"T{ref} {ref}_bi 0 {ref}_bo 0 Z0=1k TD={td}")
+            L.append(f"R{ref}t {ref}_bo 0 1k")
+            L.append(f"E{ref}1 {o1} 0 {ref}_bo 0 1")
+            L.append(f"E{ref}2 {o2} 0 {ref}_bo 0 1")
+    L.append(".control")
+    probes = " ".join((f"db(v({san(o)}))" if analysis == "ac" else f"v({san(o)})") for o in cfg["probe"])
+    if analysis == "ac":
+        L.append(f"ac dec {cfg.get('ac_pts',30)} {cfg.get('fmin',20)} {cfg.get('fmax',20000)}")
+    else:
+        f0 = cfg.get("freq", 1000.0); cyc = cfg.get("cycles", 8)
+        tstop = cyc / f0; tstep = tstop / cfg.get("tpts", 2000)
+        L.append(f"tran {tstep:.3e} {tstop:.6e} 0 {tstep:.3e}")
+    L.append(f"wrdata {cfg['out_file']} {probes}")
     L.append(".endc")
     L.append(".end")
     return "\n".join(L)

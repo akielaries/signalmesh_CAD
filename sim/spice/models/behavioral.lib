@@ -13,11 +13,12 @@ Co2 o2 0 100p
 .ends
 
 * --- LM13700 half: OTA + Darlington buffer. nodes: iabc in+ in- out buf_in buf_out V+ V- ---
-* Iout = gm*(V+in - V-in), gm ~ 19.2 * Iabc (A/V per A of Iabc). buffer = unity follower.
+* current-driven: the Iabc pin sits ~1.4V above V- (2 Vbe), external R sets the control
+* current, and transconductance gm = 19.2 * Iabc (datasheet room-temp relation). This makes
+* cutoff/resonance actually track their CV, unlike a pin-voltage approximation.
 .subckt LM13700_HALF iabc inp inn out bin bout vp vm
-* Iabc = (V(iabc)-V-)/Rabc ; Iout = gm*(V+in - V-in), gm ~ 19.2*Iabc
-Rabc iabc vm 1k
-Bota out 0 I = 19.2e-3 * (V(iabc)-V(vm)) * (V(inp)-V(inn))
+Vsense iabc vm 1.4
+Bota out 0 I = 19.2 * I(Vsense) * (V(inp)-V(inn))
 Rota out 0 1e6
 * Darlington buffer = unity follower
 Bbuf bout 0 V = V(bin)

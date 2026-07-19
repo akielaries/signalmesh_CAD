@@ -79,7 +79,32 @@ Flow (`netsim.py`):
 
 Targets: `sim-svf-real` (MASTER_FILTER), `sim-phaser-real` (FX_PHASER).
 
-Limits: behavioral models validate topology/levels-ish, not real LM13700 linear range
-/ noise (drop in TI subckts in models/ for that). The BBD chorus can't be SPICE'd
-(sampled device) - bench only. To go full-fidelity, assign real .subckt models per
+## Full-chain per-stage verification (`make sim-chain`)
+
+`test_chain_real.py` exports the WHOLE hierarchy (`AUDIO_BOARD.kicad_sch`) and verifies
+the signal at every stage boundary of the real chain:
+
+```
+input buffer -> VCF/VCA -> SVF -> drive+tremolo -> phaser -> chorus(bypass) -> out
+```
+
+It injects a clean unit source at each stage's input (routing the bypass/mode muxes for
+that scenario) and checks the transfer in isolation, then prints a per-stage frequency
+response (Bode) table. Per-stage injection is deliberate: it avoids the cascade blow-up
+you get from chaining idealized high-gain stages, and it pinpoints which stage a wiring
+bug lives in. This is exactly how it caught two real bugs on this board:
+- a value-parser bug (`4k7` was becoming 4e37 Ohm, starving the FX chain), and
+- **the analog VCF cutoff CV was dangling** (`R20` pad-2 unconnected) - the DAC cutoff
+  never reached the filter. Fixed (R20 -> summer -> VCUTOFF -> both VCF OTAs).
+
+Stage checks: input buffer ~unity, VCF/VCA + SVF lowpass, drive = +20 dB (-47k/4k7),
+phaser magnitude-flat (all-pass), output unity (chorus bypassed - BBD has no SPICE model).
+
+Limits: the OTA model is now **current-driven** (`gm = 19.2*Iabc`, Iabc sensed from the
+pin) - more correct, gives realistic levels, and CV changes the response. But absolute
+cutoff-vs-CV *tracking* and true time-domain waveform (distortion, DAC-streamed tremolo/
+phaser modulation, clipping) still need the vendor **LM13700/OPA1678 subckts** - drop them
+into `models/`. AC (frequency) is the reliable domain for these linear/unbounded models;
+that's why `sim-chain` reports frequency response, not a transient. The BBD chorus can't
+be SPICE'd (sampled device) - bench only. Full fidelity: assign real `.subckt` models per
 symbol in the KiCad GUI (Simulation Model dialog) and use the built-in simulator.

@@ -134,6 +134,15 @@ TEMPLATE = """<!doctype html>
   .links { margin-top: .75rem; display: flex; gap: .75rem; flex-wrap: wrap; }
   .links a { font-size: .85rem; color: #4493f8; text-decoration: none; }
   .links a:hover { text-decoration: underline; }
+  /* lightbox */
+  .lb { position: fixed; inset: 0; z-index: 50; background: rgba(0,0,0,.93);
+        display: grid; place-items: center; overflow: auto; }
+  .lb[hidden] { display: none; }
+  .lb img { max-width: 96vw; max-height: 92vh; cursor: zoom-in; }
+  .lb img.full { max-width: none; max-height: none; cursor: zoom-out; }
+  .lb-close { position: fixed; top: .5rem; right: 1rem; z-index: 51;
+        font-size: 2.5rem; line-height: 1; color: #fff; background: none;
+        border: 0; cursor: pointer; }
 </style>
 </head>
 <body>
@@ -144,6 +153,42 @@ TEMPLATE = """<!doctype html>
 <main class="grid">
 {{cards}}
 </main>
+<div id="lb" class="lb" hidden>
+  <button id="lbClose" class="lb-close" aria-label="close">&times;</button>
+  <img id="lbImg" alt="">
+</div>
+<script>
+(function () {
+  var lb = document.getElementById('lb');
+  var img = document.getElementById('lbImg');
+  function open(src) {
+    img.classList.remove('full');
+    img.src = src;
+    lb.hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
+  function close() {
+    lb.hidden = true;
+    img.src = '';
+    document.body.style.overflow = '';
+  }
+  // intercept thumbnail clicks; href stays as a no-js / new-tab fallback
+  document.querySelectorAll('.imgs a').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      if (e.metaKey || e.ctrlKey || e.button === 1) { return; }
+      e.preventDefault();
+      open(a.getAttribute('href'));
+    });
+  });
+  // toggle fit-to-screen vs actual 100% size (pan by scrolling the overlay)
+  img.addEventListener('click', function () { img.classList.toggle('full'); });
+  document.getElementById('lbClose').addEventListener('click', close);
+  lb.addEventListener('click', function (e) { if (e.target === lb) { close(); } });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { close(); }
+  });
+})();
+</script>
 </body>
 </html>
 """
