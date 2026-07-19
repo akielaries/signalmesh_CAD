@@ -63,3 +63,23 @@ Current result: flatness 0.00 dB, notches move **7.9×**. ✅
 
 To simulate the *real* circuit later, export the KiCad schematic to a SPICE netlist and add
 device models (LM13700, OPA1678) instead of the behavioral OTA.
+
+## Simulating the ACTUAL schematic (not just hand-decks)
+
+`make sim-real` builds SPICE decks directly from the exported KiCad netlist, so it
+tests the *real wiring and component values* in the `.kicad_sch` - catching wiring
+or value bugs the hand-written topology decks can't.
+
+Flow (`netsim.py`):
+1. `kicad-cli sch export netlist --format kicadsexpr` on a sheet (e.g. MASTER_FILTER)
+2. `netsim.build()` turns the pin->net map into a SPICE deck: passives as-is, ICs
+   mapped to behavioral subckts in `models/behavioral.lib` (OPA1678, LM13700), muxes
+   set to the selected path, DAC CVs -> DC sources, rails -> V sources.
+3. run via libngspice, check the response.
+
+Targets: `sim-svf-real` (MASTER_FILTER), `sim-phaser-real` (FX_PHASER).
+
+Limits: behavioral models validate topology/levels-ish, not real LM13700 linear range
+/ noise (drop in TI subckts in models/ for that). The BBD chorus can't be SPICE'd
+(sampled device) - bench only. To go full-fidelity, assign real .subckt models per
+symbol in the KiCad GUI (Simulation Model dialog) and use the built-in simulator.

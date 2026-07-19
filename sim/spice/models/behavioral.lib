@@ -1,0 +1,25 @@
+* Behavioral models for schematic-driven sim of the audio board.
+* Idealized but topology-accurate: real device levels/noise still need bench/vendor models.
+
+* --- OPA1678: dual op-amp. nodes: out1 in1- in1+ out2 in2- in2+ V+ V- ---
+.subckt OPA1678 o1 n1 p1 o2 n2 p2 vp vm
+* single-pole op-amp: DC gain 1e5, GBW ~ set by output RC (rails only used for biasing refs)
+Be1 e1 0 V = 1e5*(V(p1)-V(n1))
+Ro1 e1 o1 1k
+Co1 o1 0 100p
+Be2 e2 0 V = 1e5*(V(p2)-V(n2))
+Ro2 e2 o2 1k
+Co2 o2 0 100p
+.ends
+
+* --- LM13700 half: OTA + Darlington buffer. nodes: iabc in+ in- out buf_in buf_out V+ V- ---
+* Iout = gm*(V+in - V-in), gm ~ 19.2 * Iabc (A/V per A of Iabc). buffer = unity follower.
+.subckt LM13700_HALF iabc inp inn out bin bout vp vm
+* Iabc = (V(iabc)-V-)/Rabc ; Iout = gm*(V+in - V-in), gm ~ 19.2*Iabc
+Rabc iabc vm 1k
+Bota out 0 I = 19.2e-3 * (V(iabc)-V(vm)) * (V(inp)-V(inn))
+Rota out 0 1e6
+* Darlington buffer = unity follower
+Bbuf bout 0 V = V(bin)
+Rbuf bout 0 1k
+.ends

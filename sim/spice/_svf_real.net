@@ -1,0 +1,5830 @@
+(export
+	(version "E")
+	(design
+		(source "/home/akiel/trunk/pub/signalmesh_CAD/schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+		(date "2026-07-18T23:25:05")
+		(tool "Eeschema 10.0.4+b1")
+		(sheet
+			(number "1")
+			(name "/")
+			(tstamps "/")
+			(title_block
+				(title)
+				(company)
+				(rev)
+				(date)
+				(source "MASTER_FILTER.kicad_sch")
+				(comment
+					(number "1")
+					(value "")
+				)
+				(comment
+					(number "2")
+					(value "")
+				)
+				(comment
+					(number "3")
+					(value "")
+				)
+				(comment
+					(number "4")
+					(value "")
+				)
+				(comment
+					(number "5")
+					(value "")
+				)
+				(comment
+					(number "6")
+					(value "")
+				)
+				(comment
+					(number "7")
+					(value "")
+				)
+				(comment
+					(number "8")
+					(value "")
+				)
+				(comment
+					(number "9")
+					(value "")
+				)
+			)
+		)
+	)
+	(components
+		(comp
+			(ref "C110")
+			(value "1nF")
+			(footprint "Capacitor_SMD:C_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ddb90fc4-f7ab-4d32-9af5-e4e85222586d")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C114")
+			(value "1nF")
+			(footprint "Capacitor_SMD:C_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "543d9b68-b0b8-493d-a508-6c5026745e84")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C210")
+			(value "1nF")
+			(footprint "Capacitor_SMD:C_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "23f442c9-0336-4b56-8fd3-54b74d2a1fce")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C214")
+			(value "1nF")
+			(footprint "Capacitor_SMD:C_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c19ab425-ad25-401a-b5db-d7492b89039c")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C500")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "b51f4810-9c3e-4e60-9de0-ee7a085fcb28")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C501")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "89391968-96fe-45f1-9854-62c51c609b1d")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C502")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "b45aac03-3a0a-44c4-965a-b0426f726b72")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C503")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "0bc1f71d-36ca-46de-b150-611ec3f68671")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C504")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "f1bbe096-ce8e-4105-bdd0-d4da0c48e87a")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C505")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "0e168760-93c9-41c4-8164-de50dadbfbe4")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C506")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "3f64a8d5-d5a5-4ca9-b470-6cad3c81afff")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C507")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "29eefa9d-c7ee-408d-bfa1-a8208c2624a7")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C508")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "eb77b6c4-aaca-4b29-a43e-3d88f386c56e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C509")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "dd82a5f1-d8e1-4ff0-aaa2-b26e352b3ff6")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C510")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "556bf792-9493-46b5-a3fe-e9d4bf1eb885")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C511")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "1b677d05-9cef-4bb2-90a6-3f0173a42c0f")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C512")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "808318eb-7a49-4801-b3a6-065e986c4948")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C513")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "33833565-6636-410e-996b-ead2b26ee3d3")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C514")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "bc310ebb-2bf1-434e-a2f3-e75aa33e3404")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C515")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "4f583b3e-ee74-4b7d-8af0-cdbf0695c58e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R100")
+			(value "100k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "2917a286-a1ac-46f5-b0a0-7069b911b38d")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R101")
+			(value "100k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a9ab2407-fe64-49e2-b94f-d88c9458968c")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R102")
+			(value "100k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "5b3cfae4-908b-40df-b79b-ad5c51f11e0d")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R103")
+			(value "100k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "3aaab325-f2c1-4a18-8339-a9c4f88557d2")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R104")
+			(value "100k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "09e65b1e-1e76-42df-a5a0-a6bb63d431fe")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R105")
+			(value "100k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "1102901a-d065-4252-84a6-29128e285847")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R106")
+			(value "100k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "0d9bc6fb-f6f5-4977-9557-f89f69983144")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R110")
+			(value "22k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "e89b100f-fbae-4a0b-a1e7-c56320fa27c9")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R111")
+			(value "220R")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "fb8c576d-c131-489d-9271-5a2d3dc4264b")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R112")
+			(value "100k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "5a8b67a4-e7f5-44f0-a057-cf92944d0ce5")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R113")
+			(value "10k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "3a11023c-7978-4b9b-afbe-f3eb83b22cc4")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R114")
+			(value "22k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "576806cc-a1d9-4c7b-886b-10dc4d458b88")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R115")
+			(value "220R")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "77129814-0b92-4ceb-b6e0-16ca60b1c867")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R116")
+			(value "100k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "8e99bdac-4a8e-417c-a0b5-03352a5ea870")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R117")
+			(value "10k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c85bf4bb-0709-4eaf-be5f-444891d9dc6c")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R118")
+			(value "22k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "edc8ab77-39de-4929-8e54-e0bd464004ab")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R119")
+			(value "220R")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "6194c19f-ab25-4212-bae8-d35b5311f087")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R120")
+			(value "100k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "92d17e9b-147a-4295-96bc-dea6dad70b5f")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R121")
+			(value "47k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "90f83dbe-84a6-4fa5-9cf7-82bb2ef79ed4")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R200")
+			(value "100k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "2e77aeb2-d79a-47f5-aa65-35d411ff00a3")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R201")
+			(value "100k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "0620432a-f104-4ae5-86ce-5c65983b0ed8")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R202")
+			(value "100k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "798be1c5-9f6e-4888-89d7-45f5dc4e295b")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R203")
+			(value "100k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "be2c5ac1-03dd-44c9-abda-b326be1a5313")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R204")
+			(value "100k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "7d8e50dd-565a-479e-8681-7edb2dd021db")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R205")
+			(value "100k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "07e66459-1c7c-4c67-8628-1d7c7ed2403d")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R206")
+			(value "100k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "094a1f4e-bb4d-4557-904c-92b1e26b4514")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R210")
+			(value "22k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "dec55559-2135-4ac2-89cf-13dc76362a07")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R211")
+			(value "220R")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "8ce57109-04aa-406d-9f40-e6f40aa51985")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R212")
+			(value "100k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c9251b23-8446-44ba-b6c1-28d5f30e591d")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R213")
+			(value "10k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "52a5f252-2893-4119-bedd-5b909caf3cff")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R214")
+			(value "22k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "dee95740-9e42-419e-a423-607a6c9008f3")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R215")
+			(value "220R")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "9797e3c9-8db5-48bb-ba38-1ca2a0fb5e08")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R216")
+			(value "100k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "994d6dc6-5371-47e3-820b-d0be132bea05")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R217")
+			(value "10k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "e8c14218-72c2-40d1-9315-874599470d7b")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R218")
+			(value "22k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "6d2ebb1f-7e6a-4f0b-95c4-26bca94ea637")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R219")
+			(value "220R")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "60e999ae-53f9-4347-be33-caffc943e708")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R220")
+			(value "100k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "2475faf8-fa2d-463a-b5a8-b05fbb30ff5e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R221")
+			(value "47k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "b53274cc-05a0-4bd1-9037-147e24edd9cf")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U30")
+			(value "OPA1678")
+			(footprint "Package_DIP:DIP-8_W7.62mm_SMDSocket_SmallPads")
+			(fields
+				(field
+					(name "Footprint") "Package_DIP:DIP-8_W7.62mm_SMDSocket_SmallPads")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Amplifier_Operational")
+				(part "OPA1678")
+				(description "Low-Distortion Audio Operational Amplifiers, SOIC-8/VSSOP-8")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "dual opamp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "80824e0c-4416-4c82-b41e-d6a86b2d25b7" "9d8e9773-a158-4b10-8686-7fe8584955a4"
+				"246c1e96-2054-4dd4-9860-507d10e11988"
+			)
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "1")
+						)
+					)
+				)
+				(unit
+					(name "B")
+					(pins
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+					)
+				)
+				(unit
+					(name "C")
+					(pins
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "4")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U31")
+			(value "LM13700")
+			(footprint "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+			(fields
+				(field
+					(name "Footprint") "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Amplifier_Operational")
+				(part "LM13700")
+				(description "Dual Operational Transconductance Amplifiers with Linearizing Diodes and Buffers, DIP-16/SOIC-16")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "operational transconductance amplifier OTA")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "SOIC*3.9x9.9mm*P1.27mm* DIP*W7.62mm*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "e6affb30-3adf-457b-a936-f3ff70ef93e5" "bb1fb472-ce27-440f-b368-b05988901a3f"
+				"77f73ca5-fc5e-41a8-a303-c9d433ae3a0e" "6fede1bf-0975-4c5b-a9d1-7857ec7aeaeb"
+				"409e28f3-bbad-4b33-b141-a8e0e55ef2f9"
+			)
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "16")
+						)
+					)
+				)
+				(unit
+					(name "B")
+					(pins
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "9")
+						)
+					)
+				)
+				(unit
+					(name "C")
+					(pins
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "1")
+						)
+					)
+				)
+				(unit
+					(name "D")
+					(pins
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+					)
+				)
+				(unit
+					(name "E")
+					(pins
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "6")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U32")
+			(value "LM13700")
+			(footprint "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+			(fields
+				(field
+					(name "Footprint") "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Amplifier_Operational")
+				(part "LM13700")
+				(description "Dual Operational Transconductance Amplifiers with Linearizing Diodes and Buffers, DIP-16/SOIC-16")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "operational transconductance amplifier OTA")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "SOIC*3.9x9.9mm*P1.27mm* DIP*W7.62mm*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "2befa89f-2620-4bda-8169-8388be70694e" "bd186de5-ebd9-4cf3-9f8d-5cbaf9004d51"
+				"105667ea-90db-489b-92ad-c1070980705f"
+			)
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "16")
+						)
+					)
+				)
+				(unit
+					(name "B")
+					(pins
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "9")
+						)
+					)
+				)
+				(unit
+					(name "C")
+					(pins
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "1")
+						)
+					)
+				)
+				(unit
+					(name "D")
+					(pins
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+					)
+				)
+				(unit
+					(name "E")
+					(pins
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "6")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U33")
+			(value "4052")
+			(footprint "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+			(fields
+				(field
+					(name "Footprint") "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "4xxx")
+				(part "4052")
+				(description "Dual Analog Multiplexer 4 to 1 line")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "CMOS MUX MUX4")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP?16*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "f228b884-9b04-42b3-a902-f8a395d930f0")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "3")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U34")
+			(value "OPA1678")
+			(footprint "Package_DIP:DIP-8_W7.62mm_SMDSocket_SmallPads")
+			(fields
+				(field
+					(name "Footprint") "Package_DIP:DIP-8_W7.62mm_SMDSocket_SmallPads")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Amplifier_Operational")
+				(part "OPA1678")
+				(description "Low-Distortion Audio Operational Amplifiers, SOIC-8/VSSOP-8")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "dual opamp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "9ee60c08-4919-40df-95ac-1a6d82e502fb" "801ae7aa-fb6b-456c-b61a-45de0ea8fbbb"
+				"0c41c5b9-9441-4788-a73c-bca0624aa844"
+			)
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "1")
+						)
+					)
+				)
+				(unit
+					(name "B")
+					(pins
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+					)
+				)
+				(unit
+					(name "C")
+					(pins
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "4")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U35")
+			(value "LM13700")
+			(footprint "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+			(fields
+				(field
+					(name "Footprint") "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Amplifier_Operational")
+				(part "LM13700")
+				(description "Dual Operational Transconductance Amplifiers with Linearizing Diodes and Buffers, DIP-16/SOIC-16")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "operational transconductance amplifier OTA")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "SOIC*3.9x9.9mm*P1.27mm* DIP*W7.62mm*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "b0c3d8b6-cfee-49a0-b2ca-ca92b0ba99a7" "f40576c7-475b-4341-b433-c783159d9675"
+				"7cb7afb4-08f2-4e54-8d75-d5991a6d3807" "2fbcdc4e-de3f-4c60-b924-a4820246c159"
+				"045f0032-ddcd-49c7-a932-dd6258951690"
+			)
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "16")
+						)
+					)
+				)
+				(unit
+					(name "B")
+					(pins
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "9")
+						)
+					)
+				)
+				(unit
+					(name "C")
+					(pins
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "1")
+						)
+					)
+				)
+				(unit
+					(name "D")
+					(pins
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+					)
+				)
+				(unit
+					(name "E")
+					(pins
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "6")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U36")
+			(value "LM13700")
+			(footprint "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+			(fields
+				(field
+					(name "Footprint") "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Amplifier_Operational")
+				(part "LM13700")
+				(description "Dual Operational Transconductance Amplifiers with Linearizing Diodes and Buffers, DIP-16/SOIC-16")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "operational transconductance amplifier OTA")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "SOIC*3.9x9.9mm*P1.27mm* DIP*W7.62mm*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "3bec1e94-2d9c-4fbc-87c9-e4f3e8c2d730" "802e1555-3188-4aad-a3a1-13b9971982f9"
+				"0f499b06-8076-4800-8f2e-0fdd8313d9b3"
+			)
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "16")
+						)
+					)
+				)
+				(unit
+					(name "B")
+					(pins
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "9")
+						)
+					)
+				)
+				(unit
+					(name "C")
+					(pins
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "1")
+						)
+					)
+				)
+				(unit
+					(name "D")
+					(pins
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+					)
+				)
+				(unit
+					(name "E")
+					(pins
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "6")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U37")
+			(value "4052")
+			(footprint "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+			(fields
+				(field
+					(name "Footprint") "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "4xxx")
+				(part "4052")
+				(description "Dual Analog Multiplexer 4 to 1 line")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "../../schematic/AUDIO_BOARD_v1_r1/MASTER_FILTER.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "CMOS MUX MUX4")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "DIP?16*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c8096147-291b-492e-b787-ea9ac0bfcebc")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "3")
+						)
+					)
+				)
+			)
+		)
+	)
+	(groups)
+	(variants)
+	(libparts
+		(libpart
+			(lib "4xxx")
+			(part "4052")
+			(description "Dual Analog Multiplexer 4 to 1 line")
+			(docs "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4051bms-52bms-53bms.pdf")
+			(footprints
+				(fp "DIP?16*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "4052")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet") "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4051bms-52bms-53bms.pdf")
+				(field
+					(name "Description") "Dual Analog Multiplexer 4 to 1 line")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "Y0")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "Y2")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "Y")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "Y3")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "Y1")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "Inh")
+					(type "input")
+				)
+				(pin
+					(num "7")
+					(name "VEE")
+					(type "power_in")
+				)
+				(pin
+					(num "8")
+					(name "VSS")
+					(type "power_in")
+				)
+				(pin
+					(num "9")
+					(name "B")
+					(type "input")
+				)
+				(pin
+					(num "10")
+					(name "A")
+					(type "input")
+				)
+				(pin
+					(num "11")
+					(name "X3")
+					(type "passive")
+				)
+				(pin
+					(num "12")
+					(name "X0")
+					(type "passive")
+				)
+				(pin
+					(num "13")
+					(name "X")
+					(type "passive")
+				)
+				(pin
+					(num "14")
+					(name "X1")
+					(type "passive")
+				)
+				(pin
+					(num "15")
+					(name "X2")
+					(type "passive")
+				)
+				(pin
+					(num "16")
+					(name "VDD")
+					(type "power_in")
+				)
+			)
+		)
+		(libpart
+			(lib "Amplifier_Operational")
+			(part "LM13700")
+			(description "Dual Operational Transconductance Amplifiers with Linearizing Diodes and Buffers, DIP-16/SOIC-16")
+			(docs "http://www.ti.com/lit/ds/symlink/lm13700.pdf")
+			(footprints
+				(fp "SOIC*3.9x9.9mm*P1.27mm*")
+				(fp "DIP*W7.62mm*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "LM13700")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet") "http://www.ti.com/lit/ds/symlink/lm13700.pdf")
+				(field
+					(name "Description") "Dual Operational Transconductance Amplifiers with Linearizing Diodes and Buffers, DIP-16/SOIC-16")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "input")
+				)
+				(pin
+					(num "2")
+					(name "DIODE_BIAS")
+					(type "input")
+				)
+				(pin
+					(num "3")
+					(name "+")
+					(type "input")
+				)
+				(pin
+					(num "4")
+					(name "-")
+					(type "input")
+				)
+				(pin
+					(num "5")
+					(name "")
+					(type "output")
+				)
+				(pin
+					(num "6")
+					(name "V-")
+					(type "power_in")
+				)
+				(pin
+					(num "7")
+					(name "")
+					(type "input")
+				)
+				(pin
+					(num "8")
+					(name "")
+					(type "output")
+				)
+				(pin
+					(num "9")
+					(name "")
+					(type "output")
+				)
+				(pin
+					(num "10")
+					(name "")
+					(type "input")
+				)
+				(pin
+					(num "11")
+					(name "V+")
+					(type "power_in")
+				)
+				(pin
+					(num "12")
+					(name "")
+					(type "output")
+				)
+				(pin
+					(num "13")
+					(name "-")
+					(type "input")
+				)
+				(pin
+					(num "14")
+					(name "+")
+					(type "input")
+				)
+				(pin
+					(num "15")
+					(name "DIODE_BIAS")
+					(type "input")
+				)
+				(pin
+					(num "16")
+					(name "")
+					(type "input")
+				)
+			)
+		)
+		(libpart
+			(lib "Amplifier_Operational")
+			(part "OPA1678")
+			(description "Low-Distortion Audio Operational Amplifiers, SOIC-8/VSSOP-8")
+			(docs "http://www.ti.com/lit/ds/symlink/opa1678.pdf")
+			(footprints
+				(fp "SOIC*3.9x4.9mm*P1.27mm*")
+				(fp "DIP*W7.62mm*")
+				(fp "TO*99*")
+				(fp "OnSemi*Micro8*")
+				(fp "TSSOP*3x3mm*P0.65mm*")
+				(fp "TSSOP*4.4x3mm*P0.65mm*")
+				(fp "MSOP*3x3mm*P0.65mm*")
+				(fp "SSOP*3.9x4.9mm*P0.635mm*")
+				(fp "LFCSP*2x2mm*P0.5mm*")
+				(fp "*SIP*")
+				(fp "SOIC*5.3x6.2mm*P1.27mm*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "OPA1678")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet") "http://www.ti.com/lit/ds/symlink/opa1678.pdf")
+				(field
+					(name "Description") "Low-Distortion Audio Operational Amplifiers, SOIC-8/VSSOP-8")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "output")
+				)
+				(pin
+					(num "2")
+					(name "-")
+					(type "input")
+				)
+				(pin
+					(num "3")
+					(name "+")
+					(type "input")
+				)
+				(pin
+					(num "4")
+					(name "V-")
+					(type "power_in")
+				)
+				(pin
+					(num "5")
+					(name "+")
+					(type "input")
+				)
+				(pin
+					(num "6")
+					(name "-")
+					(type "input")
+				)
+				(pin
+					(num "7")
+					(name "")
+					(type "output")
+				)
+				(pin
+					(num "8")
+					(name "V+")
+					(type "power_in")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "C_Small")
+			(description "Unpolarized capacitor, small symbol")
+			(footprints
+				(fp "C_*")
+			)
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "C_Small")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor, small symbol")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "R")
+			(description "Resistor")
+			(footprints
+				(fp "R_*")
+			)
+			(fields
+				(field
+					(name "Reference") "R")
+				(field
+					(name "Value") "R")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Resistor")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+	)
+	(libraries
+		(library
+			(logical "4xxx")
+			(uri "${KICAD10_SYMBOL_DIR}/4xxx.kicad_sym")
+		)
+		(library
+			(logical "Amplifier_Operational")
+			(uri "${KICAD10_SYMBOL_DIR}/Amplifier_Operational.kicad_sym")
+		)
+		(library
+			(logical "Device")
+			(uri "${KICAD10_SYMBOL_DIR}/Device.kicad_sym")
+		)
+	)
+	(nets
+		(net
+			(code "1")
+			(name "+5V")
+			(class "Default")
+			(node
+				(ref "C500")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C502")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C504")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C506")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C508")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C510")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C512")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C514")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U30")
+				(pin "8")
+				(pinfunction "V+_8")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U31")
+				(pin "11")
+				(pinfunction "V+_11")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U32")
+				(pin "11")
+				(pinfunction "V+_11")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U33")
+				(pin "16")
+				(pinfunction "VDD_16")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U34")
+				(pin "8")
+				(pinfunction "V+_8")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U35")
+				(pin "11")
+				(pinfunction "V+_11")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U36")
+				(pin "11")
+				(pinfunction "V+_11")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U37")
+				(pin "16")
+				(pinfunction "VDD_16")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "2")
+			(name "-5V")
+			(class "Default")
+			(node
+				(ref "C501")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C503")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C505")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C507")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C509")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C511")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C513")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C515")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R113")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R117")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R213")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R217")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U30")
+				(pin "4")
+				(pinfunction "V-_4")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U31")
+				(pin "6")
+				(pinfunction "V-_6")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U32")
+				(pin "6")
+				(pinfunction "V-_6")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U33")
+				(pin "7")
+				(pinfunction "VEE_7")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U34")
+				(pin "4")
+				(pinfunction "V-_4")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U35")
+				(pin "6")
+				(pinfunction "V-_6")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U36")
+				(pin "6")
+				(pinfunction "V-_6")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U37")
+				(pin "7")
+				(pinfunction "VEE_7")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "3")
+			(name "/AUDIO_L_IN")
+			(class "Default")
+			(node
+				(ref "R100")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "4")
+			(name "/AUDIO_L_OUT")
+			(class "Default")
+			(node
+				(ref "U33")
+				(pin "13")
+				(pinfunction "X_13")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "5")
+			(name "/AUDIO_R_IN")
+			(class "Default")
+			(node
+				(ref "R200")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "6")
+			(name "/AUDIO_R_OUT")
+			(class "Default")
+			(node
+				(ref "U37")
+				(pin "13")
+				(pinfunction "X_13")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "7")
+			(name "/BPL")
+			(class "Default")
+			(node
+				(ref "R113")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R114")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R115")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R118")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R119")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U31")
+				(pin "8")
+				(pintype "output")
+			)
+			(node
+				(ref "U33")
+				(pin "14")
+				(pinfunction "X1_14")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "8")
+			(name "/BPR")
+			(class "Default")
+			(node
+				(ref "R213")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R214")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R215")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R218")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R219")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U35")
+				(pin "8")
+				(pintype "output")
+			)
+			(node
+				(ref "U37")
+				(pin "14")
+				(pinfunction "X1_14")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "9")
+			(name "/CV_CUTOFF")
+			(class "Default")
+			(node
+				(ref "R112")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R116")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R212")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R216")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "10")
+			(name "/CV_RES")
+			(class "Default")
+			(node
+				(ref "R120")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R220")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "11")
+			(name "/HPL")
+			(class "Default")
+			(node
+				(ref "R103")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R104")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R110")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R111")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U30")
+				(pin "1")
+				(pintype "output")
+			)
+			(node
+				(ref "U33")
+				(pin "15")
+				(pinfunction "X2_15")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "12")
+			(name "/HPR")
+			(class "Default")
+			(node
+				(ref "R203")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R204")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R210")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R211")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U34")
+				(pin "1")
+				(pintype "output")
+			)
+			(node
+				(ref "U37")
+				(pin "15")
+				(pinfunction "X2_15")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "13")
+			(name "/LPL")
+			(class "Default")
+			(node
+				(ref "R101")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R105")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R117")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U31")
+				(pin "9")
+				(pintype "output")
+			)
+			(node
+				(ref "U33")
+				(pin "12")
+				(pinfunction "X0_12")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "14")
+			(name "/LPR")
+			(class "Default")
+			(node
+				(ref "R201")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R205")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R217")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U35")
+				(pin "9")
+				(pintype "output")
+			)
+			(node
+				(ref "U37")
+				(pin "12")
+				(pinfunction "X0_12")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "15")
+			(name "/MODE_A")
+			(class "Default")
+			(node
+				(ref "U33")
+				(pin "10")
+				(pinfunction "A_10")
+				(pintype "input")
+			)
+			(node
+				(ref "U37")
+				(pin "10")
+				(pinfunction "A_10")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "16")
+			(name "/MODE_B")
+			(class "Default")
+			(node
+				(ref "U33")
+				(pin "9")
+				(pinfunction "B_9")
+				(pintype "input")
+			)
+			(node
+				(ref "U37")
+				(pin "9")
+				(pinfunction "B_9")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "17")
+			(name "/NOTCHL")
+			(class "Default")
+			(node
+				(ref "R106")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U30")
+				(pin "7")
+				(pintype "output")
+			)
+			(node
+				(ref "U33")
+				(pin "11")
+				(pinfunction "X3_11")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "18")
+			(name "/NOTCHR")
+			(class "Default")
+			(node
+				(ref "R206")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U34")
+				(pin "7")
+				(pintype "output")
+			)
+			(node
+				(ref "U37")
+				(pin "11")
+				(pinfunction "X3_11")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "19")
+			(name "/RESFBL")
+			(class "Default")
+			(node
+				(ref "R102")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U32")
+				(pin "8")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "20")
+			(name "/RESFBR")
+			(class "Default")
+			(node
+				(ref "R202")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U36")
+				(pin "8")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "21")
+			(name "GND")
+			(class "Default")
+			(node
+				(ref "C110")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C114")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C210")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C214")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C500")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C501")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C502")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C503")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C504")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C505")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C506")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C507")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C508")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C509")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C510")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C511")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C512")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C513")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C514")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C515")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R111")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R115")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R119")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R121")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R211")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R215")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R219")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R221")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U30")
+				(pin "3")
+				(pinfunction "+_3")
+				(pintype "input")
+			)
+			(node
+				(ref "U30")
+				(pin "5")
+				(pinfunction "+_5")
+				(pintype "input")
+			)
+			(node
+				(ref "U31")
+				(pin "13")
+				(pinfunction "-_13")
+				(pintype "input")
+			)
+			(node
+				(ref "U31")
+				(pin "4")
+				(pinfunction "-_4")
+				(pintype "input")
+			)
+			(node
+				(ref "U32")
+				(pin "4")
+				(pinfunction "-_4")
+				(pintype "input")
+			)
+			(node
+				(ref "U33")
+				(pin "6")
+				(pinfunction "Inh_6")
+				(pintype "input")
+			)
+			(node
+				(ref "U33")
+				(pin "8")
+				(pinfunction "VSS_8")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U34")
+				(pin "3")
+				(pinfunction "+_3")
+				(pintype "input")
+			)
+			(node
+				(ref "U34")
+				(pin "5")
+				(pinfunction "+_5")
+				(pintype "input")
+			)
+			(node
+				(ref "U35")
+				(pin "13")
+				(pinfunction "-_13")
+				(pintype "input")
+			)
+			(node
+				(ref "U35")
+				(pin "4")
+				(pinfunction "-_4")
+				(pintype "input")
+			)
+			(node
+				(ref "U36")
+				(pin "4")
+				(pinfunction "-_4")
+				(pintype "input")
+			)
+			(node
+				(ref "U37")
+				(pin "6")
+				(pinfunction "Inh_6")
+				(pintype "input")
+			)
+			(node
+				(ref "U37")
+				(pin "8")
+				(pinfunction "VSS_8")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "22")
+			(name "Net-(C110-Pad1)")
+			(class "Default")
+			(node
+				(ref "C110")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U31")
+				(pin "5")
+				(pintype "output")
+			)
+			(node
+				(ref "U31")
+				(pin "7")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "23")
+			(name "Net-(C114-Pad1)")
+			(class "Default")
+			(node
+				(ref "C114")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U31")
+				(pin "10")
+				(pintype "input")
+			)
+			(node
+				(ref "U31")
+				(pin "12")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "24")
+			(name "Net-(C210-Pad1)")
+			(class "Default")
+			(node
+				(ref "C210")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U35")
+				(pin "5")
+				(pintype "output")
+			)
+			(node
+				(ref "U35")
+				(pin "7")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "25")
+			(name "Net-(C214-Pad1)")
+			(class "Default")
+			(node
+				(ref "C214")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U35")
+				(pin "10")
+				(pintype "input")
+			)
+			(node
+				(ref "U35")
+				(pin "12")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "26")
+			(name "Net-(R112-Pad1)")
+			(class "Default")
+			(node
+				(ref "R112")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U31")
+				(pin "1")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "27")
+			(name "Net-(R116-Pad1)")
+			(class "Default")
+			(node
+				(ref "R116")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U31")
+				(pin "16")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "28")
+			(name "Net-(R120-Pad1)")
+			(class "Default")
+			(node
+				(ref "R120")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U32")
+				(pin "1")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "29")
+			(name "Net-(R121-Pad1)")
+			(class "Default")
+			(node
+				(ref "R121")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U32")
+				(pin "5")
+				(pintype "output")
+			)
+			(node
+				(ref "U32")
+				(pin "7")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "30")
+			(name "Net-(R212-Pad1)")
+			(class "Default")
+			(node
+				(ref "R212")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U35")
+				(pin "1")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "31")
+			(name "Net-(R216-Pad1)")
+			(class "Default")
+			(node
+				(ref "R216")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U35")
+				(pin "16")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "32")
+			(name "Net-(R220-Pad1)")
+			(class "Default")
+			(node
+				(ref "R220")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U36")
+				(pin "1")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "33")
+			(name "Net-(R221-Pad1)")
+			(class "Default")
+			(node
+				(ref "R221")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U36")
+				(pin "5")
+				(pintype "output")
+			)
+			(node
+				(ref "U36")
+				(pin "7")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "34")
+			(name "Net-(U30A--)")
+			(class "Default")
+			(node
+				(ref "R100")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R101")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R102")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R103")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U30")
+				(pin "2")
+				(pinfunction "-_2")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "35")
+			(name "Net-(U30B--)")
+			(class "Default")
+			(node
+				(ref "R104")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R105")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R106")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U30")
+				(pin "6")
+				(pinfunction "-_6")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "36")
+			(name "Net-(U31A-+)")
+			(class "Default")
+			(node
+				(ref "R114")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U31")
+				(pin "14")
+				(pinfunction "+_14")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "37")
+			(name "Net-(U31C-+)")
+			(class "Default")
+			(node
+				(ref "R110")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U31")
+				(pin "3")
+				(pinfunction "+_3")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "38")
+			(name "Net-(U32C-+)")
+			(class "Default")
+			(node
+				(ref "R118")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U32")
+				(pin "3")
+				(pinfunction "+_3")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "39")
+			(name "Net-(U34A--)")
+			(class "Default")
+			(node
+				(ref "R200")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R201")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R202")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R203")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U34")
+				(pin "2")
+				(pinfunction "-_2")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "40")
+			(name "Net-(U34B--)")
+			(class "Default")
+			(node
+				(ref "R204")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R205")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R206")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U34")
+				(pin "6")
+				(pinfunction "-_6")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "41")
+			(name "Net-(U35A-+)")
+			(class "Default")
+			(node
+				(ref "R214")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U35")
+				(pin "14")
+				(pinfunction "+_14")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "42")
+			(name "Net-(U35C-+)")
+			(class "Default")
+			(node
+				(ref "R210")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U35")
+				(pin "3")
+				(pinfunction "+_3")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "43")
+			(name "Net-(U36C-+)")
+			(class "Default")
+			(node
+				(ref "R218")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U36")
+				(pin "3")
+				(pinfunction "+_3")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "44")
+			(name "unconnected-(U31A-DIODE_BIAS-Pad15)")
+			(class "Default")
+			(node
+				(ref "U31")
+				(pin "15")
+				(pinfunction "DIODE_BIAS_15")
+				(pintype "input+no_connect")
+			)
+		)
+		(net
+			(code "45")
+			(name "unconnected-(U31C-DIODE_BIAS-Pad2)")
+			(class "Default")
+			(node
+				(ref "U31")
+				(pin "2")
+				(pinfunction "DIODE_BIAS_2")
+				(pintype "input+no_connect")
+			)
+		)
+		(net
+			(code "46")
+			(name "unconnected-(U32C-DIODE_BIAS-Pad2)")
+			(class "Default")
+			(node
+				(ref "U32")
+				(pin "2")
+				(pinfunction "DIODE_BIAS_2")
+				(pintype "input+no_connect")
+			)
+		)
+		(net
+			(code "47")
+			(name "unconnected-(U33-Y-Pad3)")
+			(class "Default")
+			(node
+				(ref "U33")
+				(pin "3")
+				(pinfunction "Y_3")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "48")
+			(name "unconnected-(U33-Y0-Pad1)")
+			(class "Default")
+			(node
+				(ref "U33")
+				(pin "1")
+				(pinfunction "Y0_1")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "49")
+			(name "unconnected-(U33-Y1-Pad5)")
+			(class "Default")
+			(node
+				(ref "U33")
+				(pin "5")
+				(pinfunction "Y1_5")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "50")
+			(name "unconnected-(U33-Y2-Pad2)")
+			(class "Default")
+			(node
+				(ref "U33")
+				(pin "2")
+				(pinfunction "Y2_2")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "51")
+			(name "unconnected-(U33-Y3-Pad4)")
+			(class "Default")
+			(node
+				(ref "U33")
+				(pin "4")
+				(pinfunction "Y3_4")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "52")
+			(name "unconnected-(U35A-DIODE_BIAS-Pad15)")
+			(class "Default")
+			(node
+				(ref "U35")
+				(pin "15")
+				(pinfunction "DIODE_BIAS_15")
+				(pintype "input+no_connect")
+			)
+		)
+		(net
+			(code "53")
+			(name "unconnected-(U35C-DIODE_BIAS-Pad2)")
+			(class "Default")
+			(node
+				(ref "U35")
+				(pin "2")
+				(pinfunction "DIODE_BIAS_2")
+				(pintype "input+no_connect")
+			)
+		)
+		(net
+			(code "54")
+			(name "unconnected-(U36C-DIODE_BIAS-Pad2)")
+			(class "Default")
+			(node
+				(ref "U36")
+				(pin "2")
+				(pinfunction "DIODE_BIAS_2")
+				(pintype "input+no_connect")
+			)
+		)
+		(net
+			(code "55")
+			(name "unconnected-(U37-Y-Pad3)")
+			(class "Default")
+			(node
+				(ref "U37")
+				(pin "3")
+				(pinfunction "Y_3")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "56")
+			(name "unconnected-(U37-Y0-Pad1)")
+			(class "Default")
+			(node
+				(ref "U37")
+				(pin "1")
+				(pinfunction "Y0_1")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "57")
+			(name "unconnected-(U37-Y1-Pad5)")
+			(class "Default")
+			(node
+				(ref "U37")
+				(pin "5")
+				(pinfunction "Y1_5")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "58")
+			(name "unconnected-(U37-Y2-Pad2)")
+			(class "Default")
+			(node
+				(ref "U37")
+				(pin "2")
+				(pinfunction "Y2_2")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "59")
+			(name "unconnected-(U37-Y3-Pad4)")
+			(class "Default")
+			(node
+				(ref "U37")
+				(pin "4")
+				(pinfunction "Y3_4")
+				(pintype "passive+no_connect")
+			)
+		)
+	)
+)
