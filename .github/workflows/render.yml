@@ -25,6 +25,13 @@ jobs:
       options: --user root
     permissions:
       contents: write
+    env:
+      # boards reference stock 3d models via these vars; the container only
+      # auto-defines KICAD10_3DMODEL_DIR, so point the older ones at the same
+      # stock dir or all KICAD9_/KISYS3DMOD parts render empty
+      KICAD10_3DMODEL_DIR: /usr/share/kicad/3dmodels
+      KICAD9_3DMODEL_DIR: /usr/share/kicad/3dmodels
+      KISYS3DMOD: /usr/share/kicad/3dmodels
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -33,7 +40,13 @@ jobs:
           fetch-depth: 0
 
       - name: mark workspace safe for git
-        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+        run: git config --global --add safe.directory '*'
+
+      - name: fetch custom footprint/3d library
+        # boards reference custom models by absolute path
+        # (/home/akiel/trunk/pub/my_footprints/...); clone the public lib repo
+        # into that exact path so those models resolve in ci
+        run: git clone --depth 1 https://github.com/akielaries/my_pcb_lib /home/akiel/trunk/pub/my_footprints
 
       - name: install xvfb
         run: |

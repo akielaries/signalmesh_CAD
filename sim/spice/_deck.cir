@@ -1,0 +1,29 @@
+phaser 4-stage
+Vin in 0 dc 0 ac 1
+Bfin fin 0 V = V(in) + 0.5*V(ap4)
+G1 0 l1 fin b1 5e-05
+C1 l1 0 1n
+Ro1 l1 0 1e9
+Eb1 b1 0 l1 0 1
+Bap1 ap1 0 V = 2*V(b1) - V(fin)
+G2 0 l2 ap1 b2 5e-05
+C2 l2 0 1n
+Ro2 l2 0 1e9
+Eb2 b2 0 l2 0 1
+Bap2 ap2 0 V = 2*V(b2) - V(ap1)
+G3 0 l3 ap2 b3 5e-05
+C3 l3 0 1n
+Ro3 l3 0 1e9
+Eb3 b3 0 l3 0 1
+Bap3 ap3 0 V = 2*V(b3) - V(ap2)
+G4 0 l4 ap3 b4 5e-05
+C4 l4 0 1n
+Ro4 l4 0 1e9
+Eb4 b4 0 l4 0 1
+Bap4 ap4 0 V = 2*V(b4) - V(ap3)
+Bout out 0 V = 0.5*V(in) + 0.5*V(ap4)
+.control
+ac dec 40 20 20k
+wrdata /home/akiel/trunk/pub/signalmesh_CAD/sim/spice/_ph.txt db(v(out))
+.endc
+.end
