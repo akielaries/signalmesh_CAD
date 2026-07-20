@@ -1,2 +1,6 @@
 # generated board renders are published to github pages, not committed
 schematic/**/renders/
+
+# kicad local history/backup dirs (were accidentally tracked as submodules)
+.history/
+.history_trim/
