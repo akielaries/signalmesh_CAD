@@ -4347,6 +4347,12 @@
 		(uuid "47dbf42f-b45d-4950-9de3-90782ce6427d")
 	)
 	(junction
+		(at 162.56 92.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4f9ed1c8-0d72-4689-babc-f77844f79b9d")
+	)
+	(junction
 		(at 66.04 165.1)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4425,7 +4431,7 @@
 		(uuid "cf4a6c6a-66ad-4a34-9647-3c1ca18f5fbb")
 	)
 	(no_connect
-		(at 144.78 85.09)
+		(at 162.56 90.17)
 		(uuid "435a84ea-ecad-44f4-8e6a-6239328bf2f5")
 	)
 	(no_connect
@@ -4477,7 +4483,7 @@
 		(uuid "aaaaaaaa-0000-0000-0000-000000000011")
 	)
 	(no_connect
-		(at 144.78 92.71)
+		(at 162.56 97.79)
 		(uuid "d6bbe79e-73e3-4815-a03f-c33357170879")
 	)
 	(wire
@@ -4592,7 +4598,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 77.47) (xy 137.16 77.47)
+			(xy 162.56 82.55) (xy 154.94 82.55)
 		)
 		(stroke
 			(width 0)
@@ -4752,7 +4758,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 80.01) (xy 137.16 80.01)
+			(xy 162.56 85.09) (xy 154.94 85.09)
 		)
 		(stroke
 			(width 0)
@@ -4932,7 +4938,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 72.39) (xy 137.16 72.39)
+			(xy 162.56 77.47) (xy 154.94 77.47)
 		)
 		(stroke
 			(width 0)
@@ -5132,7 +5138,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 90.17) (xy 137.16 90.17)
+			(xy 162.56 95.25) (xy 162.56 92.71)
 		)
 		(stroke
 			(width 0)
@@ -5242,7 +5248,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 87.63) (xy 137.16 87.63)
+			(xy 162.56 92.71) (xy 154.94 92.71)
 		)
 		(stroke
 			(width 0)
@@ -5392,7 +5398,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 85.09) (xy 137.16 85.09)
+			(xy 162.56 90.17) (xy 154.94 90.17)
 		)
 		(stroke
 			(width 0)
@@ -5472,7 +5478,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 92.71) (xy 137.16 92.71)
+			(xy 162.56 97.79) (xy 154.94 97.79)
 		)
 		(stroke
 			(width 0)
@@ -5772,7 +5778,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 74.93) (xy 137.16 74.93)
+			(xy 162.56 80.01) (xy 154.94 80.01)
 		)
 		(stroke
 			(width 0)
@@ -5942,7 +5948,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 82.55) (xy 137.16 82.55)
+			(xy 162.56 87.63) (xy 154.94 87.63)
 		)
 		(stroke
 			(width 0)
@@ -6312,7 +6318,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 69.85) (xy 137.16 69.85)
+			(xy 162.56 74.93) (xy 154.94 74.93)
 		)
 		(stroke
 			(width 0)
@@ -6431,7 +6437,7 @@
 		(uuid "0908b998-c992-461a-b931-d517108c33dd")
 	)
 	(label "SPI_SCK"
-		(at 137.16 69.85 0)
+		(at 154.94 74.93 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6601,7 +6607,7 @@
 		(uuid "56544c0a-e946-4e28-a84a-985b6cbefdcd")
 	)
 	(label "CS_CTRL2"
-		(at 137.16 92.71 0)
+		(at 154.94 97.79 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6721,7 +6727,7 @@
 		(uuid "a6f4b91f-915d-46a8-9eed-bb5574ad85d9")
 	)
 	(label "CS_DAC1"
-		(at 137.16 77.47 0)
+		(at 154.94 82.55 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6791,7 +6797,7 @@
 		(uuid "aadd0005-0000-0000-0000-000000000000")
 	)
 	(label "SPI_MISO"
-		(at 137.16 74.93 0)
+		(at 154.94 80.01 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6801,7 +6807,7 @@
 		(uuid "ac91e8d7-7aa8-41c4-b99b-1819f0759427")
 	)
 	(label "CS_CTRL"
-		(at 137.16 85.09 0)
+		(at 154.94 90.17 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6831,7 +6837,7 @@
 		(uuid "bbbbbbbb-0000-0000-0000-000000000004")
 	)
 	(label "SPI_MOSI"
-		(at 137.16 72.39 0)
+		(at 154.94 77.47 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6921,7 +6927,7 @@
 		(uuid "d246d679-070b-4a07-93cb-e28132a8d3a8")
 	)
 	(label "CS_DAC2"
-		(at 137.16 80.01 0)
+		(at 154.94 85.09 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6981,7 +6987,7 @@
 		(uuid "eebb0000-0000-0000-0000-000000000000")
 	)
 	(label "CS_EXP"
-		(at 137.16 82.55 0)
+		(at 154.94 87.63 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11151,82 +11157,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 137.16 90.17 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8169fb3e-146c-4c5e-87d1-edbc21384c1a")
-		(property "Reference" "#PWR3032"
-			(at 137.16 93.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 139.7 91.4399 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 137.16 90.17 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 137.16 90.17 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 137.16 90.17 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "002ac027-637c-4e6d-97c1-4810026a153d")
-		)
-		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19"
-					(reference "#PWR3032")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Amplifier_Operational:OPA1678")
 		(at 127 167.64 0)
 		(unit 2)
@@ -12208,7 +12138,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 137.16 87.63 0)
+		(at 154.94 92.71 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12219,7 +12149,7 @@
 		(fields_autoplaced yes)
 		(uuid "9f3d0496-08ab-46a0-ad7c-83b9253b5d21")
 		(property "Reference" "#PWR3031"
-			(at 137.16 90.63 0)
+			(at 154.94 95.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12230,18 +12160,18 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 139.7 88.8999 0)
+			(at 152.4 93.9799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" ""
-			(at 137.16 87.63 0)
+			(at 154.94 92.71 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12251,7 +12181,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 137.16 87.63 0)
+			(at 154.94 92.71 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12261,7 +12191,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 137.16 87.63 0)
+			(at 154.94 92.71 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14082,7 +14012,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x10")
-		(at 149.86 80.01 0)
+		(at 167.64 85.09 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14093,7 +14023,7 @@
 		(fields_autoplaced yes)
 		(uuid "d5956026-8959-4845-acce-7dd1b1b177a1")
 		(property "Reference" "J7"
-			(at 152.4 80.0099 0)
+			(at 170.18 85.0899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14104,7 +14034,7 @@
 			)
 		)
 		(property "Value" "CTRL FFC"
-			(at 152.4 82.5499 0)
+			(at 170.18 87.6299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14115,7 +14045,7 @@
 			)
 		)
 		(property "Footprint" "Connector_FFC-FPC:Hirose_FH12-10S-0.5SH_1x10-1MP_P0.50mm_Horizontal"
-			(at 149.86 80.01 0)
+			(at 167.64 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14126,7 +14056,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 149.86 80.01 0)
+			(at 167.64 85.09 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14136,7 +14066,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 149.86 80.01 0)
+			(at 167.64 85.09 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
