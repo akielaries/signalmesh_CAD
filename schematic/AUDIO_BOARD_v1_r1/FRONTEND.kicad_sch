@@ -1174,12 +1174,6 @@
 		(uuid "b0c85db1-5a9c-4059-b09a-2958376c802f")
 	)
 	(junction
-		(at 69.85 165.1)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c0dc5c97-e921-4330-bfbb-92f4e5049a42")
-	)
-	(junction
 		(at 106.68 128.27)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1966,6 +1960,7 @@
 	(symbol
 		(lib_id "Amplifier_Operational:OPA1678")
 		(at 77.47 167.64 0)
+		(mirror y)
 		(unit 2)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1973,7 +1968,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "3e798765-6dbe-48dc-8038-4e54b7b20016")
 		(property "Reference" "U2"
 			(at 77.47 157.48 0)
