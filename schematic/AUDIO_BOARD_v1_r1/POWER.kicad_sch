@@ -714,6 +714,200 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Regulator_Linear:AP2112K-3.3"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at -5.08 5.715 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "AP2112K-3.3"
+				(at 0 5.715 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+				(at 0 8.255 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP2204.pdf"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "150mA low dropout linear regulator, wide input voltage range, 1.5V fixed positive output, SOT-23-5"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "linear regulator ldo fixed positive"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SOT?23?5*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "AP2112K-3.3_0_1"
+				(rectangle
+					(start -5.08 4.445)
+					(end 5.08 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "AP2112K-3.3_1_1"
+				(pin power_in line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "VIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "EN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 5.08 0 180)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "VOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Regulator_SwitchedCapacitor:LTC660"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1476,6 +1670,17 @@
 		)
 		(uuid "22e18b64-bb21-43e0-85a1-f6eb214f4743")
 	)
+	(text "+3V3 LDO  -  AP2112K-3.3 from +5V (power FFC carries no +3V3); supplies only the MCP expander."
+		(exclude_from_sim no)
+		(at 185.166 155.956 0)
+		(effects
+			(font
+				(size 1.4 1.4)
+			)
+			(justify left bottom)
+		)
+		(uuid "74a1fdcb-8b1a-4f16-8104-b3f9f9d92a48")
+	)
 	(text "POWER INPUT\n- 4-pin FFC from APM (+5V)\n- ICL7660 makes -5V"
 		(exclude_from_sim no)
 		(at 108.458 60.96 0)
@@ -1561,6 +1766,10 @@
 		(at 171.958 83.82)
 		(uuid "aaaaaaaa-0000-0000-0000-000000000003")
 	)
+	(no_connect
+		(at 239.268 135.636)
+		(uuid "ae4194e2-8b5c-4203-9449-f080faa9b777")
+	)
 	(wire
 		(pts
 			(xy 130.81 102.87) (xy 130.81 106.68)
@@ -1600,6 +1809,16 @@
 			(type default)
 		)
 		(uuid "0d4c023a-6f8c-4395-baad-b04d5fb9e5fa")
+	)
+	(wire
+		(pts
+			(xy 234.188 143.256) (xy 234.188 147.066)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "168e0d82-cc84-4b5b-8883-b45dd4820830")
 	)
 	(wire
 		(pts
@@ -1733,6 +1952,16 @@
 	)
 	(wire
 		(pts
+			(xy 241.808 133.096) (xy 248.158 133.096)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64ba8875-3719-462b-a4c4-f5037bbd1982")
+	)
+	(wire
+		(pts
 			(xy 141.478 77.47) (xy 144.018 77.47)
 		)
 		(stroke
@@ -1763,6 +1992,16 @@
 	)
 	(wire
 		(pts
+			(xy 216.408 144.526) (xy 216.408 148.336)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7aa76f5e-574e-47d4-862c-015ced6778ab")
+	)
+	(wire
+		(pts
 			(xy 149.098 128.27) (xy 149.098 125.73)
 		)
 		(stroke
@@ -1770,6 +2009,16 @@
 			(type default)
 		)
 		(uuid "8b49be0c-4a2b-43aa-b332-0540cb7cf417")
+	)
+	(wire
+		(pts
+			(xy 261.112 137.414) (xy 261.112 133.604)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c19f48b-e673-4f40-b450-6569b5de92b2")
 	)
 	(wire
 		(pts
@@ -1803,6 +2052,16 @@
 	)
 	(wire
 		(pts
+			(xy 216.408 139.446) (xy 216.408 135.636)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9fdb7fda-607b-482f-8ba4-e56cd49c63c3")
+	)
+	(wire
+		(pts
 			(xy 131.318 133.35) (xy 131.318 137.16)
 		)
 		(stroke
@@ -1833,6 +2092,16 @@
 	)
 	(wire
 		(pts
+			(xy 226.568 133.096) (xy 220.218 133.096)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a31ea1cc-637c-48d8-9801-9cb2fd5a932e")
+	)
+	(wire
+		(pts
 			(xy 182.118 92.71) (xy 182.118 91.44)
 		)
 		(stroke
@@ -1860,6 +2129,36 @@
 			(type default)
 		)
 		(uuid "b21d061e-f80b-4f70-8255-8256b6408489")
+	)
+	(wire
+		(pts
+			(xy 261.112 142.494) (xy 261.112 146.304)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b7a0dece-3e77-4287-b31e-867b07444fc2")
+	)
+	(wire
+		(pts
+			(xy 226.568 135.636) (xy 220.218 135.636)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b7ae35b4-5684-448b-9104-7d618aca33b5")
+	)
+	(wire
+		(pts
+			(xy 234.188 117.856) (xy 234.188 121.666)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bb955961-d7b3-4e68-a0ea-0c7a881d3f55")
 	)
 	(wire
 		(pts
@@ -1930,6 +2229,16 @@
 			(type default)
 		)
 		(uuid "dbc9ee32-9a59-4958-9ef1-9e23ff61ab31")
+	)
+	(wire
+		(pts
+			(xy 234.188 112.776) (xy 234.188 108.966)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1f01b48-ea88-4f77-9ecf-b8f9b4242c36")
 	)
 	(wire
 		(pts
@@ -2182,6 +2491,82 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 234.188 121.666 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "066cc314-b7db-4909-ad0b-337953c98d55")
+		(property "Reference" "#PWR4170"
+			(at 234.188 124.206 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 236.728 122.9359 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 234.188 121.666 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 234.188 121.666 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 234.188 121.666 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3a6e3be8-552d-44a2-bea4-813ed9c92297")
+		)
+		(instances
+			(project "AUDIO_BOARD"
+				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/0a1b2c3d-4e5f-6071-8293-a4b5c6dddd01"
+					(reference "#PWR4170")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 281.178 62.23 0)
 		(unit 1)
@@ -2412,6 +2797,86 @@
 			(project "AUDIO_BOARD"
 				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/0a1b2c3d-4e5f-6071-8293-a4b5c6dddd01"
 					(reference "C21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 216.408 141.986 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0b960322-79cd-42a8-94a3-030bda0b463b")
+		(property "Reference" "C56"
+			(at 218.948 140.7222 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1uF"
+			(at 218.948 143.2622 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 216.408 141.986 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 216.408 141.986 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 216.408 141.986 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d53c382e-bf20-429d-9097-83f9f625859c")
+		)
+		(pin "2"
+			(uuid "d40e3eaf-5e1a-4f74-9d96-9fc92182b871")
+		)
+		(instances
+			(project "AUDIO_BOARD"
+				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/0a1b2c3d-4e5f-6071-8293-a4b5c6dddd01"
+					(reference "C56")
 					(unit 1)
 				)
 			)
@@ -2730,6 +3195,82 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 261.112 133.604 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2b1c1bd0-ddfb-43fc-a62e-2e6a89d2059e")
+		(property "Reference" "#PWR4171"
+			(at 261.112 136.144 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 262.89 132.3339 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 261.112 133.604 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 261.112 133.604 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 261.112 133.604 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b87b300c-0c33-47b1-9196-200685e79e62")
+		)
+		(instances
+			(project "AUDIO_BOARD"
+				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/0a1b2c3d-4e5f-6071-8293-a4b5c6dddd01"
+					(reference "#PWR4171")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5V")
 		(at 114.808 113.03 0)
 		(unit 1)
@@ -2880,6 +3421,82 @@
 			(project "AUDIO_BOARD"
 				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/0a1b2c3d-4e5f-6071-8293-a4b5c6dddd01"
 					(reference "R12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 216.408 148.336 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2e9d7842-6aab-4f00-87a6-ea59063a778a")
+		(property "Reference" "#PWR4173"
+			(at 216.408 150.876 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 218.948 149.6059 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 216.408 148.336 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 216.408 148.336 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 216.408 148.336 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9227e8e6-6574-4e74-aa35-abf6e6043c88")
+		)
+		(instances
+			(project "AUDIO_BOARD"
+				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/0a1b2c3d-4e5f-6071-8293-a4b5c6dddd01"
+					(reference "#PWR4173")
 					(unit 1)
 				)
 			)
@@ -3108,6 +3725,158 @@
 			(project "AUDIO_BOARD"
 				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/0a1b2c3d-4e5f-6071-8293-a4b5c6dddd01"
 					(reference "#PWR4010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 220.218 133.096 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3579033b-94f7-49ea-a9f1-e7d2d59bdd94")
+		(property "Reference" "#PWR4174"
+			(at 220.218 135.636 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 222.758 131.8259 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 220.218 133.096 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 220.218 133.096 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 220.218 133.096 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5080a7b6-ed3c-4266-8d36-c7ef7061a010")
+		)
+		(instances
+			(project "AUDIO_BOARD"
+				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/0a1b2c3d-4e5f-6071-8293-a4b5c6dddd01"
+					(reference "#PWR4174")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 261.112 146.304 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3c5d4010-2a13-4f6a-b34e-8aba7cfcd523")
+		(property "Reference" "#PWR4175"
+			(at 261.112 148.844 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 264.16 147.5739 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 261.112 146.304 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 261.112 146.304 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 261.112 146.304 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "504ea073-a776-4b3b-9e72-3849fcaf1d16")
+		)
+		(instances
+			(project "AUDIO_BOARD"
+				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/0a1b2c3d-4e5f-6071-8293-a4b5c6dddd01"
+					(reference "#PWR4175")
 					(unit 1)
 				)
 			)
@@ -3428,6 +4197,82 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 248.158 133.096 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "64492bce-4654-4fea-8bb6-15848cf00ce2")
+		(property "Reference" "#PWR4181"
+			(at 248.158 135.636 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 250.698 131.8259 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 248.158 133.096 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 248.158 133.096 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 248.158 133.096 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "14f9625e-6eae-487d-afc4-e7b481c7238b")
+		)
+		(instances
+			(project "AUDIO_BOARD"
+				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/0a1b2c3d-4e5f-6071-8293-a4b5c6dddd01"
+					(reference "#PWR4181")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 290.068 54.61 180)
 		(unit 1)
@@ -3726,6 +4571,93 @@
 			(project "AUDIO_BOARD"
 				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/0a1b2c3d-4e5f-6071-8293-a4b5c6dddd01"
 					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Regulator_Linear:AP2112K-3.3")
+		(at 234.188 135.636 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "86b76ca2-c16b-473f-afeb-29312363d977")
+		(property "Reference" "U22"
+			(at 234.188 126.746 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AP2112K-3.3"
+			(at 234.188 129.286 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+			(at 234.188 135.636 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 234.188 135.636 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 234.188 135.636 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0c2e61b6-e24e-469c-b781-cebff49431af")
+		)
+		(pin "2"
+			(uuid "74eeae4f-5059-473a-a2d1-90ae9adc158a")
+		)
+		(pin "3"
+			(uuid "db42bc37-156f-420f-baf7-dac8ad8bde0b")
+		)
+		(pin "4"
+			(uuid "a7270fb2-f746-4a6b-a647-131a0ae58a12")
+		)
+		(pin "5"
+			(uuid "b03ca180-2971-440a-bfab-2d03723e2511")
+		)
+		(instances
+			(project "AUDIO_BOARD"
+				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/0a1b2c3d-4e5f-6071-8293-a4b5c6dddd01"
+					(reference "U22")
 					(unit 1)
 				)
 			)
@@ -4354,6 +5286,82 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 220.218 135.636 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b7726da0-d769-46a3-bc01-77aaad68fcb3")
+		(property "Reference" "#PWR4188"
+			(at 220.218 138.176 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 222.758 134.3659 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 220.218 135.636 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 220.218 135.636 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 220.218 135.636 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7b2147a1-c15c-4b58-85ed-608477729b4a")
+		)
+		(instances
+			(project "AUDIO_BOARD"
+				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/0a1b2c3d-4e5f-6071-8293-a4b5c6dddd01"
+					(reference "#PWR4188")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 147.828 69.85 0)
 		(unit 1)
@@ -4424,6 +5432,81 @@
 			(project "AUDIO_BOARD"
 				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/0a1b2c3d-4e5f-6071-8293-a4b5c6dddd01"
 					(reference "#PWR4035")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 216.408 135.636 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ba732c84-0249-4d86-9fd9-49598b597934")
+		(property "Reference" "#PWR4189"
+			(at 216.408 138.176 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 216.408 130.556 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 216.408 135.636 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 216.408 135.636 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 216.408 135.636 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ece4c086-ff78-441e-9ea6-099299eaddc4")
+		)
+		(instances
+			(project "AUDIO_BOARD"
+				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/0a1b2c3d-4e5f-6071-8293-a4b5c6dddd01"
+					(reference "#PWR4189")
 					(unit 1)
 				)
 			)
@@ -4656,6 +5739,86 @@
 			(project "AUDIO_BOARD"
 				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/0a1b2c3d-4e5f-6071-8293-a4b5c6dddd01"
 					(reference "#PWR4039")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 261.112 139.954 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cc0d426f-ae10-4036-8bb6-3ab7af5b45a6")
+		(property "Reference" "C57"
+			(at 264.16 138.6902 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1uF"
+			(at 264.16 141.2302 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 261.112 139.954 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 261.112 139.954 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 261.112 139.954 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8f97b866-e5eb-4242-8ed6-4bf629829a56")
+		)
+		(pin "2"
+			(uuid "8f2c503f-53a6-4588-9536-9863d49c2e74")
+		)
+		(instances
+			(project "AUDIO_BOARD"
+				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/0a1b2c3d-4e5f-6071-8293-a4b5c6dddd01"
+					(reference "C57")
 					(unit 1)
 				)
 			)
@@ -4970,6 +6133,82 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 234.188 108.966 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "da652a07-c829-464c-9505-b28896f9ab04")
+		(property "Reference" "#PWR4196"
+			(at 234.188 111.506 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 236.728 107.6959 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 234.188 108.966 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 234.188 108.966 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 234.188 108.966 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7e5a9c0a-202f-4037-aff7-ca4eb5ee540f")
+		)
+		(instances
+			(project "AUDIO_BOARD"
+				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/0a1b2c3d-4e5f-6071-8293-a4b5c6dddd01"
+					(reference "#PWR4196")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 155.448 121.92 0)
 		(unit 1)
@@ -5040,6 +6279,162 @@
 			(project "AUDIO_BOARD"
 				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/0a1b2c3d-4e5f-6071-8293-a4b5c6dddd01"
 					(reference "#PWR4043")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 234.188 147.066 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e9988146-8ae1-4c22-8897-caf5f8abb51f")
+		(property "Reference" "#PWR4198"
+			(at 234.188 149.606 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 236.728 148.3359 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 234.188 147.066 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 234.188 147.066 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 234.188 147.066 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8d2163e5-eacb-404d-b89e-84008575b0cd")
+		)
+		(instances
+			(project "AUDIO_BOARD"
+				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/0a1b2c3d-4e5f-6071-8293-a4b5c6dddd01"
+					(reference "#PWR4198")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 234.188 115.316 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ed410a9f-e1c9-4d99-85b3-ab338153b92b")
+		(property "Reference" "C51"
+			(at 236.728 114.0522 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 236.728 116.5922 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 234.188 115.316 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 234.188 115.316 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 234.188 115.316 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3106c4c6-f613-4c33-babc-8ed970563eda")
+		)
+		(pin "2"
+			(uuid "e24a0bec-19b5-47d6-b46b-fa6d21f5920d")
+		)
+		(instances
+			(project "AUDIO_BOARD"
+				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/0a1b2c3d-4e5f-6071-8293-a4b5c6dddd01"
+					(reference "C51")
 					(unit 1)
 				)
 			)

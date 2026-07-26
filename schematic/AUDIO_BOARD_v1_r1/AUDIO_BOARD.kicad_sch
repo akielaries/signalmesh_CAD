@@ -5303,7 +5303,7 @@
 	)
 	(wire
 		(pts
-			(xy 478.79 180.34) (xy 478.79 179.07)
+			(xy 476.504 171.45) (xy 476.504 170.18)
 		)
 		(stroke
 			(width 0)
@@ -5503,7 +5503,7 @@
 	)
 	(wire
 		(pts
-			(xy 478.79 179.07) (xy 462.28 179.07)
+			(xy 476.504 170.18) (xy 459.994 170.18)
 		)
 		(stroke
 			(width 0)
@@ -6102,7 +6102,7 @@
 		(uuid "b2230ec4-0246-4ea5-8a8e-c7703c84dfb1")
 	)
 	(label "HP_L"
-		(at 462.28 184.15 0)
+		(at 459.994 175.26 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6262,7 +6262,7 @@
 		(uuid "dd220200-0000-0000-0000-000000000000")
 	)
 	(label "HP_R"
-		(at 462.28 181.61 0)
+		(at 459.994 172.72 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6850,7 +6850,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Audio:AudioJack3")
-		(at 457.2 181.61 0)
+		(at 454.914 172.72 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6861,7 +6861,7 @@
 		(fields_autoplaced yes)
 		(uuid "35af42b4-05ac-498d-aaf4-0dbf6618fe35")
 		(property "Reference" "J6"
-			(at 449.58 180.34 0)
+			(at 447.294 171.45 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6872,7 +6872,7 @@
 			)
 		)
 		(property "Value" "3.5mm HP"
-			(at 449.58 182.88 0)
+			(at 447.294 173.99 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6883,7 +6883,7 @@
 			)
 		)
 		(property "Footprint" "Connector_Audio:Jack_3.5mm_Ledino_KB3SPRS_Horizontal"
-			(at 457.2 181.61 0)
+			(at 454.914 172.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6894,7 +6894,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 457.2 181.61 0)
+			(at 454.914 172.72 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6904,7 +6904,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 457.2 181.61 0)
+			(at 454.914 172.72 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7254,7 +7254,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 478.79 180.34 0)
+		(at 476.504 171.45 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7265,7 +7265,7 @@
 		(fields_autoplaced yes)
 		(uuid "5b0beb93-a657-4fdb-b41e-83e987934a5e")
 		(property "Reference" "#PWR4017"
-			(at 478.79 182.88 0)
+			(at 476.504 173.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7276,7 +7276,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 481.33 181.61 0)
+			(at 479.044 172.72 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7287,7 +7287,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 478.79 180.34 0)
+			(at 476.504 171.45 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7297,7 +7297,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 478.79 180.34 0)
+			(at 476.504 171.45 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7307,7 +7307,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 478.79 180.34 0)
+			(at 476.504 171.45 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
