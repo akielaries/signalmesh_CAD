@@ -21,7 +21,7 @@ RENDER_H="${RENDER_H:-2160}"
 # when you spin a new revision so old revs stop consuming render time
 RENDER_DIRS=(
   schematic/APM_v5_r2
-  schematic/ACM_v1_r2
+  schematic/ACM_v1_r3
   schematic/OSC_CTRL
   schematic/AUDIO_BOARD_v1_r1
 )

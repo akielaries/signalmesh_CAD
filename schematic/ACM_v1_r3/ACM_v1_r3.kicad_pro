@@ -51,7 +51,7 @@
         "silk_text_upright": false,
         "zones": {
           "border_display_style": 2,
-          "border_hatch_pitch": 0.5,
+          "border_hatch_pitch": 0.3,
           "corner_radius": 0.0,
           "corner_smoothing": 0,
           "fill_mode": 0,
@@ -60,13 +60,13 @@
           "hatch_smoothing_level": 0,
           "hatch_smoothing_value": 0.1,
           "hatch_thickness": 1.0,
-          "min_clearance": 0.1,
+          "min_clearance": 0.15,
           "min_island_area": 10.0,
-          "min_thickness": 0.2,
+          "min_thickness": 0.1,
           "pad_connection": 2,
           "remove_islands": 0,
-          "thermal_relief_gap": 0.5,
-          "thermal_relief_spoke_width": 0.5
+          "thermal_relief_gap": 0.2,
+          "thermal_relief_spoke_width": 0.25
         }
       },
       "diff_pair_dimensions": [
@@ -148,20 +148,20 @@
         "max_error": 0.005,
         "min_clearance": 0.0,
         "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.2,
+        "min_copper_edge_clearance": 0.5,
         "min_groove_width": 0.0,
-        "min_hole_clearance": 0.1319,
+        "min_hole_clearance": 0.25,
         "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
         "min_resolved_spokes": 2,
         "min_silk_clearance": 0.0,
-        "min_text_height": 0.4,
+        "min_text_height": 0.7,
         "min_text_thickness": 0.08,
-        "min_through_hole_diameter": 0.15,
+        "min_through_hole_diameter": 0.3,
         "min_track_width": 0.0,
-        "min_via_annular_width": 0.049999,
-        "min_via_diameter": 0.25,
+        "min_via_annular_width": 0.1,
+        "min_via_diameter": 0.5,
         "solder_mask_to_copper_clearance": 0.005,
         "use_height_for_length_calcs": true
       },
@@ -210,8 +210,7 @@
         }
       ],
       "track_widths": [
-        0.0,
-        0.5
+        0.0
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -243,10 +242,6 @@
         {
           "diameter": 0.0,
           "drill": 0.0
-        },
-        {
-          "diameter": 0.5,
-          "drill": 0.3
         }
       ],
       "zones_allow_external_fillets": false
@@ -404,7 +399,7 @@
         0,
         1,
         0,
-        1,
+        2,
         2,
         2,
         2
@@ -506,14 +501,14 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "AUDIO_BOARD.kicad_pro",
+    "filename": "ACM_v1_r3.kicad_pro",
     "version": 3
   },
   "net_settings": {
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.1725,
+        "clearance": 0.15,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.3,
@@ -524,14 +519,14 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2,
+        "track_width": 0.1,
         "tuning_profile": "",
-        "via_diameter": 0.25,
-        "via_drill": 0.15,
+        "via_diameter": 0.3,
+        "via_drill": 0.2,
         "wire_width": 6
       },
       {
-        "clearance": 0.1725,
+        "clearance": 0.2,
         "diff_pair_gap": 0.25,
         "diff_pair_width": 0.4,
         "microvia_diameter": 0.3,
@@ -540,13 +535,13 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2,
+        "track_width": 0.4,
         "tuning_profile": "",
         "via_diameter": 0.3,
         "via_drill": 0.2
       },
       {
-        "clearance": 0.1725,
+        "clearance": 0.15,
         "diff_pair_gap": 0.25,
         "diff_pair_width": 0.3,
         "microvia_diameter": 0.3,
@@ -694,7 +689,7 @@
       "dashed_lines_dash_length_ratio": 12.0,
       "dashed_lines_gap_length_ratio": 3.0,
       "default_line_thickness": 6.0,
-      "default_text_size": 50.0,
+      "default_text_size": 35.0,
       "field_names": [],
       "hop_over_size_choice": 0,
       "intersheets_ref_own_page": false,
@@ -724,42 +719,26 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "AUDIO_BOARD.kicad_sch",
-        "name": "AUDIO_BOARD",
-        "uuid": "f48c9b16-466a-451c-a18e-f0696896ad19"
+        "filename": "ACM_v1_r3.kicad_sch",
+        "name": "ACM_v1_r3",
+        "uuid": "feada479-57f2-4760-a2eb-c5b652c65b2b"
       }
     ],
-    "used_designators": "H2-4,RV1-2,RV6,R11-15,C4,C18,C51,C54,C56-57,#PWR1-4,#PWR4170-4171,#PWR4173-4175,#PWR4181,#PWR4188-4189,#PWR4196,#PWR4198,#PWR4342-4343,J1,J4-5,J7,U4-8,U22",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
     [
-      "f48c9b16-466a-451c-a18e-f0696896ad19",
-      "AUDIO_BOARD"
+      "feada479-57f2-4760-a2eb-c5b652c65b2b",
+      "ACM_v1_r3"
     ],
     [
-      "0a1b2c3d-4e5f-6071-8293-a4b5c6dddd02",
-      "FRONTEND"
+      "d4782000-4a75-4a2c-8e03-80b6a40fbe9b",
+      "JTAG"
     ],
     [
-      "c0ffee00-1111-2222-3333-444455556666",
-      "FX_CONTROL"
-    ],
-    [
-      "cf72a1d0-5e4b-4a2c-9f11-2b3c4d5e6f70",
-      "ANALOG_FILTER_CV"
-    ],
-    [
-      "0a1b2c3d-4e5f-6071-8293-a4b5c6dddd01",
-      "POWER"
-    ],
-    [
-      "a1b2c3d4-e5f6-7788-99aa-bbccddee0003",
-      "MASTER_FILTER"
-    ],
-    [
-      "0a1b2c3d-4e5f-6071-8293-a4b5c6d7e8f0",
-      "OUTPUT_BUF"
+      "4c8f115f-e0bc-4e7f-9eb1-4e575a33be01",
+      "FMC"
     ]
   ],
   "text_variables": {},

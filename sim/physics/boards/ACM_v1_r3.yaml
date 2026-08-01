@@ -2,8 +2,8 @@
 # ACM nets are FPGA-ball named (e.g. /A10_IOL14B), no clean bus regex, so this
 # board runs mostly in auto-discover mode: the audit ranks all routed nets by
 # length and flags the electrically-long ones that are off controlled impedance.
-name: ACM_v1_r2
-kicad_pcb: ../../schematic/ACM_v1_r2/ACM_v1_r2.kicad_pcb
+name: ACM_v1_r3
+kicad_pcb: ../../schematic/ACM_v1_r3/ACM_v1_r3.kicad_pcb
 stackup: default
 netclasses: default
 

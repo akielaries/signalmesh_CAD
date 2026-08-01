@@ -18,7 +18,7 @@ si/                engine (importable package)
   report.py        ascii tables + matplotlib plots
   kicad_export.py  emits KiCad net-class rules
   crosstalk.py     tier-3 openEMS crosstalk: geometry -> ports -> S-params
-boards/            per-board config: APM_v5_r2.yaml, ACM_v1_r2.yaml
+boards/            per-board config: APM_v5_r2.yaml, ACM_v1_r3.yaml
 si-audit           CLI: tier 0/1
 si-netclass        CLI: emit KiCad net-class rules for a re-route
 si-coupled         CLI: tier 3 crosstalk (coupled-line model) -- the trustworthy one
@@ -43,7 +43,7 @@ si-render          CLI: render board field visuals from a gerber2ems run
 ```
 # tier 0/1: audit a board against its class targets (+ plots)
 ./si-audit APM_v5_r2 --plot
-./si-audit ACM_v1_r2                 # auto-discover mode (no named buses yet)
+./si-audit ACM_v1_r3                 # auto-discover mode (no named buses yet)
 
 # emit KiCad net-class rules (stackup-derived widths) for the re-route
 ./si-netclass APM_v5_r2
