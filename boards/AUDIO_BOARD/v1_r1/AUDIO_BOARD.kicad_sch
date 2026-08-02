@@ -4923,7 +4923,7 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 68.58) (xy 250.11 68.83)
+			(xy 242.57 68.58) (xy 250.19 68.58)
 		)
 		(stroke
 			(width 0)
@@ -5303,16 +5303,6 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 59.69) (xy 249.97 67.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d81f67c7-6a2b-4f56-a725-9b9be61de2e6")
-	)
-	(wire
-		(pts
 			(xy 347.98 63.5) (xy 355.6 63.5)
 		)
 		(stroke
@@ -5462,7 +5452,7 @@
 		(uuid "fc300000-0000-0000-0000-000000000000")
 	)
 	(label "FILT_R_IN"
-		(at 250.11 68.83 0)
+		(at 250.19 68.58 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6371,7 +6361,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 245.11 68.58 0)
+		(at 272.288 69.85 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6382,7 +6372,7 @@
 		(fields_autoplaced yes)
 		(uuid "275d5e04-14ad-4966-9bbd-434d628c40a0")
 		(property "Reference" "#FLG9002"
-			(at 237.49 71.12 0)
+			(at 264.668 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6393,7 +6383,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 247.65 67.3099 0)
+			(at 274.32 68.5799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6404,7 +6394,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 237.49 68.58 0)
+			(at 264.668 69.85 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6414,7 +6404,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 237.49 68.58 0)
+			(at 264.668 69.85 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6424,7 +6414,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 237.49 68.58 0)
+			(at 264.668 69.85 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6440,82 +6430,6 @@
 			(project "AUDIO_BOARD"
 				(path "/f48c9b16-466a-451c-a18e-f0696896ad19"
 					(reference "#FLG9002")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 249.97 67.96 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "27972eb5-ef79-4232-bcf1-e3496344f873")
-		(property "Reference" "#PWR4005"
-			(at 250.19 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 252.73 69.2299 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 249.97 67.96 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 249.97 67.96 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 249.97 67.96 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b3e58544-1554-4940-b8a2-64ec149f5cf9")
-		)
-		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19"
-					(reference "#PWR4005")
 					(unit 1)
 				)
 			)
@@ -7155,7 +7069,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 245.11 68.58 0)
+		(at 272.288 69.85 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7166,7 +7080,7 @@
 		(fields_autoplaced yes)
 		(uuid "61b22da4-75db-4b26-ae41-03cf9b5d63fa")
 		(property "Reference" "#PWR9002"
-			(at 250.19 71.12 0)
+			(at 277.368 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7177,7 +7091,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 247.65 69.8499 0)
+			(at 274.32 71.1199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7188,7 +7102,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 249.97 67.96 0)
+			(at 277.148 69.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7198,7 +7112,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 249.97 67.96 0)
+			(at 277.148 69.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7208,7 +7122,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 249.97 67.96 0)
+			(at 277.148 69.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7231,7 +7145,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 252.73 68.58 180)
+		(at 272.288 63.5 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7242,7 +7156,7 @@
 		(fields_autoplaced yes)
 		(uuid "6db4a52d-6773-4e08-bf3d-4deabd53ae6f")
 		(property "Reference" "#FLG9010"
-			(at 237.49 71.12 0)
+			(at 257.048 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7253,7 +7167,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 255.27 69.8499 0)
+			(at 274.32 64.7699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7264,7 +7178,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 237.49 68.58 0)
+			(at 257.048 63.5 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7274,7 +7188,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 237.49 68.58 0)
+			(at 257.048 63.5 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7284,7 +7198,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 237.49 68.58 0)
+			(at 257.048 63.5 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7540,7 +7454,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 252.73 68.58 0)
+		(at 272.288 63.5 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7551,7 +7465,7 @@
 		(fields_autoplaced yes)
 		(uuid "802c744c-b30e-42b5-a3ec-01e94e86fd3f")
 		(property "Reference" "#PWR9010"
-			(at 250.19 71.12 0)
+			(at 269.748 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7562,7 +7476,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 255.27 67.3099 0)
+			(at 274.32 62.2299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7573,7 +7487,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 249.97 67.96 0)
+			(at 269.528 62.88 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7583,7 +7497,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 249.97 67.96 0)
+			(at 269.528 62.88 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7593,7 +7507,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 249.97 67.96 0)
+			(at 269.528 62.88 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7627,25 +7541,23 @@
 		(fields_autoplaced yes)
 		(uuid "932a541b-5a01-45e0-b5c1-4afe211591e1")
 		(property "Reference" "H3"
-			(at 110.49 304.7999 0)
+			(at 107.95 299.72 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Value" "M2"
-			(at 110.49 307.3399 0)
+			(at 107.95 302.26 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_Pad_Via"

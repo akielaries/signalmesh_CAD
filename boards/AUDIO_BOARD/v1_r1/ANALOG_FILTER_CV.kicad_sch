@@ -2726,7 +2726,7 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 66.04) (xy 139.7 69.85)
+			(xy 203.708 229.362) (xy 203.708 233.172)
 		)
 		(stroke
 			(width 0)
@@ -2746,7 +2746,7 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 60.96) (xy 139.7 57.15)
+			(xy 203.708 224.282) (xy 203.708 220.472)
 		)
 		(stroke
 			(width 0)
@@ -4555,7 +4555,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 139.7 63.5 0)
+		(at 203.708 226.822 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4566,7 +4566,7 @@
 		(fields_autoplaced yes)
 		(uuid "239a06ae-f104-4b4a-8e11-4cc93b24d168")
 		(property "Reference" "C90"
-			(at 142.24 62.2362 0)
+			(at 206.248 225.5582 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4577,7 +4577,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 142.24 64.7762 0)
+			(at 206.248 228.0982 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4588,7 +4588,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 139.7 63.5 0)
+			(at 203.708 226.822 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4599,7 +4599,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 139.7 63.5 0)
+			(at 203.708 226.822 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4609,7 +4609,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 139.7 63.5 0)
+			(at 203.708 226.822 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5400,7 +5400,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 139.7 69.85 0)
+		(at 203.708 233.172 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5411,7 +5411,7 @@
 		(fields_autoplaced yes)
 		(uuid "42e29062-18e6-4f6d-9350-e95c298ac9d8")
 		(property "Reference" "#PWR4059"
-			(at 139.7 72.39 0)
+			(at 203.708 235.712 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5422,7 +5422,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 142.24 71.1199 0)
+			(at 206.248 234.4419 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5433,7 +5433,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 139.7 69.85 0)
+			(at 203.708 233.172 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5443,7 +5443,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 139.7 69.85 0)
+			(at 203.708 233.172 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5453,7 +5453,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 139.7 69.85 0)
+			(at 203.708 233.172 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5596,7 +5596,8 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 124.46 177.8 90)
+		(at 124.46 177.8 270)
+		(mirror x)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5604,7 +5605,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "4787dea5-fd9a-4db4-b72e-21d7f78b267a")
 		(property "Reference" "R30"
 			(at 124.46 171.45 90)
@@ -8904,7 +8904,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 139.7 57.15 0)
+		(at 203.708 220.472 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8915,7 +8915,7 @@
 		(fields_autoplaced yes)
 		(uuid "cba39117-0032-4b7c-a57e-95476f23cc77")
 		(property "Reference" "#PWR4080"
-			(at 139.7 59.69 0)
+			(at 203.708 223.012 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8926,7 +8926,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 142.24 55.8799 0)
+			(at 206.248 219.2019 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8937,7 +8937,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 139.7 57.15 0)
+			(at 203.708 220.472 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8947,7 +8947,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 139.7 57.15 0)
+			(at 203.708 220.472 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8957,7 +8957,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 139.7 57.15 0)
+			(at 203.708 220.472 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
