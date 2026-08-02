@@ -79,15 +79,19 @@ while IFS= read -r pcb; do
   kicad-cli pcb export pdf "$pcb" --layers "$PCB_LAYERS" \
     -o "$out/${base}_pcb.pdf" >/dev/null
 
+  # --use-board-stackup-colors must be passed bare and last: giving it a value
+  # (=true / true) throws bad_any_cast in kicad-cli 10.0.x. without it the ci
+  # container renders every board default green and ignores the stackup mask
+  # color (AUDIO_BOARD purple, OSC_CTRL black)
   echo "  3d top png"
   kicad-cli pcb render "$pcb" --side top --quality high \
     --width "$RENDER_W" --height "$RENDER_H" --floor \
-    -o "$out/${base}_3d_top.png" >/dev/null
+    -o "$out/${base}_3d_top.png" --use-board-stackup-colors >/dev/null
 
   echo "  3d bottom png"
   kicad-cli pcb render "$pcb" --side bottom --quality high \
     --width "$RENDER_W" --height "$RENDER_H" --floor \
-    -o "$out/${base}_3d_bottom.png" >/dev/null
+    -o "$out/${base}_3d_bottom.png" --use-board-stackup-colors >/dev/null
 
   count=$((count + 1))
 done < <(find boards -name "*.kicad_pcb" | sort)
