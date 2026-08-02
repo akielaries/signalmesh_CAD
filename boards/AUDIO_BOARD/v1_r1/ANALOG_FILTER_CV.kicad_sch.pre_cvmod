@@ -3056,16 +3056,6 @@
 	)
 	(wire
 		(pts
-			(xy 377.444 139.446) (xy 377.444 135.636)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7821c5eb-024f-4040-9175-fc3a01e75902")
-	)
-	(wire
-		(pts
 			(xy 165.1 251.46) (xy 165.1 255.27)
 		)
 		(stroke
@@ -3083,16 +3073,6 @@
 			(type default)
 		)
 		(uuid "7f3355e9-8335-49b7-a90e-9b346009271f")
-	)
-	(wire
-		(pts
-			(xy 377.444 144.526) (xy 377.444 148.336)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "84a1b595-5f91-4b41-a28e-cb3d6c817b45")
 	)
 	(wire
 		(pts
@@ -3784,27 +3764,15 @@
 		)
 		(uuid "cd943e9c-188a-4501-bef7-284d66fbf0f5")
 	)
-	(global_label "CV_MOD"
-		(shape input)
-		(at 41.91 139.7 180)
+	(label "CV_MOD"
+		(at 41.91 139.7 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left bottom)
 		)
 		(uuid "cf1825a8-5110-4908-a232-2d6748a847f8")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 41.91 139.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 	)
 	(hierarchical_label "FILT_R_IN"
 		(shape input)
@@ -3926,86 +3894,6 @@
 			(justify left)
 		)
 		(uuid "f81a4e2f-400c-4da8-92b1-5292121b7049")
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 377.444 141.986 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "04be82cf-f9ed-43c6-ac6f-86509743c658")
-		(property "Reference" "C96"
-			(at 379.984 140.7222 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100nF"
-			(at 379.984 143.2622 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 377.444 141.986 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 377.444 141.986 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 377.444 141.986 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c6ad6baf-bded-4552-99c2-108e3b4f2dca")
-		)
-		(pin "2"
-			(uuid "04330e0d-7769-4641-a00e-5cc1f73d6226")
-		)
-		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/cf72a1d0-5e4b-4a2c-9f11-2b3c4d5e6f70"
-					(reference "C96")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -6522,82 +6410,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 377.444 148.336 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5ca3c713-66c8-4bec-b57a-985f2a7aa224")
-		(property "Reference" "#PWR04192"
-			(at 377.444 150.876 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 379.984 149.6059 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 377.444 148.336 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 377.444 148.336 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 377.444 148.336 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2df85ada-e05f-47c9-9855-789fb1cff8cc")
-		)
-		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/cf72a1d0-5e4b-4a2c-9f11-2b3c4d5e6f70"
-					(reference "#PWR04192")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 274.32 177.8 90)
 		(unit 1)
@@ -8909,82 +8721,6 @@
 			(project "AUDIO_BOARD"
 				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/cf72a1d0-5e4b-4a2c-9f11-2b3c4d5e6f70"
 					(reference "R35")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:-5V")
-		(at 377.444 135.636 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c6baf0eb-0a34-4354-bd13-2a7b5cf6f7e3")
-		(property "Reference" "#PWR04185"
-			(at 377.444 138.176 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "-5V"
-			(at 379.984 134.3659 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 377.444 135.636 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 377.444 135.636 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 377.444 135.636 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3ba76d95-e031-480a-8895-36ae8e7478bd")
-		)
-		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/cf72a1d0-5e4b-4a2c-9f11-2b3c4d5e6f70"
-					(reference "#PWR04185")
 					(unit 1)
 				)
 			)
