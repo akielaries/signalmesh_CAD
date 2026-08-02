@@ -28,12 +28,12 @@ import sys
 import tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-ROOT = os.path.dirname(HERE)  # schematic/.. -> signalmesh_CAD
-SCH = os.path.join(ROOT, "schematic")
+ROOT = os.path.dirname(HERE)  # tools/.. -> signalmesh_CAD
+BOARDS = os.path.join(ROOT, "boards")
 
 # top-level schematic of each project (kicad-cli reads the full hierarchy)
-APM_SCH = os.path.join(SCH, "APM_v5_r1", "APM.kicad_sch")
-ACM_SCH = os.path.join(SCH, "ACM_v1_r1", "ACM_v1_r1.kicad_sch")
+APM_SCH = os.path.join(BOARDS, "APM", "v5_r1", "APM.kicad_sch")
+ACM_SCH = os.path.join(BOARDS, "ACM", "v1_r1", "ACM_v1_r1.kicad_sch")
 
 # the mated DF40 pairs that carry the FMC interface.
 # each entry: (apm_connector_ref, acm_connector_ref)

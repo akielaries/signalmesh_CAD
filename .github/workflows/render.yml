@@ -1,13 +1,13 @@
 name: render designs
 
-# render the allowlisted boards (see tools/render.sh) and publish a gallery to
-# github pages. renders are build outputs, not committed to the repo.
-# each board's renders are cached on the hash of its kicad files + render.sh,
-# so only boards that actually changed re-render.
+# render the allowlisted boards (the list lives in tools/render.sh) and publish
+# a gallery to github pages. renders are build outputs, not committed to the
+# repo. each board renders in its own matrix job and is cached on the hash of
+# its kicad files + render.sh, so only boards that actually changed re-render.
 on:
   push:
     paths:
-      - 'schematic/**'
+      - 'boards/**'
       - 'tools/render.sh'
       - 'tools/gallery.py'
       - '.github/workflows/render.yml'
@@ -24,8 +24,27 @@ env:
   RENDER_CACHE_VERSION: v1
 
 jobs:
-  render:
+  # the render allowlist is defined once, in tools/render.sh; read it here so
+  # adding a board is a one-line change in that script
+  plan:
     runs-on: ubuntu-latest
+    outputs:
+      boards: ${{ steps.list.outputs.boards }}
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: read board allowlist
+        id: list
+        run: echo "boards=$(bash tools/render.sh --list-json)" >>"$GITHUB_OUTPUT"
+
+  render:
+    needs: plan
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        board: ${{ fromJSON(needs.plan.outputs.boards) }}
     container:
       image: kicad/kicad:10.0-full
       options: --user root
@@ -36,51 +55,23 @@ jobs:
       - name: mark workspace safe for git
         run: git config --global --add safe.directory '*'
 
-      # one cache per board: key on that board's kicad files + render.sh so an
-      # unchanged board restores instantly and skips kicad-cli entirely
-      - name: cache APM_v5_r2 renders
-        id: cache_apm
+      # BOARD/vX_rY -> BOARD_vX_rY, used for cache keys, artifact names and the
+      # gallery card title
+      - name: derive board slug
+        id: slug
+        run: echo "slug=$(echo '${{ matrix.board }}' | tr '/' '_')" >>"$GITHUB_OUTPUT"
+
+      # key on this board's kicad files + render.sh so an unchanged board
+      # restores instantly and skips kicad-cli entirely
+      - name: cache renders
+        id: cache
         uses: actions/cache@v4
         with:
-          path: schematic/APM_v5_r2/renders
-          key: renders-${{ env.RENDER_CACHE_VERSION }}-APM_v5_r2-${{ hashFiles('schematic/APM_v5_r2/*.kicad_pcb', 'schematic/APM_v5_r2/*.kicad_sch', 'tools/render.sh') }}
-
-      - name: cache ACM_v1_r3 renders
-        id: cache_acm
-        uses: actions/cache@v4
-        with:
-          path: schematic/ACM_v1_r3/renders
-          key: renders-${{ env.RENDER_CACHE_VERSION }}-ACM_v1_r3-${{ hashFiles('schematic/ACM_v1_r3/*.kicad_pcb', 'schematic/ACM_v1_r3/*.kicad_sch', 'tools/render.sh') }}
-
-      - name: cache OSC_CTRL renders
-        id: cache_osc
-        uses: actions/cache@v4
-        with:
-          path: schematic/OSC_CTRL/renders
-          key: renders-${{ env.RENDER_CACHE_VERSION }}-OSC_CTRL-${{ hashFiles('schematic/OSC_CTRL/*.kicad_pcb', 'schematic/OSC_CTRL/*.kicad_sch', 'tools/render.sh') }}
-
-      - name: cache AUDIO_BOARD_v1_r1 renders
-        id: cache_audio
-        uses: actions/cache@v4
-        with:
-          path: schematic/AUDIO_BOARD_v1_r1/renders
-          key: renders-${{ env.RENDER_CACHE_VERSION }}-AUDIO_BOARD_v1_r1-${{ hashFiles('schematic/AUDIO_BOARD_v1_r1/*.kicad_pcb', 'schematic/AUDIO_BOARD_v1_r1/*.kicad_sch', 'tools/render.sh') }}
-
-      - name: plan (any board need rendering?)
-        id: plan
-        run: |
-          if [ "${{ steps.cache_apm.outputs.cache-hit }}" != "true" ] \
-          || [ "${{ steps.cache_acm.outputs.cache-hit }}" != "true" ] \
-          || [ "${{ steps.cache_osc.outputs.cache-hit }}" != "true" ] \
-          || [ "${{ steps.cache_audio.outputs.cache-hit }}" != "true" ]; then
-            echo "any_miss=true" >>"$GITHUB_OUTPUT"
-          else
-            echo "any_miss=false" >>"$GITHUB_OUTPUT"
-            echo "all boards cached; skipping render setup"
-          fi
+          path: boards/${{ matrix.board }}/renders
+          key: renders-${{ env.RENDER_CACHE_VERSION }}-${{ steps.slug.outputs.slug }}-${{ hashFiles(format('boards/{0}/*.kicad_pcb', matrix.board), format('boards/{0}/*.kicad_sch', matrix.board), 'tools/render.sh') }}
 
       - name: locate stock 3d model dir
-        if: steps.plan.outputs.any_miss == 'true'
+        if: steps.cache.outputs.cache-hit != 'true'
         # discover the real stock dir in this image and point all three model
         # vars at it, else stock ics/passives render as flat outlines
         run: |
@@ -97,45 +88,33 @@ jobs:
           echo "KISYS3DMOD=$stock"          >>"$GITHUB_ENV"
 
       - name: fetch custom footprint/3d library
-        if: steps.plan.outputs.any_miss == 'true'
+        if: steps.cache.outputs.cache-hit != 'true'
         # boards reference custom models by absolute path; clone the public lib
         # into that exact path so those models resolve
         run: git clone --depth 1 https://github.com/akielaries/my_pcb_lib /home/akiel/trunk/pub/my_footprints
 
       - name: install xvfb
-        if: steps.plan.outputs.any_miss == 'true'
+        if: steps.cache.outputs.cache-hit != 'true'
         run: |
           apt-get update
           apt-get install -y --no-install-recommends xvfb
 
-      - name: render only the changed boards
-        if: steps.plan.outputs.any_miss == 'true'
+      - name: render board
+        if: steps.cache.outputs.cache-hit != 'true'
         # 3d render needs a display; render.sh <board> filters to that board
-        run: |
-          render_one() {
-            echo "::group::render $1"
-            xvfb-run -a bash tools/render.sh "$1"
-            echo "::endgroup::"
-          }
-          [ "${{ steps.cache_apm.outputs.cache-hit }}"   = "true" ] || render_one APM_v5_r2
-          [ "${{ steps.cache_acm.outputs.cache-hit }}"   = "true" ] || render_one ACM_v1_r3
-          [ "${{ steps.cache_osc.outputs.cache-hit }}"   = "true" ] || render_one OSC_CTRL
-          [ "${{ steps.cache_audio.outputs.cache-hit }}" = "true" ] || render_one AUDIO_BOARD_v1_r1
+        run: xvfb-run -a bash tools/render.sh '${{ matrix.board }}'
 
-      - name: stage renders (one dir per board)
+      - name: stage renders
         run: |
-          mkdir -p renders_staged
-          find schematic -path '*/renders/*' -type f | while read -r f; do
-            board=$(echo "$f" | sed -E 's#^schematic/(.+)/renders/[^/]+$#\1#')
-            mkdir -p "renders_staged/$board"
-            cp "$f" "renders_staged/$board/"
-          done
-          find renders_staged -maxdepth 1 -mindepth 1 -type d | sort
+          dst="renders_staged/${{ steps.slug.outputs.slug }}"
+          mkdir -p "$dst"
+          cp "boards/${{ matrix.board }}/renders/"* "$dst/"
+          ls -l "$dst"
 
       - name: upload renders artifact
         uses: actions/upload-artifact@v4
         with:
-          name: renders
+          name: renders-${{ steps.slug.outputs.slug }}
           path: renders_staged
           if-no-files-found: error
 
@@ -152,10 +131,11 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
 
-      - name: download renders artifact
+      - name: download every board's renders
         uses: actions/download-artifact@v4
         with:
-          name: renders
+          pattern: renders-*
+          merge-multiple: true
           path: renders_staged
 
       - name: build gallery

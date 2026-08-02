@@ -4,7 +4,7 @@
 set -e
 cd "$(dirname "$0")"
 
-APM=../schematic/APM_v5_r1/APM.kicad_pcb
+APM=../../boards/APM/v5_r1/APM.kicad_pcb
 OUT=out
 mkdir -p "$OUT"
 

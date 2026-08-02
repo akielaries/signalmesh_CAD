@@ -1,5 +1,8 @@
 # generated board renders are published to github pages, not committed
-schematic/**/renders/
+boards/**/renders/
+
+# kicad editor lock files
+*.lck
 
 # kicad local history/backup dirs (were accidentally tracked as submodules)
 .history/

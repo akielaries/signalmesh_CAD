@@ -13,7 +13,7 @@ impedance.py
 
 net_lengths.py
   routed copper length and via count per net, straight from a kicad_pcb.
-  `python3 net_lengths.py ../schematic/APM_v5_r1/APM.kicad_pcb --filter 'FMC_DA|FMC_CLK'`
+  `python3 net_lengths.py ../../boards/APM/v5_r1/APM.kicad_pcb --filter 'FMC_DA|FMC_CLK'`
   use it to check length match against FMC_CLK and to spot outlier nets.
 
 ## field solve (openEMS)

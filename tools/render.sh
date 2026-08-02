@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 # render design pictures (schematic pdf, pcb layer pdf, 3d front/back png)
-# for the allowlisted boards below, skipping .history and archive copies
+# for the allowlisted boards below, skipping .history and _archive copies
 #
 # usage:
-#   tools/render.sh              render all allowlisted designs
-#   tools/render.sh APM_v5_r2    render only matching allowlisted design(s)
+#   tools/render.sh               render all allowlisted designs
+#   tools/render.sh APM/v5_r2     render only matching allowlisted design(s)
+#   tools/render.sh --list        print the allowlist (one board/rev per line)
+#   tools/render.sh --list-json   print the allowlist as a json array (ci matrix)
 set -euo pipefail
 
 cd "$(dirname "$0")/.."
@@ -18,20 +20,36 @@ RENDER_W="${RENDER_W:-3840}"
 RENDER_H="${RENDER_H:-2160}"
 
 # only the newest revision of each active board is rendered; update the entry
-# when you spin a new revision so old revs stop consuming render time
-RENDER_DIRS=(
-  schematic/APM_v5_r2
-  schematic/ACM_v1_r3
-  schematic/OSC_CTRL
-  schematic/AUDIO_BOARD_v1_r1
+# when you spin a new revision so old revs stop consuming render time.
+# this list is also the ci render matrix (see tools/render.sh --list-json)
+RENDER_BOARDS=(
+  APM/v5_r2
+  ACM/v1_r3
+  OSC_CTRL/v1_r1
+  AUDIO_BOARD/v1_r1
 )
+
+case "${1:-}" in
+  --list)
+    printf '%s\n' "${RENDER_BOARDS[@]}"
+    exit 0
+    ;;
+  --list-json)
+    out=""
+    for b in "${RENDER_BOARDS[@]}"; do
+      out="$out,\"$b\""
+    done
+    echo "[${out#,}]"
+    exit 0
+    ;;
+esac
 
 filter="${1:-}"
 count=0
 
 while IFS= read -r pcb; do
   case "$pcb" in
-    */.history/*|*/archive/*) continue ;;
+    */.history/*|boards/_archive/*) continue ;;
   esac
 
   dir="$(dirname "$pcb")"
@@ -41,8 +59,8 @@ while IFS= read -r pcb; do
 
   # skip anything not in the render allowlist
   keep=0
-  for d in "${RENDER_DIRS[@]}"; do
-    [ "$dir" = "$d" ] && keep=1 && break
+  for b in "${RENDER_BOARDS[@]}"; do
+    [ "$dir" = "boards/$b" ] && keep=1 && break
   done
   [ "$keep" = 1 ] || continue
 
@@ -72,6 +90,6 @@ while IFS= read -r pcb; do
     -o "$out/${base}_3d_bottom.png" >/dev/null
 
   count=$((count + 1))
-done < <(find schematic -name "*.kicad_pcb" | sort)
+done < <(find boards -name "*.kicad_pcb" | sort)
 
 echo "done: rendered $count design(s)"
