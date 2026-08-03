@@ -1697,7 +1697,7 @@
 					)
 				)
 			)
-			(property "Value" "FILT_+5V"
+			(property "Value" "+5V"
 				(at 0 3.556 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1836,7 +1836,7 @@
 					)
 				)
 			)
-			(property "Value" "FILT_-5V"
+			(property "Value" "-5V"
 				(at 0 3.556 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1951,7 +1951,7 @@
 					)
 				)
 			)
-			(property "Value" "FILT_GND"
+			(property "Value" "GND"
 				(at 0 -3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2031,573 +2031,6 @@
 						)
 					)
 					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-			(symbol "Connector:Conn_Coaxial_Small"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at 0.254 3.048 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_Coaxial_Small"
-				(at 0 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "small coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "BNC SMA SMB SMC LEMO coaxial connector CINCH RCA MCX MMCX U.FL UMRF"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "*BNC* *SMA* *SMB* *SMC* *Cinch* *LEMO* *UMRF* *MCX* *U.FL*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Conn_Coaxial_Small_0_1"
-				(polyline
-					(pts
-						(xy -2.54 0) (xy -0.508 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0 0)
-					(radius 0.508)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Conn_Coaxial_Small_1_1"
-				(arc
-					(start 1.3484 0.0039)
-					(mid 0.327 -1.308)
-					(end -1.1916 -0.6311)
-					(stroke
-						(width 0.3048)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -1.1916 0.6311)
-					(mid 0.327 1.3081)
-					(end 1.3484 -0.0039)
-					(stroke
-						(width 0.3048)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -2.54 0 0)
-					(length 1.27)
-					(name "In"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 0 180)
-					(length 1.27)
-					(name "Ext"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-			(symbol "Connector_Generic:Conn_01x10"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at 0 12.7 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_01x10"
-				(at 0 -15.24 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Conn_01x10_1_1"
-				(rectangle
-					(start -1.27 11.43)
-					(end 1.27 -13.97)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start -1.27 10.287)
-					(end 0 10.033)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 7.747)
-					(end 0 7.493)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 5.207)
-					(end 0 4.953)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -4.953)
-					(end 0 -5.207)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -7.493)
-					(end 0 -7.747)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -10.033)
-					(end 0 -10.287)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -12.573)
-					(end 0 -12.827)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 10.16 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 7.62 0)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 5.08 0)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 0)
-					(length 3.81)
-					(name "Pin_4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 3.81)
-					(name "Pin_7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -7.62 0)
-					(length 3.81)
-					(name "Pin_8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -10.16 0)
-					(length 3.81)
-					(name "Pin_9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -12.7 0)
-					(length 3.81)
-					(name "Pin_10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5172,7 +4605,8 @@
 		)
 		(uuid "f6533aa4-ca91-48fc-bcee-2f1e256eb615")
 	)
-	(label "CV_CUTOFF"
+	(hierarchical_label "CV_CUTOFF"
+		(shape input)
 		(at 144.78 196.85 0)
 		(effects
 			(font
@@ -5182,7 +4616,8 @@
 		)
 		(uuid "08f7a962-9abb-46ac-a4f8-97471f9a492e")
 	)
-	(label "AUDIO_R_IN"
+	(hierarchical_label "AUDIO_R_IN"
+		(shape input)
 		(at 15.24 201.93 0)
 		(effects
 			(font
@@ -5192,7 +4627,8 @@
 		)
 		(uuid "4d51b479-e129-44aa-b37a-58b0c839d6f1")
 	)
-	(label "CV_RES"
+	(hierarchical_label "CV_RES"
+		(shape input)
 		(at 88.9 245.11 0)
 		(effects
 			(font
@@ -5202,7 +4638,8 @@
 		)
 		(uuid "4f78d907-80e0-4476-ac98-58cebbda16b5")
 	)
-	(label "MODE_A"
+	(hierarchical_label "MODE_A"
+		(shape input)
 		(at 191.77 82.55 0)
 		(effects
 			(font
@@ -5212,7 +4649,8 @@
 		)
 		(uuid "5b12ca2a-7fdf-4285-ad32-c2d12fc548cf")
 	)
-	(label "CV_RES"
+	(hierarchical_label "CV_RES"
+		(shape input)
 		(at 88.9 114.3 0)
 		(effects
 			(font
@@ -5222,7 +4660,8 @@
 		)
 		(uuid "6492104a-2112-41c8-87d5-f81401c8d56e")
 	)
-	(label "AUDIO_L_OUT"
+	(hierarchical_label "AUDIO_L_OUT"
+		(shape output)
 		(at 234.95 54.61 0)
 		(effects
 			(font
@@ -5232,7 +4671,8 @@
 		)
 		(uuid "687a1590-d746-4742-89eb-47cba5560e47")
 	)
-	(label "CV_CUTOFF"
+	(hierarchical_label "CV_CUTOFF"
+		(shape input)
 		(at 144.78 67.31 0)
 		(effects
 			(font
@@ -5242,7 +4682,8 @@
 		)
 		(uuid "a89171a2-81ad-4670-91af-9b6f638521fc")
 	)
-	(label "AUDIO_L_IN"
+	(hierarchical_label "AUDIO_L_IN"
+		(shape input)
 		(at 15.24 72.39 0)
 		(effects
 			(font
@@ -5252,7 +4693,8 @@
 		)
 		(uuid "bb6d2fcd-1c42-4953-9a3b-fc2c6d72d617")
 	)
-	(label "MODE_A"
+	(hierarchical_label "MODE_A"
+		(shape input)
 		(at 191.77 212.09 0)
 		(effects
 			(font
@@ -5262,7 +4704,8 @@
 		)
 		(uuid "ca19e4e9-0fc9-46c9-a5a4-ce4212b0ba47")
 	)
-	(label "MODE_B"
+	(hierarchical_label "MODE_B"
+		(shape input)
 		(at 187.96 214.63 0)
 		(effects
 			(font
@@ -5272,7 +4715,8 @@
 		)
 		(uuid "d084993c-f66e-47cd-961e-ebdb2cff3f81")
 	)
-	(label "AUDIO_R_OUT"
+	(hierarchical_label "AUDIO_R_OUT"
+		(shape output)
 		(at 234.95 184.15 0)
 		(effects
 			(font
@@ -5282,7 +4726,8 @@
 		)
 		(uuid "da20a541-2591-4fe5-9977-f4a7f5b7674d")
 	)
-	(label "CV_CUTOFF"
+	(hierarchical_label "CV_CUTOFF"
+		(shape input)
 		(at 144.78 95.25 0)
 		(effects
 			(font
@@ -5292,7 +4737,8 @@
 		)
 		(uuid "db621ca7-1624-4eb5-a852-d01b20676e49")
 	)
-	(label "MODE_B"
+	(hierarchical_label "MODE_B"
+		(shape input)
 		(at 187.96 85.09 0)
 		(effects
 			(font
@@ -5302,7 +4748,8 @@
 		)
 		(uuid "e4405f79-b7b3-497b-bdac-65906ec25e6d")
 	)
-	(label "CV_CUTOFF"
+	(hierarchical_label "CV_CUTOFF"
+		(shape input)
 		(at 144.78 224.79 0)
 		(effects
 			(font
@@ -5334,7 +4781,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 124.46 97.79 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5378,8 +4825,8 @@
 			(uuid "3154159d-38c7-456c-87ed-9edc0fe2469d")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4092")
 					(unit 1)
 				)
@@ -5499,8 +4946,8 @@
 			(uuid "e4e2f587-439e-4cc3-97f0-fc282c1f26f9")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "U35")
 					(unit 4)
 				)
@@ -5578,8 +5025,8 @@
 			(uuid "4c8d7759-c9b3-428b-a77a-e229215b56d5")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R201")
 					(unit 1)
 				)
@@ -5657,8 +5104,8 @@
 			(uuid "d77ec4d2-0243-4af5-8257-b8c1132510ff")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R205")
 					(unit 1)
 				)
@@ -5736,8 +5183,8 @@
 			(uuid "d3d7f993-abab-4143-acd0-d4a5a73c3b88")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R206")
 					(unit 1)
 				)
@@ -5815,8 +5262,8 @@
 			(uuid "5e6bbcf6-a32e-4c35-ada5-b31806560c51")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R104")
 					(unit 1)
 				)
@@ -5894,8 +5341,8 @@
 			(uuid "aba55822-e7ea-4228-b58d-6a1731186ee0")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "C503")
 					(unit 1)
 				)
@@ -5991,8 +5438,8 @@
 			(uuid "397d29c3-18a2-4334-b6f1-1ef54fc1e768")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "U34")
 					(unit 3)
 				)
@@ -6070,8 +5517,8 @@
 			(uuid "9ae41804-114c-4c69-baf1-36a4fbd8f5dc")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R106")
 					(unit 1)
 				)
@@ -6149,8 +5596,8 @@
 			(uuid "079ce2fd-e540-4ffd-9505-113358d526c3")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "C505")
 					(unit 1)
 				)
@@ -6179,7 +5626,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_+5V"
+		(property "Value" "+5V"
 			(at 198.12 180.34 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6223,8 +5670,8 @@
 			(uuid "0f8078fe-f383-4ae1-9e7d-a340b5e629bb")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4093")
 					(unit 1)
 				)
@@ -6344,8 +5791,8 @@
 			(uuid "13c4a1eb-6230-4f87-a062-3137c7c25a4e")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "U36")
 					(unit 5)
 				)
@@ -6465,8 +5912,8 @@
 			(uuid "1da4708e-ed6a-4a2b-94a3-2ec44d7c19c5")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "U32")
 					(unit 4)
 				)
@@ -6495,7 +5942,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_+5V"
+		(property "Value" "+5V"
 			(at 111.76 262.89 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6539,8 +5986,8 @@
 			(uuid "808a9cdc-7bd2-4a6d-b64a-d6d2f6569392")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4094")
 					(unit 1)
 				)
@@ -6618,8 +6065,8 @@
 			(uuid "296f29c6-9e1c-480b-9a0f-4c92d8486382")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R105")
 					(unit 1)
 				)
@@ -6648,7 +6095,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 71.12 63.5 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6692,8 +6139,8 @@
 			(uuid "6f5090a8-86d8-42d9-9854-33a49f13e94c")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4095")
 					(unit 1)
 				)
@@ -6722,7 +6169,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 123.19 181.61 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6766,8 +6213,8 @@
 			(uuid "0aaf2871-67df-488d-a435-00d6d118f8c1")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4096")
 					(unit 1)
 				)
@@ -6845,8 +6292,8 @@
 			(uuid "f3d784d5-5597-46e0-b7f6-3ce42df5f7c1")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "C511")
 					(unit 1)
 				)
@@ -6875,7 +6322,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 148.59 275.59 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6919,8 +6366,8 @@
 			(uuid "1f75d103-a704-4d60-9fa0-7fd183499277")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4097")
 					(unit 1)
 				)
@@ -6949,7 +6396,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_-5V"
+		(property "Value" "-5V"
 			(at 220.98 223.52 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6993,8 +6440,8 @@
 			(uuid "b7509a3b-1f9c-412d-ba9a-8a78fcd0e2e3")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4098")
 					(unit 1)
 				)
@@ -7072,8 +6519,8 @@
 			(uuid "c83c54f1-2428-4536-8c0d-67c47951836d")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "C210")
 					(unit 1)
 				)
@@ -7169,8 +6616,8 @@
 			(uuid "fd890ec6-2657-4f62-ab45-e893c7b11810")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "U30")
 					(unit 1)
 				)
@@ -7248,8 +6695,8 @@
 			(uuid "549f428e-3f71-4239-9706-643be3078c69")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R220")
 					(unit 1)
 				)
@@ -7278,7 +6725,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_-5V"
+		(property "Value" "-5V"
 			(at 231.14 50.8 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7322,8 +6769,8 @@
 			(uuid "1777f4b7-c432-44ce-ae35-8def348b3776")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4099")
 					(unit 1)
 				)
@@ -7352,7 +6799,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 43.18 106.68 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7396,8 +6843,8 @@
 			(uuid "597903a4-3dc8-47ab-811f-8188c4f66252")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4100")
 					(unit 1)
 				)
@@ -7475,8 +6922,8 @@
 			(uuid "ff49ee99-47f2-490e-b229-4d2944e5843a")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R100")
 					(unit 1)
 				)
@@ -7505,7 +6952,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 82.55 203.2 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7549,8 +6996,8 @@
 			(uuid "b28ab695-8d50-4256-a694-31f8140699e0")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4101")
 					(unit 1)
 				)
@@ -7628,8 +7075,8 @@
 			(uuid "6aa68843-1ff7-4d56-9c5a-0246fe6a8320")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "C507")
 					(unit 1)
 				)
@@ -7658,7 +7105,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_+5V"
+		(property "Value" "+5V"
 			(at 91.44 123.19 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7702,8 +7149,8 @@
 			(uuid "6c424aad-3eca-4cab-abe7-e014c1d299f7")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4102")
 					(unit 1)
 				)
@@ -7823,8 +7270,8 @@
 			(uuid "97175539-1c7b-4725-9f66-dd7db72e687a")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "U32")
 					(unit 5)
 				)
@@ -7853,7 +7300,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 82.55 231.14 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7897,8 +7344,8 @@
 			(uuid "66f81f60-eced-4923-8218-5bb915204193")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4103")
 					(unit 1)
 				)
@@ -7927,7 +7374,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 44.45 165.1 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7971,8 +7418,8 @@
 			(uuid "10cb2d94-78f5-4d09-94d1-69a449c26b59")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4104")
 					(unit 1)
 				)
@@ -8050,8 +7497,8 @@
 			(uuid "b5b1c725-80bc-4e70-b948-4cea3e9487f8")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R200")
 					(unit 1)
 				)
@@ -8171,8 +7618,8 @@
 			(uuid "2c845b7d-9cba-4264-8efa-0ec72421c7d4")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "U35")
 					(unit 2)
 				)
@@ -8201,7 +7648,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 231.14 193.04 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8245,8 +7692,8 @@
 			(uuid "07fe20b1-3943-486b-8bc7-0b5da71b6c02")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4105")
 					(unit 1)
 				)
@@ -8324,8 +7771,8 @@
 			(uuid "9b70c0dc-708e-436d-8008-8bce66d68cec")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "C513")
 					(unit 1)
 				)
@@ -8354,7 +7801,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 99.06 210.82 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8398,8 +7845,8 @@
 			(uuid "be83423a-9bec-4013-8f9d-9674d7bbc212")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4106")
 					(unit 1)
 				)
@@ -8428,7 +7875,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 198.12 193.04 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8472,8 +7919,8 @@
 			(uuid "4ff4f6dc-9461-4217-ab29-17802e27a238")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4107")
 					(unit 1)
 				)
@@ -8551,8 +7998,8 @@
 			(uuid "8dd64eba-0a03-4124-a96a-e2aa5a528e24")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R113")
 					(unit 1)
 				)
@@ -8630,8 +8077,8 @@
 			(uuid "e3fa4370-f8f3-4d38-83d3-e33179e288fd")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R103")
 					(unit 1)
 				)
@@ -8752,8 +8199,8 @@
 			(uuid "dff0b026-4f8c-4028-bfab-5d362c12b8c6")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "U36")
 					(unit 3)
 				)
@@ -8782,7 +8229,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_+5V"
+		(property "Value" "+5V"
 			(at 121.92 97.79 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8826,8 +8273,8 @@
 			(uuid "8d292d1e-33ba-47ed-b0b8-0af414218118")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4108")
 					(unit 1)
 				)
@@ -8905,8 +8352,8 @@
 			(uuid "80f93cbc-8c9b-4b13-aa31-e85bfd0ee218")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "C506")
 					(unit 1)
 				)
@@ -9026,8 +8473,8 @@
 			(uuid "3b7daba1-be31-45a4-9ce1-5a3b3591e140")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "U31")
 					(unit 3)
 				)
@@ -9056,7 +8503,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_-5V"
+		(property "Value" "-5V"
 			(at 198.12 50.8 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9100,8 +8547,8 @@
 			(uuid "08fc22bc-fdc8-44ce-89fd-6c8ec4e6fd8f")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4109")
 					(unit 1)
 				)
@@ -9130,7 +8577,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_-5V"
+		(property "Value" "-5V"
 			(at 27.94 127 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9174,8 +8621,8 @@
 			(uuid "8257abd7-5bab-4b2a-94d2-f6adecab85c6")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4110")
 					(unit 1)
 				)
@@ -9204,7 +8651,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_-5V"
+		(property "Value" "-5V"
 			(at 148.59 101.6 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9248,8 +8695,8 @@
 			(uuid "ee9293e9-eee8-46d1-a83d-7c16e9658976")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4111")
 					(unit 1)
 				)
@@ -9278,7 +8725,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 195.58 74.93 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9322,8 +8769,8 @@
 			(uuid "b8593d4a-06c7-4f93-a68c-2bbd4e5b6381")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4112")
 					(unit 1)
 				)
@@ -9352,7 +8799,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 231.14 63.5 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9396,8 +8843,8 @@
 			(uuid "32ddbada-1753-40ff-aade-0c9deb18157e")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4113")
 					(unit 1)
 				)
@@ -9475,8 +8922,8 @@
 			(uuid "7438a8e5-2237-4723-b16c-acb629bab04b")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "C515")
 					(unit 1)
 				)
@@ -9505,7 +8952,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 44.45 64.77 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9549,8 +8996,8 @@
 			(uuid "b971b863-d6bc-4784-9a56-00f716394318")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4114")
 					(unit 1)
 				)
@@ -9628,8 +9075,8 @@
 			(uuid "e126247c-5d2e-40fe-a1cd-38df1e6adae6")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R213")
 					(unit 1)
 				)
@@ -9707,8 +9154,8 @@
 			(uuid "b9609038-7d95-4b79-9c63-12a7d17edb5a")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "C114")
 					(unit 1)
 				)
@@ -9786,8 +9233,8 @@
 			(uuid "a34b121a-ba20-4d8e-a5ba-ebf1610da597")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "C510")
 					(unit 1)
 				)
@@ -9816,7 +9263,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 127 52.07 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9860,8 +9307,8 @@
 			(uuid "d62c5e44-1f28-4246-a90a-cb957ca0ef65")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4115")
 					(unit 1)
 				)
@@ -9939,8 +9386,8 @@
 			(uuid "001bfe22-f612-4cec-a8d5-7380d545acca")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R114")
 					(unit 1)
 				)
@@ -9969,7 +9416,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_-5V"
+		(property "Value" "-5V"
 			(at 27.94 256.54 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10013,8 +9460,8 @@
 			(uuid "05ee1636-49d9-4ed1-85d6-589cab484bd7")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4116")
 					(unit 1)
 				)
@@ -10092,8 +9539,8 @@
 			(uuid "a9a7fe43-0251-4256-a5b1-dbf4ad476c60")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R112")
 					(unit 1)
 				)
@@ -10171,8 +9618,8 @@
 			(uuid "85c5dace-6b53-4f73-9ab0-5060fd9efa04")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R102")
 					(unit 1)
 				)
@@ -10201,7 +9648,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 198.12 63.5 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10245,8 +9692,8 @@
 			(uuid "9c74939f-5e09-43b8-ba75-262d921d14bc")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4117")
 					(unit 1)
 				)
@@ -10275,7 +9722,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_-5V"
+		(property "Value" "-5V"
 			(at 121.92 251.46 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10319,8 +9766,8 @@
 			(uuid "df579cd2-9675-4715-bb39-bdf519933b16")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4118")
 					(unit 1)
 				)
@@ -10349,7 +9796,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 99.06 53.34 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10393,8 +9840,8 @@
 			(uuid "cdb0c3f3-feef-4876-9d8c-c0968ea8e2dd")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4119")
 					(unit 1)
 				)
@@ -10472,8 +9919,8 @@
 			(uuid "b189ec10-a511-436e-8e6e-1d09ebea8b7f")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R219")
 					(unit 1)
 				)
@@ -10551,8 +9998,8 @@
 			(uuid "c2bcd6ee-356d-4e53-b9c3-596d303cc305")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R119")
 					(unit 1)
 				)
@@ -10581,7 +10028,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 111.76 275.59 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10625,8 +10072,8 @@
 			(uuid "4f4eb5fa-5bdb-4f91-bb97-22fb33875355")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4120")
 					(unit 1)
 				)
@@ -10655,7 +10102,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_-5V"
+		(property "Value" "-5V"
 			(at 110.49 29.21 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10699,8 +10146,8 @@
 			(uuid "77b6449a-bc50-4cb3-9aa0-dbfd49c90810")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4121")
 					(unit 1)
 				)
@@ -10729,7 +10176,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 99.06 182.88 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10773,8 +10220,8 @@
 			(uuid "fcdb59c4-6d1f-4aca-84b8-90e55f579bd9")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4122")
 					(unit 1)
 				)
@@ -10852,8 +10299,8 @@
 			(uuid "73603b08-1e17-4543-b9c5-4d8e42676bbf")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R218")
 					(unit 1)
 				)
@@ -10882,7 +10329,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_+5V"
+		(property "Value" "+5V"
 			(at 231.14 180.34 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10926,8 +10373,8 @@
 			(uuid "0c7b172a-a279-42f8-bbb8-c1b683dacb42")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4123")
 					(unit 1)
 				)
@@ -11048,8 +10495,8 @@
 			(uuid "d58b55a0-2a33-4925-9a33-063c56046dab")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "U31")
 					(unit 1)
 				)
@@ -11078,7 +10525,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 124.46 199.39 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11122,8 +10569,8 @@
 			(uuid "18884b5d-2bfe-40c7-bd27-b8ee73cdeaf5")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4124")
 					(unit 1)
 				)
@@ -11152,7 +10599,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 195.58 204.47 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11196,8 +10643,8 @@
 			(uuid "ed811a24-fb92-4d1a-a6bc-494119a78fd4")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4125")
 					(unit 1)
 				)
@@ -11275,8 +10722,8 @@
 			(uuid "a550dc17-1167-416d-b4ca-6e65237bb73f")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R115")
 					(unit 1)
 				)
@@ -11396,8 +10843,8 @@
 			(uuid "0164db56-b8aa-4750-96c4-c68e27e98cb7")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "U31")
 					(unit 4)
 				)
@@ -11426,7 +10873,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 44.45 194.31 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11470,8 +10917,8 @@
 			(uuid "ae44c1aa-ace0-4a14-bd3d-7931c61b3a4b")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4126")
 					(unit 1)
 				)
@@ -11549,8 +10996,8 @@
 			(uuid "480bf9e6-998c-4e03-9547-e9208af4c8c7")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R202")
 					(unit 1)
 				)
@@ -11579,7 +11026,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 91.44 135.89 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11623,8 +11070,8 @@
 			(uuid "1f39c5c4-cc93-41ba-8c01-10754ee9a9aa")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4127")
 					(unit 1)
 				)
@@ -11744,8 +11191,8 @@
 			(uuid "8d0ee636-97a9-434c-a85c-f510f62a6cce")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "U35")
 					(unit 3)
 				)
@@ -11823,8 +11270,8 @@
 			(uuid "c9a18b88-c4c6-4db7-a7f9-29f061eb44cf")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R204")
 					(unit 1)
 				)
@@ -11853,7 +11300,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 54.61 93.98 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11897,8 +11344,8 @@
 			(uuid "4dac3c75-2cca-4a7d-9f5d-3e072c573aee")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4128")
 					(unit 1)
 				)
@@ -11994,8 +11441,8 @@
 			(uuid "9921b5a8-e59a-4e9d-b8f1-ea4fbf0fa2b8")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "U34")
 					(unit 1)
 				)
@@ -12115,8 +11562,8 @@
 			(uuid "7f96ce6f-b80e-481c-9a74-45decda348c4")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "U36")
 					(unit 4)
 				)
@@ -12212,8 +11659,8 @@
 			(uuid "cb5bf041-d6f5-43fc-92ee-a9d06ff616e5")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "U30")
 					(unit 2)
 				)
@@ -12291,8 +11738,8 @@
 			(uuid "2bbe29ce-8063-484b-b1fb-3009f04ffe29")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "C512")
 					(unit 1)
 				)
@@ -12370,8 +11817,8 @@
 			(uuid "389f1a0c-40d4-4a34-9a79-58f5b4bfc7aa")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "C501")
 					(unit 1)
 				)
@@ -12449,8 +11896,8 @@
 			(uuid "ae1ad548-55ed-4122-b57c-546562ef022e")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R211")
 					(unit 1)
 				)
@@ -12479,7 +11926,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 139.7 171.45 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12523,8 +11970,8 @@
 			(uuid "236ef574-7202-4b0d-9627-e1d7ee120295")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4129")
 					(unit 1)
 				)
@@ -12602,8 +12049,8 @@
 			(uuid "120e6387-cab5-4517-b696-b40aac8e06b0")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R116")
 					(unit 1)
 				)
@@ -12632,7 +12079,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 68.58 124.46 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12676,8 +12123,8 @@
 			(uuid "749a18f7-2500-41be-a28a-ef48c4428ff7")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4130")
 					(unit 1)
 				)
@@ -12755,8 +12202,8 @@
 			(uuid "03cc975e-9192-4c78-9056-091cd662da4c")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R121")
 					(unit 1)
 				)
@@ -12785,7 +12232,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 68.58 255.27 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12829,8 +12276,8 @@
 			(uuid "7cb11b14-2eda-4f57-a624-70bf716a8e6d")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4131")
 					(unit 1)
 				)
@@ -12859,7 +12306,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 13.97 251.46 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12903,8 +12350,8 @@
 			(uuid "a633004b-49dc-49c1-9f54-8557072a576d")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4132")
 					(unit 1)
 				)
@@ -12982,8 +12429,8 @@
 			(uuid "01dc20c9-914d-43a3-9f9c-81a8c64378c8")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R120")
 					(unit 1)
 				)
@@ -13012,7 +12459,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_+5V"
+		(property "Value" "+5V"
 			(at 165.1 58.42 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13056,8 +12503,8 @@
 			(uuid "31398eb3-0e69-41ca-814a-d4d0610df2dd")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4133")
 					(unit 1)
 				)
@@ -13086,7 +12533,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 26.67 257.81 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13130,8 +12577,8 @@
 			(uuid "438e1673-3572-496c-89d4-2ececa60e300")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4134")
 					(unit 1)
 				)
@@ -13209,8 +12656,8 @@
 			(uuid "0b58533b-18f9-4d98-8c38-efe28995306c")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R215")
 					(unit 1)
 				)
@@ -13288,8 +12735,8 @@
 			(uuid "dece15bc-bcf6-4ff3-898b-8afd3ff3e989")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R216")
 					(unit 1)
 				)
@@ -13318,7 +12765,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_-5V"
+		(property "Value" "-5V"
 			(at 121.92 120.65 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13362,8 +12809,8 @@
 			(uuid "1ba38fcc-6c09-4e3b-a8a2-a261f2a82fb2")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4135")
 					(unit 1)
 				)
@@ -13392,7 +12839,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_-5V"
+		(property "Value" "-5V"
 			(at 165.1 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13436,8 +12883,8 @@
 			(uuid "da1f5bbc-1680-4580-bf54-3c0c40ca5235")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4136")
 					(unit 1)
 				)
@@ -13533,8 +12980,8 @@
 			(uuid "1b49c725-a09e-4882-b799-9770a6de86e1")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "U30")
 					(unit 3)
 				)
@@ -13563,7 +13010,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_+5V"
+		(property "Value" "+5V"
 			(at 121.92 228.6 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13607,8 +13054,8 @@
 			(uuid "2fddf5de-aa37-496b-994d-21204f9a1e09")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4137")
 					(unit 1)
 				)
@@ -13637,7 +13084,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 43.18 237.49 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13681,8 +13128,8 @@
 			(uuid "df736489-b0d7-46a5-9d88-08e24eb6c4cf")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4138")
 					(unit 1)
 				)
@@ -13778,8 +13225,8 @@
 			(uuid "d638c7c3-4273-4585-b382-62c0c60bc577")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "U34")
 					(unit 2)
 				)
@@ -13808,7 +13255,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_+5V"
+		(property "Value" "+5V"
 			(at 165.1 187.96 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13852,8 +13299,8 @@
 			(uuid "71b32a53-50e8-4959-b522-9d58cc1c7057")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4139")
 					(unit 1)
 				)
@@ -13882,7 +13329,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 26.67 127 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13926,8 +13373,8 @@
 			(uuid "3609e142-1baa-4c83-874b-4c84213f12cc")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4140")
 					(unit 1)
 				)
@@ -13956,7 +13403,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 212.09 93.98 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14000,8 +13447,8 @@
 			(uuid "9fa1da32-7895-4231-aecf-78263fb877f2")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4141")
 					(unit 1)
 				)
@@ -14079,8 +13526,8 @@
 			(uuid "dc423b82-0526-4920-85cd-9bfbadb9f9d2")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R101")
 					(unit 1)
 				)
@@ -14109,7 +13556,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_-5V"
+		(property "Value" "-5V"
 			(at 165.1 210.82 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14153,8 +13600,8 @@
 			(uuid "0397b727-5c0e-4688-a4fc-1d73e515294f")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4142")
 					(unit 1)
 				)
@@ -14183,7 +13630,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 124.46 227.33 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14227,8 +13674,8 @@
 			(uuid "b8900188-830c-4500-89c9-9514a33914a6")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4143")
 					(unit 1)
 				)
@@ -14257,7 +13704,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 110.49 41.91 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14301,8 +13748,8 @@
 			(uuid "a0ea3250-05dc-49a8-8855-3486b1d047e5")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4144")
 					(unit 1)
 				)
@@ -14331,7 +13778,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_+5V"
+		(property "Value" "+5V"
 			(at 214.63 40.64 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14375,8 +13822,8 @@
 			(uuid "8226f07a-ce86-43fb-bc6c-ed6fda3d16c1")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4145")
 					(unit 1)
 				)
@@ -14497,8 +13944,8 @@
 			(uuid "1b270a4a-b637-4ae7-bf0d-e65581bcd060")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "U35")
 					(unit 1)
 				)
@@ -14527,7 +13974,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 82.55 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14571,8 +14018,8 @@
 			(uuid "b94f175f-3d79-421d-a263-fdb0a37c5bbd")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4146")
 					(unit 1)
 				)
@@ -14650,8 +14097,8 @@
 			(uuid "4a5d11df-9ad8-489c-b023-194210132089")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "C502")
 					(unit 1)
 				)
@@ -14729,8 +14176,8 @@
 			(uuid "7e51ee94-d8b4-4c14-8628-a26c0e3b241b")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "C500")
 					(unit 1)
 				)
@@ -14808,8 +14255,8 @@
 			(uuid "3c2b83b1-46f4-441c-b3f9-2963894cb4ec")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R221")
 					(unit 1)
 				)
@@ -14838,7 +14285,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_-5V"
+		(property "Value" "-5V"
 			(at 71.12 50.8 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14882,8 +14329,8 @@
 			(uuid "b17538e3-12c2-4e17-a93c-dc3f5767d829")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4147")
 					(unit 1)
 				)
@@ -14912,7 +14359,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_+5V"
+		(property "Value" "+5V"
 			(at 27.94 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14956,8 +14403,8 @@
 			(uuid "abd78f26-f63e-421f-95d4-c8804a051e03")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4148")
 					(unit 1)
 				)
@@ -14986,7 +14433,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_-5V"
+		(property "Value" "-5V"
 			(at 148.59 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15030,8 +14477,8 @@
 			(uuid "7111b6f7-5bd4-44a1-a54a-1d6d4e1cd995")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4149")
 					(unit 1)
 				)
@@ -15151,8 +14598,8 @@
 			(uuid "25a016cf-779c-422f-b29d-1e37188db360")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "U31")
 					(unit 5)
 				)
@@ -15230,8 +14677,8 @@
 			(uuid "12209180-7d40-4a79-9cfa-3cda9f576d52")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "C514")
 					(unit 1)
 				)
@@ -15352,8 +14799,8 @@
 			(uuid "3dd35e7a-2768-45b5-8636-bf4ca1b6614c")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "U32")
 					(unit 3)
 				)
@@ -15382,7 +14829,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_+5V"
+		(property "Value" "+5V"
 			(at 148.59 262.89 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15426,8 +14873,8 @@
 			(uuid "1e58ca40-f1b9-458d-91f5-6cf74521a71b")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4150")
 					(unit 1)
 				)
@@ -15505,8 +14952,8 @@
 			(uuid "bcedf37b-dba7-4acc-abc3-dc69d6199fad")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R203")
 					(unit 1)
 				)
@@ -15535,7 +14982,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_+5V"
+		(property "Value" "+5V"
 			(at 107.95 233.68 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15579,8 +15026,8 @@
 			(uuid "ccb42ded-e46e-4ae8-ba9a-7bb627ad4d4f")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4151")
 					(unit 1)
 				)
@@ -15609,7 +15056,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_-5V"
+		(property "Value" "-5V"
 			(at 148.59 203.2 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15653,8 +15100,8 @@
 			(uuid "7521ac32-4a76-4c71-94da-da37c30efe65")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4152")
 					(unit 1)
 				)
@@ -15683,7 +15130,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_-5V"
+		(property "Value" "-5V"
 			(at 123.19 168.91 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15727,8 +15174,8 @@
 			(uuid "1b1a98ea-b1c9-4091-a516-98d7838016a0")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4153")
 					(unit 1)
 				)
@@ -15806,8 +15253,8 @@
 			(uuid "72b126c6-1c51-4c6f-a9c0-dba44dcd86f3")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "C214")
 					(unit 1)
 				)
@@ -15927,8 +15374,8 @@
 			(uuid "8cbe6214-32c0-43a4-a7b3-ae5bdbb41e91")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "U37")
 					(unit 1)
 				)
@@ -16006,8 +15453,8 @@
 			(uuid "a0d04af9-ae60-4521-a125-c25353d0f23b")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R117")
 					(unit 1)
 				)
@@ -16085,8 +15532,8 @@
 			(uuid "437ed1ef-c635-4a3f-8d69-34838c22fc65")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R212")
 					(unit 1)
 				)
@@ -16115,7 +15562,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 212.09 223.52 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16159,8 +15606,8 @@
 			(uuid "2f9d22aa-3f1d-452c-848a-c696fba54e5c")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4154")
 					(unit 1)
 				)
@@ -16189,7 +15636,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 107.95 246.38 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16233,8 +15680,8 @@
 			(uuid "c083b2ea-bc43-4657-b9cb-97c8191c36af")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4155")
 					(unit 1)
 				)
@@ -16263,7 +15710,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 129.54 275.59 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16307,8 +15754,8 @@
 			(uuid "fc12c5f0-8213-4ef1-99e6-ba7925fd7786")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4156")
 					(unit 1)
 				)
@@ -16337,7 +15784,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 99.06 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16381,8 +15828,8 @@
 			(uuid "91d079c1-6088-4e43-ab42-ad4025aea78a")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4157")
 					(unit 1)
 				)
@@ -16411,7 +15858,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_+5V"
+		(property "Value" "+5V"
 			(at 27.94 233.68 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16455,8 +15902,8 @@
 			(uuid "46771a99-c542-4efd-bba9-f6d8a52fdef9")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4158")
 					(unit 1)
 				)
@@ -16485,7 +15932,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_-5V"
+		(property "Value" "-5V"
 			(at 220.98 93.98 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16529,8 +15976,8 @@
 			(uuid "057524ac-51f3-4e3c-a4d6-7ffbb78abcc1")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4159")
 					(unit 1)
 				)
@@ -16608,8 +16055,8 @@
 			(uuid "7d21d900-572a-44fc-a37c-613294c85a7d")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "C509")
 					(unit 1)
 				)
@@ -16687,8 +16134,8 @@
 			(uuid "3dcb6a6a-0dfb-415a-973f-54d1880c0099")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "C110")
 					(unit 1)
 				)
@@ -16766,8 +16213,8 @@
 			(uuid "f7ac00b9-3c16-489a-b2df-bfe8105e5d67")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R210")
 					(unit 1)
 				)
@@ -16845,8 +16292,8 @@
 			(uuid "d782ad8f-5157-4845-94f4-cdebb0ad116c")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R214")
 					(unit 1)
 				)
@@ -16875,7 +16322,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_+5V"
+		(property "Value" "+5V"
 			(at 214.63 170.18 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16919,8 +16366,8 @@
 			(uuid "bc66ed7f-7e7f-42d1-9a02-8d08b220e8d0")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4160")
 					(unit 1)
 				)
@@ -16949,7 +16396,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_-5V"
+		(property "Value" "-5V"
 			(at 139.7 158.75 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16993,8 +16440,8 @@
 			(uuid "38675c14-e74d-4908-a558-e7643afe005c")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4161")
 					(unit 1)
 				)
@@ -17114,8 +16561,8 @@
 			(uuid "f8f7caf6-d282-424f-83dc-d1a329810e86")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "U31")
 					(unit 2)
 				)
@@ -17144,7 +16591,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 124.46 69.85 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17188,8 +16635,8 @@
 			(uuid "4ff7acdf-8cd4-4b25-b968-cb5b51b5657d")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4162")
 					(unit 1)
 				)
@@ -17267,8 +16714,8 @@
 			(uuid "b84bd002-7631-492a-ad85-b4764f217f77")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R110")
 					(unit 1)
 				)
@@ -17346,8 +16793,8 @@
 			(uuid "64fc4f3a-477e-4402-b5fc-3e3175c7f86a")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R217")
 					(unit 1)
 				)
@@ -17376,7 +16823,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_-5V"
+		(property "Value" "-5V"
 			(at 148.59 231.14 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17420,8 +16867,8 @@
 			(uuid "56ef451a-54ab-41b1-86d2-a2539273298d")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4163")
 					(unit 1)
 				)
@@ -17450,7 +16897,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 82.55 101.6 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17494,8 +16941,8 @@
 			(uuid "151f73e7-4972-4a36-885d-8dbebaf6349d")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4164")
 					(unit 1)
 				)
@@ -17573,8 +17020,8 @@
 			(uuid "d7bdb2aa-947d-4959-bb9d-a91787988a10")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "C508")
 					(unit 1)
 				)
@@ -17603,7 +17050,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_GND"
+		(property "Value" "GND"
 			(at 44.45 34.29 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17647,8 +17094,8 @@
 			(uuid "a344b82d-1e47-422a-ab04-73adacca7e8c")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4165")
 					(unit 1)
 				)
@@ -17726,8 +17173,8 @@
 			(uuid "dd0f4e5c-9a64-4b79-a4c5-1fb031b94f5f")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R118")
 					(unit 1)
 				)
@@ -17756,7 +17203,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_+5V"
+		(property "Value" "+5V"
 			(at 129.54 262.89 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17800,8 +17247,8 @@
 			(uuid "767f0e4a-2a15-4b08-b39d-9bf61b7d7242")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4166")
 					(unit 1)
 				)
@@ -17830,7 +17277,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_+5V"
+		(property "Value" "+5V"
 			(at 13.97 238.76 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17874,8 +17321,8 @@
 			(uuid "51017bd2-2cd6-49d9-ac5a-ce132be05729")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4167")
 					(unit 1)
 				)
@@ -17953,8 +17400,8 @@
 			(uuid "41755507-2403-475e-9f06-eb2d861cfe61")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "C504")
 					(unit 1)
 				)
@@ -18074,8 +17521,8 @@
 			(uuid "1942c5c5-a7fc-4b6c-958a-23957e9f7741")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "U33")
 					(unit 1)
 				)
@@ -18104,7 +17551,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_-5V"
+		(property "Value" "-5V"
 			(at 127 39.37 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18148,8 +17595,8 @@
 			(uuid "11ae7ccc-56e6-4c9f-af6e-1866ae277107")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4168")
 					(unit 1)
 				)
@@ -18269,8 +17716,8 @@
 			(uuid "8f530024-4590-4164-9f56-c6ab5b18c98d")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "U35")
 					(unit 5)
 				)
@@ -18348,8 +17795,8 @@
 			(uuid "66f40b76-dba1-47dc-84a0-eabac1b3033c")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "R111")
 					(unit 1)
 				)
@@ -18378,7 +17825,7 @@
 				)
 			)
 		)
-		(property "Value" "FILT_-5V"
+		(property "Value" "-5V"
 			(at 54.61 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18422,518 +17869,12 @@
 			(uuid "feb7a106-d9d2-467c-958e-97e9fd085e0a")
 		)
 		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
+			(project "FILTER"
+				(path "/5f1e2d3c-4b5a-6c7d-8e9f-0a1b2c3d4e5f"
 					(reference "#PWR4169")
 					(unit 1)
 				)
 			)
 		)
-	)
-	(symbol
-		(lib_id "Connector:Conn_Coaxial_Small")
-		(at 60 60 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5b894aaf-712d-44b1-9042-d0563325e525")
-		(property "Reference" "J13"
-			(at 256.0204 104.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "U.FL AUDIO L IN"
-			(at 256.0204 106.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_Coaxial:U.FL_Hirose_U.FL-R-SMT-1_Vertical"
-			(at 30.48 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 30.48 167.64 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 30.48 167.64 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8a02042b-8b28-42c7-b3c5-5bde6fb9ef92")
-		)
-		(pin "2"
-			(uuid "535e78af-3a66-4496-a7ac-dd37e00d1ee8")
-		)
-		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
-					(reference "J13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(label "AUDIO_L_IN"
-		(at 57.46 60 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "0315f73d-ee82-4a2d-a841-27ee12663b3e")
-	)
-	(label "FILT_GND"
-		(at 62.54 60 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "d03e96e0-3ca8-476d-8fe7-193d3c67bcc6")
-	)
-	(symbol
-		(lib_id "Connector:Conn_Coaxial_Small")
-		(at 60 70 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1f0ea870-b735-4739-9fc5-6af03e089d8b")
-		(property "Reference" "J14"
-			(at 256.0204 104.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "U.FL AUDIO R IN"
-			(at 256.0204 106.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_Coaxial:U.FL_Hirose_U.FL-R-SMT-1_Vertical"
-			(at 30.48 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 30.48 167.64 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 30.48 167.64 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8e5f8a5d-9056-4f22-ab2f-f0d0edc6ea4a")
-		)
-		(pin "2"
-			(uuid "fe9eb3f6-0c71-44f6-a850-4960e960ccdf")
-		)
-		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
-					(reference "J14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(label "AUDIO_R_IN"
-		(at 57.46 70 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "19235a30-7cda-48a8-836c-cacf9e6ca7bf")
-	)
-	(label "FILT_GND"
-		(at 62.54 70 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "be55dbef-96e7-40e9-9425-e4a10a3b26ef")
-	)
-	(symbol
-		(lib_id "Connector:Conn_Coaxial_Small")
-		(at 60 80 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b4e7e3c8-b67b-4038-8639-df639df4d3f0")
-		(property "Reference" "J15"
-			(at 256.0204 104.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "U.FL AUDIO L OUT"
-			(at 256.0204 106.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_Coaxial:U.FL_Hirose_U.FL-R-SMT-1_Vertical"
-			(at 30.48 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 30.48 167.64 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 30.48 167.64 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "14527ac7-7eaf-4392-9926-20ec4e2e74ef")
-		)
-		(pin "2"
-			(uuid "7b9fafec-b7bd-409c-845f-fa21bea6a831")
-		)
-		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
-					(reference "J15")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(label "AUDIO_L_OUT"
-		(at 57.46 80 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "ebc084ba-7a71-4c83-84ba-c090e2d7af47")
-	)
-	(label "FILT_GND"
-		(at 62.54 80 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "79e1af6b-f210-47da-90ea-2970da90f59f")
-	)
-	(symbol
-		(lib_id "Connector:Conn_Coaxial_Small")
-		(at 60 90 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "795f0c7d-0fde-4874-af50-aaa78e88d7be")
-		(property "Reference" "J16"
-			(at 256.0204 104.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "U.FL AUDIO R OUT"
-			(at 256.0204 106.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_Coaxial:U.FL_Hirose_U.FL-R-SMT-1_Vertical"
-			(at 30.48 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 30.48 167.64 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 30.48 167.64 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8ade2dd2-1971-42c3-b03c-3e87358e15e4")
-		)
-		(pin "2"
-			(uuid "da722b1f-18b4-4646-b7b7-c7d24f3de9c1")
-		)
-		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
-					(reference "J16")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(label "AUDIO_R_OUT"
-		(at 57.46 90 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "5f52d3a9-e6d4-4432-a7d4-215afbf48f93")
-	)
-	(label "FILT_GND"
-		(at 62.54 90 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "9e51436f-a888-4c00-82b8-c16fa5e3babe")
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x10")
-		(at 90 70 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "14039527-a411-4e81-a127-e7f13f658c9e")
-		(property "Reference" "J17"
-			(at 219.456 137.6679 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "FILTER FFC"
-			(at 219.456 140.2079 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_FFC-FPC:Hirose_FH12-10S-0.5SH_1x10-1MP_P0.50mm_Horizontal"
-			(at 216.916 137.668 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 216.916 137.668 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 216.916 137.668 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e9383f7f-1e7a-4e86-bd86-491327c22b42")
-		)
-		(pin "2"
-			(uuid "c9ca0c70-daa9-4ef0-86e1-67f93a21474c")
-		)
-		(pin "3"
-			(uuid "d4a0bace-e78d-4b36-b1af-028b25bb7254")
-		)
-		(pin "4"
-			(uuid "61a2af67-2829-4699-995c-a1d8a9fb071a")
-		)
-		(pin "5"
-			(uuid "5364a2e9-64c3-4111-a896-3ee248b3cf94")
-		)
-		(pin "6"
-			(uuid "5d95ff00-80be-49b7-a704-61f45c667531")
-		)
-		(pin "7"
-			(uuid "26452c8a-56cf-4cba-9fc8-ce8154055164")
-		)
-		(pin "8"
-			(uuid "475d8769-68cd-4968-9e3e-a42d691bf5f6")
-		)
-		(pin "9"
-			(uuid "dda205ad-83f5-43bb-9d54-8d5b98931c20")
-		)
-		(pin "10"
-			(uuid "79b43638-67b7-429c-90ea-dece182cf15c")
-		)
-		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19/a1b2c3d4-e5f6-7788-99aa-bbccddee0003"
-					(reference "J17")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(label "FILT_+5V"
-		(at 84.92 59.84 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "c1c13271-4d71-4720-b3ac-d0f00bfd3b1a")
-	)
-	(label "FILT_-5V"
-		(at 84.92 62.38 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "df89ddad-417e-4c7b-89b8-e562815f9a6c")
-	)
-	(label "FILT_GND"
-		(at 84.92 64.92 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "a8903e34-f7d5-4c7f-b0be-89b8f01c2dd5")
-	)
-	(label "CV_CUTOFF"
-		(at 84.92 67.46 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "49756fb3-10da-46c0-91c4-7ec82f583397")
-	)
-	(label "FILT_GND"
-		(at 84.92 70.0 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "1d655ca9-7c73-45f2-924e-93d2ad5d47d7")
-	)
-	(label "CV_RES"
-		(at 84.92 72.54 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "669b7e38-4f05-4588-ae8f-2846d568a689")
-	)
-	(label "FILT_GND"
-		(at 84.92 75.08 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "5d348f12-4d76-48e7-a8e7-b2691378585d")
-	)
-	(label "MODE_A"
-		(at 84.92 77.62 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "322dbd39-1478-463b-9ad8-760cb99125c6")
-	)
-	(label "MODE_B"
-		(at 84.92 80.16 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "9abe6094-7d01-4217-b5c5-b5aed1750745")
-	)
-	(label "FILT_GND"
-		(at 84.92 82.7 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "58330807-081a-4f8d-b08c-16f6e6a0cb29")
 	)
 )

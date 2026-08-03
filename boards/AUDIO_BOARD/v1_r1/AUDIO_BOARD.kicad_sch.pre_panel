@@ -8552,6 +8552,86 @@
 				(justify left top)
 			)
 		)
+		(pin "AUDIO_L_IN" input
+			(at 347.98 48.26 0)
+			(uuid "92b518a0-cce3-42f8-ba24-138a079eeec1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "AUDIO_R_IN" input
+			(at 347.98 53.34 0)
+			(uuid "ac2d61ea-6553-4608-b631-16377a0b4adb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "AUDIO_L_OUT" output
+			(at 347.98 58.42 0)
+			(uuid "a96ef637-017f-4e36-b86d-b0793e1f1b21")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "AUDIO_R_OUT" output
+			(at 347.98 63.5 0)
+			(uuid "d7a1e0e9-2e7d-4f76-9579-c0e70f5e43e0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "CV_CUTOFF" input
+			(at 347.98 71.12 0)
+			(uuid "74a49102-bf4d-4469-acbb-356901c0eb0c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "CV_RES" input
+			(at 347.98 76.2 0)
+			(uuid "1880de2a-748a-40c2-9529-a8c133de3fce")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "MODE_A" input
+			(at 347.98 81.28 0)
+			(uuid "dbf43737-c728-4997-ab71-113771f7985d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "MODE_B" input
+			(at 347.98 86.36 0)
+			(uuid "fdf93ae5-8b32-478a-9592-6a1e04d60e26")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 	)
 	(sheet
 		(at 117.856 137.668)
@@ -8777,581 +8857,4 @@
 		)
 	)
 	(embedded_fonts no)
-	(symbol
-		(lib_id "Connector:Conn_Coaxial_Small")
-		(at 40 120 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e7a858be-724a-4802-b5df-106e3d1002b7")
-		(property "Reference" "J18"
-			(at 256.0204 104.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "U.FL->FILT L IN"
-			(at 256.0204 106.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_Coaxial:U.FL_Hirose_U.FL-R-SMT-1_Vertical"
-			(at 30.48 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 30.48 167.64 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 30.48 167.64 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c3692947-c1fe-4082-819e-65deb0a3711a")
-		)
-		(pin "2"
-			(uuid "43b9740c-1c49-489c-a8d7-5f7b1c687b00")
-		)
-		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19"
-					(reference "J18")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(label "FX_RET_L"
-		(at 37.46 120 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "e60630f3-cef0-4c12-aa41-60651e2f8151")
-	)
-	(label "GND"
-		(at 42.54 120 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "33901d66-9229-4b50-adca-c505595e1ae4")
-	)
-	(symbol
-		(lib_id "Connector:Conn_Coaxial_Small")
-		(at 40 130 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7ef3b766-36ea-49f5-8d22-319a82107763")
-		(property "Reference" "J19"
-			(at 256.0204 104.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "U.FL->FILT R IN"
-			(at 256.0204 106.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_Coaxial:U.FL_Hirose_U.FL-R-SMT-1_Vertical"
-			(at 30.48 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 30.48 167.64 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 30.48 167.64 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d60d0ede-3499-4c81-ac5a-26caa5a2692b")
-		)
-		(pin "2"
-			(uuid "1c3e2f77-3fa1-4e43-a71a-83eca716189c")
-		)
-		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19"
-					(reference "J19")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(label "FX_RET_R"
-		(at 37.46 130 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "36ee1498-251f-43d9-90e8-a4fe46df4797")
-	)
-	(label "GND"
-		(at 42.54 130 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "d2a0af75-a844-47fe-9361-e86e3672bdcb")
-	)
-	(symbol
-		(lib_id "Connector:Conn_Coaxial_Small")
-		(at 40 140 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3ba6022f-99c9-40ce-a30c-ab6ab020b52f")
-		(property "Reference" "J20"
-			(at 256.0204 104.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "U.FL<-FILT L OUT"
-			(at 256.0204 106.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_Coaxial:U.FL_Hirose_U.FL-R-SMT-1_Vertical"
-			(at 30.48 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 30.48 167.64 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 30.48 167.64 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "de55f758-cc7d-471c-9920-0a7aa757b924")
-		)
-		(pin "2"
-			(uuid "314c36f5-00a1-43a1-898c-a57c40e2fb2e")
-		)
-		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19"
-					(reference "J20")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(label "VOL_L"
-		(at 37.46 140 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "183e165d-a712-4c7c-adf4-1be9033edf5c")
-	)
-	(label "GND"
-		(at 42.54 140 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "9dcc72d9-8cde-4e8d-bccf-ba8d11a924d5")
-	)
-	(symbol
-		(lib_id "Connector:Conn_Coaxial_Small")
-		(at 40 150 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "48cc6ce1-2b90-47fd-a7e2-935b98696482")
-		(property "Reference" "J21"
-			(at 256.0204 104.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "U.FL<-FILT R OUT"
-			(at 256.0204 106.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_Coaxial:U.FL_Hirose_U.FL-R-SMT-1_Vertical"
-			(at 30.48 167.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 30.48 167.64 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 30.48 167.64 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "381edfa2-68fc-429c-bc41-b67ccbbb2f08")
-		)
-		(pin "2"
-			(uuid "868420aa-0620-48b3-8cd7-86112d77edc2")
-		)
-		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19"
-					(reference "J21")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(label "VOL_R"
-		(at 37.46 150 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "bc625aab-6b87-4d54-801e-320653d6c24a")
-	)
-	(label "GND"
-		(at 42.54 150 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "147d1e1e-ced3-4b49-8d82-99f6db5445cf")
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x10")
-		(at 70 130 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e91dedb5-04f9-4f02-a9cb-f34fa7616060")
-		(property "Reference" "J22"
-			(at 219.456 137.6679 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "FILTER-IF FFC"
-			(at 219.456 140.2079 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_FFC-FPC:Hirose_FH12-10S-0.5SH_1x10-1MP_P0.50mm_Horizontal"
-			(at 216.916 137.668 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 216.916 137.668 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 216.916 137.668 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0fb00a7b-d620-46fb-a6ba-3e6b5c0eb15c")
-		)
-		(pin "2"
-			(uuid "5cedb5dc-cf0e-4b6a-9a16-ae06c6105679")
-		)
-		(pin "3"
-			(uuid "1f4edc77-8a5b-4d5f-b592-25f3a12909e8")
-		)
-		(pin "4"
-			(uuid "a5774dee-673e-46cd-a14a-da05e2239cd1")
-		)
-		(pin "5"
-			(uuid "6ccf4275-f23c-432b-b39b-90d0b63f9587")
-		)
-		(pin "6"
-			(uuid "53d2e95f-d9b0-4595-ba61-e9223c7ff157")
-		)
-		(pin "7"
-			(uuid "e78c5676-2f85-41b8-bdb5-78deaf21141b")
-		)
-		(pin "8"
-			(uuid "a25f1d50-3556-4d81-af2e-50e4caa38268")
-		)
-		(pin "9"
-			(uuid "9a69ec12-3b6f-42ba-a182-7ef6ae776d2d")
-		)
-		(pin "10"
-			(uuid "16503b1d-56d9-4bb9-9dcb-6507a77a2d01")
-		)
-		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19"
-					(reference "J22")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(label "+5V"
-		(at 64.92 119.84 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "1ea8a3f2-ff79-462b-bdab-d90350e2236e")
-	)
-	(label "GND"
-		(at 64.92 124.92 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "6f6d0938-e112-42e6-94c2-1ec9f0d88b08")
-	)
-	(label "MF_CV_CUTOFF"
-		(at 64.92 127.46 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "da02d61d-12b0-44b6-815e-d91dfebb4631")
-	)
-	(label "GND"
-		(at 64.92 130.0 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "be3c4e4d-edb9-4bf7-87fc-34566bf1a61e")
-	)
-	(label "MF_CV_RES"
-		(at 64.92 132.54 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "a4be9be4-215d-4b44-99f4-af8629287eeb")
-	)
-	(label "GND"
-		(at 64.92 135.08 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "a8d7f3b6-831e-4b21-8cd4-970832fe319d")
-	)
-	(label "MF_MODE_A"
-		(at 64.92 137.62 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "4044da36-4e07-481b-9e82-0f13592cd7a2")
-	)
-	(label "MF_MODE_B"
-		(at 64.92 140.16 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "345c6a2e-5d0b-48f5-b10d-0bdb15bc5bfa")
-	)
-	(label "GND"
-		(at 64.92 142.7 0)
-		(effects (font (size 1.27 1.27)) (justify left bottom))
-		(uuid "6accb284-d13c-48f8-be5b-5bd98b0abf9c")
-	)
-	(symbol
-		(lib_id "power:-5V")
-		(at 64.92 122.38 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "90890359-86f6-4cfc-9c88-17a61eabc963")
-		(property "Reference" "#PWR05987"
-			(at 269.748 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "-5V"
-			(at 274.32 62.2299 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 269.528 62.88 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 269.528 62.88 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 269.528 62.88 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5de779e5-f696-413d-8365-e2e7042b9421")
-		)
-		(instances
-			(project "AUDIO_BOARD"
-				(path "/f48c9b16-466a-451c-a18e-f0696896ad19"
-					(reference "#PWR05987")
-					(unit 1)
-				)
-			)
-		)
-	)
 )
