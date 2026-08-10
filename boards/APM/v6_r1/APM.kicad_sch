@@ -5718,16 +5718,6 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 162.56) (xy 146.05 162.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "14acb8a5-24a7-4c10-9901-550c12f2ff1e")
-	)
-	(wire
-		(pts
 			(xy 361.95 102.87) (xy 346.71 102.87)
 		)
 		(stroke
@@ -7055,16 +7045,6 @@
 			(type default)
 		)
 		(uuid "8649e752-917f-4402-90e4-bf089ec6a717")
-	)
-	(wire
-		(pts
-			(xy 148.59 177.8) (xy 146.05 177.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "866529a4-fd30-43c9-a7ec-fc3398708308")
 	)
 	(wire
 		(pts
@@ -31791,83 +31771,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 146.05 177.8 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "64607280-193c-4567-92ec-ac48034fbf59")
-		(property "Reference" "GND1"
-			(at 142.24 172.72 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 142.24 175.26 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 146.05 172.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 146.05 172.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 146.05 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "15ebb5aa-df2a-4964-ad03-187c6e3ba76b")
-		)
-		(instances
-			(project "APM"
-				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
-					(reference "GND1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+5V")
 		(at 379.73 87.63 0)
 		(unit 1)
@@ -32177,85 +32080,6 @@
 			(project "APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "TP9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 148.59 162.56 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6f87d480-249a-457e-9374-aae10f1c1308")
-		(property "Reference" "#PWR0130"
-			(at 148.59 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "3V3_APM"
-			(at 151.13 161.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 148.59 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 148.59 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 148.59 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "92d80aed-cffc-4473-9231-6794cf98363a")
-		)
-		(instances
-			(project "APM"
-				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
-					(reference "#PWR0130")
 					(unit 1)
 				)
 			)
@@ -32960,85 +32784,6 @@
 			(project "APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "U1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 148.59 177.8 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "89b116c3-c23d-4e4c-812d-26c6b5dd6b92")
-		(property "Reference" "#PWR054"
-			(at 148.59 184.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 151.13 179.07 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 148.59 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 148.59 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 148.59 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "13345355-c30b-4d6f-aaa4-d31abeb0a6c1")
-		)
-		(instances
-			(project "APM"
-				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
-					(reference "#PWR054")
 					(unit 1)
 				)
 			)
@@ -35128,83 +34873,6 @@
 			(project "APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR0149")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 146.05 162.56 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "dc4a34db-3627-4161-bc1b-7bc22ec58523")
-		(property "Reference" "3v3"
-			(at 142.24 157.48 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "3v3"
-			(at 142.24 160.02 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 146.05 157.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 146.05 157.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 146.05 162.56 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "116c5e6e-ed25-47dc-b6a7-f242bb6d78a2")
-		)
-		(instances
-			(project "APM"
-				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
-					(reference "3v3")
 					(unit 1)
 				)
 			)
