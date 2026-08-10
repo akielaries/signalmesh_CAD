@@ -23,7 +23,7 @@ RENDER_H="${RENDER_H:-2160}"
 # when you spin a new revision so old revs stop consuming render time.
 # this list is also the ci render matrix (see tools/render.sh --list-json)
 RENDER_BOARDS=(
-  APM/v5_r2
+  APM/v6_r1
   ACM/v1_r3
   OSC_CTRL/v1_r1
   AUDIO_BOARD/v1_r1
