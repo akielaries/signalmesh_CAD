@@ -5461,6 +5461,12 @@
 		(uuid "8ae35390-25f4-4b43-aa66-36c1b076a842")
 	)
 	(junction
+		(at 203.2 265.43)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8df5b3c2-d8eb-4979-8be4-d2fa8c5ba2c9")
+	)
+	(junction
 		(at 210.82 168.91)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5477,6 +5483,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b07b8870-d43f-4f19-a93d-c3679471ae98")
+	)
+	(junction
+		(at 203.2 257.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b5251bf7-eb4b-421d-8502-910a25b06eff")
 	)
 	(junction
 		(at 48.26 125.73)
@@ -6178,6 +6190,16 @@
 	)
 	(wire
 		(pts
+			(xy 203.2 258.826) (xy 203.2 257.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "369455e4-286a-47ae-85d6-3f5b29304d64")
+	)
+	(wire
+		(pts
 			(xy 346.71 36.83) (xy 360.68 36.83)
 		)
 		(stroke
@@ -6295,6 +6317,16 @@
 			(type default)
 		)
 		(uuid "427a804b-70a9-4feb-8cf3-fa4e39fa8249")
+	)
+	(wire
+		(pts
+			(xy 189.738 263.906) (xy 203.2 263.906)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "43f49acd-9771-4285-aea5-ab3422171c33")
 	)
 	(wire
 		(pts
@@ -7188,6 +7220,16 @@
 	)
 	(wire
 		(pts
+			(xy 189.738 258.826) (xy 203.2 258.826)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "983862ab-4cab-4aaa-9ffd-fcd97e4d0fa2")
+	)
+	(wire
+		(pts
 			(xy 173.99 59.69) (xy 189.23 59.69)
 		)
 		(stroke
@@ -7885,6 +7927,16 @@
 			(type default)
 		)
 		(uuid "e02e3a51-1ba0-4ece-9828-7eb7595db96e")
+	)
+	(wire
+		(pts
+			(xy 203.2 263.906) (xy 203.2 265.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1886286-5913-4e4b-b4a4-d764a0c2e319")
 	)
 	(wire
 		(pts
@@ -34638,6 +34690,89 @@
 			(project "APM"
 				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
 					(reference "#PWR079")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 189.738 261.366 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cbbafb3d-825e-4b56-bfad-93e99f18d9ba")
+		(property "Reference" "C25"
+			(at 192.278 260.1022 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "220uF 10V"
+			(at 192.278 262.6422 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:CP_Elec_4x3"
+			(at 189.738 261.366 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 189.738 261.366 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 189.738 261.366 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1cec6c31-4f67-4559-8030-716378a91a82")
+		)
+		(pin "2"
+			(uuid "f64c1aa9-4982-4505-8c64-31311a6464eb")
+		)
+		(instances
+			(project "APM"
+				(path "/63e257c1-2fa4-4533-ab9e-932d24befb8c"
+					(reference "C25")
 					(unit 1)
 				)
 			)
