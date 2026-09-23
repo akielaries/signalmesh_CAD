@@ -11671,9 +11671,9 @@
 		)
 		(uuid "fead73bb-4b48-a0ad-2ee2-71fdc57d67e2")
 	)
-	(global_label "ACM_DAC_SCLK"
+	(global_label "ACM_DAC_MCLK"
 		(shape input)
-		(at 81.28 96.52 0)
+		(at 81.28 93.98 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11681,9 +11681,9 @@
 			)
 			(justify left)
 		)
-		(uuid "5b1b8b64-b73b-4720-aa40-8f4676668a5c")
+		(uuid "06f7ede7-bded-42a6-89b1-38e5744942f3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 98.4166 96.52 0)
+			(at 98.6585 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11697,7 +11697,7 @@
 	)
 	(global_label "ACM_DAC_SDIN"
 		(shape input)
-		(at 81.28 93.98 0)
+		(at 81.28 101.6 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11705,9 +11705,33 @@
 			)
 			(justify left)
 		)
-		(uuid "833b054d-2cf1-471e-9b7c-cf669c7c989a")
+		(uuid "bd8e3bb4-cf62-44e6-bdb2-b05845c268ab")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 98.0538 93.98 0)
+			(at 98.0538 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "ACM_DAC_SCLK"
+		(shape input)
+		(at 81.28 99.06 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c94311f5-36c4-4fba-b9ac-fa8ac368b978")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 98.4166 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11721,7 +11745,7 @@
 	)
 	(global_label "ACM_DAC_LRCK"
 		(shape input)
-		(at 81.28 99.06 0)
+		(at 81.28 96.52 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11729,33 +11753,9 @@
 			)
 			(justify left)
 		)
-		(uuid "bfb1b834-94f4-4c79-ba22-a71b2a88954d")
+		(uuid "e7b4b27a-cd9b-4122-9187-389793a534c3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 98.4771 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
-	(global_label "ACM_DAC_MCLK"
-		(shape input)
-		(at 81.28 101.6 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "dacd78d8-9272-4114-95bc-43d91612df96")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 98.6585 101.6 0)
+			(at 98.4771 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
