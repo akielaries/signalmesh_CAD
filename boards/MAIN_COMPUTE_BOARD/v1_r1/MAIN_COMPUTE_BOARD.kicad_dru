@@ -1,0 +1,36 @@
+(version 1)
+
+# impedance: JLC08161H-1080, widths from 2D field solve (outer microstrip / inner stripline between planes)
+(rule "SE50 inner"
+	(layer inner)
+	(condition "A.NetClass == 'SE50' || A.NetClass == 'DDR'")
+	(constraint track_width (min 0.2) (opt 0.23) (max 0.26)))
+
+(rule "DIFF100 inner"
+	(layer inner)
+	(condition "A.NetClass == 'DIFF100'")
+	(constraint track_width (min 0.11) (opt 0.115) (max 0.12))
+	(constraint diff_pair_gap (min 0.09) (opt 0.10) (max 0.11)))
+
+(rule "DIFF100 outer"
+	(layer outer)
+	(condition "A.NetClass == 'DIFF100'")
+	(constraint track_width (min 0.095) (opt 0.10) (max 0.105))
+	(constraint diff_pair_gap (min 0.17) (opt 0.18) (max 0.19)))
+
+(rule "USB90 outer"
+	(layer outer)
+	(condition "A.NetClass == 'USB90'")
+	(constraint track_width (min 0.105) (opt 0.11) (max 0.115))
+	(constraint diff_pair_gap (min 0.12) (opt 0.127) (max 0.135)))
+
+# bga escape under the fpga and ddr
+(rule "BGA escape"
+	(condition "A.intersectsCourtyard('U100') || A.intersectsCourtyard('U21')")
+	(constraint track_width (min 0.09))
+	(constraint clearance (min 0.09)))
+
+# keep audio analog away from digital
+(rule "DAC clearance"
+	(condition "A.NetClass == 'DAC' && B.NetClass != 'DAC' && B.NetClass != 'PWR'")
+	(constraint clearance (min 0.3)))
