@@ -27,6 +27,7 @@ RENDER_BOARDS=(
   ACM/v1_r3
   OSC_CTRL/v1_r1
   AUDIO_BOARD/v1_r1
+  MAIN_COMPUTE_BOARD/v1_r1
 )
 
 case "${1:-}" in

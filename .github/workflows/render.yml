@@ -68,7 +68,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: boards/${{ matrix.board }}/renders
-          key: renders-${{ env.RENDER_CACHE_VERSION }}-${{ steps.slug.outputs.slug }}-${{ hashFiles(format('boards/{0}/*.kicad_pcb', matrix.board), format('boards/{0}/*.kicad_sch', matrix.board), 'tools/render.sh') }}
+          key: renders-${{ env.RENDER_CACHE_VERSION }}-${{ steps.slug.outputs.slug }}-${{ hashFiles(format('boards/{0}/*.kicad_pcb', matrix.board), format('boards/{0}/*.kicad_sch', matrix.board), format('boards/{0}/3dmodels/**', matrix.board), 'tools/render.sh') }}
 
       - name: locate stock 3d model dir
         if: steps.cache.outputs.cache-hit != 'true'
