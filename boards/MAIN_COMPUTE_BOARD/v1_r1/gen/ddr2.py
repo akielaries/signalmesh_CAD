@@ -355,7 +355,7 @@ def stretch_leg(leg, tgt):
     blocked = FIX[ly] | ((CNT[ly] - OWN[(ly, net)]) > 0) | (others(ly, (0, NY, 0, NX), net) > 0.5)
     want = tgt - stub(net, leg['a'], U100) - stub(net, leg['b'], U21)
     A, B = cell(leg['a']), cell(leg['b'])
-    tot, ok, ma, _ = pick(blocked, A, B, want, inbga, w + 0.45)
+    tot, ok, ma, _ = pick(blocked, A, B, want, inbga, w / 2 + 0.35)
     jj, ii = np.ogrid[:NY, :NX]
     search = want
     for attempt in range(5):
@@ -416,6 +416,41 @@ if PHASE == 'measure':
     json.dump(tg, open(TFILE, 'w'))
     print('targets', tg, 'pairs', {k: round(v, 2) for k, v in pair_len.items() if v})
     sys.exit(0)
+def shrink_leg(leg):
+    # a leg that came out long: shortest path against everything else as it now stands
+    ly, net = leg['layer'], leg['net']
+    old = (leg['path'], leg['box'], leg['keep'])
+    rip(leg)
+    blocked = FIX[ly] | ((CNT[ly] - OWN[(ly, net)]) > 0) | (others(ly, (0, NY, 0, NX), net) > 0.5)
+    A, B = cell(leg['a']), cell(leg['b'])
+    cost = np.where(blocked, np.inf, 1.0)
+    for (j, i) in (A, B):
+        cost[max(0, j - 6):j + 7, max(0, i - 6):i + 7] = 1.0
+    m = MCP_Geometric(cost, fully_connected=True)
+    cc, _ = m.find_costs([A], [B])
+    if np.isfinite(cc[B]):
+        path = list(m.traceback(B))
+        if plen(rlib.simplify([(XS[i], YS[j]) for (j, i) in path])) < plen(rlib.simplify([(XS[i], YS[j]) for (j, i) in old[0]])) - 0.3:
+            box = (max(0, min(p[0] for p in path) - 30), min(NY, max(p[0] for p in path) + 30),
+                   max(0, min(p[1] for p in path) - 30), min(NX, max(p[1] for p in path) + 30))
+            km = keep_mask(path, ly, box)
+            leg.update({'path': path, 'box': box, 'keep': km})
+            D[ly][box[0]:box[1], box[2]:box[3]] += km
+            return True
+    leg['path'], leg['box'], leg['keep'] = old
+    D[ly][leg['box'][0]:leg['box'][1], leg['box'][2]:leg['box'][3]] += leg['keep']
+    return False
+
+
+TOLG = {'LANE0': 1.4, 'LANE1': 1.4, 'CMD': 3.0}
+n_sh = 0
+for leg in legs:
+    if leg['group'] in GROUP_OF and leg['net'] in flights and 'keep' in leg:
+        g, f = flights[leg['net']]
+        if TARGETS.get(g) and f > TARGETS[g] + TOLG[g] - 0.3 and shrink_leg(leg):
+            n_sh += 1
+            flights[leg['net']] = (g, leg_flight(leg))
+print('shrunk', n_sh, 'long legs', flush=True)
 n_ok = n_bad = 0
 for leg in sorted(legs, key=lambda l: flights.get(l['net'], (0, 1e9))[1]):
     if leg['group'] not in GROUP_OF or leg['net'] not in flights or 'keep' not in leg:
