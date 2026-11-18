@@ -53,6 +53,11 @@ JTAG stays available at all times on the 2x7 and 1x6 headers.
 - chip select disabled (CS_N is tied low at the DRAM), internal VREF, 800 Mb/s max.
 - sys_clk comes from the 100 MHz oscillator through an MMCM ("no buffer" option).
 - re-run MIG pin validation in Vivado with the bank 34 plan in [pinout](pinout.md).
+- the bank 34 plan is pin-swapped for layout: FPGA byte group T0 carries the DRAM upper
+  byte (DQ8-15, UDQS, UDM) and T1 the lower byte. DQ bits are reordered within each byte, and
+  address/command nets are reordered among the address/command balls. DQS, CK, DM, ODT and RESET
+  keep their original pins, so the MIG rules still hold. Use the plan in pinout.md for the XDC,
+  not the original MIG default.
 
 ## mezzanine
 
