@@ -122,8 +122,9 @@ def plan():
             put(bp, pn)
         if nn:
             put(bn, nn)
-    put(io(34, r'^IO_0_'), 'DDR_RESET_N')
-    put(io(34, r'^IO_25_'), 'DDR_ODT')
+    # odt is length-matched to ck, reset is not: odt takes the single pin nearer the dram
+    put(io(34, r'^IO_0_'), 'DDR_ODT')
+    put(io(34, r'^IO_25_'), 'DDR_RESET_N')
 
     # banks 35 and 16: vita la pairs at vadj
     for bank, clk, cc, las in ((35, 'CLK0_M2C', ('LA00_CC', 'LA01_CC'), range(2, 17)),
@@ -198,7 +199,7 @@ def build_banks(d):
     s = d.sheet('FPGA_BANKS', 'XC7A100T-2FGG484 IO banks', width=900)
     s.note('Bank 14 (3V3): FMC D0-D31 on SelectMAP D00-D31, FMC controls, CSI_B/RDWR_B. Bank 15 (3V3): FMC A0-A18, clocks, debug')
     s.note('Bank 13 (3V3): Pmods, audio DAC, SFP sideband. Bank 34 (1V35): DDR3L x16, internal VREF. Banks 35/16 (VADJ): VITA LA00-LA33')
-    s.note('DDR3: data T0/T1, addr/cmd T2/T3 + IO_25 (ODT), RESET_N IO_0, CS_N tied low (MIG chip select off). Checked vs UG586 rules')
+    s.note('DDR3: data T0/T1, addr/cmd T2/T3 + IO_0 (ODT), RESET_N IO_25, CS_N tied low (MIG chip select off). Checked vs UG586 rules')
     s.add(LIBID, PLAN, value='XC7A100T-2FGG484I', fp='Package_BGA:Xilinx_FGG484', ref='U100', units=[1, 2, 3])
     # ug483 table 2-2: per bank 2x4.7u + 4x0.47u, one 47u per same-voltage group of up to 4 banks
     for net, n in (('+3V3', 3), ('+1V35', 1), ('VADJ', 2)):

@@ -172,7 +172,7 @@ P14-P17 spare (IOX_SPARE header).
 - bank 14: FMC D0-D31 sit on the SelectMAP D00-D31 pins, so the same wires carry
   the bitstream at boot. CSI_B and RDWR_B are STM32 GPIOs.
 - bank 34: DDR3L. Data bytes in T0/T1, address/command in T2/T3 with CK in T3 and
-  ODT on IO_25, RESET_N on IO_0. CS_N is tied low at the DRAM. This follows the
+  ODT on IO_0, RESET_N on IO_25. CS_N is tied low at the DRAM. This follows the
   UG586 byte-group rules (same layout as the Arty A7-100).
 - banks 35/16: VITA LA00-LA16 + CLK0_M2C on bank 35, LA17-LA33 + CLK1_M2C on bank 16.
   The CC pairs land on MRCC/SRCC pins.
@@ -361,54 +361,54 @@ P14-P17 spare (IOX_SPARE header).
 
 | ball | pin | net |
 |---|---|---|
-| Y6 | L18P_T2 | DDR_A0 |
-| AA6 | L18N_T2 | DDR_A1 |
-| U5 | L14N_T2_SRCC | DDR_A10 |
-| Y7 | L23N_T3 | DDR_A11 |
-| T6 | L17N_T2 | DDR_A12 |
-| Y9 | L24N_T3 | DDR_A13 |
-| AB8 | L22N_T3 | DDR_A14 |
-| W7 | L19N_T3_VREF | DDR_A2 |
-| AB6 | L20N_T3 | DDR_A3 |
-| W6 | L15P_T2_DQS | DDR_A4 |
-| AB7 | L20P_T3 | DDR_A5 |
-| V7 | L19P_T3 | DDR_A6 |
-| W9 | L24P_T3 | DDR_A7 |
-| Y8 | L23P_T3 | DDR_A8 |
-| AA8 | L22P_T3 | DDR_A9 |
-| U6 | L16P_T2 | DDR_BA0 |
-| W5 | L15N_T2_DQS | DDR_BA1 |
-| R6 | L17P_T2 | DDR_BA2 |
-| T5 | L14P_T2_SRCC | DDR_CAS_N |
-| R4 | L13P_T2_MRCC | DDR_CKE |
+| AA6 | L18N_T2 | DDR_A0 |
+| U6 | L16P_T2 | DDR_A1 |
+| Y9 | L24N_T3 | DDR_A10 |
+| V7 | L19P_T3 | DDR_A11 |
+| T4 | L13N_T2_MRCC | DDR_A12 |
+| W7 | L19N_T3_VREF | DDR_A13 |
+| W9 | L24P_T3 | DDR_A14 |
+| Y6 | L18P_T2 | DDR_A2 |
+| V5 | L16N_T2 | DDR_A3 |
+| T5 | L14P_T2_SRCC | DDR_A4 |
+| W5 | L15N_T2_DQS | DDR_A5 |
+| T6 | L17N_T2 | DDR_A6 |
+| W6 | L15P_T2_DQS | DDR_A7 |
+| R6 | L17P_T2 | DDR_A8 |
+| U5 | L14N_T2_SRCC | DDR_A9 |
+| Y7 | L23N_T3 | DDR_BA0 |
+| R4 | L13P_T2_MRCC | DDR_BA1 |
+| Y8 | L23P_T3 | DDR_BA2 |
+| AB7 | L20P_T3 | DDR_CAS_N |
+| AA8 | L22P_T3 | DDR_CKE |
 | V8 | L21N_T3_DQS | DDR_CK_N |
 | V9 | L21P_T3_DQS | DDR_CK_P |
 | V4 | L12P_T1_MRCC | DDR_DM0 |
 | U3 | L6P_T0 | DDR_DM1 |
 | AB2 | L8N_T1 | DDR_DQ0 |
-| AB1 | L7N_T1 | DDR_DQ1 |
-| W1 | L5P_T0 | DDR_DQ10 |
-| Y2 | L4N_T0 | DDR_DQ11 |
-| T1 | L1P_T0 | DDR_DQ12 |
-| Y1 | L5N_T0 | DDR_DQ13 |
-| U1 | L1N_T0 | DDR_DQ14 |
-| U2 | L2P_T0 | DDR_DQ15 |
-| Y4 | L11P_T1_SRCC | DDR_DQ2 |
-| AA1 | L7P_T1 | DDR_DQ3 |
-| AB5 | L10N_T1 | DDR_DQ4 |
-| AB3 | L8P_T1 | DDR_DQ5 |
-| AA5 | L10P_T1 | DDR_DQ6 |
-| AA4 | L11N_T1_SRCC | DDR_DQ7 |
-| V2 | L2N_T0 | DDR_DQ8 |
-| W2 | L4P_T0 | DDR_DQ9 |
+| AA4 | L11N_T1_SRCC | DDR_DQ1 |
+| U2 | L2P_T0 | DDR_DQ10 |
+| W1 | L5P_T0 | DDR_DQ11 |
+| W2 | L4P_T0 | DDR_DQ12 |
+| Y2 | L4N_T0 | DDR_DQ13 |
+| V2 | L2N_T0 | DDR_DQ14 |
+| U1 | L1N_T0 | DDR_DQ15 |
+| AB3 | L8P_T1 | DDR_DQ2 |
+| AB5 | L10N_T1 | DDR_DQ3 |
+| AA1 | L7P_T1 | DDR_DQ4 |
+| Y4 | L11P_T1_SRCC | DDR_DQ5 |
+| AB1 | L7N_T1 | DDR_DQ6 |
+| AA5 | L10P_T1 | DDR_DQ7 |
+| T1 | L1P_T0 | DDR_DQ8 |
+| Y1 | L5N_T0 | DDR_DQ9 |
 | AA3 | L9N_T1_DQS | DDR_DQS0_N |
 | Y3 | L9P_T1_DQS | DDR_DQS0_P |
 | R2 | L3N_T0_DQS | DDR_DQS1_N |
 | R3 | L3P_T0_DQS | DDR_DQS1_P |
-| U7 | 25 | DDR_ODT |
-| T4 | L13N_T2_MRCC | DDR_RAS_N |
-| T3 | 0 | DDR_RESET_N |
-| V5 | L16N_T2 | DDR_WE_N |
+| T3 | 0 | DDR_ODT |
+| AB8 | L22N_T3 | DDR_RAS_N |
+| U7 | 25 | DDR_RESET_N |
+| AB6 | L20N_T3 | DDR_WE_N |
 
 ### bank 35 (VCCO VADJ)
 

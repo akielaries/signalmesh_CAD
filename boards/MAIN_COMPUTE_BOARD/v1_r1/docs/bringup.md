@@ -63,8 +63,9 @@ JTAG stays available at all times on the 2x7 and 1x6 headers.
 - re-run MIG pin validation in Vivado with the bank 34 plan in [pinout](pinout.md).
 - the bank 34 plan is pin-swapped for layout: FPGA byte group T0 carries the DRAM upper
   byte (DQ8-15, UDQS, UDM) and T1 the lower byte. DQ bits are reordered within each byte, and
-  address/command nets are reordered among the address/command balls. DQS, CK, DM, ODT and RESET
-  keep their original pins, so the MIG rules still hold. Use the plan in pinout.md for the XDC,
+  address/command nets are reordered among the address/command balls, paired so routed lengths
+  come out nearly equal. ODT is on IO_0 (nearer the DRAM) and RESET_N on IO_25. DQS, CK and DM
+  keep their byte-group pins, so the MIG rules still hold. Use the plan in pinout.md for the XDC,
   not the original MIG default.
 
 ## mezzanine

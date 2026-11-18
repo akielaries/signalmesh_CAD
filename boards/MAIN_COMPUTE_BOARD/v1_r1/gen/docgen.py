@@ -156,7 +156,7 @@ P14-P17 spare (IOX_SPARE header).
 - bank 14: FMC D0-D31 sit on the SelectMAP D00-D31 pins, so the same wires carry
   the bitstream at boot. CSI_B and RDWR_B are STM32 GPIOs.
 - bank 34: DDR3L. Data bytes in T0/T1, address/command in T2/T3 with CK in T3 and
-  ODT on IO_25, RESET_N on IO_0. CS_N is tied low at the DRAM. This follows the
+  ODT on IO_0, RESET_N on IO_25. CS_N is tied low at the DRAM. This follows the
   UG586 byte-group rules (same layout as the Arty A7-100).
 - banks 35/16: VITA LA00-LA16 + CLK0_M2C on bank 35, LA17-LA33 + CLK1_M2C on bank 16.
   The CC pairs land on MRCC/SRCC pins.

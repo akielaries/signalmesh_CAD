@@ -348,10 +348,20 @@ def leg_flight(leg):
 
 
 def stretch_leg(leg, tgt):
-    ly, net = leg['layer'], leg['net']
+    # own layer first, then the other routing layers (a leg mid-bus can only detour on a freer layer)
+    home = leg['layer']
+    for ly in [home] + [l for l in ALLOWED[leg['group']] if l != home]:
+        if stretch_on(leg, tgt, ly):
+            return True
+    return False
+
+
+def stretch_on(leg, tgt, ly):
+    net = leg['net']
     w, win = WIDTH[ly]
-    keep_old = (leg['path'], leg['box'], leg['keep'])
+    keep_old = (leg['path'], leg['box'], leg['keep'], leg['layer'])
     rip(leg)
+    leg['layer'] = ly
     blocked = FIX[ly] | ((CNT[ly] - OWN[(ly, net)]) > 0) | (others(ly, (0, NY, 0, NX), net) > 0.5)
     want = tgt - stub(net, leg['a'], U100) - stub(net, leg['b'], U21)
     A, B = cell(leg['a']), cell(leg['b'])
@@ -393,8 +403,8 @@ def stretch_leg(leg, tgt):
         print('nostretch', net, ly, 'want %.2f' % want, 'ok cells', int(ok.sum()), 'finite', int(fin.sum()),
               'min err %.2f' % float(e0.min()), 'max tot %.2f' % float(tot[fin].max() if fin.any() else -1),
               'direct %.2f' % float(tot[B] if np.isfinite(tot[B]) else -1))
-    leg['path'], leg['box'], leg['keep'] = keep_old
-    D[ly][leg['box'][0]:leg['box'][1], leg['box'][2]:leg['box'][3]] += leg['keep']
+    leg['path'], leg['box'], leg['keep'], leg['layer'] = keep_old
+    D[leg['layer']][leg['box'][0]:leg['box'][1], leg['box'][2]:leg['box'][3]] += leg['keep']
     return False
 
 
