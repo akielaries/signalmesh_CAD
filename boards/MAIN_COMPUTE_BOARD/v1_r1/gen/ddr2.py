@@ -48,6 +48,8 @@ PHASE = os.environ.get('PHASE', 'route')
 TFILE = os.path.join(HERE, 'ddr_targets.json')
 TARGETS = json.load(open(TFILE)) if PHASE == 'route' and os.path.exists(TFILE) else {}
 PAIR_GROUP = {'DQS0': 'LANE0', 'DQS1': 'LANE1', 'CK': 'CMD'}
+# nets that took long detours last time: lower congestion penalty so the others make way
+PRIO = set(TARGETS.get('prio', []))
 
 import ddr  # noqa: E402  (helpers only; ddr.py's routing loop is guarded below)
 
@@ -161,6 +163,11 @@ for name, p, n, ly in PAIRS:
     meta[p] = meta[n] = {'group': name, 'layer': ok[1]}
 bd.reload()
 
+for name, g in PAIR_GROUP.items():
+    if pair_len.get(name) and g in TARGETS:
+        TARGETS[g] = pair_len[name]
+print('leg targets', {g: round(TARGETS[g], 2) for g in ('LANE0', 'LANE1', 'CMD') if g in TARGETS})
+
 # 2) end vias for every single-ended leg (dogbone or new via), and the terminator tail vias
 tasks = []
 for k, nets in LANES.items():
@@ -251,7 +258,8 @@ def route_leg(leg, pres):
     for ly in ALLOWED[leg['group']]:
         blocked = FIX[ly][j0:j1, i0:i1] | ((CNT[ly][j0:j1, i0:i1] - OWN[(ly, leg['net'])][j0:j1, i0:i1]) > 0)
         lc = LAYER_COST[ly] * (1.0 if ly == PREF[leg['group']] else 1.15)
-        cost = lc * (1.0 + H[ly][j0:j1, i0:i1] + pres * others(ly, (j0, j1, i0, i1), leg['net']))
+        f = 0.25 if leg['net'] in PRIO else 1.0
+        cost = lc * (1.0 + f * H[ly][j0:j1, i0:i1] + f * pres * others(ly, (j0, j1, i0, i1), leg['net']))
         cost = np.where(blocked, np.inf, cost)
         for (j, i) in ((ja - j0, ia - i0), (jb - j0, ib_ - i0)):
             cost[max(0, j - 6):j + 7, max(0, i - 6):i + 7] = np.minimum(cost[max(0, j - 6):j + 7, max(0, i - 6):i + 7], 1.0)
@@ -403,6 +411,8 @@ if PHASE == 'measure':
         if pair_len.get(pn):
             vals.append(pair_len[pn])
         tg[g] = round(max(vals) + 0.3, 2)
+    tol = {'LANE0': 1.4, 'LANE1': 1.4, 'CMD': 3.0}
+    tg['prio'] = sorted(n for n, (g, f) in flights.items() if f > tg[g] + tol[g] - 0.3)
     json.dump(tg, open(TFILE, 'w'))
     print('targets', tg, 'pairs', {k: round(v, 2) for k, v in pair_len.items() if v})
     sys.exit(0)
