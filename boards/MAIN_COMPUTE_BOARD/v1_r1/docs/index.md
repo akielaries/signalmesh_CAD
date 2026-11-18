@@ -25,9 +25,13 @@ source: [system.drawio](system.drawio) (open in draw.io / diagrams.net to edit)
 | MCU | STM32H755BIT6 (LQFP208) | LDO supply mode for VOS0 480 MHz. BIT3 is not a substitute (no VOS0) |
 | FPGA | XC7A100T-2FGG484I | wire-bond plastic BGA, GTP max 6.25 Gb/s in this package |
 | memory | MT41K256M16TW-107 | DDR3L x16, 800 Mb/s with internal VREF, MIG chip select disabled |
-| boot/bitstream flash | 2x W25Q01JVSFIQ | QUADSPI dual-flash, 8-bit, 256 MB memory mapped, shared BK1_NCS |
+| boot/bitstream flash | 2x W25Q01JVZEIQ (WSON-8) | QUADSPI dual-flash, 8-bit, 256 MB memory mapped, shared BK1_NCS. Bottom side, under the STM32 |
 | USB HS PHY | USB3300-EZK | ULPI, 24 MHz crystal |
 | Ethernet PHY | LAN8742A | RMII, PHY sources the 50 MHz REF_CLK |
 | audio DAC | CS4344 + OPA1656 | ported from APM v7, -5 V from LM2662 |
 | mezzanine | Samtec ASP-134486-01 | VITA 57.1 HPC, LPC cards fit |
 | backplane | DIN 41612 C 3x32 male R/A | provisional pinout, see [pinout](pinout.md) |
+
+Sourcing: LCSC had no stock of W25Q01JVZEIQ when it was chosen (Nov 2026); DigiKey stocks the
+tray part. Supply it to the assembler if needed. The 1 Gb part was kept over the in-stock
+512 Mb W25Q512JVEIQ (same footprint and pinout, half the capacity) for headroom.

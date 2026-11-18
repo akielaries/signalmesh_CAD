@@ -39,6 +39,21 @@ the VITA connector footprint it drops to 0.10 mm, so pairs can leave the 1.27 mm
 - 3 mm card-guide strips along the long edges are keepouts.
 - FPGA in the middle with its GTP corner facing the SFPs. DDR3 on the bank-34 side,
   STM32 on the bank-14/15 side, VITA connector above.
+- VITA 57.1 site: connector centre at (100, 19.5) mm from the front-top corner. A
+  single-width module (78.8 x 69 mm, regions 2+3) then covers x 65.5-134.5, y 3.1-81.9:
+  3 mm inside the top edge, clear of the card guide. Two M2.5 standoffs sit at the
+  connector ends (2.0 mm toward the module, +-31.5 mm along it) for 10 mm spacers.
+  The far-end standoff pair is not fitted, because it would land on the audio DAC.
+- with a module fitted, everything under that outline is covered, including the button
+  and LED rows and the dupont duplicate headers. The debug headers you need with a card
+  fitted (Xilinx JTAG, both UARTs, both MIPI-10 SWD) are in the bottom header field,
+  outside the outline.
+- header field along the bottom edge, three aligned rows with pin 1 on the left and
+  silkscreen labels: row a has the FPGA JTAG 1x6, MCU SWD 1x6 and BOOT0; row b has the
+  Xilinx JTAG 2x7, MCU UART and SC UART; row c has PMOD A, PMOD B and the two MIPI-10s
+  side by side. The 2x20 MCU breakout runs along the DIN.
+- mounting: four M3 holes (top and bottom corners of the free area) plus the two VITA
+  standoffs, all tied to GND.
 - kept-clear routing channels on top: FPGA to SFP (GTP), FPGA to STM32 (FMC),
   FPGA to VITA (LA pairs). FPGA and STM32 decoupling sits on the bottom side.
 - power bottom-left, audio in its own bottom-right corner, mirrored L/R.
