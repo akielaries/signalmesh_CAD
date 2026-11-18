@@ -17,7 +17,7 @@ META = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '
 FPGA_R = (109.5, 79.5, 134.5, 104.5)
 DRAM_R = (99.555, 111.455, 115.645, 121.545)
 rlib.BGA_RECTS[:] = [FPGA_R + (0.09,), (120.8, 62.35, 179.3, 76.65, 0.10), DRAM_R + (0.09,)]
-TOL_LANE, TOL_CMD = 0.5, 2.0
+TOL_LANE, TOL_CMD = 1.4, 3.0   # +-10 ps in a byte, +-20 ps addr/cmd to ck (inner ~7 ps/mm)
 CLR = 0.15
 C, F, GAP_B = 0.15, 0.5, 0.7   # chamfer, flat top, spacing (3w) for 0.23 mm traces
 

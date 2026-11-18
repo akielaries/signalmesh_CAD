@@ -44,6 +44,42 @@ def pair_up(fnets, dnets):
     return dict(zip(fo, do))
 
 
+def mh(a, b):
+    # escape routes run along the ball grids, so manhattan distance tracks routed length better
+    return abs(a[0] - b[0]) + abs(a[1] - b[1])
+
+
+def balance(fnets, dnets, ref, tol):
+    # bottleneck matching: no member longer than ref + tol, the shortest as long as possible, so
+    # the length tuner has the least to add
+    L = [[mh(fpga[a], dram[c]) for c in dnets] for a in fnets]
+    n = len(fnets)
+
+    def match(lo, hi):
+        own = {}
+
+        def aug(i, seen):
+            for j in range(n):
+                if lo <= L[i][j] <= hi and j not in seen:
+                    seen.add(j)
+                    if j not in own or aug(own[j], seen):
+                        own[j] = i
+                        return True
+            return False
+        for i in range(n):
+            if not aug(i, set()):
+                return None
+        return {fnets[i]: dnets[j] for j, i in own.items()}
+    hi = ref + tol
+    for lo in sorted({v for r in L for v in r if v <= hi}, reverse=True):
+        got = match(lo, hi)
+        if got:
+            print('  balanced: %.1f..%.1f mm (ref %.1f)' % (lo, max(L[fnets.index(a)][dnets.index(c)] for a, c in got.items()), ref))
+            return got
+    print('  balance failed, keeping crossing-free order')
+    return pair_up(fnets, dnets)
+
+
 m = {}
 byte = {k: ['DDR_DQ%d' % (8 * k + i) for i in range(8)] for k in (0, 1)}
 extra = {k: ['DDR_DM%d' % k, 'DDR_DQS%d_P' % k, 'DDR_DQS%d_N' % k] for k in (0, 1)}
@@ -58,10 +94,12 @@ print('fpga byte group -> dram byte:', lane)
 for k, kk in lane.items():
     for a, c in zip(extra[k], extra[kk]):
         m[a] = c
-    m.update(pair_up(byte[k], byte[kk]))
+    ref = (mh(fpga['DDR_DQS%d_P' % k], dram['DDR_DQS%d_P' % kk]) + mh(fpga['DDR_DQS%d_N' % k], dram['DDR_DQS%d_N' % kk])) / 2
+    m.update(balance(byte[k], byte[kk], ref, 1.4))
 cmd = ['DDR_A%d' % i for i in range(15)] + ['DDR_BA0', 'DDR_BA1', 'DDR_BA2', 'DDR_RAS_N', 'DDR_CAS_N', 'DDR_WE_N',
                                             'DDR_CKE']
-m.update(pair_up(cmd, cmd))
+ck = (mh(fpga['DDR_CK_P'], dram['DDR_CK_P']) + mh(fpga['DDR_CK_N'], dram['DDR_CK_N'])) / 2
+m.update(balance(cmd, cmd, ck, 3.0))
 assert sorted(m.values()) == sorted(m.keys())
 changed = {a: c for a, c in m.items() if a != c}
 json.dump(changed, open(OUT, 'w'), indent=1, sort_keys=True)

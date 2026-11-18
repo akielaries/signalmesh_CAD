@@ -408,11 +408,11 @@ if PHASE == 'measure':
     sys.exit(0)
 n_ok = n_bad = 0
 for leg in sorted(legs, key=lambda l: flights.get(l['net'], (0, 1e9))[1]):
-    if leg['net'] not in flights or 'keep' not in leg:
+    if leg['group'] not in GROUP_OF or leg['net'] not in flights or 'keep' not in leg:
         continue
     g, f = flights[leg['net']]
     tgt = TARGETS.get(g)
-    if tgt and tgt - f > 0.25:
+    if tgt and tgt - f > (0.9 if g.startswith('LANE') else 2.0):
         if stretch_leg(leg, tgt):
             n_ok += 1
         else:
