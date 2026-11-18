@@ -77,8 +77,8 @@ def via_ok(x, y, r, net, clr=CLR):
             continue
         if dseg(x, y, x1, y1, x2, y2) < r + hw + clr:
             return False
-    # board edge
-    if x < 50.5 or x > 209.5 or y < 53.2 or y > 146.8:
+    # board edge, and the card-guide strips (keepouts up to y 53 and from y 147) by the via's edge
+    if x - r < 50.5 or x + r > 209.5 or y - r < 53.05 or y + r > 146.95:
         return False
     return True
 

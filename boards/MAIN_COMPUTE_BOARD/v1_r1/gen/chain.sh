@@ -10,7 +10,8 @@ cp $P board_fanout.kicad_pcb
 INNER=In2.Cu,B.Cu PASSES=10 ${PY:-python3} gtp.py $P board_fanout.kicad_pcb 2>&1 | grep -v "$F" | grep "pass"
 ${PY:-python3} tune.py $P 2>&1 | grep -v "$F" | grep -v "'ok')"
 cp $P gtp_tuned.kicad_pcb
-ITERS=${DDR_ITERS:-60} ${PY:-python3} ddr2.py $P gtp_tuned.kicad_pcb 2>&1 | grep -v "$F" | grep "iter\|committed\|failed" | tail -4
+PHASE=measure ITERS=${DDR_ITERS:-60} ${PY:-python3} ddr2.py $P gtp_tuned.kicad_pcb 2>&1 | grep -v "$F" | grep "targets\|committed\|Traceback\|Error"
+PHASE=route ITERS=${DDR_ITERS:-60} ${PY:-python3} ddr2.py $P gtp_tuned.kicad_pcb 2>&1 | grep -v "$F" | grep "iter 5\|stretch\|committed\|Traceback\|Error" | tail -12
 cp $P ddr_routed.kicad_pcb
 ${PY:-python3} ddr_tune.py $P 2>&1 | grep -v "$F"
 ${PY:-python3} resilk.py $P 2>&1 | grep -v "$F"

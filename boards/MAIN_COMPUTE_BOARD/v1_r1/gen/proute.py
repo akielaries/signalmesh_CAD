@@ -332,15 +332,35 @@ def segs_clear(bd, layer, pts, half_w, own, clr, partner=None):
     return True
 
 
-def route_pair_c(bd, netp, netn, sp, sn, ep, en, layer, w, gap, clr):
-    # centreline method: plan one track of the pair's full width, offset both halves exactly
-    from shapely.geometry import LineString, Point
-    from shapely.ops import substring
+def pair_frame(sp, sn, ep, en, layer, w, gap):
     cs, ce = mid(sp, sn), mid(ep, en)
     rs = max(free_r_of(sp, layer), free_r_of(sn, layer))
     re_ = max(free_r_of(ep, layer), free_r_of(en, layer))
-    half = w + gap / 2
-    c = bd.path(layer, cs, ce, half, {netp, netn}, clr, free=((cs[0], cs[1], rs), (ce[0], ce[1], re_)))
+    return cs, ce, rs, re_, w + gap / 2
+
+
+def route_pair_c(bd, netp, netn, sp, sn, ep, en, layer, w, gap, clr, waypoint=None):
+    # centreline method: plan one track of the pair's full width, offset both halves exactly.
+    # with a waypoint the centreline goes out to it and back (length matching), the return half
+    # kept a pair width plus clearance away from the outbound half
+    from shapely.geometry import LineString, Point
+    from shapely.ops import substring
+    cs, ce, rs, re_, half = pair_frame(sp, sn, ep, en, layer, w, gap)
+    if waypoint is None:
+        c = bd.path(layer, cs, ce, half, {netp, netn}, clr, free=((cs[0], cs[1], rs), (ce[0], ce[1], re_)))
+    else:
+        c1 = bd.path(layer, cs, waypoint, half, {netp, netn}, clr, free=((cs[0], cs[1], rs),), margin=10.0)
+        c = None
+        if c1:
+            l1 = LineString(c1)
+            st = []
+            if l1.length > 1.2:
+                body = [tuple(q) for q in substring(l1, 0, l1.length - 1.0).coords]
+                bd.stage_track(body, 2 * half, '__pair_out', layer, st)
+            c2 = bd.path(layer, waypoint, ce, half, {netp, netn}, clr, free=((ce[0], ce[1], re_),), margin=10.0)
+            bd.unstage(st)
+            if c2:
+                c = rlib.simplify(list(c1) + list(c2[1:]))
     if not c:
         return None, 'centreline failed'
     cl = LineString(c)

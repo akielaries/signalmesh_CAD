@@ -42,6 +42,12 @@ ALLOWED = {'LANE0': ALL3, 'LANE1': ALL3, 'CMD': ALL3, 'TAIL': ALL3, 'RESET': ALL
 PREF = {'LANE0': 'In2.Cu', 'LANE1': 'In2.Cu', 'CMD': 'In5.Cu', 'TAIL': 'In5.Cu', 'RESET': 'In5.Cu', 'LANE0P': 'In2.Cu',
         'LANE1P': 'In2.Cu', 'CMDP': 'In5.Cu'}
 ITERS = int(os.environ.get('ITERS', '14'))
+# two runs: PHASE=measure writes per-group target lengths from the natural routes, PHASE=route
+# stretches pairs and legs to them (waypoint detours); ddr_tune.py trims what is left
+PHASE = os.environ.get('PHASE', 'route')
+TFILE = os.path.join(HERE, 'ddr_targets.json')
+TARGETS = json.load(open(TFILE)) if PHASE == 'route' and os.path.exists(TFILE) else {}
+PAIR_GROUP = {'DQS0': 'LANE0', 'DQS1': 'LANE1', 'CK': 'CMD'}
 
 import ddr  # noqa: E402  (helpers only; ddr.py's routing loop is guarded below)
 
@@ -50,9 +56,78 @@ bd = rlib.Board(PCB)
 U100 = 'U100'
 U21 = ddr.ref_of(bd, 'MT41K256M16TW')
 
+x0, y0, x1, y1 = WIN
+NX, NY = int(round((x1 - x0) / G)) + 1, int(round((y1 - y0) / G)) + 1
+XS = x0 + np.arange(NX) * G
+YS = y0 + np.arange(NY) * G
+inbga = np.zeros((NY, NX), bool)
+for r in (FPGA_R, DRAM_R):
+    inbga[np.ix_((YS >= r[1]) & (YS <= r[3]), (XS >= r[0]) & (XS <= r[2]))] = True
+
+
+def cell(p):
+    return (int(round((p[1] - y0) / G)), int(round((p[0] - x0) / G)))
+
+
+def stub(net, via, ref):
+    # ball to its end via (dogbone or the stub to a dropped via)
+    b = ddr.pad_xy(bd, net, ref)
+    return math.hypot(b[0] - via[0], b[1] - via[1])
+
+
+def plen(pts):
+    return sum(math.hypot(q[0] - p[0], q[1] - p[1]) for p, q in zip(pts, pts[1:]))
+
+
+def pick(blocked, a_cell, b_cell, need, bad_zone, clear_r):
+    # waypoint cell whose shortest a->w->b length is closest to need, with room to turn around
+    cost = np.where(blocked, np.inf, 1.0)
+    for (j, i) in (a_cell, b_cell):
+        cost[max(0, j - 6):j + 7, max(0, i - 6):i + 7] = 1.0
+    ma = MCP_Geometric(cost, fully_connected=True)
+    ca, _ = ma.find_costs([a_cell])
+    mb = MCP_Geometric(cost, fully_connected=True)
+    cb, _ = mb.find_costs([b_cell])
+    tot = (ca + cb) * G
+    room = ndimage.distance_transform_edt(~blocked) * G
+    ok = np.isfinite(tot) & ~bad_zone & (room > clear_r)
+    return tot, ok, ma, cost
+
+
+def stretch_pair(p, n, ends, lyr, fl, tgt, stubs, staged):
+    # re-route the pair centreline through a waypoint so its length lands on the group target
+    cs, ce, rs, re_, half = proute.pair_frame(*ends, lyr, PW, PG)
+    blocked, xs, ys = bd.grid(lyr, WIN, half, {p, n}, PCLR)
+    bd.unstage(staged)
+    tot, ok, _, _ = pick(blocked, cell(cs), cell(ce), 0, inbga, half + 0.5)
+    # shortest centreline today plus what the pair is short by
+    base = tot[cell(ce)] if np.isfinite(tot[cell(ce)]) else plen([cs, ce])
+    need = base + (tgt - fl)
+    for attempt in range(4):
+        err = np.where(ok, np.abs(tot - need), np.inf)
+        k = np.unravel_index(np.argmin(err), err.shape)
+        if not np.isfinite(err[k]) or err[k] > 1.0:
+            break
+        wpt = (XS[k[1]], YS[k[0]])
+        s, l = proute.route_pair_c(bd, p, n, *ends, lyr, PW, PG, PCLR, waypoint=wpt)
+        if not s:
+            ok[max(0, k[0] - 8):k[0] + 9, max(0, k[1] - 8):k[1] + 9] = False
+            continue
+        got = sum(l) / 2 + stubs
+        if abs(got - tgt) <= 0.35:
+            print('pair %s stretched %.2f -> %.2f (target %.2f)' % (p[:-2], fl, got, tgt))
+            return s, got
+        bd.unstage(s)
+        need += (tgt - got)
+    # keep the natural route
+    s, l = proute.route_pair(bd, p, n, *ends, lyr, PW, PG, PCLR)
+    return (s, sum(l) / 2 + stubs) if s else None
+
+
 # 1) pairs with the coupled router, fixed from here on
 meta = {}
 pair_fallback = []
+pair_len = {}
 for name, p, n, ly in PAIRS:
     pre = []
     dm = proute.mid(ddr.pad_xy(bd, p, U21), ddr.pad_xy(bd, n, U21))
@@ -66,6 +141,16 @@ for name, p, n, ly in PAIRS:
             if s:
                 ok = (s, lyr)
                 break
+    if ok:
+        stubs = (stub(p, ends[0], U100) + stub(n, ends[1], U100) + stub(p, ends[2], U21) + stub(n, ends[3], U21)) / 2
+        fl = sum(l) / 2 + stubs if isinstance(l, tuple) and len(l) == 2 and not isinstance(l[0], str) else None
+        tgt = TARGETS.get(PAIR_GROUP[name])
+        if fl is not None and tgt and tgt - fl > 0.3:
+            got = stretch_pair(p, n, ends, ok[1], fl, tgt, stubs, ok[0])
+            if got:
+                ok = (got[0], ok[1])
+                fl = got[1]
+        pair_len[name] = fl
     if not ok:
         bd.unstage(pre)
         # fall back to two matched single-ended legs with the byte (skew is tuned afterwards)
@@ -108,19 +193,6 @@ for net, grp in tasks:
             print('no terminator via', net)
 bd.reload()
 SE = sorted({l['net'] for l in legs})
-x0, y0, x1, y1 = WIN
-NX, NY = int(round((x1 - x0) / G)) + 1, int(round((y1 - y0) / G)) + 1
-XS = x0 + np.arange(NX) * G
-YS = y0 + np.arange(NY) * G
-inbga = np.zeros((NY, NX), bool)
-for r in (FPGA_R, DRAM_R):
-    inbga[np.ix_((YS >= r[1]) & (YS <= r[3]), (XS >= r[0]) & (XS <= r[2]))] = True
-
-
-def cell(p):
-    return (int(round((p[1] - y0) / G)), int(round((p[0] - x0) / G)))
-
-
 # 3) fixed obstacles per layer (everything except the single-ended ddr nets), and each ddr net's own
 #    vias/dogbones so other ddr legs keep clear of them
 t0 = time.time()
@@ -257,6 +329,88 @@ if os.environ.get('DIAG'):
             eb = math.hypot(XS[hits[-1][1]] - leg['b'][0], YS[hits[-1][0]] - leg['b'][1])
             print('conflict', leg['net'], leg['group'], ly, 'cells', len(hits), 'at (%.2f, %.2f)' % (XS[i], YS[j]),
                   'from a %.2f, to b %.2f' % (ea, eb))
+# 3b) lengths. flight = ball stubs + leg. measure writes the group targets (the longest natural member,
+#     pairs included); route stretches every short leg to its group target through a waypoint
+GROUP_OF = {'LANE0': 'LANE0', 'LANE1': 'LANE1', 'CMD': 'CMD', 'LANE0P': 'LANE0', 'LANE1P': 'LANE1', 'CMDP': 'CMD'}
+
+
+def leg_flight(leg):
+    pts = rlib.simplify([(XS[i], YS[j]) for (j, i) in leg['path']])
+    return stub(leg['net'], leg['a'], U100) + plen(pts) + stub(leg['net'], leg['b'], U21)
+
+
+def stretch_leg(leg, tgt):
+    ly, net = leg['layer'], leg['net']
+    w, win = WIDTH[ly]
+    keep_old = (leg['path'], leg['box'], leg['keep'])
+    rip(leg)
+    blocked = FIX[ly] | ((CNT[ly] - OWN[(ly, net)]) > 0) | (others(ly, (0, NY, 0, NX), net) > 0.5)
+    want = tgt - stub(net, leg['a'], U100) - stub(net, leg['b'], U21)
+    A, B = cell(leg['a']), cell(leg['b'])
+    tot, ok, ma, _ = pick(blocked, A, B, want, inbga, w + 0.45)
+    jj, ii = np.ogrid[:NY, :NX]
+    search = want
+    for attempt in range(5):
+        err = np.where(ok, np.abs(tot - search), np.inf)
+        k = np.unravel_index(np.argmin(err), err.shape)
+        if not np.isfinite(err[k]) or err[k] > 1.0:
+            break
+        p1 = ma.traceback(k)
+        sub = np.zeros((NY, NX), bool)
+        for (j, i) in p1:
+            sub[j, i] = True
+        d1 = ndimage.distance_transform_edt(~sub) * G
+        nearw = ((jj - k[0]) ** 2 + (ii - k[1]) ** 2) * G * G < 1.0
+        blk2 = blocked | ((d1 < 2 * w + CLR + rlib.MARGIN) & ~nearw)
+        c2 = np.where(blk2, np.inf, 1.0)
+        c2[max(0, B[0] - 6):B[0] + 7, max(0, B[1] - 6):B[1] + 7] = 1.0
+        m2 = MCP_Geometric(c2, fully_connected=True)
+        cc, _ = m2.find_costs([k], [B])
+        if not np.isfinite(cc[B]):
+            ok[max(0, k[0] - 10):k[0] + 11, max(0, k[1] - 10):k[1] + 11] = False
+            continue
+        path = list(p1) + list(m2.traceback(B))[1:]
+        got = plen(rlib.simplify([(XS[i], YS[j]) for (j, i) in path]))
+        if abs(got - want) <= 0.35:
+            box = (max(0, min(p[0] for p in path) - 30), min(NY, max(p[0] for p in path) + 30),
+                   max(0, min(p[1] for p in path) - 30), min(NX, max(p[1] for p in path) + 30))
+            km = keep_mask(path, ly, box)
+            leg.update({'path': path, 'box': box, 'keep': km, 'stretched': True})
+            D[ly][box[0]:box[1], box[2]:box[3]] += km
+            return True
+        search += want - got
+    leg['path'], leg['box'], leg['keep'] = keep_old
+    D[ly][leg['box'][0]:leg['box'][1], leg['box'][2]:leg['box'][3]] += leg['keep']
+    return False
+
+
+flights = {leg['net']: (GROUP_OF[leg['group']], leg_flight(leg)) for leg in legs
+           if 'path' in leg and leg['group'] in GROUP_OF}
+if PHASE == 'measure':
+    tg = {}
+    for g in ('LANE0', 'LANE1', 'CMD'):
+        vals = [f for (gg, f) in flights.values() if gg == g]
+        pn = {v: k for k, v in PAIR_GROUP.items()}[g]
+        if pair_len.get(pn):
+            vals.append(pair_len[pn])
+        tg[g] = round(max(vals) + 0.3, 2)
+    json.dump(tg, open(TFILE, 'w'))
+    print('targets', tg, 'pairs', {k: round(v, 2) for k, v in pair_len.items() if v})
+    sys.exit(0)
+n_ok = n_bad = 0
+for leg in sorted(legs, key=lambda l: flights.get(l['net'], (0, 1e9))[1]):
+    if leg['net'] not in flights or 'keep' not in leg:
+        continue
+    g, f = flights[leg['net']]
+    tgt = TARGETS.get(g)
+    if tgt and tgt - f > 0.25:
+        if stretch_leg(leg, tgt):
+            n_ok += 1
+        else:
+            n_bad += 1
+print('stretched', n_ok, 'legs; could not stretch', n_bad, flush=True)
+
+
 def detour(leg, pts):
     direct = math.hypot(leg['a'][0] - leg['b'][0], leg['a'][1] - leg['b'][1])
     return rlib.length(pts) > 1.35 * direct + 4.0
@@ -272,7 +426,7 @@ for leg in legs:
     pts = [(XS[i], YS[j]) for (j, i) in leg['path']]
     pts[0], pts[-1] = leg['a'], leg['b']
     pts = rlib.simplify(pts)
-    if detour(leg, pts):
+    if not leg.get('stretched') and detour(leg, pts):
         left.append((leg['net'], leg['group']))
         continue
     w, win = WIDTH[leg['layer']]
