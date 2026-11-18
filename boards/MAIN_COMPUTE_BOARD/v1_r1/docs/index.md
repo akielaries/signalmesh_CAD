@@ -9,6 +9,8 @@ and it can also drive RF or other front ends through the VITA 57.1 mezzanine.
 - [PCB: stackup, impedance, net classes, floorplan](pcb.md)
 - [bring-up and firmware notes](bringup.md)
 - [backplane system and Eurorack notes](system.md)
+- [performance, clocks and overclocking](performance.md)
+- [hardware reference: connectors, headers, buttons, LEDs](hardware.md)
 
 ## block diagram
 
