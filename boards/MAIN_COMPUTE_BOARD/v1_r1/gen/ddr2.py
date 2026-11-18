@@ -101,7 +101,7 @@ def stretch_pair(p, n, ends, lyr, fl, tgt, stubs, staged):
     cs, ce, rs, re_, half = proute.pair_frame(*ends, lyr, PW, PG)
     blocked, xs, ys = bd.grid(lyr, WIN, half, {p, n}, PCLR)
     bd.unstage(staged)
-    tot, ok, _, _ = pick(blocked, cell(cs), cell(ce), 0, inbga, half + 0.5)
+    tot, ok, _, _ = pick(blocked, cell(cs), cell(ce), 0, inbga, half + 0.3)
     # shortest centreline today plus what the pair is short by
     base = tot[cell(ce)] if np.isfinite(tot[cell(ce)]) else plen([cs, ce])
     need = base + (tgt - fl)
@@ -404,13 +404,18 @@ if PHASE == 'measure':
     tg = {}
     for g in ('LANE0', 'LANE1', 'CMD'):
         vals = sorted(f for (gg, f) in flights.values() if gg == g)
-        # a congestion detour should not set the target for everyone: drop members far above the rest
-        while len(vals) > 3 and vals[-1] > vals[-2] + 3.0:
-            vals.pop()
+        win = {'LANE0': 1.4, 'LANE1': 1.4, 'CMD': 3.0}[g]
         pn = {v: k for k, v in PAIR_GROUP.items()}[g]
-        if pair_len.get(pn):
-            vals.append(pair_len[pn])
-        tg[g] = round(max(vals) + 0.3, 2)
+        # the target whose window holds the most members as routed; short ones get stretched up to it,
+        # the reference pair is stretched to it, members above the window are re-routed shorter
+        best = None
+        for t0 in [v - win + 0.2 for v in vals] + [pair_len.get(pn) or 0]:
+            cnt = sum(1 for v in vals if t0 - win * 3 <= v <= t0 + win - 0.2)
+            above = sum(1 for v in vals if v > t0 + win - 0.2)
+            key = (-above, cnt, -t0)
+            if t0 >= (pair_len.get(pn) or 0) - 0.01 and (best is None or key > best[0]):
+                best = (key, t0)
+        tg[g] = round(best[1], 2)
     tol = {'LANE0': 1.4, 'LANE1': 1.4, 'CMD': 3.0}
     tg['prio'] = sorted(n for n, (g, f) in flights.items() if f > tg[g] + tol[g] - 0.3)
     json.dump(tg, open(TFILE, 'w'))
