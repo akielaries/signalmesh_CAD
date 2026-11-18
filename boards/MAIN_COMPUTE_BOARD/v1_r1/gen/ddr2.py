@@ -379,6 +379,12 @@ def stretch_leg(leg, tgt):
             D[ly][box[0]:box[1], box[2]:box[3]] += km
             return True
         search += want - got
+    if os.environ.get('SDIAG'):
+        e0 = np.where(ok, np.abs(tot - want), np.inf)
+        fin = np.isfinite(tot)
+        print('nostretch', net, ly, 'want %.2f' % want, 'ok cells', int(ok.sum()), 'finite', int(fin.sum()),
+              'min err %.2f' % float(e0.min()), 'max tot %.2f' % float(tot[fin].max() if fin.any() else -1),
+              'direct %.2f' % float(tot[B] if np.isfinite(tot[B]) else -1))
     leg['path'], leg['box'], leg['keep'] = keep_old
     D[ly][leg['box'][0]:leg['box'][1], leg['box'][2]:leg['box'][3]] += leg['keep']
     return False
