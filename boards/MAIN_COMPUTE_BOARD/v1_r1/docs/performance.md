@@ -39,7 +39,7 @@ UG470, UG482. "Board" columns are what this design is set up to run, not just th
 | SPI1-3 | 100 MHz master, 100 MHz slave RX | on the breakout | |
 | SPI4-6 | 50 MHz master | | |
 | USART | up to 12.5 Mb/s | console on USART1 | |
-| I2C | 1 Mb/s (Fm+) | I2C1: expander, INA219, VITA EEPROM | |
+| I2C | 1 Mb/s (Fm+) | I2C1: expander, INA219, MAC EEPROM, VITA EEPROM | |
 | FDCAN | classic + FD | SN65HVD230 to the backplane | the transceiver limits FD data rate (about 1 Mb/s class) |
 | SAI | up to 192 kHz audio | SAI1 on the breakout | |
 | SDMMC1 | 133 MHz | PC8-PC12/PD2 on the breakout | |

@@ -38,6 +38,14 @@ the [hardware reference](hardware.md#test-points).
   (DFM=0 with FSEL) is not possible on this board. W25Q01JV: check the status register
   handling in the driver, it differs a little from Macronix parts.
 
+## Ethernet MAC address
+
+- read the 6-byte EUI-48 from the 24AA025E48 (U200) on I2C1, device address 0x54, memory
+  address 0xFA-0xFF, and program it into the ETH MAC address registers. It is factory-written
+  and read-only.
+- 0x00-0x7F of the same chip is free EEPROM (board serial, calibration). Device addresses
+  0x50-0x53 are left for a VITA module's EEPROM.
+
 ## FPGA configuration (slave SelectMAP, M[2:0]=110)
 
 1. drive PROGRAM_B low, release, wait for INIT_B high.

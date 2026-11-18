@@ -20,7 +20,7 @@ SRC = sys.argv[2] if len(sys.argv) > 2 else PCB
 HERE = os.path.dirname(os.path.abspath(__file__))
 G = rlib.G
 FPGA_R = (109.5, 79.5, 134.5, 104.5)
-DRAM_R = (99.955, 115.955, 116.045, 126.045)
+DRAM_R = (100.955, 107.355, 117.045, 117.445)
 rlib.BGA_RECTS[:] = [FPGA_R + (0.09,), (120.8, 62.35, 179.3, 76.65, 0.10), DRAM_R + (0.09,)]
 proute.ESC[:] = [FPGA_R, DRAM_R]
 WIN = (95.0, 91.0, 125.0, 135.0)
@@ -257,6 +257,11 @@ if os.environ.get('DIAG'):
             eb = math.hypot(XS[hits[-1][1]] - leg['b'][0], YS[hits[-1][0]] - leg['b'][1])
             print('conflict', leg['net'], leg['group'], ly, 'cells', len(hits), 'at (%.2f, %.2f)' % (XS[i], YS[j]),
                   'from a %.2f, to b %.2f' % (ea, eb))
+def detour(leg, pts):
+    direct = math.hypot(leg['a'][0] - leg['b'][0], leg['a'][1] - leg['b'][1])
+    return rlib.length(pts) > 1.35 * direct + 4.0
+
+
 # 4) commit legs that ended conflict free; conflicted ones are reported and left open
 bad = {id(l) for l in conflicts()}
 done, left = 0, []
@@ -281,11 +286,6 @@ for leg in legs:
         meta[leg['net']] = {'group': nm, 'layer': leg['layer']}
     elif leg['group'] != 'TAIL':
         meta[leg['net']] = {'group': leg['group'], 'layer': leg['layer']}
-def detour(leg, pts):
-    direct = math.hypot(leg['a'][0] - leg['b'][0], leg['a'][1] - leg['b'][1])
-    return rlib.length(pts) > 1.35 * direct + 4.0
-
-
 # 5) completion: leftover legs search against everything committed so far, any layer
 still = []
 for leg in legs:

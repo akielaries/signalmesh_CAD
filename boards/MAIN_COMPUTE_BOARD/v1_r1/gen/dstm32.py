@@ -155,6 +155,12 @@ def build(d):
           value='TCA9535PWR 0x20')
     C(s, '+3V3', 'GND', '100nF')
     header(s, ['IOX_P14', 'IOX_P15', 'IOX_P16', 'IOX_P17', '+3V3', 'GND'], value='IOX_SPARE')
+    # board id: factory eui-48 (ethernet mac) + 128 b user area. a2=1 puts it at 0x54, clear of a vita
+    # module eeprom (0x50-0x53 by ga)
+    s.add('Memory_EEPROM:24AA025E-SN',
+          {'A0': 'GND', 'A1': 'GND', 'A2': '+3V3', 'V_{SS}': 'GND', 'SDA': 'I2C1_SDA', 'SCL': 'I2C1_SCL',
+           'NC': 'NC', 'V_{CC}': '+3V3'}, value='24AA025E48 0x54 MAC', by='name', ref='U200')
+    C(s, '+3V3', 'GND', '100nF')
 
     # breakout header
     # pc8-pc12/pd2 also carry sdmmc1 if an sd card is wanted on a daughter board

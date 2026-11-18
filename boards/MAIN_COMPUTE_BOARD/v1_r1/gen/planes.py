@@ -60,11 +60,11 @@ zone('+12V', 'B.Cu', [(64.5, 53.6), (190.6, 53.6), (190.6, 62.0), (180.0, 62.0),
 # vita supplies at the connector's right end (In5)
 zone('+3V3_MEZZ', 'In5.Cu', [(158.0, 53.6), (190.6, 53.6), (190.6, 67.0), (158.0, 67.0)], 1, 'P3V3M_IN5', thermal=False)
 # ddr3 vtt strip between the two termination rows (pcbbuild TERM_*), fed from the TPS51200 at its left end
-zone('VTT_DDR', 'F.Cu', [(95.4, 127.25), (114.75, 127.25), (114.75, 129.35), (95.4, 129.35)], 2, 'VTT_STRIP',
+zone('VTT_DDR', 'F.Cu', [(95.4, 118.75), (114.75, 118.75), (114.75, 120.85), (95.4, 120.85)], 2, 'VTT_STRIP',
      thermal=False)
 # bottom vtt pour under the strip and the vtt decaps, stitched to the top strip through the pad vias
-zone('VTT_DDR', 'B.Cu', [(95.4, 126.4), (114.75, 126.4), (114.75, 130.0), (110.2, 130.0), (110.2, 133.0),
-                         (95.4, 133.0)], 2, 'VTT_BOT', thermal=False)
+zone('VTT_DDR', 'B.Cu', [(95.4, 117.9), (114.75, 117.9), (114.75, 121.5), (110.2, 121.5), (110.2, 124.5),
+                         (95.4, 124.5)], 2, 'VTT_BOT', thermal=False)
 # +1V0 feed from its buck (left of the fpga) up the fpga's left side and in above the ddr balls to the
 # core island; the band under the fpga (y > 95) is left to the ddr3 escape
 zone('+1V0', 'In5.Cu', [(86.0, 113.5), (101.0, 113.5), (101.0, 94.3), (122.0, 94.3), (122.0, 86.0), (96.0, 86.0),

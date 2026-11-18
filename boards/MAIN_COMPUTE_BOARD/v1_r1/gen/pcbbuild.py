@@ -267,7 +267,9 @@ for ref, rot, _ in FRONT:
     print('front', ref, fps[ref][1]['value'][:14], 'body y %.2f..%.2f' % fab_bb(fps[ref][0])[1::2])
 fix(one('DIN41612'), 197.7, 52.45 + 8.2, 270)
 fix('U100', 122.0, 92.0, 0)
-fix(one('MT41K256M16TW'), 108.0, 121.0, 90)
+# dram right under bank 34 (short fly-by), between the fpga and the button row
+DRAM_C = (109.0, 112.4)
+fix(one('MT41K256M16TW'), DRAM_C[0], DRAM_C[1], 90)
 fix(one('STM32H755BIT6'), 165.0, 99.0, 0)
 VITA_C = (150.0, 69.5)
 fix(one('VITA57.1'), VITA_C[0], VITA_C[1], 0)
@@ -336,7 +338,7 @@ for v, (x, y, rot) in HDR_FIX.items():
 # ddr3 fly-by termination: two rows of 0402s just past the dram, signal pads on the outside,
 # vtt pads facing a vtt strip between the rows (planes.py pours it). columns follow the dram
 # ball x order so the in5 fan from the balls does not cross itself
-TERM_X0, TERM_DX, TERM_Y = 101.0, 1.2, (127.0, 129.6)
+TERM_X0, TERM_DX, TERM_Y = 101.0, 1.2, (DRAM_C[1] + 6.1, DRAM_C[1] + 8.7)
 u21 = fps[one('MT41K256M16TW')][0]
 ballx = {p.GetNetname(): (p.GetPosition().x / MM, p.GetPosition().y / MM) for p in L(u21.Pads())}
 terms = [r for r, (f, c) in fps.items() if c['value'].startswith('39.2')]
@@ -364,29 +366,29 @@ for r in vtt_caps:
     big = fps[r][1]['value'] == '10uF'
     wcap = 1.7 if big else 0.94
     for rot in (90, 270):
-        put(fp, cur + wcap / 2, 131.0, rot, 'B')
+        put(fp, cur + wcap / 2, TERM_Y[1] + 1.4, rot, 'B')
         pv = [p for p in L(fp.Pads()) if p.GetNetname() == 'VTT_DDR'][0]
         pg = [p for p in L(fp.Pads()) if p.GetNetname() != 'VTT_DDR'][0]
         if pv.GetPosition().y < pg.GetPosition().y:
             break
-    fix(r, cur + wcap / 2, 131.0, rot, 'B')
+    fix(r, cur + wcap / 2, TERM_Y[1] + 1.4, rot, 'B')
     cur += wcap + 0.15
 
 # ck 100 r differential termination at the dram, bottom side, in the gap between the ball groups
 ckt = [r for r, (f, c) in fps.items() if {p.GetNetname() for p in L(f.Pads())} == {'DDR_CK_P', 'DDR_CK_N'}][0]
-fix(ckt, 108.8, 121.0, 0, 'B')
+fix(ckt, DRAM_C[0] + 0.8, DRAM_C[1], 0, 'B')
 
 HZ = (90,)
 ANCHOR_T = {
     'USB3300': (76, 140), 'LAN8742A': (80, 109), 'TPS2051C': (74, 127), 'USBLC6-2SC6': None,
     # flat wson flashes on the bottom inside the stm32 outline, between its quadspi pins
     'W25Q01JVZEIQ': (160, 104, (0, 90), 'B'), 'SN65HVD230': (176, 73),
-    'TCA9535': (176, 100, (0, 90), 'B'),
+    'TCA9535': (176, 100, (0, 90), 'B'), '24AA025E48': (172, 80, (0, 90), 'F'),
     'IOX_SPARE': (156, 141, HZ, 'F'), 'CAN': (170, 79),
     
     '100MHz': (133, 108), '24.576MHz': (137, 108), '22.5792MHz': (141, 108), '125MHz LVDS': (106, 90),
     'TPS62130RGT': (92, 112), 'LMR33630ADDA': (85, 133), 'TLV62568DBV': (100, 108), 'TLV75801': (104, 101),
-    'TPS51200DRC': (97.6, 128.3, (0, 90), 'F'),  # vtt source at the end of the termination strip 'INA219': (80, 58), 'DMP3013SFV': (70, 58), '25MHz 8pF': (150, 85),
+    'TPS51200DRC': (97.6, 119.9, (0, 90), 'F'),  # vtt source at the end of the termination strip 'INA219': (80, 58), 'DMP3013SFV': (70, 58), '25MHz 8pF': (150, 85),
     '32.768kHz': (150, 90), '24MHz 12pF': (80, 136), '25MHz 10pF': (84, 112),
     'M3': None, 'M2.5 VITA': None, 'MCU_BREAKOUT': None,
     '1.1A hold': (167, 70),  # vita 12P0V polyfuse next to the connector
@@ -397,7 +399,7 @@ CORRIDORS = [(98.6, 60, 112, 100), (134.6, 79, 147.5, 116.5), (109, 76.8, 152, 7
              (115.5, 123.5, 165.0, 125.7),  # label strip under the button row
              (117.0, 115.2, 156.0, 117.4),  # led row
              (110.0, 126.0, 162.0, 147.0),  # header field: headers and their labels only
-             (100.0, 104.8, 121.0, 115.6)]  # ddr3 top-layer corridor between fpga and dram
+             (100.0, 104.8, 121.0, 107.3)]  # ddr3 top-layer gap between fpga and dram
 POWER_ZONE = (67, 105, 106, 147)
 
 # mounting holes

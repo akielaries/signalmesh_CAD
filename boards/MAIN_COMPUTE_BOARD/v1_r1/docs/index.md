@@ -28,6 +28,7 @@ source: [system.drawio](system.drawio) (open in draw.io / diagrams.net to edit)
 | boot/bitstream flash | 2x W25Q01JVZEIQ (WSON-8) | QUADSPI dual-flash, 8-bit, 256 MB memory mapped, shared BK1_NCS. Bottom side, under the STM32 |
 | USB HS PHY | USB3300-EZK | ULPI, 24 MHz crystal |
 | Ethernet PHY | LAN8742A | RMII, PHY sources the 50 MHz REF_CLK |
+| board ID / MAC | 24AA025E48 (U200) | I2C1 at 0x54: factory EUI-48 MAC address plus 128 bytes of user EEPROM |
 | audio DAC | CS4344 + OPA1656 | ported from APM v7, -5 V from LM2662 |
 | mezzanine | Samtec ASP-134486-01 | VITA 57.1 HPC, LPC cards fit |
 | backplane | DIN 41612 C 3x32 male R/A | provisional pinout, see [pinout](pinout.md) |

@@ -237,10 +237,15 @@ def bga_fanout(ref, pitch, via_d, ring_skip, sig_w):
 
 
 bga_fanout('U100', 1.0, 0.45, 2, 0.1)
-bga_fanout('U21', 0.8, 0.4, 0, 0.1)
+def ref_by_value(prefix):
+    fs = b.Footprints()
+    return [fs[i].GetReference() for i in range(len(fs)) if fs[i].GetValue().startswith(prefix)][0]
+
+
+bga_fanout(ref_by_value('MT41K256M16TW'), 0.8, 0.4, 0, 0.1)
 
 # stm32 supply/ground pins: via just past the pad tip
-fp = b.FindFootprintByReference('U11')
+fp = b.FindFootprintByReference(ref_by_value('STM32H755'))
 cx, cy = fp.GetPosition().x / MM, fp.GetPosition().y / MM
 n = 0
 for p in L(fp.Pads()):
