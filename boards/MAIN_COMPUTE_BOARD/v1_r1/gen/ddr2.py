@@ -20,7 +20,7 @@ SRC = sys.argv[2] if len(sys.argv) > 2 else PCB
 HERE = os.path.dirname(os.path.abspath(__file__))
 G = rlib.G
 FPGA_R = (109.5, 79.5, 134.5, 104.5)
-DRAM_R = (100.955, 107.355, 117.045, 117.445)
+DRAM_R = (99.555, 111.455, 115.645, 121.545)
 rlib.BGA_RECTS[:] = [FPGA_R + (0.09,), (120.8, 62.35, 179.3, 76.65, 0.10), DRAM_R + (0.09,)]
 proute.ESC[:] = [FPGA_R, DRAM_R]
 WIN = (95.0, 91.0, 125.0, 135.0)
@@ -389,7 +389,10 @@ flights = {leg['net']: (GROUP_OF[leg['group']], leg_flight(leg)) for leg in legs
 if PHASE == 'measure':
     tg = {}
     for g in ('LANE0', 'LANE1', 'CMD'):
-        vals = [f for (gg, f) in flights.values() if gg == g]
+        vals = sorted(f for (gg, f) in flights.values() if gg == g)
+        # a congestion detour should not set the target for everyone: drop members far above the rest
+        while len(vals) > 3 and vals[-1] > vals[-2] + 3.0:
+            vals.pop()
         pn = {v: k for k, v in PAIR_GROUP.items()}[g]
         if pair_len.get(pn):
             vals.append(pair_len[pn])

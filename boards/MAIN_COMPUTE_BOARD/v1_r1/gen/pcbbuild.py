@@ -268,7 +268,7 @@ for ref, rot, _ in FRONT:
 fix(one('DIN41612'), 197.7, 52.45 + 8.2, 270)
 fix('U100', 122.0, 92.0, 0)
 # dram right under bank 34 (short fly-by), between the fpga and the button row
-DRAM_C = (109.0, 112.4)
+DRAM_C = (107.6, 116.5)
 fix(one('MT41K256M16TW'), DRAM_C[0], DRAM_C[1], 90)
 fix(one('STM32H755BIT6'), 165.0, 99.0, 0)
 VITA_C = (150.0, 69.5)
@@ -388,7 +388,7 @@ ANCHOR_T = {
     
     '100MHz': (133, 108), '24.576MHz': (137, 108), '22.5792MHz': (141, 108), '125MHz LVDS': (106, 90),
     'TPS62130RGT': (92, 112), 'LMR33630ADDA': (85, 133), 'TLV62568DBV': (100, 108), 'TLV75801': (104, 101),
-    'TPS51200DRC': (97.6, 119.9, (0, 90), 'F'),  # vtt source at the end of the termination strip 'INA219': (80, 58), 'DMP3013SFV': (70, 58), '25MHz 8pF': (150, 85),
+    'TPS51200DRC': (97.6, 123.9, (0, 90), 'F'),  # vtt source at the end of the termination strip 'INA219': (80, 58), 'DMP3013SFV': (70, 58), '25MHz 8pF': (150, 85),
     '32.768kHz': (150, 90), '24MHz 12pF': (80, 136), '25MHz 10pF': (84, 112),
     'M3': None, 'M2.5 VITA': None, 'MCU_BREAKOUT': None,
     '1.1A hold': (167, 70),  # vita 12P0V polyfuse next to the connector
@@ -399,7 +399,7 @@ CORRIDORS = [(98.6, 60, 112, 100), (134.6, 79, 147.5, 116.5), (109, 76.8, 152, 7
              (115.5, 123.5, 165.0, 125.7),  # label strip under the button row
              (117.0, 115.2, 156.0, 117.4),  # led row
              (110.0, 126.0, 162.0, 147.0),  # header field: headers and their labels only
-             (100.0, 104.8, 121.0, 107.3)]  # ddr3 top-layer gap between fpga and dram
+             (100.0, 104.8, 121.0, 111.3)]  # ddr3 top-layer gap between fpga and dram
 POWER_ZONE = (67, 105, 106, 147)
 
 # mounting holes
