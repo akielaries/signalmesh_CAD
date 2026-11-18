@@ -58,7 +58,9 @@ def md_to_html(text):
         m = re.match(r'(#{1,4})\s+(.*)', ln)
         if m:
             n = len(m.group(1))
-            out.append('<h%d>%s</h%d>' % (n, inline(m.group(2)), n))
+            # github-style ids so page#heading links work on pages too
+            slug = re.sub(r'[^\w\- ]', '', m.group(2).lower()).strip().replace(' ', '-')
+            out.append('<h%d id="%s">%s</h%d>' % (n, slug, inline(m.group(2)), n))
             i += 1
             continue
         if ln.startswith('|') and i + 1 < len(lines) and re.match(r'\|?\s*:?-+', lines[i + 1]):

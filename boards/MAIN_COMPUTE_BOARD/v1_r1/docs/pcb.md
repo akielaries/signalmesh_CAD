@@ -27,7 +27,8 @@ Widths come from a 2D finite-difference field solve of these exact cross section
 | PWR | 0.4 mm min | 0.4 mm min | rails |
 
 Per-layer widths are enforced in `MAIN_COMPUTE_BOARD.kicad_dru`. Under the FPGA and
-DDR BGAs the clearance drops to 0.09 mm for escape routing (JLC 8-layer minimum).
+DDR BGAs the clearance drops to 0.09 mm for escape routing (JLC 8-layer minimum). Inside
+the VITA connector footprint it drops to 0.10 mm, so pairs can leave the 1.27 mm pin field.
 
 ## floorplan
 
@@ -41,3 +42,42 @@ DDR BGAs the clearance drops to 0.09 mm for escape routing (JLC 8-layer minimum)
 - kept-clear routing channels on top: FPGA to SFP (GTP), FPGA to STM32 (FMC),
   FPGA to VITA (LA pairs). FPGA and STM32 decoupling sits on the bottom side.
 - power bottom-left, audio in its own bottom-right corner, mirrored L/R.
+
+## routing status
+
+| group | state |
+|---|---|
+| GTP transceivers: SFP, VITA DP, reference clocks | routed, skew matched |
+| DDR3 byte lanes, address/command, CK | next |
+| VITA LA pairs and clocks | planned |
+| FMC, ULPI, RMII, QSPI | planned |
+| low-speed and power | autorouter, then cleanup |
+
+### GTP lanes
+
+Coupled 100 R pairs on F.Cu (microstrip over In1 GND), In2 (stripline between In1 and In3
+GND) and B.Cu (microstrip over In6 GND). In5 is not used for transceivers because it
+references the split In4 power plane. Lengths run from FPGA ball to connector pad,
+including both sides of the AC-coupling capacitor. Skew is total P minus N, matched with
+small bumps on the shorter half.
+
+| lane | length mm | P/N skew mm | vias | layers |
+|---|---|---|---|---|
+| SFP0 TX | 24.4 | 0.02 | 0 | F |
+| SFP0 RX | 27.9 | 0.00 | 4 | F, In2 |
+| SFP1 TX | 27.2 | 0.00 | 8 | F, In2 |
+| SFP1 RX | 31.4 | 0.13 | 8 | F, In2 |
+| VITA DP0 C2M | 32.8 | 0.04 | 8 | F, In2 |
+| VITA DP1 C2M | 51.2 | 0.07 | 8 | F, In2 |
+| VITA DP0 M2C | 34.6 | 0.00 | 4 | F, In2 |
+| VITA DP1 M2C | 34.6 | 0.00 | 4 | F, B |
+| REFCLK1 (VITA GBTCLK0) | 33.2 | 0.00 | 8 | F, In2, B |
+| REFCLK0 (125 MHz osc) | 23.6 | 0.00 | 4 | F, B |
+
+- the DC-blocking caps sit near the receiver: at the connector for FPGA TX, at the FPGA
+  for FPGA RX and the reference clocks.
+- VITA DP pins sit in rows A and C of the 1.27 mm field. Each pin drops to a via next
+  to the pad and the pair couples on In2 or B.Cu under the connector, uncoupled for at
+  most about 2.5 mm.
+- inside the FPGA ball field the two halves of a pair escape separately (1 mm pitch) and
+  couple once they leave the BGA.

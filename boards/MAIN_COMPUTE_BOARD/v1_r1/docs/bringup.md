@@ -1,5 +1,33 @@
 # bring-up and firmware notes
 
+## first power-up
+
+Every rail and power-good has a labelled test point; the table with expected readings is in
+the [hardware reference](hardware.md#test-points).
+
+1. unpowered: measure each rail test point to a GND loop on the ohms range. Nothing
+   should read below about 10 R. The 1V0 core rail reads lowest, since the FPGA core
+   loads it.
+2. power from a bench supply at 12 V with the current limit at 0.5 A, through the barrel
+   jack or the DIN. Expect roughly 150-300 mA at 12 V with an unconfigured FPGA (estimate, not yet measured).
+3. check the rails in sequence order. Each stage enables the next, so the first missing
+   rail is the fault:
+
+| step | rail (test point) | enabled by |
+|---|---|---|
+| 1 | 12VIN, 12V | input; 12V is after the fuse, reverse-polarity FET and current shunt |
+| 2 | 5V, 3V3M | 12V through the 100k/15k EN divider (5V starts at about 9.4 V input) |
+| 3 | 1V0 | PG5V |
+| 4 | 1V8, MGTAVCC | PG1V0; the MGTAVCC LDO is enabled from 1V8 |
+| 5 | 3V3, 1V35, MGTAVTT | PG1V8; MGTAVTT is RC-delayed after MGTAVCC (DS181 order) |
+| 6 | VTT, VREF | 3V3 |
+| 7 | VADJ | firmware: VADJ_EN on the IO expander, after reading the mezzanine EEPROM |
+
+4. with all rails good, the 3V3 LED is on. INIT goes high once the FPGA has cleared its
+   configuration memory. DONE stays low until a bitstream is loaded over SelectMAP or JTAG.
+5. raise the current limit to 2 A before configuring the FPGA or plugging in SFPs or a
+   mezzanine.
+
 ## STM32
 
 - select LDO supply in PWR_CR3 before raising the clock (SDEN=0, LDOEN=1). VOS0 is
