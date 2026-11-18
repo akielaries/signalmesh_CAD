@@ -30,6 +30,11 @@
 	(constraint track_width (min 0.09))
 	(constraint clearance (min 0.09)))
 
+# vita 57.1 pin field: 1.27 mm array, a coupled pair fits between pin columns at 0.10
+(rule "VITA escape"
+	(condition "A.intersectsCourtyard('J20')")
+	(constraint clearance (min 0.10)))
+
 # keep audio analog away from digital
 (rule "DAC clearance"
 	(condition "A.NetClass == 'DAC' && B.NetClass != 'DAC' && B.NetClass != 'PWR'")
