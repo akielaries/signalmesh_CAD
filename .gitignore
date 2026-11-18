@@ -7,3 +7,6 @@ boards/**/renders/
 # kicad local history/backup dirs (were accidentally tracked as submodules)
 .history/
 .history_trim/
+
+# python bytecode from tools/
+__pycache__/

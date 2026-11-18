@@ -13,6 +13,20 @@ import os
 import shutil
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import mddoc  # noqa: E402
+
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def docs_dir(slug):
+    # BOARD_vN_rM -> boards/BOARD/vN_rM/docs
+    i = slug.rfind('_v')
+    if i < 0:
+        return None
+    d = os.path.join(REPO, 'boards', slug[:i], slug[i + 1:], 'docs')
+    return d if os.path.isdir(d) else None
+
 
 def find_boards(root):
     # each immediate subdir with files is one board
@@ -32,7 +46,7 @@ def pick(files, suffix):
     return None
 
 
-def card(name, rel, files):
+def card(name, rel, files, has_docs=False):
     top = pick(files, "_3d_top.png")
     bottom = pick(files, "_3d_bottom.png")
     pcb = pick(files, "_pcb.pdf")
@@ -54,6 +68,8 @@ def card(name, rel, files):
         if f:
             href = html.escape(f"{rel}/{f}")
             links += f'<a href="{href}">{label}</a>'
+    if has_docs:
+        links += f'<a href="{html.escape(rel)}/docs/index.html">docs</a>'
 
     return (f'<section class="card"><h2>{html.escape(name)}</h2>'
             f'<div class="imgs">{imgs}</div>'
@@ -73,7 +89,11 @@ def build(root, out):
         for f in os.listdir(renders):
             shutil.copy2(os.path.join(renders, f), os.path.join(dst, f))
             files.append(f)
-        cards.append(card(name, rel, files))
+        dd = docs_dir(name)
+        if dd:
+            n = mddoc.build_docs(dd, os.path.join(dst, 'docs'), name)
+            print(f"gallery: {name} docs, {n} page(s)")
+        cards.append(card(name, rel, files, has_docs=bool(dd)))
 
     body = "\n".join(cards) if cards else "<p>no renders found</p>"
     page = TEMPLATE.replace("{{cards}}", body).replace("{{count}}", str(len(boards)))

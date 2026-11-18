@@ -10,6 +10,7 @@ on:
       - 'boards/**'
       - 'tools/render.sh'
       - 'tools/gallery.py'
+      - 'tools/mddoc.py'
       - '.github/workflows/render.yml'
   workflow_dispatch:
 

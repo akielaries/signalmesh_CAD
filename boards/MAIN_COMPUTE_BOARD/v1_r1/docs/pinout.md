@@ -1,0 +1,598 @@
+# pin plans
+
+Generated from the same tables that build the schematic, so these match the design.
+
+## STM32H755BIT6 (LQFP208)
+
+FMC bank 1 runs as a synchronous NOR/PSRAM bus, 32-bit, non-multiplexed, with
+A0-A18 (2 MB window). NL/NADV is not used: the FPGA latches the address on the
+first FMC_CLK edge with NE1 low, and the address is held for the whole burst
+(DS12919 fig 32/33). FMC_CLK max is 125 MHz at 3.3 V.
+
+| pin | net | function |
+|---|---|---|
+| PA0 | MCU_PA0 | GPIO |
+| PA1 | ETH_REF_CLK | ETH_REF_CLK |
+| PA2 | ETH_MDIO | ETH_MDIO |
+| PA3 | ULPI_D0 | USB_OTG_HS_ULPI_D0 |
+| PA4 | STM32_DAC1_OUT1 | DAC1_OUT1 |
+| PA5 | ULPI_CK | USB_OTG_HS_ULPI_CK |
+| PA6 | MCU_PA6 | GPIO |
+| PA7 | ETH_CRS_DV | ETH_CRS_DV |
+| PA8 | MCU_PA8 | GPIO |
+| PA9 | MCU_PA9 | GPIO |
+| PA10 | MCU_PA10 | GPIO |
+| PA11 | USBH_DM | USB_OTG_FS_DM |
+| PA12 | USBH_DP | USB_OTG_FS_DP |
+| PA13 | SWDIO | DEBUG_JTMS-SWDIO |
+| PA14 | SWCLK | DEBUG_JTCK-SWCLK |
+| PA15 | MCU_PA15 | GPIO |
+| PB0 | ULPI_D1 | USB_OTG_HS_ULPI_D1 |
+| PB1 | ULPI_D2 | USB_OTG_HS_ULPI_D2 |
+| PB2 | MCU_PB2 | GPIO |
+| PB3 | SWO | DEBUG_JTDO-SWO |
+| PB4 | MCU_PB4 | GPIO |
+| PB5 | ULPI_D7 | USB_OTG_HS_ULPI_D7 |
+| PB6 | I2C1_SCL | I2C1_SCL |
+| PB7 | I2C1_SDA | I2C1_SDA |
+| PB8 | FDCAN1_RX | FDCAN1_RX |
+| PB9 | FDCAN1_TX | FDCAN1_TX |
+| PB10 | ULPI_D3 | USB_OTG_HS_ULPI_D3 |
+| PB11 | ULPI_D4 | USB_OTG_HS_ULPI_D4 |
+| PB12 | ULPI_D5 | USB_OTG_HS_ULPI_D5 |
+| PB13 | ULPI_D6 | USB_OTG_HS_ULPI_D6 |
+| PB14 | CONSOLE_TX | USART1_TX |
+| PB15 | CONSOLE_RX | USART1_RX |
+| PC0 | ULPI_STP | USB_OTG_HS_ULPI_STP |
+| PC1 | ETH_MDC | ETH_MDC |
+| PC2_C | MCU_PC2 | GPIO |
+| PC3_C | MCU_PC3 | GPIO |
+| PC4 | ETH_RXD0 | ETH_RXD0 |
+| PC5 | ETH_RXD1 | ETH_RXD1 |
+| PC6 | MCU_PC6 | GPIO |
+| PC7 | MCU_PC7 | GPIO |
+| PC8 | MCU_PC8 | GPIO |
+| PC9 | MCU_PC9 | GPIO |
+| PC10 | MCU_PC10 | GPIO |
+| PC11 | MCU_PC11 | GPIO |
+| PC12 | MCU_PC12 | GPIO |
+| PC13 | MCU_BTN | GPIO |
+| PC14 | LSE_IN | RCC_OSC32_IN |
+| PC15 | LSE_OUT | RCC_OSC32_OUT |
+| PD0 | FMC_D2 | FMC_D2 |
+| PD1 | FMC_D3 | FMC_D3 |
+| PD2 | MCU_PD2 | GPIO |
+| PD3 | FMC_CLK | FMC_CLK |
+| PD4 | FMC_NOE | FMC_NOE |
+| PD5 | FMC_NWE | FMC_NWE |
+| PD6 | FMC_NWAIT | FMC_NWAIT |
+| PD7 | FMC_NE1 | FMC_NE1 |
+| PD8 | FMC_D13 | FMC_D13 |
+| PD9 | FMC_D14 | FMC_D14 |
+| PD10 | FMC_D15 | FMC_D15 |
+| PD11 | FMC_A16 | FMC_A16 |
+| PD12 | FMC_A17 | FMC_A17 |
+| PD13 | FMC_A18 | FMC_A18 |
+| PD14 | FMC_D0 | FMC_D0 |
+| PD15 | FMC_D1 | FMC_D1 |
+| PE0 | FMC_NBL0 | FMC_NBL0 |
+| PE1 | FMC_NBL1 | FMC_NBL1 |
+| PE2 | MCU_PE2 | GPIO |
+| PE3 | MCU_PE3 | GPIO |
+| PE4 | MCU_PE4 | GPIO |
+| PE5 | MCU_PE5 | GPIO |
+| PE6 | MCU_PE6 | GPIO |
+| PE7 | FMC_D4 | FMC_D4 |
+| PE8 | FMC_D5 | FMC_D5 |
+| PE9 | FMC_D6 | FMC_D6 |
+| PE10 | FMC_D7 | FMC_D7 |
+| PE11 | FMC_D8 | FMC_D8 |
+| PE12 | FMC_D9 | FMC_D9 |
+| PE13 | FMC_D10 | FMC_D10 |
+| PE14 | FMC_D11 | FMC_D11 |
+| PE15 | FMC_D12 | FMC_D12 |
+| PF0 | FMC_A0 | FMC_A0 |
+| PF1 | FMC_A1 | FMC_A1 |
+| PF2 | FMC_A2 | FMC_A2 |
+| PF3 | FMC_A3 | FMC_A3 |
+| PF4 | FMC_A4 | FMC_A4 |
+| PF5 | FMC_A5 | FMC_A5 |
+| PF6 | QSPI_BK1_IO3 | QUADSPI_BK1_IO3 |
+| PF7 | QSPI_BK1_IO2 | QUADSPI_BK1_IO2 |
+| PF8 | QSPI_BK1_IO0 | QUADSPI_BK1_IO0 |
+| PF9 | QSPI_BK1_IO1 | QUADSPI_BK1_IO1 |
+| PF10 | QSPI_CLK | QUADSPI_CLK |
+| PF11 | MCU_PF11 | GPIO |
+| PF12 | FMC_A6 | FMC_A6 |
+| PF13 | FMC_A7 | FMC_A7 |
+| PF14 | FMC_A8 | FMC_A8 |
+| PF15 | FMC_A9 | FMC_A9 |
+| PG0 | FMC_A10 | FMC_A10 |
+| PG1 | FMC_A11 | FMC_A11 |
+| PG2 | FMC_A12 | FMC_A12 |
+| PG3 | FMC_A13 | FMC_A13 |
+| PG4 | FMC_A14 | FMC_A14 |
+| PG5 | FMC_A15 | FMC_A15 |
+| PG6 | QSPI_NCS | QUADSPI_BK1_NCS |
+| PG7 | FPGA_IRQ0 | GPIO |
+| PG8 | FPGA_IRQ1 | GPIO |
+| PG9 | QSPI_BK2_IO2 | QUADSPI_BK2_IO2 |
+| PG10 | FPGA_IRQ2 | GPIO |
+| PG11 | ETH_TX_EN | ETH_TX_EN |
+| PG12 | ETH_TXD1 | ETH_TXD1 |
+| PG13 | ETH_TXD0 | ETH_TXD0 |
+| PG14 | QSPI_BK2_IO3 | QUADSPI_BK2_IO3 |
+| PG15 | FPGA_IRQ3 | GPIO |
+| PH0 | HSE_IN | RCC_OSC_IN |
+| PH1 | HSE_OUT | RCC_OSC_OUT |
+| PH2 | QSPI_BK2_IO0 | QUADSPI_BK2_IO0 |
+| PH3 | QSPI_BK2_IO1 | QUADSPI_BK2_IO1 |
+| PH4 | ULPI_NXT | USB_OTG_HS_ULPI_NXT |
+| PH5 | FPGA_RST_N | GPIO |
+| PH6 | FPGA_CSI_B | GPIO |
+| PH7 | FPGA_RDWR_B | GPIO |
+| PH8 | FMC_D16 | FMC_D16 |
+| PH9 | FMC_D17 | FMC_D17 |
+| PH10 | FMC_D18 | FMC_D18 |
+| PH11 | FMC_D19 | FMC_D19 |
+| PH12 | FMC_D20 | FMC_D20 |
+| PH13 | FMC_D21 | FMC_D21 |
+| PH14 | FMC_D22 | FMC_D22 |
+| PH15 | FMC_D23 | FMC_D23 |
+| PI0 | FMC_D24 | FMC_D24 |
+| PI1 | FMC_D25 | FMC_D25 |
+| PI2 | FMC_D26 | FMC_D26 |
+| PI3 | FMC_D27 | FMC_D27 |
+| PI4 | FMC_NBL2 | FMC_NBL2 |
+| PI5 | FMC_NBL3 | FMC_NBL3 |
+| PI6 | FMC_D28 | FMC_D28 |
+| PI7 | FMC_D29 | FMC_D29 |
+| PI8 | FPGA_CCLK | GPIO |
+| PI9 | FMC_D30 | FMC_D30 |
+| PI10 | FMC_D31 | FMC_D31 |
+| PI11 | ULPI_DIR | USB_OTG_HS_ULPI_DIR |
+| PI15 | MCU_LED0 | GPIO |
+| PJ6 | FPGA_IRQ4 | GPIO |
+| PJ7 | FPGA_PROGRAM_B | GPIO |
+| PJ8 | MCU_UART_TX | UART8_TX |
+| PJ9 | MCU_UART_RX | UART8_RX |
+| PJ10 | FPGA_INIT_B | GPIO |
+| PJ11 | MCU_LED1 | GPIO |
+| PK0 | FPGA_IRQ5 | GPIO |
+| PK1 | FPGA_DONE | GPIO |
+| PK2 | IOX_INT_N | GPIO |
+
+Slow controls live on the TCA9535 at I2C1 address 0x20: P00 VADJ_EN, P01/P02
+VADJ_SEL0/1, P03 VADJ_PG, P04 MEZZ_PRSNT_L, P05 MEZZ_PG_M2C, P06 MEZZ_PG_C2M,
+P07 PG_1V8, P10 ETH_NRST, P11 ULPI_RST, P12 USBH_VBUS_EN, P13 USBH_OC_N,
+P14-P17 spare (IOX_SPARE header).
+
+## XC7A100T-2FGG484 banks
+
+- bank 14: FMC D0-D31 sit on the SelectMAP D00-D31 pins, so the same wires carry
+  the bitstream at boot. CSI_B and RDWR_B are STM32 GPIOs.
+- bank 34: DDR3L. Data bytes in T0/T1, address/command in T2/T3 with CK in T3 and
+  ODT on IO_25, RESET_N on IO_0. CS_N is tied low at the DRAM. This follows the
+  UG586 byte-group rules (same layout as the Arty A7-100).
+- banks 35/16: VITA LA00-LA16 + CLK0_M2C on bank 35, LA17-LA33 + CLK1_M2C on bank 16.
+  The CC pairs land on MRCC/SRCC pins.
+
+### bank 13 (VCCO 3.3 V)
+
+| ball | pin | net |
+|---|---|---|
+| AA10 | L9P_T1_DQS | AUD_DAC_LRCK |
+| AA9 | L8P_T1 | AUD_DAC_MCLK |
+| AA11 | L9N_T1_DQS | AUD_DAC_SCLK |
+| W10 | L10N_T1 | AUD_DAC_SDIN |
+| Y17 | 0 | PMODA_IO1 |
+| AA16 | L1N_T0 | PMODA_IO2 |
+| Y16 | L1P_T0 | PMODA_IO3 |
+| AB17 | L2N_T0 | PMODA_IO4 |
+| AB16 | L2P_T0 | PMODA_IO5 |
+| AB13 | L3N_T0_DQS | PMODA_IO6 |
+| AA13 | L3P_T0_DQS | PMODA_IO7 |
+| AB15 | L4N_T0 | PMODA_IO8 |
+| AA15 | L4P_T0 | PMODB_IO1 |
+| AA14 | L5N_T0 | PMODB_IO2 |
+| Y13 | L5P_T0 | PMODB_IO3 |
+| Y14 | L6N_T0_VREF | PMODB_IO4 |
+| W14 | L6P_T0 | PMODB_IO5 |
+| AB12 | L7N_T1 | PMODB_IO6 |
+| AB11 | L7P_T1 | PMODB_IO7 |
+| AB10 | L8N_T1 | PMODB_IO8 |
+| Y12 | L11N_T1_SRCC | SFP0_LOS |
+| V10 | L10P_T1 | SFP0_MOD_ABS |
+| W11 | L12P_T1_MRCC | SFP0_SCL |
+| V14 | L13N_T2_MRCC | SFP0_SDA |
+| W12 | L12N_T1_MRCC | SFP0_TX_DIS |
+| Y11 | L11P_T1_SRCC | SFP0_TX_FAULT |
+| V15 | L14N_T2_SRCC | SFP1_LOS |
+| V13 | L13P_T2_MRCC | SFP1_MOD_ABS |
+| T14 | L15P_T2_DQS | SFP1_SCL |
+| W16 | L16N_T2 | SFP1_SDA |
+| T15 | L15N_T2_DQS | SFP1_TX_DIS |
+| U15 | L14P_T2_SRCC | SFP1_TX_FAULT |
+
+### bank 14 (VCCO 3.3 V)
+
+| ball | pin | net |
+|---|---|---|
+| W19 | L12P_T1_MRCC | FMC_CLK |
+| P22 | L1P_T0_D00_MOSI | FMC_D0 |
+| R22 | L1N_T0_D01_DIN | FMC_D1 |
+| W22 | L7N_T1_D10 | FMC_D10 |
+| AA20 | L8P_T1_D11 | FMC_D11 |
+| AA21 | L8N_T1_D12 | FMC_D12 |
+| Y22 | L9N_T1_DQS_D13 | FMC_D13 |
+| AB21 | L10P_T1_D14 | FMC_D14 |
+| AB22 | L10N_T1_D15 | FMC_D15 |
+| R17 | L24N_T3_A00_D16 | FMC_D16 |
+| P16 | L24P_T3_A01_D17 | FMC_D17 |
+| N14 | L23N_T3_A02_D18 | FMC_D18 |
+| N13 | L23P_T3_A03_D19 | FMC_D19 |
+| P21 | L2P_T0_D02 | FMC_D2 |
+| R16 | L22N_T3_A04_D20 | FMC_D20 |
+| P15 | L22P_T3_A05_D21 | FMC_D21 |
+| P17 | L21N_T3_DQS_A06_D22 | FMC_D22 |
+| T18 | L20N_T3_A07_D23 | FMC_D23 |
+| R18 | L20P_T3_A08_D24 | FMC_D24 |
+| R14 | L19N_T3_A09_D25_VREF | FMC_D25 |
+| P14 | L19P_T3_A10_D26 | FMC_D26 |
+| U18 | L18N_T2_A11_D27 | FMC_D27 |
+| U17 | L18P_T2_A12_D28 | FMC_D28 |
+| AB18 | L17N_T2_A13_D29 | FMC_D29 |
+| R21 | L2N_T0_D03 | FMC_D3 |
+| AA18 | L17P_T2_A14_D30 | FMC_D30 |
+| W17 | L16N_T2_A15_D31 | FMC_D31 |
+| T21 | L4P_T0_D04 | FMC_D4 |
+| U21 | L4N_T0_D05 | FMC_D5 |
+| P19 | L5P_T0_D06 | FMC_D6 |
+| R19 | L5N_T0_D07 | FMC_D7 |
+| T20 | L6N_T0_D08_VREF | FMC_D8 |
+| W21 | L7P_T1_D09 | FMC_D9 |
+| Y21 | L9P_T1_DQS | FMC_NBL0 |
+| N17 | L21P_T3_DQS | FMC_NBL1 |
+| V20 | L11N_T1_SRCC | FMC_NBL2 |
+| U20 | L11P_T1_SRCC | FMC_NBL3 |
+| V22 | L3N_T0_DQS_EMCCLK | FMC_NE1 |
+| P20 | 0 | FMC_NOE |
+| T19 | L6P_T0_FCS_B | FMC_NWAIT |
+| N15 | 25 | FMC_NWE |
+| V17 | L16P_T2_CSI_B | FPGA_CSI_B |
+| AB20 | L15N_T2_DQS_DOUT_CSO_B | FPGA_IRQ0 |
+| V19 | L14N_T2_SRCC | FPGA_IRQ1 |
+| V18 | L14P_T2_SRCC | FPGA_IRQ2 |
+| U22 | L3P_T0_DQS_PUDC_B | FPGA_PUDC_B |
+| AA19 | L15P_T2_DQS_RDWR_B | FPGA_RDWR_B |
+| W20 | L12N_T1_MRCC | FPGA_RST_N |
+| Y19 | L13N_T2_MRCC | MCU_UART_RX |
+| Y18 | L13P_T2_MRCC | MCU_UART_TX |
+
+### bank 15 (VCCO 3.3 V)
+
+| ball | pin | net |
+|---|---|---|
+| J20 | L11P_T1_SRCC | AUD_CLK_44K |
+| K18 | L13P_T2_MRCC | AUD_CLK_48K |
+| K13 | L19P_T3_A22 | BP_TDM_BCLK |
+| J17 | L21N_T3_DQS_A18 | BP_TDM_DIN |
+| M13 | L20P_T3_A20 | BP_TDM_DOUT |
+| L13 | L20N_T3_A19 | BP_TDM_FS |
+| K14 | L19N_T3_A21_VREF | BP_TDM_MCLK |
+| J16 | 0 | FMC_A0 |
+| G13 | L1N_T0_AD0N | FMC_A1 |
+| J15 | L5P_T0_AD9P | FMC_A10 |
+| H18 | L6N_T0_VREF | FMC_A11 |
+| H17 | L6P_T0 | FMC_A12 |
+| H22 | L7N_T1_AD2N | FMC_A13 |
+| J22 | L7P_T1_AD2P | FMC_A14 |
+| G20 | L8N_T1_AD10N | FMC_A15 |
+| H20 | L8P_T1_AD10P | FMC_A16 |
+| K22 | L9N_T1_DQS_AD3N | FMC_A17 |
+| K21 | L9P_T1_DQS_AD3P | FMC_A18 |
+| H13 | L1P_T0_AD0P | FMC_A2 |
+| G16 | L2N_T0_AD8N | FMC_A3 |
+| G15 | L2P_T0_AD8P | FMC_A4 |
+| H14 | L3N_T0_DQS_AD1N | FMC_A5 |
+| J14 | L3P_T0_DQS_AD1P | FMC_A6 |
+| G18 | L4N_T0 | FMC_A7 |
+| G17 | L4P_T0 | FMC_A8 |
+| H15 | L5N_T0_AD9N | FMC_A9 |
+| M20 | L18N_T2_A23 | FPGA_BTN0 |
+| N20 | L18P_T2_A24 | FPGA_BTN1 |
+| L21 | L10N_T1_AD11N | FPGA_IRQ3 |
+| M21 | L10P_T1_AD11P | FPGA_IRQ4 |
+| J21 | L11N_T1_SRCC | FPGA_IRQ5 |
+| L18 | L16N_T2_A27 | FPGA_LED0 |
+| M18 | L16P_T2_A28 | FPGA_LED1 |
+| N19 | L17N_T2_A25 | FPGA_LED2 |
+| N18 | L17P_T2_A26 | FPGA_LED3 |
+| L19 | L14P_T2_SRCC | SC_NRST |
+| K19 | L13N_T2_MRCC | SC_SWCLK |
+| H19 | L12N_T1_MRCC | SC_SWDIO |
+| L20 | L14N_T2_SRCC | SC_SWO |
+| N22 | L15P_T2_DQS | SC_UART_RX |
+| M22 | L15N_T2_DQS_ADV_B | SC_UART_TX |
+| J19 | L12P_T1_MRCC | SYSCLK_100M |
+
+### bank 16 (VCCO VADJ)
+
+| ball | pin | net |
+|---|---|---|
+| C17 | L12N_T1_MRCC | MEZZ_CLK1_M2C_N |
+| D17 | L12P_T1_MRCC | MEZZ_CLK1_M2C_P |
+| C19 | L13N_T2_MRCC | MEZZ_LA17_CC_N |
+| C18 | L13P_T2_MRCC | MEZZ_LA17_CC_P |
+| D19 | L14N_T2_SRCC | MEZZ_LA18_CC_N |
+| E19 | L14P_T2_SRCC | MEZZ_LA18_CC_P |
+| F14 | L1N_T0 | MEZZ_LA19_N |
+| F13 | L1P_T0 | MEZZ_LA19_P |
+| E17 | L2N_T0 | MEZZ_LA20_N |
+| F16 | L2P_T0 | MEZZ_LA20_P |
+| C15 | L3N_T0_DQS | MEZZ_LA21_N |
+| C14 | L3P_T0_DQS | MEZZ_LA21_P |
+| E14 | L4N_T0 | MEZZ_LA22_N |
+| E13 | L4P_T0 | MEZZ_LA22_P |
+| D16 | L5N_T0 | MEZZ_LA23_N |
+| E16 | L5P_T0 | MEZZ_LA23_P |
+| D15 | L6N_T0_VREF | MEZZ_LA24_N |
+| D14 | L6P_T0 | MEZZ_LA24_P |
+| B16 | L7N_T1 | MEZZ_LA25_N |
+| B15 | L7P_T1 | MEZZ_LA25_P |
+| B13 | L8N_T1 | MEZZ_LA26_N |
+| C13 | L8P_T1 | MEZZ_LA26_P |
+| A16 | L9N_T1_DQS | MEZZ_LA27_N |
+| A15 | L9P_T1_DQS | MEZZ_LA27_P |
+| A14 | L10N_T1 | MEZZ_LA28_N |
+| A13 | L10P_T1 | MEZZ_LA28_P |
+| B18 | L11N_T1_SRCC | MEZZ_LA29_N |
+| B17 | L11P_T1_SRCC | MEZZ_LA29_P |
+| E18 | L15N_T2_DQS | MEZZ_LA30_N |
+| F18 | L15P_T2_DQS | MEZZ_LA30_P |
+| A20 | L16N_T2 | MEZZ_LA31_N |
+| B20 | L16P_T2 | MEZZ_LA31_P |
+| A19 | L17N_T2 | MEZZ_LA32_N |
+| A18 | L17P_T2 | MEZZ_LA32_P |
+| F20 | L18N_T2 | MEZZ_LA33_N |
+| F19 | L18P_T2 | MEZZ_LA33_P |
+
+### bank 34 (VCCO 1.35 V)
+
+| ball | pin | net |
+|---|---|---|
+| V7 | L19P_T3 | DDR_A0 |
+| W7 | L19N_T3_VREF | DDR_A1 |
+| R4 | L13P_T2_MRCC | DDR_A10 |
+| T4 | L13N_T2_MRCC | DDR_A11 |
+| T5 | L14P_T2_SRCC | DDR_A12 |
+| U5 | L14N_T2_SRCC | DDR_A13 |
+| W6 | L15P_T2_DQS | DDR_A14 |
+| AB7 | L20P_T3 | DDR_A2 |
+| AB6 | L20N_T3 | DDR_A3 |
+| AA8 | L22P_T3 | DDR_A4 |
+| AB8 | L22N_T3 | DDR_A5 |
+| Y8 | L23P_T3 | DDR_A6 |
+| Y7 | L23N_T3 | DDR_A7 |
+| W9 | L24P_T3 | DDR_A8 |
+| Y9 | L24N_T3 | DDR_A9 |
+| W5 | L15N_T2_DQS | DDR_BA0 |
+| U6 | L16P_T2 | DDR_BA1 |
+| V5 | L16N_T2 | DDR_BA2 |
+| T6 | L17N_T2 | DDR_CAS_N |
+| AA6 | L18N_T2 | DDR_CKE |
+| V8 | L21N_T3_DQS | DDR_CK_N |
+| V9 | L21P_T3_DQS | DDR_CK_P |
+| U3 | L6P_T0 | DDR_DM0 |
+| V4 | L12P_T1_MRCC | DDR_DM1 |
+| T1 | L1P_T0 | DDR_DQ0 |
+| U1 | L1N_T0 | DDR_DQ1 |
+| AB3 | L8P_T1 | DDR_DQ10 |
+| AB2 | L8N_T1 | DDR_DQ11 |
+| AA5 | L10P_T1 | DDR_DQ12 |
+| AB5 | L10N_T1 | DDR_DQ13 |
+| Y4 | L11P_T1_SRCC | DDR_DQ14 |
+| AA4 | L11N_T1_SRCC | DDR_DQ15 |
+| U2 | L2P_T0 | DDR_DQ2 |
+| V2 | L2N_T0 | DDR_DQ3 |
+| W2 | L4P_T0 | DDR_DQ4 |
+| Y2 | L4N_T0 | DDR_DQ5 |
+| W1 | L5P_T0 | DDR_DQ6 |
+| Y1 | L5N_T0 | DDR_DQ7 |
+| AA1 | L7P_T1 | DDR_DQ8 |
+| AB1 | L7N_T1 | DDR_DQ9 |
+| R2 | L3N_T0_DQS | DDR_DQS0_N |
+| R3 | L3P_T0_DQS | DDR_DQS0_P |
+| AA3 | L9N_T1_DQS | DDR_DQS1_N |
+| Y3 | L9P_T1_DQS | DDR_DQS1_P |
+| U7 | 25 | DDR_ODT |
+| R6 | L17P_T2 | DDR_RAS_N |
+| T3 | 0 | DDR_RESET_N |
+| Y6 | L18P_T2 | DDR_WE_N |
+
+### bank 35 (VCCO VADJ)
+
+| ball | pin | net |
+|---|---|---|
+| G4 | L12N_T1_MRCC | MEZZ_CLK0_M2C_N |
+| H4 | L12P_T1_MRCC | MEZZ_CLK0_M2C_P |
+| J4 | L13N_T2_MRCC | MEZZ_LA00_CC_N |
+| K4 | L13P_T2_MRCC | MEZZ_LA00_CC_P |
+| K3 | L14N_T2_SRCC | MEZZ_LA01_CC_N |
+| L3 | L14P_T2_SRCC | MEZZ_LA01_CC_P |
+| A1 | L1N_T0_AD4N | MEZZ_LA02_N |
+| B1 | L1P_T0_AD4P | MEZZ_LA02_P |
+| B2 | L2N_T0_AD12N | MEZZ_LA03_N |
+| C2 | L2P_T0_AD12P | MEZZ_LA03_P |
+| D1 | L3N_T0_DQS_AD5N | MEZZ_LA04_N |
+| E1 | L3P_T0_DQS_AD5P | MEZZ_LA04_P |
+| D2 | L4N_T0 | MEZZ_LA05_N |
+| E2 | L4P_T0 | MEZZ_LA05_P |
+| F1 | L5N_T0_AD13N | MEZZ_LA06_N |
+| G1 | L5P_T0_AD13P | MEZZ_LA06_P |
+| E3 | L6N_T0_VREF | MEZZ_LA07_N |
+| F3 | L6P_T0 | MEZZ_LA07_P |
+| J1 | L7N_T1_AD6N | MEZZ_LA08_N |
+| K1 | L7P_T1_AD6P | MEZZ_LA08_P |
+| G2 | L8N_T1_AD14N | MEZZ_LA09_N |
+| H2 | L8P_T1_AD14P | MEZZ_LA09_P |
+| J2 | L9N_T1_DQS_AD7N | MEZZ_LA10_N |
+| K2 | L9P_T1_DQS_AD7P | MEZZ_LA10_P |
+| H5 | L10N_T1_AD15N | MEZZ_LA11_N |
+| J5 | L10P_T1_AD15P | MEZZ_LA11_P |
+| G3 | L11N_T1_SRCC | MEZZ_LA12_N |
+| H3 | L11P_T1_SRCC | MEZZ_LA12_P |
+| L1 | L15N_T2_DQS | MEZZ_LA13_N |
+| M1 | L15P_T2_DQS | MEZZ_LA13_P |
+| M2 | L16N_T2 | MEZZ_LA14_N |
+| M3 | L16P_T2 | MEZZ_LA14_P |
+| J6 | L17N_T2 | MEZZ_LA15_N |
+| K6 | L17P_T2 | MEZZ_LA15_P |
+| L4 | L18N_T2 | MEZZ_LA16_N |
+| L5 | L18P_T2 | MEZZ_LA16_P |
+
+### GTP quad 216
+
+| lane | use |
+|---|---|
+| 0 | SFP0 (TX/RX AC coupled on board) |
+| 1 | SFP1 |
+| 2 | VITA DP0 (C2M AC coupled on board, M2C on the card) |
+| 3 | VITA DP1 |
+| REFCLK0 | 125 MHz LVDS XO (SiT9120) |
+| REFCLK1 | VITA GBTCLK0_M2C |
+
+## VITA 57.1 HPC (connected pins)
+
+HA, HB, DP2-DP9, CLK2/3_BIDIR and the JTAG pins are not connected. GA0/GA1 are
+tied low, so the card EEPROM answers at 0x50 on I2C1.
+
+| pin | signal |
+|---|---|
+| A2 | DP1_M2C_P |
+| A3 | DP1_M2C_N |
+| A22 | DP1_C2M_P |
+| A23 | DP1_C2M_N |
+| C2 | DP0_C2M_P |
+| C3 | DP0_C2M_N |
+| C6 | DP0_M2C_P |
+| C7 | DP0_M2C_N |
+| C10 | LA06_P |
+| C11 | LA06_N |
+| C14 | LA10_P |
+| C15 | LA10_N |
+| C18 | LA14_P |
+| C19 | LA14_N |
+| C22 | LA18_P_CC |
+| C23 | LA18_N_CC |
+| C26 | LA27_P |
+| C27 | LA27_N |
+| C30 | SCL |
+| C31 | SDA |
+| C34 | GA0 |
+| C35 | 12P0V |
+| C37 | 12P0V |
+| C39 | 3P3V |
+| D1 | PG_C2M |
+| D4 | GBTCLK0_M2C_P |
+| D5 | GBTCLK0_M2C_N |
+| D8 | LA01_P_CC |
+| D9 | LA01_N_CC |
+| D11 | LA05_P |
+| D12 | LA05_N |
+| D14 | LA09_P |
+| D15 | LA09_N |
+| D17 | LA13_P |
+| D18 | LA13_N |
+| D20 | LA17_P_CC |
+| D21 | LA17_N_CC |
+| D23 | LA23_P |
+| D24 | LA23_N |
+| D26 | LA26_P |
+| D27 | LA26_N |
+| D32 | 3P3VAUX |
+| D35 | GA1 |
+| D36 | 3P3V |
+| D38 | 3P3V |
+| D40 | 3P3V |
+| E39 | VADJ |
+| F1 | PG_M2C |
+| F40 | VADJ |
+| G2 | CLK1_M2C_P |
+| G3 | CLK1_M2C_N |
+| G6 | LA00_P_CC |
+| G7 | LA00_N_CC |
+| G9 | LA03_P |
+| G10 | LA03_N |
+| G12 | LA08_P |
+| G13 | LA08_N |
+| G15 | LA12_P |
+| G16 | LA12_N |
+| G18 | LA16_P |
+| G19 | LA16_N |
+| G21 | LA20_P |
+| G22 | LA20_N |
+| G24 | LA22_P |
+| G25 | LA22_N |
+| G27 | LA25_P |
+| G28 | LA25_N |
+| G30 | LA29_P |
+| G31 | LA29_N |
+| G33 | LA31_P |
+| G34 | LA31_N |
+| G36 | LA33_P |
+| G37 | LA33_N |
+| G39 | VADJ |
+| H2 | PRSNT_M2C_L |
+| H4 | CLK0_M2C_P |
+| H5 | CLK0_M2C_N |
+| H7 | LA02_P |
+| H8 | LA02_N |
+| H10 | LA04_P |
+| H11 | LA04_N |
+| H13 | LA07_P |
+| H14 | LA07_N |
+| H16 | LA11_P |
+| H17 | LA11_N |
+| H19 | LA15_P |
+| H20 | LA15_N |
+| H22 | LA19_P |
+| H23 | LA19_N |
+| H25 | LA21_P |
+| H26 | LA21_N |
+| H28 | LA24_P |
+| H29 | LA24_N |
+| H31 | LA28_P |
+| H32 | LA28_N |
+| H34 | LA30_P |
+| H35 | LA30_N |
+| H37 | LA32_P |
+| H38 | LA32_N |
+| H40 | VADJ |
+
+## DIN 41612 backplane (provisional)
+
+| pins | signal |
+|---|---|
+| a1, a2, b1, b2, c1, c2 | +12V (shared with the barrel jack) |
+| a3/b3/c3, a32/b32/c32, even b rows | GND |
+| a5 | BP_TDM_MCLK |
+| a7 | BP_TDM_BCLK |
+| a9 | BP_TDM_FS |
+| a11 | BP_TDM_DOUT |
+| a13 | BP_TDM_DIN |
+| c5 / c6 | BP_CANH / BP_CANL (SN65HVD230, 120R via solder jumper) |
+
+## debug and user headers
+
+| header | pinout |
+|---|---|
+| MCU_SWD MIPI-10 | 1 3V3, 2 SWDIO, 3 GND, 4 SWCLK, 5 GND, 6 SWO, 9 GND, 10 NRST |
+| MCU_SWD 1x6 | 3V3, SWCLK, GND, SWDIO, NRST, SWO |
+| MCU_UART 1x6 (FTDI) | GND, -, -, RX (from FTDI TXD), TX (to FTDI RXD), - |
+| SOFTCORE_SWD MIPI-10 | same as MCU, driven by FPGA user IO (bank 15) |
+| SOFTCORE_UART 1x6 (FTDI) | same as MCU UART |
+| FPGA_JTAG 2x7 2 mm | Xilinx platform cable pinout |
+| FPGA_JTAG 1x6 | VREF, GND, TCK, TDO, TDI, TMS (Digilent HS2 order) |
+| PMODA / PMODB | Digilent 12-pin, 3V3, FPGA bank 13 |
+| MCU_BREAKOUT 2x20 | 24 STM32 GPIO (ADC, timers, SAI1, SDMMC1 on PC8-PC12/PD2), I2C1, FDCAN1, NRST, power |

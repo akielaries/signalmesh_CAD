@@ -9,11 +9,14 @@
 boards/<BOARD>/<vN_rM>/    one kicad project per version/revision
 boards/_archive/           pre-split signalmesh v1-v4 dumps, not maintained
 sim/                       spice + signal-integrity sim toolkit
-tools/                     render, gallery, and fmc parity scripts
+tools/                     render, gallery, docs, and fmc parity scripts
 3d_assembly/               freeCAD assembly
 ```
 
-boards today: 7SDD, ACM, AFFM, APM, AUDIO_BOARD, COMPUTE_BOARD, OSC_CTRL.
+boards today: 7SDD, ACM, AFFM, APM, AUDIO_BOARD, COMPUTE_BOARD, MAIN_COMPUTE_BOARD, OSC_CTRL.
+
+board docs: markdown in `boards/<BOARD>/<vN_rM>/docs/` is converted by
+`tools/mddoc.py` and linked from that board's card on the github pages gallery.
 
 only the newest revision of each active board is rendered in ci. the allowlist
 lives in `tools/render.sh` (`RENDER_BOARDS`) and doubles as the github actions
