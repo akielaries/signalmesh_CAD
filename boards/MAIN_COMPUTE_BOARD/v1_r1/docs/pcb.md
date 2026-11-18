@@ -52,8 +52,10 @@ the VITA connector footprint it drops to 0.10 mm, so pairs can leave the 1.27 mm
   silkscreen labels: row a has the FPGA JTAG 1x6, MCU SWD 1x6 and BOOT0; row b has the
   Xilinx JTAG 2x7, MCU UART and SC UART; row c has PMOD A, PMOD B and the two MIPI-10s
   side by side. The 2x20 MCU breakout runs along the DIN.
-- mounting: four M3 holes (top and bottom corners of the free area) plus the two VITA
-  standoffs, all tied to GND.
+- mounting: four M3 holes near the card corners (front-panel side and DIN side) plus the two
+  VITA standoffs, all tied to GND.
+- QSPI flashes (2x W25Q01JVZEIQ, WSON-8) sit on the bottom side inside the STM32 outline,
+  between its QUADSPI pins.
 - kept-clear routing channels on top: FPGA to SFP (GTP), FPGA to STM32 (FMC),
   FPGA to VITA (LA pairs). FPGA and STM32 decoupling sits on the bottom side.
 - power bottom-left, audio in its own bottom-right corner, mirrored L/R.
@@ -74,7 +76,8 @@ Coupled 100 R pairs on F.Cu (microstrip over In1 GND), In2 (stripline between In
 GND) and B.Cu (microstrip over In6 GND). In5 is not used for transceivers because it
 references the split In4 power plane. Lengths run from FPGA ball to connector pad,
 including both sides of the AC-coupling capacitor. Skew is total P minus N, matched with
-small bumps on the shorter half.
+small bumps on the shorter half. REFCLK1 is left at 1 mm (about 7 ps): there is no room
+for bumps on that route, and the offset is negligible for a reference clock.
 
 | lane | length mm | P/N skew mm | vias | layers |
 |---|---|---|---|---|
@@ -82,11 +85,11 @@ small bumps on the shorter half.
 | SFP0 RX | 27.9 | 0.00 | 4 | F, In2 |
 | SFP1 TX | 27.2 | 0.00 | 8 | F, In2 |
 | SFP1 RX | 31.4 | 0.13 | 8 | F, In2 |
-| VITA DP0 C2M | 32.8 | 0.04 | 8 | F, In2 |
-| VITA DP1 C2M | 51.2 | 0.07 | 8 | F, In2 |
-| VITA DP0 M2C | 34.6 | 0.00 | 4 | F, In2 |
-| VITA DP1 M2C | 34.6 | 0.00 | 4 | F, B |
-| REFCLK1 (VITA GBTCLK0) | 33.2 | 0.00 | 8 | F, In2, B |
+| VITA DP0 C2M | 27.4 | 0.08 | 8 | F, In2 |
+| VITA DP1 C2M | 47.5 | 0.06 | 8 | F, In2 |
+| VITA DP0 M2C | 26.3 | 0.00 | 4 | F, In2 |
+| VITA DP1 M2C | 25.8 | 0.00 | 4 | F, B |
+| REFCLK1 (VITA GBTCLK0) | 28.9 | 1.00 | 8 | F, In2, B |
 | REFCLK0 (125 MHz osc) | 23.6 | 0.00 | 4 | F, B |
 
 - the DC-blocking caps sit near the receiver: at the connector for FPGA TX, at the FPGA

@@ -87,34 +87,34 @@ audio corner. See [bring-up](bringup.md) for the power-on order.
 
 | label | ref | net | expect | location |
 |---|---|---|---|---|
-| 12VIN | TP1 | +12V_JACK | 12 V (input, before protection) | x 17 mm, y 8 mm, bottom side |
-| 12V | TP2 | +12V | 12 V (after fuse, reverse FET and shunt) | x 137 mm, y 13 mm, bottom side |
+| 12VIN | TP1 | +12V_JACK | 12 V (input, before protection) | x 24 mm, y 8 mm, bottom side |
+| 12V | TP2 | +12V | 12 V (after fuse, reverse FET and shunt) | x 138 mm, y 18 mm, bottom side |
 | 5V | TP3 | +5V | 5.0 V | x 48 mm, y 67 mm, bottom side |
 | 3V3 | TP4 | +3V3 | 3.3 V | x 32 mm, y 10 mm, bottom side |
 | 1V0 | TP5 | +1V0 | 1.00 V | x 42 mm, y 57 mm, bottom side |
 | 1V8 | TP6 | +1V8 | 1.80 V | x 46 mm, y 57 mm, bottom side |
 | 1V35 | TP7 | +1V35 | 1.35 V | x 52 mm, y 74 mm, bottom side |
-| VADJ | TP8 | VADJ | 0 V until enabled, then 1.8/2.5/2.6/3.3 V per VADJ_SEL | x 61 mm, y 6 mm, bottom side |
-| 3V3M | TP9 | +3V3_MEZZ | 3.3 V | x 133 mm, y 14 mm, bottom side |
-| 12VM | TP10 | +12V_MEZZ | 12 V | x 130 mm, y 28 mm, bottom side |
+| VADJ | TP8 | VADJ | 0 V until enabled, then 1.8/2.5/2.6/3.3 V per VADJ_SEL | x 60 mm, y 6 mm, bottom side |
+| 3V3M | TP9 | +3V3_MEZZ | 3.3 V | x 131 mm, y 13 mm, bottom side |
+| 12VM | TP10 | +12V_MEZZ | 12 V | x 121 mm, y 28 mm, bottom side |
 | MGTAVCC | TP11 | +1V0_MGT | 1.00 V | x 54 mm, y 51 mm, bottom side |
 | MGTAVTT | TP12 | +1V2_MGT | 1.20 V | x 56 mm, y 56 mm, bottom side |
-| 5VA | TP13 | +5V_AUD | 5.0 V | x 135 mm, y 77 mm, bottom side |
-| 3V3A | TP14 | +3V3_AUD | 3.3 V | x 125 mm, y 65 mm, bottom side |
+| 5VA | TP13 | +5V_AUD | 5.0 V | x 128 mm, y 84 mm, bottom side |
+| 3V3A | TP14 | +3V3_AUD | 3.3 V | x 132 mm, y 68 mm, bottom side |
 | VTT | TP28 | VTT_DDR | 0.675 V | x 66 mm, y 62 mm, bottom side |
-| VREF | TP29 | VREF_DDR | 0.675 V | x 57 mm, y 74 mm, bottom side |
+| VREF | TP29 | VREF_DDR | 0.675 V | x 58 mm, y 74 mm, bottom side |
 | PG5V | TP15 | PG_5V | high (5 V) when 5V is good | x 37 mm, y 62 mm, bottom side |
 | PG1V0 | TP16 | PG_1V0 | high (5 V) when 1V0 is good | x 52 mm, y 60 mm, bottom side |
 | PG1V8 | TP17 | PG_1V8 | high (5 V) when 1V8 is good | x 44 mm, y 68 mm, bottom side |
 | PG3V3 | TP18 | PG_3V3 | high (5 V) when 3V3 is good | x 34 mm, y 94 mm, bottom side |
-| PG3V3M | TP19 | PG_3V3M | high (5 V) when 3V3_MEZZ is good | x 129 mm, y 14 mm, bottom side |
-| PGVADJ | TP20 | VADJ_PG | high (3.3 V) when VADJ is good | x 51 mm, y 9 mm, bottom side |
-| DONE | TP26 | FPGA_DONE | high after the FPGA is configured | x 72 mm, y 26 mm, bottom side |
+| PG3V3M | TP19 | PG_3V3M | high (5 V) when 3V3_MEZZ is good | x 131 mm, y 9 mm, bottom side |
+| PGVADJ | TP20 | VADJ_PG | high (3.3 V) when VADJ is good | x 49 mm, y 9 mm, bottom side |
+| DONE | TP26 | FPGA_DONE | high after the FPGA is configured | x 72 mm, y 27 mm, bottom side |
 | INIT | TP27 | FPGA_INIT_B | high once the FPGA has cleared its memory | x 72 mm, y 58 mm, bottom side |
 | NRST | TP25 | NRST | 3.3 V, low while the STM32 is in reset | x 98 mm, y 50 mm, bottom side |
 | GND | TP21 | GND | 0 V | x 29 mm, y 68 mm |
-| GND | TP22 | GND | 0 V | x 100 mm, y 92 mm |
-| GND | TP23 | GND | 0 V | x 133 mm, y 62 mm |
+| GND | TP22 | GND | 0 V | x 133 mm, y 64 mm |
+| GND | TP23 | GND | 0 V | x 133 mm, y 60 mm |
 | GND | TP24 | GND | 0 V | x 135 mm, y 88 mm |
 
 ## clocks on the board
@@ -134,7 +134,7 @@ audio corner. See [bring-up](bringup.md) for the power-on order.
 
 ### STM32 SWD, MIPI-10 (J3)
 
-x 101 mm, y 80 mm from the front-top corner, top, `MCU_SWD MIPI-10`. Key pin 7 removed.
+x 99 mm, y 93 mm from the front-top corner, top, `MCU_SWD MIPI-10`. Key pin 7 removed.
 
 | pin | signal |
 |---|---|
@@ -151,7 +151,7 @@ x 101 mm, y 80 mm from the front-top corner, top, `MCU_SWD MIPI-10`. Key pin 7 r
 
 ### soft-core SWD, MIPI-10 (J14)
 
-x 108 mm, y 90 mm from the front-top corner, top, `SOFTCORE_SWD MIPI-10`. 
+x 107 mm, y 93 mm from the front-top corner, top, `SOFTCORE_SWD MIPI-10`. 
 
 | pin | signal |
 |---|---|
@@ -168,7 +168,7 @@ x 108 mm, y 90 mm from the front-top corner, top, `SOFTCORE_SWD MIPI-10`.
 
 ### FPGA JTAG 2x7 (J12)
 
-x 61 mm, y 80 mm from the front-top corner, top, `FPGA_JTAG Xilinx`. 
+x 62 mm, y 86 mm from the front-top corner, top, `FPGA_JTAG Xilinx`. 
 
 | pin | signal |
 |---|---|
@@ -189,7 +189,7 @@ x 61 mm, y 80 mm from the front-top corner, top, `FPGA_JTAG Xilinx`.
 
 ### FPGA JTAG 1x6 (J13)
 
-x 77 mm, y 78 mm from the front-top corner, top, `FPGA_JTAG 6p`. 
+x 67 mm, y 78 mm from the front-top corner, top, `FPGA_JTAG 6p`. 
 
 | pin | signal |
 |---|---|
@@ -202,7 +202,7 @@ x 77 mm, y 78 mm from the front-top corner, top, `FPGA_JTAG 6p`.
 
 ### STM32 console UART (J5)
 
-x 82 mm, y 83 mm from the front-top corner, top, `MCU_UART FTDI`. Pin 4 is the STM32 RX (connect FTDI TXD).
+x 78 mm, y 84 mm from the front-top corner, top, `MCU_UART FTDI`. Pin 4 is the STM32 RX (connect FTDI TXD).
 
 | pin | signal |
 |---|---|
@@ -215,7 +215,7 @@ x 82 mm, y 83 mm from the front-top corner, top, `MCU_UART FTDI`. Pin 4 is the S
 
 ### soft-core UART (J15)
 
-x 72 mm, y 88 mm from the front-top corner, top, `SOFTCORE_UART FTDI`. 
+x 96 mm, y 84 mm from the front-top corner, top, `SOFTCORE_UART FTDI`. 
 
 | pin | signal |
 |---|---|
@@ -326,7 +326,7 @@ x 114 mm, y 70 mm from the front-top corner, top, `IOX_SPARE`.
 
 ### BOOT0 (J2)
 
-x 132 mm, y 6 mm from the front-top corner, top, `BOOT0`. 
+x 101 mm, y 78 mm from the front-top corner, top, `BOOT0`. 
 
 | pin | signal |
 |---|---|
