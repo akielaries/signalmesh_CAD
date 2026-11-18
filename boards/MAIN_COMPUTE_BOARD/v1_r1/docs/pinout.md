@@ -575,6 +575,8 @@ tied low, so the card EEPROM answers at 0x50 on I2C1.
 | pins | signal |
 |---|---|
 | a1, a2, b1, b2, c1, c2 | +12V (shared with the barrel jack) |
+| a28, c28 | -12V (for analog cards, not connected on this board) |
+| a30, c30 | +5V (for other cards, not connected on this board) |
 | a3/b3/c3, a32/b32/c32, even b rows | GND |
 | a5 | BP_TDM_MCLK |
 | a7 | BP_TDM_BCLK |

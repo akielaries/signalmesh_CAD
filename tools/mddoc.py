@@ -2,7 +2,7 @@
 # minimal markdown to html for the per-board docs published next to the renders
 #
 # supports what the board docs use: headings, paragraphs, lists, tables, fenced
-# code (mermaid blocks become diagrams), inline code, bold and links. links to
+# code (mermaid blocks become diagrams), images, inline code, bold and links. links to
 # .md files are rewritten to .html so docs cross-link on github pages too
 #
 # usage:
@@ -11,6 +11,7 @@
 import html
 import os
 import re
+import shutil
 import sys
 
 
@@ -18,6 +19,8 @@ def inline(s):
     s = html.escape(s, quote=False)
     s = re.sub(r'`([^`]+)`', r'<code>\1</code>', s)
     s = re.sub(r'\*\*([^*]+)\*\*', r'<strong>\1</strong>', s)
+    # images before links so ![x](y) is not read as a link
+    s = re.sub(r'!\[([^\]]*)\]\(([^)]+)\)', r'<img src="\2" alt="\1">', s)
 
     def link(m):
         href = m.group(2)
@@ -117,6 +120,7 @@ PAGE = """<!doctype html>
   code { font-size: .85em; background: #8882; padding: .1em .3em; border-radius: 4px; }
   pre { overflow-x: auto; }
   pre.mermaid { background: transparent; text-align: center; }
+  img { max-width: 100%; height: auto; background: #fff; border-radius: 6px; padding: 6px; }
 </style>
 </head>
 <body>
@@ -138,7 +142,13 @@ def build_docs(docs_dir, out_dir, board):
     os.makedirs(out_dir, exist_ok=True)
     pages = 0
     for f in sorted(os.listdir(docs_dir)):
+        src = os.path.join(docs_dir, f)
         if not f.endswith('.md'):
+            # diagrams (drawio sources, exported svg) and other assets ship as-is
+            if os.path.isdir(src):
+                shutil.copytree(src, os.path.join(out_dir, f), dirs_exist_ok=True)
+            else:
+                shutil.copy2(src, os.path.join(out_dir, f))
             continue
         text = open(os.path.join(docs_dir, f), encoding='utf-8').read()
         m = re.search(r'^#\s+(.*)$', text, re.M)

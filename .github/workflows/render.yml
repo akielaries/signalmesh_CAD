@@ -139,6 +139,19 @@ jobs:
           merge-multiple: true
           path: renders_staged
 
+      # refresh every board's docs/export/*.svg from the committed .drawio
+      # sources so the published diagrams always match their source
+      - name: export draw.io diagrams
+        uses: rlespinasse/drawio-export-action@v2
+        with:
+          path: boards
+          format: svg
+          output: export
+          action-mode: all
+          remove-page-suffix: true
+          border: 10
+          embed-svg-fonts: true
+
       - name: build gallery
         run: python3 tools/gallery.py renders_staged _site
 

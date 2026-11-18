@@ -4,25 +4,9 @@
 Every rail below is generated on board. Sequencing is automatic and follows the
 Artix-7 order in DS181 (VCCINT, VCCBRAM, VCCAUX, VCCO; MGTAVCC before MGTAVTT).
 
-```mermaid
-flowchart TD
-  IN[12V jack / DIN a1-c2] --> F1[polyfuse 3A] --> Q1[reverse FET DMP3013SFV] --> SH[10m shunt, INA219 0x40] --> V12[+12V]
-  V12 --> R5[LMR33630<br/>+5V 3A]
-  V12 --> R33M[LMR33630<br/>+3V3_MEZZ 3A]
-  V12 --> RVADJ[TPS62130<br/>VADJ 1.8/2.5/3.3V 3A]
-  V12 --> F2[polyfuse 1.1A] --> V12M[+12V_MEZZ]
-  R5 -->|PG_5V| R10[TPS62130<br/>+1V0 VCCINT/BRAM 3A]
-  R10 -->|PG_1V0| R18[TPS62130<br/>+1V8 VCCAUX 3A]
-  R18 --> LMGA[TLV75801<br/>+1V0_MGT MGTAVCC]
-  R18 -->|RC delay| LMGT[TLV75801<br/>+1V2_MGT MGTAVTT]
-  R18 -->|PG_1V8| R135[TLV62568<br/>+1V35 DDR 1A]
-  R18 -->|PG_1V8| R33[LMR33630<br/>+3V3 3A]
-  R135 --> VTT[TPS51200<br/>VTT_DDR 0.675V + VREF_DDR]
-  R5 --> HS[TPS2051<br/>+5V_USBH 0.5A]
-  R5 --> FBA[ferrite] --> V5A[+5V_AUD] --> CP[LM2662<br/>-5V]
-  R33 --> FB3[ferrites] --> V3A[+3V3_AUD, +3V3_VDDA,<br/>+3V3_SFP0/1, ETH_AVDD]
-  R18 --> FBADC[ferrite] --> VADC[VCCADC]
-```
+![power tree](export/power.svg)
+
+source: [power.drawio](power.drawio)
 
 ## rails
 
