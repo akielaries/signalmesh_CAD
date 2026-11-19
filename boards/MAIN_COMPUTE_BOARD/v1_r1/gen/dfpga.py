@@ -47,7 +47,13 @@ def bank_balls(bank):
 def plan():
     m = {}
 
+    # fmc layout swap (fmcswap.py): within d16-d31, a0-a18 and the controls, nets follow the
+    # crossing-free pairing with the stm32 pins. d0-d15, fmc_clk and config pins are fixed
+    fsw = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'fmc_swap.json')
+    fswap = json.load(open(fsw)) if os.path.exists(fsw) else {}
+
     def put(ball, net):
+        net = fswap.get(net, net)
         if ball in m:
             raise ValueError('ball %s used twice (%s, %s)' % (ball, m[ball], net))
         m[ball] = net

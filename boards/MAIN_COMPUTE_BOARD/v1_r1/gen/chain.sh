@@ -14,7 +14,11 @@ PHASE=measure ITERS=${DDR_ITERS:-60} ${PY:-python3} ddr2.py $P gtp_tuned.kicad_p
 PHASE=route ITERS=${DDR_ITERS:-60} ${PY:-python3} ddr2.py $P gtp_tuned.kicad_pcb 2>&1 | grep -v "$F" | grep "iter 5\|stretch\|committed\|Traceback\|Error" | tail -12
 cp $P ddr_routed.kicad_pcb
 ${PY:-python3} ddr_tune.py $P 2>&1 | grep -v "$F"
+${PY:-python3} fmc2.py $P $P 2>&1 | grep -v "$F" | grep "routed\|no fpga\|no stm32"
+${PY:-python3} octify.py $P "" 2>&1 | grep -v "$F" | grep "off-angle"
+${PY:-python3} octify.py $P "" 2>&1 | grep -v "$F" | grep "off-angle"
 ${PY:-python3} resilk.py $P 2>&1 | grep -v "$F"
 kicad-cli pcb drc --refill-zones --schematic-parity --severity-all -o $S/drc_chain.rpt $P >/dev/null
 grep -E "^\[" $S/drc_chain.rpt | grep -v "unconnected\|via_dangling" | sed 's/(.*//' | sort | uniq -c
 grep Found $S/drc_chain.rpt
+${PY:-python3} ddrdoc.py $P "$(dirname $P)/docs" 2>&1 | grep -v "$F"

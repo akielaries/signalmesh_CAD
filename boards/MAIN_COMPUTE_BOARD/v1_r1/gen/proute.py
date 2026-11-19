@@ -228,10 +228,10 @@ def drop_via(bd, p, net, toward, staged, w=0.1, radii=(0.75, 0.9, 1.05, 1.25, 1.
     v = existing_via(bd, p, net)
     if v:
         return v
-    ang0 = math.atan2(toward[1] - p[1], toward[0] - p[0])
+    ang0 = round(math.atan2(toward[1] - p[1], toward[0] - p[0]) / (math.pi / 4)) * (math.pi / 4)
     for rad in radii:
-        for k in range(16):
-            da = (k + 1) // 2 * (1 if k % 2 else -1) * (math.pi / 8)
+        for k in range(8):
+            da = (k + 1) // 2 * (1 if k % 2 else -1) * (math.pi / 4)
             a = ang0 + da
             x, y = p[0] + rad * math.cos(a), p[1] + rad * math.sin(a)
             if not via_spot_ok(bd, x, y, net):
@@ -373,12 +373,17 @@ def route_pair_c(bd, netp, netn, sp, sn, ep, en, layer, w, gap, clr, waypoint=No
     t1 = min([s for s, q in zip(ts, pin) if q.distance(Point(ce)) <= re_ + 0.05] or [cl.length])
     if t1 - t0 < 0.3:
         return None, 'too short to couple'
-    core = substring(cl, t0, t1).simplify(0.02)
+    # octilinear centreline: pull the grid staircase tight with 0/45/90 doglegs only, against the
+    # obstacles for the full pair width; mitred offsets then keep both halves at 45-degree corners
+    cpts = [tuple(q) for q in substring(cl, t0, t1).coords]
+    xs_ = [p[0] for p in cpts]
+    ys_ = [p[1] for p in cpts]
+    win = (min(xs_) - 1.0, min(ys_) - 1.0, max(xs_) + 1.0, max(ys_) + 1.0)
+    bl, _, _ = bd.grid(layer, win, half, {netp, netn}, clr, margin=0.0)
+    core = LineString(rlib.pull_tight(rlib.simplify(cpts), bl, win[0], win[1]))
     offs = {}
     for side in (1, -1):
-        o = core.offset_curve(side * (w + gap) / 2, quad_segs=2, join_style=1)
-        if not o.is_empty and o.geom_type == 'LineString':
-            o = o.simplify(0.003)
+        o = core.offset_curve(side * (w + gap) / 2, join_style=2, mitre_limit=2.5)
         if o.is_empty or o.geom_type != 'LineString':
             return None, 'offset failed'
         offs[side] = [tuple(q) for q in o.coords]

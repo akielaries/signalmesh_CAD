@@ -27,7 +27,8 @@ todo = []
 for i in range(len(ts)):
     t = ts[i]
     n = t.GetNetname()
-    if t.GetClass() == 'PCB_VIA' or not n.startswith(PREFIX):
+    if t.GetClass() == 'PCB_VIA' or not n.startswith(PREFIX) or n.endswith(('_P', '_N')):
+        # pairs are octilinear from the pair router (both halves must move together)
         continue
     ly = bd.b.GetLayerName(t.GetLayer())
     if ly not in rlib.LAYERS:

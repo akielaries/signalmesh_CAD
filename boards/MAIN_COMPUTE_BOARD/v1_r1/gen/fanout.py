@@ -62,6 +62,12 @@ def layers_hit(a, b_):
 VIAS = []  # (x, y) of every drilled via, any net
 
 
+def octi(dx, dy):
+    # stub direction is a multiple of 45 degrees (orthodox fanout)
+    a = math.degrees(math.atan2(dy, dx)) % 45.0
+    return min(a, 45.0 - a) < 1.0
+
+
 def via_ok(x, y, r, net, clr=CLR):
     # drill to drill spacing applies regardless of net (0.25 mm wall between 0.2 mm drills)
     for (vx, vy) in VIAS:
@@ -258,7 +264,7 @@ for p in L(fp.Pads()):
     else:
         ux, uy = 0, (1 if py > cy else -1)
     for off in (1.25, 1.6, 2.0):
-        for lat in (0.0, 0.5, -0.5):
+        for lat in (0.0, off, -off):
             vx, vy = px + ux * off + uy * lat, py + uy * off + ux * lat
             if via_ok(vx, vy, 0.225, net) and seg_ok(px, py, vx, vy, 0.125, net, 'F'):
                 add_via(vx, vy, net)
@@ -289,7 +295,7 @@ for fp in L(b.Footprints()):
             dd = math.hypot(vx - px, vy - py)
             if dd > 1.8:
                 break
-            if seg_ok(px, py, vx, vy, 0.1, net, 'B'):
+            if octi(vx - px, vy - py) and seg_ok(px, py, vx, vy, 0.1, net, 'B'):
                 best = (vx, vy)
                 break
         if best:
@@ -304,7 +310,7 @@ for fp in L(b.Footprints()):
         ax, ay = ax / al, ay / al
         done = False
         for off in (0.55, 0.75, 1.0, 1.3):
-            for lat in (0.0, 0.45, -0.45, 0.8, -0.8):
+            for lat in (0.0, off, -off):
                 vx, vy = px + ax * off - ay * lat, py + ay * off + ax * lat
                 if via_ok(vx, vy, 0.225, net) and seg_ok(px, py, vx, vy, 0.1, net, 'B'):
                     add_via(vx, vy, net)
@@ -353,6 +359,7 @@ for fp in L(b.Footprints()):
         px, py = p.GetPosition().x / MM, p.GetPosition().y / MM
         # reuse a same-net via already close by
         near = [(vx, vy) for (vx, vy) in vias_by_net.get(net, []) if math.hypot(vx - px, vy - py) < 1.2]
+        near = [v for v in near if octi(v[0] - px, v[1] - py)]
         if near and seg_ok(px, py, near[0][0], near[0][1], 0.125, net, lay_s):
             add_track(px, py, near[0][0], near[0][1], 0.25, net, lay_l)
             n_top += 1
@@ -361,11 +368,12 @@ for fp in L(b.Footprints()):
         al = math.hypot(ax, ay)
         if al < 0.05:
             ax, ay, al = 1.0, 0.0, 1.0
-        ax, ay = ax / al, ay / al
+        a0 = round(math.atan2(ay, ax) / (math.pi / 4)) * (math.pi / 4)
+        ax, ay = math.cos(a0), math.sin(a0)
         sz = max(p.GetSize().x, p.GetSize().y) / MM / 2
         done = False
         for off in (sz + 0.4, sz + 0.65, sz + 0.95, sz + 1.3):
-            for ang in (0, 35, -35, 70, -70, 110, -110, 180):
+            for ang in (0, 45, -45, 90, -90, 135, -135, 180):
                 ca, sa = math.cos(math.radians(ang)), math.sin(math.radians(ang))
                 dx, dy = ax * ca - ay * sa, ax * sa + ay * ca
                 vx, vy = px + dx * off, py + dy * off

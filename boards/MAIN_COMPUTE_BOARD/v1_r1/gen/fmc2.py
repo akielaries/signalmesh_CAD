@@ -26,7 +26,7 @@ WIN = (106.0, 74.0, 188.0, 122.0)
 CLR = 0.127
 WIDTH = {'In2.Cu': (0.23, 0.10), 'In5.Cu': (0.23, 0.10), 'B.Cu': (0.127, 0.10), 'F.Cu': (0.127, 0.10)}
 LAYER_COST = {'In2.Cu': 1.0, 'In5.Cu': 1.0, 'B.Cu': 1.15, 'F.Cu': 1.1}
-ITERS = int(os.environ.get('ITERS', '60'))
+ITERS = int(os.environ.get('FMC_ITERS', '40'))
 DDR_BLOCK = [(95.0, 94.0), (121.2, 94.0), (121.2, 135.5), (95.0, 135.5)]
 OUTER = tuple(0.75 + 0.25 * i for i in range(22))
 
@@ -115,7 +115,7 @@ def box_of(path):
 def route_leg(leg, pres):
     ja, ia = cell(leg['a'])
     jb, ib = cell(leg['b'])
-    m = int(8.0 / G)
+    m = int(5.0 / G)
     j0, j1 = max(0, min(ja, jb) - m), min(NY, max(ja, jb) + m)
     i0, i1 = max(0, min(ia, ib) - m), min(NX, max(ia, ib) + m)
     best = None
