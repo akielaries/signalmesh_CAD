@@ -1,18 +1,20 @@
 #!/usr/bin/env bash
 # run ddr route + tune variants in parallel (seed x spacing), score each: 3 x open legs + nets out of window
 S=$(cd "$(dirname "$0")" && pwd)
-cd "$S"; mkdir -p var
+cd "$S"
+# variants and checkpoints live outside the kicad project dir so kicad backups stay small
+CK=$S/../../checkpoints; V=$CK/var; mkdir -p $V
 PY=${PY:-python3}
 F="assert\|pcb_track.cpp\|swig\|Debug"
 run() {
     tag=$1; seed=$2; sp=$3; spc=$4
-    b=var/$tag.kicad_pcb
-    export SEED=$( [ "$seed" = 0 ] && echo "" || echo $seed ) SPREAD=$sp SPREAD_CMD=$spc TFILE=var/$tag.targets.json ROUTES=var/$tag.routes.json ITERS=60
-    { PHASE=measure $PY ddr2.py $b gtp_tuned.kicad_pcb 2>&1 | grep -v "$F" | grep "targets"
-      PHASE=route $PY ddr2.py $b gtp_tuned.kicad_pcb 2>&1 | grep -v "$F" | grep "committed"
-      $PY ddr_tune.py $b 2>&1 | grep -v "$F"; } > var/$tag.log 2>&1
-    open=$(grep -o "left open: \[.*\]" var/$tag.log | grep -o "('DDR" | wc -l)
-    out=$(grep -c " OUT$" var/$tag.log)
+    b=$V/$tag.kicad_pcb
+    export SEED=$( [ "$seed" = 0 ] && echo "" || echo $seed ) SPREAD=$sp SPREAD_CMD=$spc TFILE=$V/$tag.targets.json ROUTES=$V/$tag.routes.json ITERS=60
+    { PHASE=measure $PY ddr2.py $b $CK/gtp_tuned.kicad_pcb 2>&1 | grep -v "$F" | grep "targets"
+      PHASE=route $PY ddr2.py $b $CK/gtp_tuned.kicad_pcb 2>&1 | grep -v "$F" | grep "committed"
+      $PY ddr_tune.py $b 2>&1 | grep -v "$F"; } > $V/$tag.log 2>&1
+    open=$(grep -o "left open: \[.*\]" $V/$tag.log | grep -o "('DDR" | wc -l)
+    out=$(grep -c " OUT$" $V/$tag.log)
     echo "$tag seed=$seed spread=$sp/$spc open=$open out=$out score=$((3 * open + out))"
 }
 i=0

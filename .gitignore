@@ -10,3 +10,9 @@ boards/**/renders/
 
 # python bytecode from tools/
 __pycache__/
+
+# kicad zip backups: git history is the backup, and they grow past github limits
+*-backups/
+
+# router checkpoints and intermediate boards (kept outside the kicad project dirs)
+boards/**/checkpoints/
