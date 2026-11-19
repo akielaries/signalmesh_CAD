@@ -245,25 +245,30 @@ def drop_via(bd, p, net, toward, staged, w=0.1, radii=(0.75, 0.9, 1.05, 1.25, 1.
     return None
 
 
-def route_pair_any(bd, netp, netn, sp, sn, ep, en, clr, layers=None):
+def route_pair_any(bd, netp, netn, sp, sn, ep, en, clr, layers=None, s_layers=('F.Cu',), e_layers=('F.Cu',)):
     if layers is None:
         layers = ('F.Cu',) + tuple(os.environ.get('INNER', 'In2.Cu,In5.Cu').split(','))
-    # try the top layer, then inner layers with vias dropped where an end is top-only
+    # direct on an outer layer both ends' pads are on, else vias dropped beside the pads (stub on
+    # the pad's own layer) and the pair on the given layer
     why = []
     for ly in layers:
-        if ly == 'F.Cu':
-            s, l = route_pair(bd, netp, netn, sp, sn, ep, en, 'F.Cu', 0.10, 0.18, clr)
+        if ly in ('F.Cu', 'B.Cu') and ly in s_layers and ly in e_layers:
+            w, gap = (0.10, 0.18)
+            s, l = route_pair(bd, netp, netn, sp, sn, ep, en, ly, w, gap, clr)
             if s:
                 return s, (ly, l)
             why.append((ly, l))
             continue
+        if ly == 'F.Cu':
+            why.append((ly, 'pads not on F.Cu'))
+            continue
         w, gap = INNER[ly]
         staged = []
         mids = mid(sp, sn), mid(ep, en)
-        vsp = drop_via(bd, sp, netp, mids[1], staged)
-        vsn = drop_via(bd, sn, netn, mids[1], staged) if vsp else None
-        vep = drop_via(bd, ep, netp, mids[0], staged) if vsn else None
-        ven = drop_via(bd, en, netn, mids[0], staged) if vep else None
+        vsp = drop_via(bd, sp, netp, mids[1], staged, layer=s_layers[0])
+        vsn = drop_via(bd, sn, netn, mids[1], staged, layer=s_layers[0]) if vsp else None
+        vep = drop_via(bd, ep, netp, mids[0], staged, layer=e_layers[0]) if vsn else None
+        ven = drop_via(bd, en, netn, mids[0], staged, layer=e_layers[0]) if vep else None
         if not ven:
             bd.unstage(staged)
             why.append((ly, 'via drop failed %s' % [bool(q) for q in (vsp, vsn, vep, ven)]))

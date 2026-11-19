@@ -69,20 +69,18 @@ the VITA connector footprint it drops to 0.10 mm, so pairs can leave the 1.27 mm
 | VITA LA pairs and clocks | 10 of 36 pairs routed; the rest by hand (2.8 mm gap between the connector and the FPGA's top banks) |
 | FMC and FPGA config | 49 of 73 nets routed after the pin swap; the rest by hand |
 | QSPI | 4 of 10 routed (BK1_IO2/IO3, BK2_IO0/IO1); CLK, NCS, BK1_IO0/IO1, BK2_IO2/IO3 by hand |
-| ULPI | not routed; about 105-140 mm with the USB3300 at the front panel, over the 90 mm TI guidance (see below) |
-| RMII and MDIO | 2 of 9 routed (CRS_DV 110 mm, RXD0 108 mm). TXD0/TXD1/TX_EN can only use PG11-13 or PB11-13 (taken by ULPI), and PG11-13 sit on the STM32's far edge: about 180-240 mm around the FPGA/DDR. Fix: move the LAN8742 beside the STM32 at the next regeneration (with the USB3300); REF_CLK, MDC, MDIO, RXD1 by hand |
+| ULPI | USB3300 moved beside the STM32 (bottom, below it): D0, D1, D3 routed at 9-17 mm; CK, D2, D4-D7, DIR, NXT, STP, RST by hand (all short now); USB HS pair routed on In2, 116 mm |
+| RMII and MDIO | LAN8742 moved beside the STM32 (bottom, under its upper right): REF_CLK 35 mm, TX_EN 22 mm, MDC 33 mm routed; CRS_DV, RXD0, RXD1, TXD0, TXD1, MDIO, NRST by hand (all short now); both MDI pairs to the RJ45 (about 105 mm, 100 R) by hand |
 | low-speed and power | autorouter, then cleanup |
 
-### ULPI length
+### PHY placement
 
-ULPI runs at 60 MHz with the clock sourced by the PHY, so the budget is the round trip
-(clock out to the STM32, data back) against the PHY's and STM32's setup/hold and clock-to-out.
-No USB3300-specific maximum was found; TI's TUSB1210 guidance is 90 mm maximum (600 ps one
-way) and generic guidance is 3 in (76 mm). The planned route is 105-140 mm, roughly 0.7-0.9 ns
-one way. That may still close at 60 MHz, but it is outside every published guideline. The
-safe fix is moving the USB3300, its crystal and decaps beside the STM32 on the bottom side
-and routing the USB HS pair (90 R differential, tolerant of length) to the front panel instead,
-at the next full regeneration.
+The USB3300 and LAN8742 groups (PHY, crystal, decaps, straps, terminations) sit on the bottom side
+beside the STM32, so ULPI and RMII are 10-35 mm. The long runs are differential instead: the USB HS
+pair (90 R) to the USB-C and the two Ethernet MDI pairs (100 R) to the RJ45, about 105-115 mm. That
+is fine for USB HS; for 100BASE-TX it is longer than the ideal (PHY within about 25 mm of the
+magnetics) but works. The ESD part (U14), VBUS cap (C102) and the magnetics centre tap parts
+(R60, C113) stay at their connectors.
 
 ### GTP lanes
 
