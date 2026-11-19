@@ -7,6 +7,7 @@ and it can also drive RF or other front ends through the VITA 57.1 mezzanine.
 - [power tree and sequencing](power.md)
 - [pin plans: STM32, FPGA banks, connectors](pinout.md)
 - [PCB: stackup, impedance, net classes, floorplan, routing status](pcb.md)
+- [DDR3 routing: per-net status and finishing guide](ddr_routing.md)
 - [bring-up: first power-up, firmware notes](bringup.md)
 - [backplane system and Eurorack notes](system.md)
 - [performance, clocks and overclocking](performance.md)

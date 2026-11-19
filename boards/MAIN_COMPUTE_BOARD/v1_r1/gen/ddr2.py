@@ -45,7 +45,9 @@ ITERS = int(os.environ.get('ITERS', '14'))
 # two runs: PHASE=measure writes per-group target lengths from the natural routes, PHASE=route
 # stretches pairs and legs to them (waypoint detours); ddr_tune.py trims what is left
 PHASE = os.environ.get('PHASE', 'route')
-TFILE = os.path.join(HERE, 'ddr_targets.json')
+TFILE = os.environ.get('TFILE', os.path.join(HERE, 'ddr_targets.json'))
+ROUTES = os.environ.get('ROUTES', os.path.join(HERE, 'ddr_routes.json'))
+SEED = os.environ.get('SEED')
 TARGETS = json.load(open(TFILE)) if PHASE == 'route' and os.path.exists(TFILE) else {}
 PAIR_GROUP = {'DQS0': 'LANE0', 'DQS1': 'LANE1', 'CK': 'CMD'}
 # extra spacing between ddr legs outside the ball fields, room for in-place serpentines (ddr_tune)
@@ -306,7 +308,9 @@ def conflicts():
 
 
 pres = 0.5
-order = sorted(legs, key=lambda l: math.hypot(l['a'][0] - l['b'][0], l['a'][1] - l['b'][1]))
+_rng = __import__('random').Random(int(SEED)) if SEED else None
+order = sorted(legs, key=lambda l: math.hypot(l['a'][0] - l['b'][0], l['a'][1] - l['b'][1]) *
+               (1.0 + (0.6 * _rng.random() if _rng else 0.0)))
 for it in range(ITERS):
     t0 = time.time()
     todo = order if it == 0 else conflicts()
@@ -538,5 +542,5 @@ for leg in legs:
     elif leg['group'] != 'TAIL':
         meta[leg['net']] = {'group': leg['group'], 'layer': ly}
 bd.save()
-json.dump(meta, open(os.path.join(HERE, 'ddr_routes.json'), 'w'))
+json.dump(meta, open(ROUTES, 'w'))
 print('committed', done, 'legs; left open:', still)

@@ -65,7 +65,7 @@ the VITA connector footprint it drops to 0.10 mm, so pairs can leave the 1.27 mm
 | group | state |
 |---|---|
 | GTP transceivers: SFP, VITA DP, reference clocks | routed, skew matched |
-| DDR3 byte lanes, address/command, CK | next |
+| DDR3 byte lanes, address/command, CK | mostly routed, finishing by hand: see [DDR3 routing](ddr_routing.md) |
 | VITA LA pairs and clocks | planned |
 | FMC, ULPI, RMII, QSPI | planned |
 | low-speed and power | autorouter, then cleanup |

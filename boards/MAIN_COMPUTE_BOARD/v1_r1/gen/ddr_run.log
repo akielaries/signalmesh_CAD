@@ -2,3 +2,45 @@ leg targets {}
 targets {'LANE0': 21.6, 'LANE1': 25.3, 'CMD': 22.62, 'prio': ['DDR_A11', 'DDR_A14', 'DDR_A3', 'DDR_A8', 'DDR_A9', 'DDR_BA2', 'DDR_DM1', 'DDR_DQ15', 'DDR_DQ3', 'DDR_DQ4', 'DDR_DQ6', 'DDR_ODT']} pairs {'DQS0': 21.6, 'DQS1': 24.37, 'CK': 22.62}
 pair DDR_DQS1 stretched 24.37 -> 25.45 (target 25.30)
 leg targets {'LANE0': 21.6, 'LANE1': 25.45, 'CMD': 22.62}
+shrunk 1 long legs
+stretched 3 legs; could not stretch 12
+committed 52 legs; left open: [('DDR_DQ1', 'LANE0'), ('DDR_A4', 'CMD'), ('DDR_A6', 'TAIL'), ('DDR_A7', 'CMD'), ('DDR_A9', 'CMD'), ('DDR_A11', 'CMD'), ('DDR_A12', 'CMD'), ('DDR_A14', 'CMD'), ('DDR_BA2', 'CMD'), ('DDR_RAS_N', 'CMD')]
+net              len mm   ref mm    delta  status
+DDR_DQS0          22.00  pair skew 0.00
+DDR_DQ7           17.17    22.00    -4.83  OUT
+DDR_DM0           21.19    22.00    -0.81  ok
+DDR_DQ2           21.20    22.00    -0.80  ok
+DDR_DQ4           21.30    22.00    -0.70  ok
+DDR_DQ5           22.00    22.00    -0.00  ok
+DDR_DQ6           22.00    22.00    -0.00  ok
+DDR_DQ3           22.00    22.00    -0.00  ok
+DDR_DQ0           23.55    22.00    +1.55  OUT
+DDR_DQS1          25.69  pair skew 0.00
+DDR_DQ12          20.57    25.69    -5.13  OUT
+DDR_DQ10          23.19    25.69    -2.50  OUT
+DDR_DQ8           25.22    25.69    -0.47  ok
+DDR_DQ13          25.33    25.69    -0.36  ok
+DDR_DQ9           25.45    25.69    -0.25  ok
+DDR_DQ14          25.45    25.69    -0.25  ok
+DDR_DQ11          25.45    25.69    -0.25  ok
+DDR_DQ15          25.83    25.69    +0.14  ok
+DDR_DM1           26.31    25.69    +0.62  ok
+DDR_CK            22.62  pair skew 1.79
+DDR_CKE           18.64    22.62    -3.98  OUT
+DDR_A10           18.65    22.62    -3.98  OUT
+DDR_A8            20.68    22.62    -1.94  ok
+DDR_BA1           20.90    22.62    -1.73  ok
+DDR_A13           21.35    22.62    -1.28  ok
+DDR_CAS_N         22.51    22.62    -0.12  ok
+DDR_WE_N          22.62    22.62    -0.00  ok
+DDR_BA0           23.43    22.62    +0.80  ok
+DDR_A1            23.57    22.62    +0.95  ok
+DDR_A2            23.64    22.62    +1.02  ok
+DDR_A3            24.20    22.62    +1.58  ok
+DDR_A0            25.96    22.62    +3.33  OUT
+DDR_A6            26.65    22.62    +4.03  OUT
+DDR_A5            29.25    22.62    +6.63  OUT
+DDR_ODT           29.64    22.62    +7.01  OUT
+CK - DQS0 = +0.62 mm (ok, ck longer)
+CK - DQS1 = -3.07 mm (CK SHORTER)
+out of window: ['DDR_DQ7', 'DDR_DQ0', 'DDR_DQ12', 'DDR_DQ10', 'DDR_CKE', 'DDR_A10', 'DDR_A0', 'DDR_A6', 'DDR_A5', 'DDR_ODT']
