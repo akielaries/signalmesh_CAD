@@ -11,6 +11,7 @@ G = 0.025         # grid pitch, mm
 MARGIN = 0.02     # extra over the drc clearance to absorb grid quantisation (G*sqrt2/2 ~ 0.018)
 LAYERS = {'F.Cu': pcbnew.F_Cu, 'In2.Cu': pcbnew.In2_Cu, 'In5.Cu': pcbnew.In5_Cu, 'B.Cu': pcbnew.B_Cu}
 BGA_RECTS = []    # (x0, y0, x1, y1, clr) regions where a reduced escape clearance applies
+TIGHT = False     # pull-tight smoothing of every path (the ddr router turns it on)
 
 
 def L(v):
@@ -196,7 +197,7 @@ class Board:
     # ---------- search
 
     def path(self, layer, a, b_, half_w, own, clr, margin=4.0, free=(), follow=None, follow_d=None,
-             wide=0.0, wide_except=(), partner=None, half_in=None):
+             wide=0.0, wide_except=(), partner=None, half_in=None, tight=None):
         x0 = min(a[0], b_[0]) - margin
         x1 = max(a[0], b_[0]) + margin
         y0 = min(a[1], b_[1]) - margin
@@ -244,6 +245,8 @@ class Board:
         free = np.zeros(blocked.shape, bool)
         for (j, i) in (ia, ib):
             free[max(0, j - 1):j + 2, max(0, i - 1):i + 2] = True
+        if not (TIGHT if tight is None else tight):
+            return simplify(pts)
         return pull_tight(simplify(pts), blocked & ~free, x0, y0)
 
     # ---------- staged edits
