@@ -7,7 +7,7 @@ F="assert\|pcb_track.cpp\|swig\|Debug"
 run() {
     tag=$1; seed=$2; sp=$3; spc=$4
     b=var/$tag.kicad_pcb
-    export SEED=$seed SPREAD=$sp SPREAD_CMD=$spc TFILE=var/$tag.targets.json ROUTES=var/$tag.routes.json ITERS=60
+    export SEED=$( [ "$seed" = 0 ] && echo "" || echo $seed ) SPREAD=$sp SPREAD_CMD=$spc TFILE=var/$tag.targets.json ROUTES=var/$tag.routes.json ITERS=60
     { PHASE=measure $PY ddr2.py $b gtp_tuned.kicad_pcb 2>&1 | grep -v "$F" | grep "targets"
       PHASE=route $PY ddr2.py $b gtp_tuned.kicad_pcb 2>&1 | grep -v "$F" | grep "committed"
       $PY ddr_tune.py $b 2>&1 | grep -v "$F"; } > var/$tag.log 2>&1
@@ -16,8 +16,8 @@ run() {
     echo "$tag seed=$seed spread=$sp/$spc open=$open out=$out score=$((3 * open + out))"
 }
 i=0
-for seed in 1 2 3 4; do
-  for sp in "0.4 0.4" "0.4 0.3"; do
+for seed in 0 1 2 3; do
+  for sp in "0.4 0.4" "0.25 0.15"; do
     set -- $sp
     run s${seed}_${1}_${2} $seed $1 $2 &
     i=$((i + 1))
