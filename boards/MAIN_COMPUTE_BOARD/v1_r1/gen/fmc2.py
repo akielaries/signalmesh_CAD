@@ -30,7 +30,8 @@ ITERS = int(os.environ.get('FMC_ITERS', '40'))
 DDR_BLOCK = [(95.0, 94.0), (121.2, 94.0), (121.2, 135.5), (95.0, 135.5)]
 OUTER = tuple(0.75 + 0.25 * i for i in range(22))
 
-shutil.copy(SRC, PCB)
+if os.path.abspath(SRC) != os.path.abspath(PCB):
+    shutil.copy(SRC, PCB)
 bd = rlib.Board(PCB)
 bd.keepouts.append((DDR_BLOCK, set(rlib.LAYERS)))
 STM = ddr.ref_of(bd, 'STM32H755')
@@ -42,6 +43,31 @@ def pads_of(ref):
 
 fp, sp = pads_of('U100'), pads_of(STM)
 nets = sorted(n for n in set(fp) & set(sp) if n.startswith(('FMC_', 'FPGA_')))
+
+
+def connected(net, a, b_):
+    # copper path between the two pads already (kept from an earlier run)
+    k = lambda x, y: (round(x, 3), round(y, 3))
+    g = {}
+    for (xa, ya, xb, yb, hw, n, ly) in bd.tracks:
+        if n == net:
+            g.setdefault(k(xa, ya), set()).add(k(xb, yb))
+            g.setdefault(k(xb, yb), set()).add(k(xa, ya))
+    seen, todo = {k(*a)}, [k(*a)]
+    while todo:
+        x = todo.pop()
+        if x == k(*b_):
+            return True
+        for y in g.get(x, ()):
+            if y not in seen:
+                seen.add(y)
+                todo.append(y)
+    return False
+
+
+already = [n for n in nets if connected(n, fp[n], sp[n])]
+nets = [n for n in nets if n not in already]
+print('already routed %d, to route %d' % (len(already), len(nets)), flush=True)
 
 # 1) end vias
 legs = []
