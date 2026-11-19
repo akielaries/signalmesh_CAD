@@ -48,6 +48,9 @@ PHASE = os.environ.get('PHASE', 'route')
 TFILE = os.path.join(HERE, 'ddr_targets.json')
 TARGETS = json.load(open(TFILE)) if PHASE == 'route' and os.path.exists(TFILE) else {}
 PAIR_GROUP = {'DQS0': 'LANE0', 'DQS1': 'LANE1', 'CK': 'CMD'}
+# extra spacing between ddr legs outside the ball fields, room for in-place serpentines (ddr_tune)
+SPREAD = float(os.environ.get('SPREAD', '0.4'))
+SPREAD_CMD = float(os.environ.get('SPREAD_CMD', '0.2'))
 # nets that took long detours last time: lower congestion penalty so the others make way
 PRIO = set(TARGETS.get('prio', []))
 
@@ -219,7 +222,7 @@ D = {ly: np.zeros((NY, NX), np.float32) for ly in WIDTH}
 H = {ly: np.zeros((NY, NX), np.float32) for ly in WIDTH}
 
 
-def keep_mask(path_cells, ly, box):
+def keep_mask(path_cells, ly, box, grp=''):
     # cells another leg's centre may not enter: within w + clr of this centre line
     j0, j1, i0, i1 = box
     sub = np.zeros((j1 - j0, i1 - i0), bool)
@@ -228,7 +231,7 @@ def keep_mask(path_cells, ly, box):
     dist = ndimage.distance_transform_edt(~sub) * G
     w, win = WIDTH[ly]
     ib = inbga[j0:j1, i0:i1]
-    r_out = w + CLR + rlib.MARGIN
+    r_out = w + CLR + rlib.MARGIN + (SPREAD_CMD if grp in ('CMD', 'CMDP', 'TAIL', 'RESET') else SPREAD)
     r_in = win + 0.09 + rlib.MARGIN
     return np.where(ib, dist < r_in, dist < r_out)
 
@@ -274,7 +277,7 @@ def route_leg(leg, pres):
     _, ly, path = best
     box = (max(0, min(p[0] for p in path) - 30), min(NY, max(p[0] for p in path) + 30),
            max(0, min(p[1] for p in path) - 30), min(NX, max(p[1] for p in path) + 30))
-    km = keep_mask(path, ly, box)
+    km = keep_mask(path, ly, box, leg['group'])
     leg.update({'layer': ly, 'path': path, 'box': box, 'keep': km})
     D[ly][box[0]:box[1], box[2]:box[3]] += km
     return True
@@ -392,7 +395,7 @@ def stretch_on(leg, tgt, ly):
         if abs(got - want) <= 0.35:
             box = (max(0, min(p[0] for p in path) - 30), min(NY, max(p[0] for p in path) + 30),
                    max(0, min(p[1] for p in path) - 30), min(NX, max(p[1] for p in path) + 30))
-            km = keep_mask(path, ly, box)
+            km = keep_mask(path, ly, box, leg['group'])
             leg.update({'path': path, 'box': box, 'keep': km, 'stretched': True})
             D[ly][box[0]:box[1], box[2]:box[3]] += km
             return True
@@ -447,7 +450,7 @@ def shrink_leg(leg):
         if plen(rlib.simplify([(XS[i], YS[j]) for (j, i) in path])) < plen(rlib.simplify([(XS[i], YS[j]) for (j, i) in old[0]])) - 0.3:
             box = (max(0, min(p[0] for p in path) - 30), min(NY, max(p[0] for p in path) + 30),
                    max(0, min(p[1] for p in path) - 30), min(NX, max(p[1] for p in path) + 30))
-            km = keep_mask(path, ly, box)
+            km = keep_mask(path, ly, box, leg['group'])
             leg.update({'path': path, 'box': box, 'keep': km})
             D[ly][box[0]:box[1], box[2]:box[3]] += km
             return True
