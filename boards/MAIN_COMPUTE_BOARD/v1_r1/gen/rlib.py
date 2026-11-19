@@ -240,7 +240,11 @@ class Board:
         pts = [(x0 + i * G, y0 + j * G) for (j, i) in mcp.traceback(ib)]
         pts[0] = (a[0], a[1])
         pts[-1] = (b_[0], b_[1])
-        return simplify(pts)
+        # the free squares at the ends let the trace leave a pad/via through blocked cells
+        free = np.zeros(blocked.shape, bool)
+        for (j, i) in (ia, ib):
+            free[max(0, j - 1):j + 2, max(0, i - 1):i + 2] = True
+        return pull_tight(simplify(pts), blocked & ~free, x0, y0)
 
     # ---------- staged edits
 
@@ -327,4 +331,32 @@ def split_neck(pts, step=0.0125):
             cur.append((xb, yb))
     if len(cur) > 1:
         out.append((simplify(cur) if len(cur) > 2 else cur, state))
+    return out
+
+
+def seg_clear(blocked, x0, y0, a, b_):
+    # every grid cell the straight segment a-b passes over is free
+    n = max(2, int(math.hypot(b_[0] - a[0], b_[1] - a[1]) / (G / 2)) + 1)
+    t = np.linspace(0.0, 1.0, n)
+    ii = np.rint((a[0] + t * (b_[0] - a[0]) - x0) / G).astype(int)
+    jj = np.rint((a[1] + t * (b_[1] - a[1]) - y0) / G).astype(int)
+    if ii.min() < 0 or jj.min() < 0 or ii.max() >= blocked.shape[1] or jj.max() >= blocked.shape[0]:
+        return False
+    return not blocked[jj, ii].any()
+
+
+def pull_tight(pts, blocked, x0, y0):
+    # string pulling: from each kept vertex jump to the farthest later vertex in clear line of
+    # sight, so grid staircases collapse into a few straight segments
+    if len(pts) < 3:
+        return pts
+    out = [pts[0]]
+    i = 0
+    n = len(pts)
+    while i < n - 1:
+        j = n - 1
+        while j > i + 1 and not seg_clear(blocked, x0, y0, pts[i], pts[j]):
+            j -= 1
+        out.append(pts[j])
+        i = j
     return out

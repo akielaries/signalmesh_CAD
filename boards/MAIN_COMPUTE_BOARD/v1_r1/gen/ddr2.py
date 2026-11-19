@@ -349,9 +349,60 @@ if os.environ.get('DIAG'):
 GROUP_OF = {'LANE0': 'LANE0', 'LANE1': 'LANE1', 'CMD': 'CMD', 'LANE0P': 'LANE0', 'LANE1P': 'LANE1', 'CMDP': 'CMD'}
 
 
+def raster(pts):
+    # polyline -> ordered grid cells (for keep masks)
+    cells = []
+    for (xa, ya), (xb, yb) in zip(pts, pts[1:]):
+        n = max(1, int(math.hypot(xb - xa, yb - ya) / (G / 2)))
+        for k in range(n + 1):
+            c = (int(round((ya + (yb - ya) * k / n - y0) / G)), int(round((xa + (xb - xa) * k / n - x0) / G)))
+            if not cells or cells[-1] != c:
+                cells.append(c)
+    return cells
+
+
+def tight(cells, blocked, a, b_):
+    # grid path -> straight segments in clear line of sight (no staircase jabs)
+    pts = [(XS[i], YS[j]) for (j, i) in cells]
+    pts[0], pts[-1] = a, b_
+    bl = blocked.copy()
+    for (j, i) in (cell(a), cell(b_)):
+        bl[max(0, j - 6):j + 7, max(0, i - 6):i + 7] = False
+    return rlib.pull_tight(rlib.simplify(pts), bl, x0, y0)
+
+
+def leg_pts(leg):
+    if leg.get('pts'):
+        return leg['pts']
+    pts = [(XS[i], YS[j]) for (j, i) in leg['path']]
+    pts[0], pts[-1] = leg['a'], leg['b']
+    return rlib.simplify(pts)
+
+
+def set_path(leg, pts):
+    path = raster(pts)
+    box = (max(0, min(p[0] for p in path) - 30), min(NY, max(p[0] for p in path) + 30),
+           max(0, min(p[1] for p in path) - 30), min(NX, max(p[1] for p in path) + 30))
+    km = keep_mask(path, leg['layer'], box, leg['group'])
+    leg.update({'path': path, 'box': box, 'keep': km, 'pts': pts})
+    D[leg['layer']][box[0]:box[1], box[2]:box[3]] += km
+
+
+def smooth_leg(leg):
+    ly, net = leg['layer'], leg['net']
+    rip(leg)
+    blocked = FIX[ly] | ((CNT[ly] - OWN[(ly, net)]) > 0) | (others(ly, (0, NY, 0, NX), net, skip=leg) > 0.5)
+    set_path(leg, tight(leg['path'], blocked, leg['a'], leg['b']))
+
+
+for leg in legs:
+    if 'keep' in leg:
+        smooth_leg(leg)
+print('smoothed', sum('pts' in l for l in legs), 'legs', flush=True)
+
+
 def leg_flight(leg):
-    pts = rlib.simplify([(XS[i], YS[j]) for (j, i) in leg['path']])
-    return stub(leg['net'], leg['a'], U100) + plen(pts) + stub(leg['net'], leg['b'], U21)
+    return stub(leg['net'], leg['a'], U100) + plen(leg_pts(leg)) + stub(leg['net'], leg['b'], U21)
 
 
 def stretch_leg(leg, tgt):
@@ -394,14 +445,17 @@ def stretch_on(leg, tgt, ly):
         if not np.isfinite(cc[B]):
             ok[max(0, k[0] - 10):k[0] + 11, max(0, k[1] - 10):k[1] + 11] = False
             continue
-        path = list(p1) + list(m2.traceback(B))[1:]
-        got = plen(rlib.simplify([(XS[i], YS[j]) for (j, i) in path]))
+        wpt = (XS[k[1]], YS[k[0]])
+        h1 = tight(list(p1), blocked, leg['a'], wpt)
+        h2 = tight(list(m2.traceback(B)), blk2, wpt, leg['b'])
+        spts = h1 + h2[1:]
+        path = raster(spts)
+        got = plen(spts)
         if abs(got - want) <= 0.35:
             box = (max(0, min(p[0] for p in path) - 30), min(NY, max(p[0] for p in path) + 30),
                    max(0, min(p[1] for p in path) - 30), min(NX, max(p[1] for p in path) + 30))
-            km = keep_mask(path, ly, box, leg['group'])
-            leg.update({'path': path, 'box': box, 'keep': km, 'stretched': True})
-            D[ly][box[0]:box[1], box[2]:box[3]] += km
+            set_path(leg, spts)
+            leg['stretched'] = True
             return True
         search += want - got
     if os.environ.get('SDIAG'):
@@ -441,6 +495,7 @@ def shrink_leg(leg):
     # a leg that came out long: shortest path against everything else as it now stands
     ly, net = leg['layer'], leg['net']
     old = (leg['path'], leg['box'], leg['keep'])
+    old_pts = leg_pts(leg)
     rip(leg)
     blocked = FIX[ly] | ((CNT[ly] - OWN[(ly, net)]) > 0) | (others(ly, (0, NY, 0, NX), net) > 0.5)
     A, B = cell(leg['a']), cell(leg['b'])
@@ -450,10 +505,11 @@ def shrink_leg(leg):
     m = MCP_Geometric(cost, fully_connected=True)
     cc, _ = m.find_costs([A], [B])
     if np.isfinite(cc[B]):
-        path = list(m.traceback(B))
-        if plen(rlib.simplify([(XS[i], YS[j]) for (j, i) in path])) < plen(rlib.simplify([(XS[i], YS[j]) for (j, i) in old[0]])) - 0.3:
-            box = (max(0, min(p[0] for p in path) - 30), min(NY, max(p[0] for p in path) + 30),
-                   max(0, min(p[1] for p in path) - 30), min(NX, max(p[1] for p in path) + 30))
+        spts = tight(list(m.traceback(B)), blocked, leg['a'], leg['b'])
+        if plen(spts) < plen(old_pts) - 0.3:
+            set_path(leg, spts)
+            return True
+        if False:
             km = keep_mask(path, ly, box, leg['group'])
             leg.update({'path': path, 'box': box, 'keep': km})
             D[ly][box[0]:box[1], box[2]:box[3]] += km
@@ -498,9 +554,7 @@ for leg in legs:
     if id(leg) in bad or 'path' not in leg:
         left.append((leg['net'], leg['group']))
         continue
-    pts = [(XS[i], YS[j]) for (j, i) in leg['path']]
-    pts[0], pts[-1] = leg['a'], leg['b']
-    pts = rlib.simplify(pts)
+    pts = leg_pts(leg)
     if not leg.get('stretched') and detour(leg, pts):
         left.append((leg['net'], leg['group']))
         continue
