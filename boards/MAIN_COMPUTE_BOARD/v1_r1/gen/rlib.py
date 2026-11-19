@@ -348,9 +348,32 @@ def seg_clear(blocked, x0, y0, a, b_):
     return not blocked[jj, ii].any()
 
 
+def octi_options(a, b_):
+    # the two 45-degree doglegs between a and b (straight run + diagonal run, either order)
+    dx, dy = b_[0] - a[0], b_[1] - a[1]
+    adx, ady = abs(dx), abs(dy)
+    if adx < 1e-6 or ady < 1e-6 or abs(adx - ady) < 1e-6:
+        return [[a, b_]]
+    sx, sy = (1 if dx > 0 else -1), (1 if dy > 0 else -1)
+    if adx > ady:
+        m1 = (a[0] + sx * (adx - ady), a[1])
+        m2 = (a[0] + sx * ady, b_[1])
+    else:
+        m1 = (a[0], a[1] + sy * (ady - adx))
+        m2 = (b_[0], a[1] + sy * adx)
+    return [[a, m1, b_], [a, m2, b_]]
+
+
+def octi_clear(blocked, x0, y0, a, b_):
+    for opt in octi_options(a, b_):
+        if all(seg_clear(blocked, x0, y0, p, q) for p, q in zip(opt, opt[1:])):
+            return opt
+    return None
+
+
 def pull_tight(pts, blocked, x0, y0):
-    # string pulling: from each kept vertex jump to the farthest later vertex in clear line of
-    # sight, so grid staircases collapse into a few straight segments
+    # octilinear string pulling: from each kept vertex jump to the farthest later vertex that a
+    # clear 0/45/90-degree dogleg reaches, so grid staircases collapse into a few standard segments
     if len(pts) < 3:
         return pts
     out = [pts[0]]
@@ -358,8 +381,16 @@ def pull_tight(pts, blocked, x0, y0):
     n = len(pts)
     while i < n - 1:
         j = n - 1
-        while j > i + 1 and not seg_clear(blocked, x0, y0, pts[i], pts[j]):
+        opt = None
+        while j > i + 1:
+            opt = octi_clear(blocked, x0, y0, pts[i], pts[j])
+            if opt:
+                break
             j -= 1
-        out.append(pts[j])
+        if opt is None or j == i + 1:
+            # adjacent grid points are always 0/45/90 apart
+            opt = [pts[i], pts[i + 1]]
+            j = i + 1
+        out.extend(opt[1:])
         i = j
-    return out
+    return simplify(out)
