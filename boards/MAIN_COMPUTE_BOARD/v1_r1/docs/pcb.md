@@ -70,7 +70,7 @@ the VITA connector footprint it drops to 0.10 mm, so pairs can leave the 1.27 mm
 | FMC and FPGA config | 49 of 73 nets routed after the pin swap; the rest by hand |
 | QSPI | 4 of 10 routed (BK1_IO2/IO3, BK2_IO0/IO1); CLK, NCS, BK1_IO0/IO1, BK2_IO2/IO3 by hand |
 | ULPI | not routed; about 105-140 mm with the USB3300 at the front panel, over the 90 mm TI guidance (see below) |
-| RMII and MDIO | 4 of 9 routed (CRS_DV, RXD0, TXD0, TX_EN); REF_CLK, MDC, MDIO (STM32 west-edge pins boxed in by FMC vias), RXD1, TXD1 (no via room at the PHY) by hand |
+| RMII and MDIO | 2 of 9 routed (CRS_DV 110 mm, RXD0 108 mm). TXD0/TXD1/TX_EN can only use PG11-13 or PB11-13 (taken by ULPI), and PG11-13 sit on the STM32's far edge: about 180-240 mm around the FPGA/DDR. Fix: move the LAN8742 beside the STM32 at the next regeneration (with the USB3300); REF_CLK, MDC, MDIO, RXD1 by hand |
 | low-speed and power | autorouter, then cleanup |
 
 ### ULPI length

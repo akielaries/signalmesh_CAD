@@ -24,76 +24,76 @@ including both dogbones; the fly-by tail to each command terminator is not count
 
 | pair | length mm |
 |---|---|
-| DDR_DQS0 | 22.91 |
-| DDR_DQS1 | 25.00 |
-| DDR_CK | 23.73 |
+| DDR_DQS0 | open |
+| DDR_DQS1 | 26.44 |
+| DDR_CK | 26.15 |
 
 ## pairs
 
 | net | FPGA ball | DRAM ball | length mm | vias / layers |
 |---|---|---|---|---|
-| DDR_DQS0_P | Y3 | F3 | 23.47 | 2 / F,In2 |
-| DDR_DQS0_N | AA3 | G3 | 22.34 | 2 / F,In2 |
-| DDR_DQS1_P | R3 | C7 | 25.16 | 2 / F,In2 |
-| DDR_DQS1_N | R2 | B7 | 24.84 | 2 / F,In2 |
-| DDR_CK_P | V9 | J7 | 23.73 | 2 / F,In5 |
-| DDR_CK_N | V8 | K7 | 23.73 | 2 / F,In5 |
+| DDR_DQS0_P | Y3 | F3 | **open** |  |
+| DDR_DQS0_N | AA3 | G3 | 22.71 | 2 / F,In2 |
+| DDR_DQS1_P | R3 | C7 | 26.73 | 1 / F,In2 |
+| DDR_DQS1_N | R2 | B7 | 26.14 | 2 / F,In2 |
+| DDR_CK_P | V9 | J7 | 26.33 | 2 / F,In5 |
+| DDR_CK_N | V8 | K7 | 25.96 | 1 / F,In5 |
 
 ## byte lane 0 (to DQS0)
 
 | net | FPGA ball | DRAM ball | terminator | length mm | vs ref | vias / layers | state |
 |---|---|---|---|---|---|---|---|
-| DDR_DQ0 | AB2 | E3 |  | 31.51 | +8.60 | 2 / F,In2 | **tune** |
-| DDR_DQ1 | AA4 | F7 |  | 22.82 | -0.09 | 2 / F,In5 | ok |
-| DDR_DQ2 | AB3 | F2 |  | 22.09 | -0.82 | 2 / F,In5 | ok |
-| DDR_DQ3 | AB5 | F8 |  | 22.65 | -0.26 | 2 / B,F | ok |
-| DDR_DQ4 | AB1 | H3 |  | 22.82 | -0.09 | 2 / B,F | ok |
-| DDR_DQ5 | Y4 | H8 |  | 18.73 | -4.17 | 2 / B,F | **tune** |
-| DDR_DQ6 | AA1 | G2 |  | 23.90 | +0.99 | 2 / F,In2 | ok |
-| DDR_DQ7 | AA5 | H7 |  | 19.09 | -3.81 | 2 / B,F | **tune** |
-| DDR_DM0 | V4 | E7 |  | 22.73 | -0.18 | 2 / F,In5 | ok |
+| DDR_DQ0 | AB2 | E3 |  | 31.88 |  | 2 / F,In2 | **tune** |
+| DDR_DQ1 | AA4 | F7 |  | 23.33 |  | 2 / F,In5 | **tune** |
+| DDR_DQ2 | AB3 | F2 |  | 21.30 |  | 1 / F,In5 | **tune** |
+| DDR_DQ3 | AB5 | F8 |  | 18.20 |  | 1 / B,F | **tune** |
+| DDR_DQ4 | AB1 | H3 |  | 21.93 |  | 2 / B,F | **tune** |
+| DDR_DQ5 | Y4 | H8 |  | 18.89 |  | 2 / B,F | **tune** |
+| DDR_DQ6 | AA1 | G2 |  | 24.46 |  | 2 / F,In2 | **tune** |
+| DDR_DQ7 | AA5 | H7 |  | 19.34 |  | 2 / B,F | **tune** |
+| DDR_DM0 | V4 | E7 |  | 23.13 |  | 2 / F,In5 | **tune** |
 
 ## byte lane 1 (to DQS1)
 
 | net | FPGA ball | DRAM ball | terminator | length mm | vs ref | vias / layers | state |
 |---|---|---|---|---|---|---|---|
-| DDR_DQ8 | T1 | D7 |  | 26.10 | +1.10 | 2 / F,In2 | ok |
-| DDR_DQ9 | Y1 | C3 |  | 23.47 | -1.53 | 2 / F,In2 | **tune** |
-| DDR_DQ10 | U2 | C8 |  | 21.83 | -3.17 | 2 / F,In5 | **tune** |
-| DDR_DQ11 | W1 | C2 |  | 25.19 | +0.19 | 2 / B,F | ok |
-| DDR_DQ12 | W2 | A7 |  | 29.42 | +4.42 | 2 / B,F | **tune** |
-| DDR_DQ13 | Y2 | A2 |  | 25.22 | +0.22 | 2 / F,In5 | ok |
-| DDR_DQ14 | V2 | B8 |  | 24.78 | -0.22 | 2 / B,F | ok |
-| DDR_DQ15 | U1 | A3 |  | 26.93 | +1.93 | 2 / F,In5 | **tune** |
-| DDR_DM1 | U3 | D3 |  | 34.56 | +9.56 | 2 / F,In5 | **tune** |
+| DDR_DQ8 | T1 | D7 |  | 27.05 | +0.62 | 2 / F,In2 | ok |
+| DDR_DQ9 | Y1 | C3 |  | 22.64 | -3.80 | 1 / F,In2 | **tune** |
+| DDR_DQ10 | U2 | C8 |  | 22.43 | -4.01 | 2 / F,In5 | **tune** |
+| DDR_DQ11 | W1 | C2 |  | 25.89 | -0.55 | 2 / B,F | ok |
+| DDR_DQ12 | W2 | A7 |  | 30.40 | +3.96 | 2 / B,F | **tune** |
+| DDR_DQ13 | Y2 | A2 |  | 24.32 | -2.12 | 1 / F,In5 | **tune** |
+| DDR_DQ14 | V2 | B8 |  | 24.10 | -2.34 | 1 / B,F | **tune** |
+| DDR_DQ15 | U1 | A3 |  | 27.75 | +1.31 | 2 / F,In5 | ok |
+| DDR_DM1 | U3 | D3 |  | 35.35 | +8.92 | 2 / F,In5 | **tune** |
 
 ## address / command (to CK)
 
 | net | FPGA ball | DRAM ball | terminator | length mm | vs ref | vias / layers | state |
 |---|---|---|---|---|---|---|---|
-| DDR_A0 | Y9 | N3 | R99 (tail 12.6 mm) | 24.44 | +0.71 | 2 / F,In2 | ok |
-| DDR_A1 | V5 | P7 | R100 (tail 18.0 mm) | 23.79 | +0.06 | 2 / F,In2 | ok |
-| DDR_A2 | Y6 | P3 | R101 (tail 11.4 mm) | 24.30 | +0.58 | 2 / B,F | ok |
-| DDR_A3 | W6 | N2 | R102 (tail 18.7 mm) | 30.77 | +7.05 | 2 / F,In5 | **tune** |
-| DDR_A4 | T6 | P8 | R103 (tail **open**) | 26.04 | +2.31 | 2 / F,In5 | ok |
-| DDR_A5 | AA6 | P2 | R104 (tail 15.2 mm) | 23.58 | -0.15 | 2 / B,F | ok |
-| DDR_A6 | R4 | R8 | R105 (tail 13.2 mm) | 29.43 | +5.70 | 2 / F,In5 | **tune** |
-| DDR_A7 | V7 | R2 | R106 (tail 14.2 mm) | 29.02 | +5.30 | 2 / B,F | **tune** |
+| DDR_A0 | Y9 | N3 | R99 (tail 13.4 mm) | 24.93 | -1.21 | 2 / F,In2 | ok |
+| DDR_A1 | V5 | P7 | R100 (tail 18.6 mm) | 23.20 | -2.95 | 1 / F,In2 | ok |
+| DDR_A2 | Y6 | P3 | R101 (tail 11.7 mm) | 24.28 | -1.86 | 1 / B,F | ok |
+| DDR_A3 | W6 | N2 | R102 (tail 19.6 mm) | 32.92 | +6.77 | 2 / F,In5 | **tune** |
+| DDR_A4 | T6 | P8 | R103 (tail **open**) | 26.24 | +0.10 | 2 / F,In5 | ok |
+| DDR_A5 | AA6 | P2 | R104 (tail 15.0 mm) | 22.78 | -3.37 | 1 / B,F | **tune** |
+| DDR_A6 | R4 | R8 | R105 (tail 13.7 mm) | 29.72 | +3.58 | 2 / F,In5 | **tune** |
+| DDR_A7 | V7 | R2 | R106 (tail 14.7 mm) | 27.87 | +1.72 | 1 / B,F | ok |
 | DDR_A8 | U6 | T8 | R107 (tail **open**) |  |  |  | **open** |
-| DDR_A9 | W7 | R3 | R108 (tail 9.8 mm) | 35.69 | +11.97 | 2 / F,In2 | **tune** |
-| DDR_A10 | W9 | L7 | R109 (tail 18.8 mm) | 25.81 | +2.09 | 2 / B,F | ok |
+| DDR_A9 | W7 | R3 | R108 (tail 9.9 mm) | 36.18 | +10.03 | 2 / F,In2 | **tune** |
+| DDR_A10 | W9 | L7 | R109 (tail 17.5 mm) | 25.88 | -0.27 | 1 / B,F | ok |
 | DDR_A11 | U5 | R7 | R110 (tail **open**) |  |  |  | **open** |
-| DDR_A12 | T5 | N7 | R111 (tail 28.4 mm) | 25.25 | +1.52 | 2 / F,In2 | ok |
-| DDR_A13 | AB6 | T3 | R112 (tail 11.0 mm) | 21.62 | -2.10 | 2 / F | ok |
-| DDR_A14 | W5 | T7 | R113 (tail 15.0 mm) | 22.67 | -1.05 | 2 / B,F | ok |
-| DDR_BA0 | Y7 | M2 | R114 (tail 19.9 mm) |  |  |  | **open** |
-| DDR_BA1 | T4 | N8 | R115 (tail 16.5 mm) | 23.08 | -0.65 | 2 / F,In2 | ok |
-| DDR_BA2 | Y8 | M3 | R116 (tail **open**) | 25.08 | +1.35 | 2 / F,In2 | ok |
-| DDR_RAS_N | AB7 | J3 | R117 (tail **open**) | 21.78 | -1.95 | 2 / B,F | ok |
+| DDR_A12 | T5 | N7 | R111 (tail 28.9 mm) | 25.56 | -0.58 | 2 / F,In2 | ok |
+| DDR_A13 | AB6 | T3 | R112 (tail 11.1 mm) | 22.75 | -3.40 | 2 / F | **tune** |
+| DDR_A14 | W5 | T7 | R113 (tail 15.4 mm) | 22.78 | -3.37 | 2 / B,F | **tune** |
+| DDR_BA0 | Y7 | M2 | R114 (tail 20.4 mm) |  |  |  | **open** |
+| DDR_BA1 | T4 | N8 | R115 (tail 15.3 mm) | 23.85 | -2.30 | 2 / F,In2 | ok |
+| DDR_BA2 | Y8 | M3 | R116 (tail **open**) | 25.52 | -0.62 | 2 / F,In2 | ok |
+| DDR_RAS_N | AB7 | J3 | R117 (tail **open**) | 21.92 | -4.22 | 2 / B,F | **tune** |
 | DDR_CAS_N | AA8 | K3 | R118 (tail **open**) |  |  |  | **open** |
-| DDR_WE_N | AB8 | L3 | R119 (tail 22.1 mm) |  |  |  | **open** |
-| DDR_CKE | R6 | K9 | R120 (tail **open**) | 31.53 | +7.81 | 2 / F | **tune** |
-| DDR_ODT | T3 | K1 | R121 (tail **open**) | 39.62 | +15.89 | 2 / B,F | **tune** |
+| DDR_WE_N | AB8 | L3 | R119 (tail 22.7 mm) |  |  |  | **open** |
+| DDR_CKE | R6 | K9 | R120 (tail **open**) | 31.65 | +5.50 | 2 / F | **tune** |
+| DDR_ODT | T3 | K1 | R121 (tail **open**) | 39.67 | +13.52 | 1 / B,F | **tune** |
 
 ## reset (not matched)
 

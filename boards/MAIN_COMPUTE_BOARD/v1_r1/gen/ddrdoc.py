@@ -62,22 +62,70 @@ def term_xy(net):
             return (p.GetPosition().x / 1e6, p.GetPosition().y / 1e6)
 
 
+def pad_of(net, ref):
+    f = fp[ref]
+    for k in range(len(f.Pads())):
+        if f.Pads()[k].GetNetname() == net:
+            return f.Pads()[k]
+
+
+def term_pad(net):
+    r = term(net)
+    return pad_of(net, r) if r else None
+
+
 def flight(net, s=None, e=None):
-    # copper path (default fpga ball -> dram ball): length, vias passed, layers used (None if not connected)
+    # copper path (default fpga ball -> dram ball): length, vias passed, layers used (None if not connected).
+    # s/e are pads: a track end anywhere inside the pad counts, and a track ending on the middle of
+    # another segment (t-junction, common in hand routing) is joined to it
+    segs = tracks.get(net, [])
     g = {}
-    for (xa, ya, xb, yb, ln, ly) in tracks.get(net, []):
-        g.setdefault((xa, ya), []).append(((xb, yb), ln, ly))
-        g.setdefault((xb, yb), []).append(((xa, ya), ln, ly))
-    if s is None:
-        _, s = ball(net, 'U100')
-    if e is None:
-        _, e = ball(net, U21)
-    s, e = (round(s[0], 3), round(s[1], 3)), (round(e[0], 3), round(e[1], 3))
-    dist, prev = {s: 0.0}, {}
-    q = [(0.0, s)]
+
+    def link(a, c, w, ly):
+        g.setdefault(a, []).append((c, w, ly))
+        g.setdefault(c, []).append((a, w, ly))
+
+    # snap ends that overlap (within half a track width, or onto a via) to one node, as drc does
+    raw = [(x, y) for (xa, ya, xb, yb, ln, ly) in segs for (x, y) in ((xa, ya), (xb, yb))]
+    snap = {}
+    reps = list(vias.get(net, set()))
+    for p in raw:
+        for r in reps:
+            if (p[0] - r[0]) ** 2 + (p[1] - r[1]) ** 2 < 0.06 ** 2:
+                snap[p] = r
+                break
+        else:
+            reps.append(p)
+            snap[p] = p
+    segs = [(snap[(xa, ya)][0], snap[(xa, ya)][1], snap[(xb, yb)][0], snap[(xb, yb)][1], ln, ly)
+            for (xa, ya, xb, yb, ln, ly) in segs]
+    ends = {(x, y) for (xa, ya, xb, yb, ln, ly) in segs for (x, y) in ((xa, ya), (xb, yb))}
+    for (xa, ya, xb, yb, ln, ly) in segs:
+        pts = [(xa, ya), (xb, yb)]
+        L2 = (xb - xa) ** 2 + (yb - ya) ** 2
+        if L2 > 0:
+            for (x, y) in ends:
+                u = ((x - xa) * (xb - xa) + (y - ya) * (yb - ya)) / L2
+                if 0.001 < u < 0.999 and abs((x - xa) * (yb - ya) - (y - ya) * (xb - xa)) / L2 ** 0.5 < 0.06:
+                    pts.append((x, y))
+        pts.sort(key=lambda p: (p[0] - xa) ** 2 + (p[1] - ya) ** 2)
+        for p, q in zip(pts, pts[1:]):
+            link(p, q, ((q[0] - p[0]) ** 2 + (q[1] - p[1]) ** 2) ** 0.5, ly)
+    sp = s or pad_of(net, 'U100')
+    ep = e or pad_of(net, U21)
+    if sp is None or ep is None:
+        return None, 0, set()
+    hit = lambda pad, n: pad.HitTest(pcbnew.VECTOR2I(int(n[0] * 1e6), int(n[1] * 1e6)))
+    S = [n for n in g if hit(sp, n)]
+    E = {n for n in g if hit(ep, n)}
+    dist, prev = {n: 0.0 for n in S}, {}
+    q = [(0.0, n) for n in S]
+    heapq.heapify(q)
+    end = None
     while q:
         d, u = heapq.heappop(q)
-        if u == e:
+        if u in E:
+            end = u
             break
         if d > dist.get(u, 1e9):
             continue
@@ -85,15 +133,15 @@ def flight(net, s=None, e=None):
             if d + w < dist.get(v, 1e9):
                 dist[v], prev[v] = d + w, (u, ly)
                 heapq.heappush(q, (d + w, v))
-    if e not in dist:
+    if end is None:
         return None, 0, set()
-    nv, lys, u = 0, set(), e
+    nv, lys, u = 0, set(), end
     while u in prev:
         u, ly = prev[u]
         lys.add(ly.replace('.Cu', ''))
         if u in vias.get(net, set()):
             nv += 1
-    return dist[e], nv, lys
+    return dist[end], nv, lys
 
 
 L = {}
@@ -113,7 +161,7 @@ def rows(nets, g):
         ln, nv, lys = L[n]
         tr = term(n) if g == 'CMD' else ''
         if tr:
-            tl = flight(n, ball(n, U21)[1], term_xy(n))[0]
+            tl = flight(n, pad_of(n, U21), term_pad(n))[0]
             tr += ' (tail %s)' % ('%.1f mm' % tl if tl else '**open**')
         if ln is None:
             state, dl = '**open**', ''
