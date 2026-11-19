@@ -111,6 +111,9 @@ def route_lane(bd, lane):
 
 
 ALL = [l + ('cap',) for l in LANES] + [d + ('direct',) for d in DIRECT]
+ONLY = os.environ.get('ONLY')
+if ONLY:
+    ALL = [l for l in ALL if any(k in l[0] for k in ONLY.split(','))]
 order = list(range(len(ALL)))
 best = None
 rng = random.Random(1)

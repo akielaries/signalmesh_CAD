@@ -9,7 +9,7 @@ import pcbnew
 # fpga balls and their fanout dogbones, and remove only those nets' old routes
 PCB = sys.argv[1]
 HERE = os.path.dirname(os.path.abspath(__file__))
-swap = json.load(open(os.path.join(HERE, 'fmc_swap.json')))
+swap = json.load(open(os.path.join(HERE, sys.argv[2] if len(sys.argv) > 2 else 'fmc_swap.json')))
 b = pcbnew.LoadBoard(PCB)
 u = b.FindFootprintByReference('U100')
 ball_new = {}

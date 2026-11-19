@@ -61,8 +61,9 @@ def build(d):
           {'IN+': '.ISNS_P', 'IN-': '.ISNS_N', 'VS': '+3V3', 'GND': 'GND', 'SCL': 'I2C1_SCL',
            'SDA': 'I2C1_SDA', 'A0': 'GND', 'A1': 'GND'}, value='INA219 0x40')
     C(s, '+3V3', 'GND', '100nF')
-    s.add('Device:C_Polarized_Small', {'1': '+12V', '2': 'GND'}, value='100uF 25V',
-          fp='Capacitor_SMD:CP_Elec_6.3x7.7', prefix='C')
+    # 12v input bulk: two 1210 ceramics (about 10-15 uF effective at 12 V bias), fixed refs
+    for ref in ('C2', 'C300'):
+        s.add('Device:C_Small', {'1': '+12V', '2': 'GND'}, value='22uF 25V X5R', fp=C1210, ref=ref)
     R(s, '+12V', '.EN_12V', '100k')
     R(s, '.EN_12V', 'GND', '15k')
 

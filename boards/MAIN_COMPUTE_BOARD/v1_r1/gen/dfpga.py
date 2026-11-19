@@ -51,6 +51,10 @@ def plan():
     # crossing-free pairing with the stm32 pins. d0-d15, fmc_clk and config pins are fixed
     fsw = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'fmc_swap.json')
     fswap = json.load(open(fsw)) if os.path.exists(fsw) else {}
+    # vita la pair swap (laswap.py), same idea: whole pairs within each bank, cc pairs and clocks fixed
+    lsw = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'la_swap.json')
+    if os.path.exists(lsw):
+        fswap.update(json.load(open(lsw)))
 
     def put(ball, net):
         net = fswap.get(net, net)

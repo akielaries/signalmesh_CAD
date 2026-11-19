@@ -66,9 +66,23 @@ the VITA connector footprint it drops to 0.10 mm, so pairs can leave the 1.27 mm
 |---|---|
 | GTP transceivers: SFP, VITA DP, reference clocks | routed, skew matched |
 | DDR3 byte lanes, address/command, CK | mostly routed, finishing by hand: see [DDR3 routing](ddr_routing.md) |
-| VITA LA pairs and clocks | planned |
-| FMC, ULPI, RMII, QSPI | planned |
+| VITA LA pairs and clocks | 10 of 36 pairs routed; the rest by hand (2.8 mm gap between the connector and the FPGA's top banks) |
+| FMC and FPGA config | 49 of 73 nets routed after the pin swap; the rest by hand |
+| QSPI | 4 of 10 routed (BK1_IO2/IO3, BK2_IO0/IO1); CLK, NCS, BK1_IO0/IO1, BK2_IO2/IO3 by hand |
+| ULPI | not routed; about 105-140 mm with the USB3300 at the front panel, over the 90 mm TI guidance (see below) |
+| RMII | planned |
 | low-speed and power | autorouter, then cleanup |
+
+### ULPI length
+
+ULPI runs at 60 MHz with the clock sourced by the PHY, so the budget is the round trip
+(clock out to the STM32, data back) against the PHY's and STM32's setup/hold and clock-to-out.
+No USB3300-specific maximum was found; TI's TUSB1210 guidance is 90 mm maximum (600 ps one
+way) and generic guidance is 3 in (76 mm). The planned route is 105-140 mm, roughly 0.7-0.9 ns
+one way. That may still close at 60 MHz, but it is outside every published guideline. The
+safe fix is moving the USB3300, its crystal and decaps beside the STM32 on the bottom side
+and routing the USB HS pair (90 R differential, tolerant of length) to the front panel instead,
+at the next full regeneration.
 
 ### GTP lanes
 

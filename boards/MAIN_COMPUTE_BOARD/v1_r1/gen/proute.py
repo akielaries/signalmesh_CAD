@@ -223,8 +223,8 @@ def existing_via(bd, p, net, maxd=0.9):
     return best[1] if best else None
 
 
-def drop_via(bd, p, net, toward, staged, w=0.1, radii=(0.75, 0.9, 1.05, 1.25, 1.5, 1.8, 2.2)):
-    # via near a top pad (reuse the dogbone if there is one), with a short top stub
+def drop_via(bd, p, net, toward, staged, w=0.1, radii=(0.75, 0.9, 1.05, 1.25, 1.5, 1.8, 2.2), layer='F.Cu'):
+    # via near a pad on layer (reuse the dogbone if there is one), with a short stub on that layer
     v = existing_via(bd, p, net)
     if v:
         return v
@@ -236,10 +236,10 @@ def drop_via(bd, p, net, toward, staged, w=0.1, radii=(0.75, 0.9, 1.05, 1.25, 1.
             x, y = p[0] + rad * math.cos(a), p[1] + rad * math.sin(a)
             if not via_spot_ok(bd, x, y, net):
                 continue
-            st = bd.path('F.Cu', p, (x, y), w / 2, {net}, 0.12, margin=1.0)
+            st = bd.path(layer, p, (x, y), w / 2, {net}, 0.12, margin=1.0)
             if not st:
                 continue
-            bd.stage_track(st, w, net, 'F.Cu', staged)
+            bd.stage_track(st, w, net, layer, staged)
             bd.stage_via(x, y, net, staged)
             return (x, y)
     return None
