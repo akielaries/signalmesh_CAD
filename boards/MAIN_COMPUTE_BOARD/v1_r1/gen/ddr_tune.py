@@ -15,7 +15,7 @@ import rlib
 PCB = sys.argv[1]
 META = json.load(open(os.environ.get('ROUTES', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'ddr_routes.json'))))
 FPGA_R = (109.5, 79.5, 134.5, 104.5)
-DRAM_R = (99.555, 111.455, 115.645, 121.545)
+DRAM_R = (105.455, 115.505, 121.545, 125.595)
 rlib.BGA_RECTS[:] = [FPGA_R + (0.09,), (120.8, 62.35, 179.3, 76.65, 0.10), DRAM_R + (0.09,)]
 TOL_LANE, TOL_CMD = 1.4, 3.0   # +-10 ps in a byte, +-20 ps addr/cmd to ck (inner ~7 ps/mm)
 CLR = 0.15

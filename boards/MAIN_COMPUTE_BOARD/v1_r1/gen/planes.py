@@ -46,8 +46,8 @@ zone('+3V3', 'In4.Cu', full, 0, 'P3V3')
 zone('+1V0', 'In4.Cu', [(117.0, 86.8), (122.0, 86.8), (122.0, 98.4), (122.0, 106.0), (118.2, 106.0),
                         (118.2, 98.4), (117.0, 98.4)], 3, 'P1V0_CORE', thermal=False)
 # bank 34 vcco balls + ddr3l
-zone('+1V35', 'In4.Cu', [(110.8, 95.0), (116.6, 95.0), (116.6, 98.9), (117.9, 98.9), (117.9, 128.0),
-                         (99.0, 128.0), (99.0, 104.0), (110.8, 104.0)], 2, 'P1V35_DDR', thermal=False)
+zone('+1V35', 'In4.Cu', [(110.8, 95.0), (116.6, 95.0), (116.6, 98.9), (117.9, 98.9), (117.9, 106.4), (122.6, 106.4),
+                         (122.6, 128.0), (99.0, 128.0), (99.0, 104.0), (110.8, 104.0)], 2, 'P1V35_DDR', thermal=False)
 # banks 35/16 vcco and the vita connector band
 zone('VADJ', 'In4.Cu', [(98.6, 53.6), (183.0, 53.6), (183.0, 79.6), (133.7, 79.6), (133.7, 87.0),
                         (122.6, 87.0), (122.6, 86.4), (116.6, 86.4), (116.6, 94.6), (110.4, 94.6),
@@ -60,11 +60,11 @@ zone('+12V', 'B.Cu', [(64.5, 53.6), (190.6, 53.6), (190.6, 62.0), (180.0, 62.0),
 # vita supplies at the connector's right end (In5)
 zone('+3V3_MEZZ', 'In5.Cu', [(158.0, 53.6), (190.6, 53.6), (190.6, 67.0), (158.0, 67.0)], 1, 'P3V3M_IN5', thermal=False)
 # ddr3 vtt strip between the two termination rows (pcbbuild TERM_*), fed from the TPS51200 at its left end
-zone('VTT_DDR', 'F.Cu', [(95.4, 122.85), (114.75, 122.85), (114.75, 124.95), (95.4, 124.95)], 2, 'VTT_STRIP',
+zone('VTT_DDR', 'F.Cu', [(95.4, 126.9), (114.75, 126.9), (114.75, 129.0), (95.4, 129.0)], 2, 'VTT_STRIP',
      thermal=False)
 # bottom vtt pour under the strip and the vtt decaps, stitched to the top strip through the pad vias
-zone('VTT_DDR', 'B.Cu', [(95.4, 122.0), (114.75, 122.0), (114.75, 125.6), (110.2, 125.6), (110.2, 128.6),
-                         (95.4, 128.6)], 2, 'VTT_BOT', thermal=False)
+zone('VTT_DDR', 'B.Cu', [(95.4, 126.05), (114.75, 126.05), (114.75, 129.65), (110.2, 129.65), (110.2, 132.65),
+                         (95.4, 132.65)], 2, 'VTT_BOT', thermal=False)
 # +1V0 feed from its buck (left of the fpga) up the fpga's left side and in above the ddr balls to the
 # core island; the band under the fpga (y > 95) is left to the ddr3 escape
 zone('+1V0', 'In5.Cu', [(86.0, 113.5), (100.0, 113.5), (100.0, 94.3), (122.0, 94.3), (122.0, 86.0), (96.0, 86.0),

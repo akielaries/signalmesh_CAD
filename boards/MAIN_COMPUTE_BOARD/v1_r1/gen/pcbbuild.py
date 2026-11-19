@@ -268,7 +268,7 @@ for ref, rot, _ in FRONT:
 fix(one('DIN41612'), 197.7, 52.45 + 8.2, 270)
 fix('U100', 122.0, 92.0, 0)
 # dram right under bank 34 (short fly-by), between the fpga and the button row
-DRAM_C = (107.6, 116.5)
+DRAM_C = (113.5, 120.55)
 fix(one('MT41K256M16TW'), DRAM_C[0], DRAM_C[1], 90)
 fix(one('STM32H755BIT6'), 165.0, 99.0, 0)
 VITA_C = (150.0, 69.5)
@@ -302,7 +302,7 @@ for apm, (val, x, y, rot) in AUDIO_FIX.items():
     fix(ref, x, y, rot)
 
 # user leds in a row just above the buttons
-for (v, sh), xs in ((('GREEN', 'FPGA_IO'), (119.0, 122.0, 125.0, 128.0)), (('GREEN', 'STM32'), (150.0,)),
+for (v, sh), xs in ((('GREEN', 'FPGA_IO'), (127.0, 130.0, 133.0, 136.0)), (('GREEN', 'STM32'), (150.0,)),
                     (('BLUE', 'STM32'), (153.0,))):
     for r_, x in zip(sorted([r for r, (f, c) in fps.items() if c['value'] == v and c['sheet'] == sh],
                             key=lambda r: int(re.sub(r'\D', '', r))), xs):
@@ -311,7 +311,7 @@ for (v, sh), xs in ((('GREEN', 'FPGA_IO'), (119.0, 122.0, 125.0, 128.0)), (('GRE
 # one labelled button row below the fpga/stm32
 BTN_ROW = [('FPGA_PROG', 'PROG'), ('FPGA_BTN0', 'BTN0'), ('FPGA_BTN1', 'BTN1'), ('MCU_RESET', 'RESET'), ('MCU_USER', 'USER')]
 LABELS = []
-for (val, lab), x in zip(BTN_ROW, (120.0, 129.5, 139.0, 148.0, 157.0)):
+for (val, lab), x in zip(BTN_ROW, (126.5, 135.5, 144.5, 153.5, 162.5)):
     fix(one(val), x, 120.5, 0)
     LABELS.append((lab, x, 124.6))
 LABELS += [('L OUT', 167.4, 141.9 - 4.5), ('R OUT', 182.6, 141.9 - 4.5)]
@@ -331,6 +331,8 @@ HDR_FIX = {
     'SOFTCORE_UART FTDI': (145.7, 134.3, 90),
     # row c: pmods (above), then both mipi-10s side by side, same orientation
     'MCU_SWD MIPI-10': (148.75, 142.55, 90), 'SOFTCORE_SWD MIPI-10': (157.25, 142.55, 90),
+    # spare expander pins at the right end of the button row, next to the breakout
+    'IOX_SPARE': (170.0, 120.0, 90),
 }
 for v, (x, y, rot) in HDR_FIX.items():
     fix([r for r, (f, c) in fps.items() if c['value'] == v][0], x, y, rot)
@@ -384,11 +386,13 @@ ANCHOR_T = {
     # flat wson flashes on the bottom inside the stm32 outline, between its quadspi pins
     'W25Q01JVZEIQ': (160, 104, (0, 90), 'B'), 'SN65HVD230': (176, 73),
     'TCA9535': (176, 100, (0, 90), 'B'), '24AA025E48': (172, 80, (0, 90), 'F'),
-    'IOX_SPARE': (156, 141, HZ, 'F'), 'CAN': (170, 79),
+    'CAN': (170, 79),
     
     '100MHz': (133, 108), '24.576MHz': (137, 108), '22.5792MHz': (141, 108), '125MHz LVDS': (106, 90),
     'TPS62130RGT': (92, 112), 'LMR33630ADDA': (85, 133), 'TLV62568DBV': (100, 108), 'TLV75801': (104, 101),
-    'TPS51200DRC': (97.6, 123.9, (0, 90), 'F'),  # vtt source at the end of the termination strip 'INA219': (80, 58), 'DMP3013SFV': (70, 58), '25MHz 8pF': (150, 85),
+    # vtt source at the end of the termination strip
+    'TPS51200DRC': (97.6, 127.95, (0, 90), 'F'),
+    'INA219': (80, 58), 'DMP3013SFV': (70, 58), '25MHz 8pF': (150, 85),
     '32.768kHz': (150, 90), '24MHz 12pF': (80, 136), '25MHz 10pF': (84, 112),
     'M3': None, 'M2.5 VITA': None, 'MCU_BREAKOUT': None,
     '1.1A hold': (167, 70),  # vita 12P0V polyfuse next to the connector
@@ -396,10 +400,10 @@ ANCHOR_T = {
 AUDIO_ZONE = (162, 123.0, 191.0, 147)
 # routing channels kept free on the top side: gtp to sfp, fmc to stm32, vita la to fpga
 CORRIDORS = [(98.6, 60, 112, 100), (134.6, 79, 147.5, 116.5), (109, 76.8, 152, 79.4),
-             (115.5, 123.5, 165.0, 125.7),  # label strip under the button row
-             (117.0, 115.2, 156.0, 117.4),  # led row
+             (122.0, 123.5, 167.0, 125.7),  # label strip under the button row
+             (125.5, 115.2, 156.0, 117.4),  # led row
              (110.0, 126.0, 162.0, 147.0),  # header field: headers and their labels only
-             (100.0, 104.8, 121.0, 111.3)]  # ddr3 top-layer gap between fpga and dram
+             (100.0, 104.8, 125.0, 115.3)]  # ddr3 top-layer gap between fpga and dram
 POWER_ZONE = (67, 105, 106, 147)
 
 # mounting holes
