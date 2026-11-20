@@ -9,6 +9,7 @@
 # them into the site dir and writes an index.html card grid
 
 import html
+import re
 import os
 import shutil
 import sys
@@ -63,12 +64,61 @@ def layer_files(d):
     return [(k, found[k]) for k in order]
 
 
+def pour_layers(slug):
+    # copper layers that are mostly plane: zone outlines covering >= 40% of the board outline box.
+    # returned as LAYER_ORDER keys (In1_Cu, ...)
+    i = slug.rfind('_v')
+    if i < 0:
+        return set()
+    d = os.path.join(REPO, 'boards', slug[:i], slug[i + 1:])
+    out = set()
+    for f in os.listdir(d) if os.path.isdir(d) else []:
+        if not f.endswith('.kicad_pcb'):
+            continue
+        txt = open(os.path.join(d, f), encoding='utf-8', errors='ignore').read()
+        xs, ys = [], []
+        for m in re.finditer(r'\(layer "Edge\.Cuts"\)', txt):
+            blk = txt[txt.rfind('(gr_', 0, m.start()):m.start()]
+            for x, y in re.findall(r'\((?:start|end|mid) ([-\d.]+) ([-\d.]+)\)', blk):
+                xs.append(float(x))
+                ys.append(float(y))
+        if not xs:
+            continue
+        board = (max(xs) - min(xs)) * (max(ys) - min(ys))
+        starts = [m.start() for m in re.finditer(r'\(zone\b', txt)] + [len(txt)]
+        area = {}
+        for s, e in zip(starts, starts[1:]):
+            blk = txt[s:e]
+            if '(keepout' in blk[:1500]:
+                continue
+            lm = re.search(r'\(layers? ((?:"[^"]+"\s*)+)\)', blk[:800])
+            ps = blk.find('(polygon')
+            if not lm or ps < 0:
+                continue
+            pe = blk.find('(filled_polygon', ps)
+            outline = blk[ps:pe if pe > 0 else len(blk)]
+            pts = [(float(x), float(y)) for x, y in re.findall(r'\(xy ([-\d.]+) ([-\d.]+)\)', outline)]
+            if len(pts) < 3:
+                continue
+            a = abs(sum(p[0] * q[1] - q[0] * p[1] for p, q in zip(pts, pts[1:] + pts[:1]))) / 2
+            for ly in re.findall(r'"([^"]+)"', lm.group(1)):
+                if ly.endswith('.Cu'):
+                    area[ly] = area.get(ly, 0) + a
+        out |= {ly.replace('.', '_') for ly, a in area.items() if a >= 0.4 * board}
+    return out
+
+
 def layers_page(name, layers, out_html):
-    imgs = ''.join(f'<img data-layer="{html.escape(k)}" src="layers/{html.escape(f)}" alt="">' for k, f in layers)
-    boxes = ''.join(f'<label><input type="checkbox" value="{html.escape(k)}">{html.escape(k.replace("_", "."))}</label>'
-                    for k, f in reversed(layers))
+    imgs = ''.join(f'<img data-layer="{html.escape(k)}" src="layers/{html.escape(f)}" alt="" draggable="false">'
+                   for k, f in layers)
+    pours = pour_layers(name)
+    # pour layers start faint, else a stack of solid planes hides everything under them
+    rows = ''.join(f'<div class="row"><label><input type="checkbox" value="{html.escape(k)}">'
+                   f'{html.escape(k.replace("_", "."))}{" <i>(pour)</i>" if k in pours else ""}</label>'
+                   f'<input class="op" type="range" min="0" max="100" value="{30 if k in pours else 100}" '
+                   f'data-layer="{html.escape(k)}" title="opacity"></div>' for k, f in reversed(layers))
     page = (LAYERS_TEMPLATE.replace('{{name}}', html.escape(name)).replace('{{imgs}}', imgs)
-            .replace('{{boxes}}', boxes))
+            .replace('{{boxes}}', rows))
     with open(out_html, 'w', encoding='utf-8') as fh:
         fh.write(page)
 
@@ -258,25 +308,33 @@ LAYERS_TEMPLATE = """<!doctype html>
 <title>{{name}} layers</title>
 <style>
   * { box-sizing: border-box; }
+  html, body { height: 100%; }
   body { margin: 0; font: 14px/1.4 system-ui, sans-serif; background: #0d1117; color: #e6edf3;
-         display: grid; grid-template-columns: 220px 1fr; height: 100vh; }
+         display: grid; grid-template-columns: 260px 1fr; }
   aside { padding: 1rem; border-right: 1px solid #30363d; overflow: auto; }
-  aside h1 { font-size: 1rem; margin: 0 0 .75rem; overflow-wrap: anywhere; }
+  aside h1 { font-size: 1rem; margin: 0 0 .5rem; overflow-wrap: anywhere; }
   aside a { color: #4493f8; text-decoration: none; font-size: .85rem; }
-  label { display: block; padding: .15rem 0; cursor: pointer; }
-  input { margin-right: .5rem; }
-  .btns { display: flex; flex-wrap: wrap; gap: .35rem; margin: .75rem 0; }
-  button { background: #21262d; color: #e6edf3; border: 1px solid #30363d; border-radius: 6px;
-           padding: .25rem .5rem; cursor: pointer; font-size: .8rem; }
-  button:hover { border-color: #4493f8; }
-  .zoom { margin-top: .75rem; font-size: .8rem; }
-  .zoom input { width: 100%; }
-  main { overflow: auto; background: #000; }
-  #stack { position: relative; margin: 1rem; }
-  #stack img { position: absolute; inset: 0; width: 100%; height: auto; mix-blend-mode: screen; }
+  .sec { margin-top: .9rem; font-size: .75rem; text-transform: uppercase; letter-spacing: .05em; opacity: .6; }
+  .row { display: grid; grid-template-columns: 1fr 80px; align-items: center; gap: .4rem; padding: .1rem 0; }
+  .row label { cursor: pointer; white-space: nowrap; }
+  .row i { opacity: .55; font-style: normal; font-size: .75rem; }
+  .row input[type=checkbox] { margin-right: .45rem; }
+  input[type=range] { width: 100%; accent-color: #4493f8; }
+  .btns { display: flex; flex-wrap: wrap; gap: .35rem; margin: .4rem 0; }
+  button, select { background: #21262d; color: #e6edf3; border: 1px solid #30363d; border-radius: 6px;
+           padding: .25rem .55rem; cursor: pointer; font-size: .8rem; }
+  button:hover, select:hover { border-color: #4493f8; }
+  .ctl { display: grid; grid-template-columns: 70px 1fr; align-items: center; gap: .4rem; margin: .3rem 0; font-size: .85rem; }
+  .hint { font-size: .75rem; opacity: .55; margin-top: .75rem; }
+  main { position: relative; overflow: hidden; background: #000; cursor: grab; touch-action: none; }
+  main.drag { cursor: grabbing; }
+  #stack { position: absolute; left: 0; top: 0; }
+  #stack img { position: absolute; left: 0; top: 0; width: 100%; height: auto; user-select: none; }
   #stack img:first-child { position: relative; }
+  #stack.add img { mix-blend-mode: lighten; }
   #stack img.off { visibility: hidden; }
-  @media (max-width: 700px) { body { grid-template-columns: 1fr; height: auto; }
+  #zl { position: absolute; right: .75rem; bottom: .6rem; font-size: .8rem; opacity: .7; pointer-events: none; }
+  @media (max-width: 760px) { body { grid-template-columns: 1fr; grid-template-rows: auto 70vh; }
     aside { border-right: 0; border-bottom: 1px solid #30363d; } }
 </style>
 </head>
@@ -284,6 +342,7 @@ LAYERS_TEMPLATE = """<!doctype html>
 <aside>
   <h1>{{name}}</h1>
   <a href="../index.html">back to gallery</a>
+  <div class="sec">show</div>
   <div class="btns">
     <button data-set="F_Cu">top</button>
     <button data-set="B_Cu">bottom</button>
@@ -292,33 +351,110 @@ LAYERS_TEMPLATE = """<!doctype html>
     <button data-set="*">all</button>
     <button data-set="">none</button>
   </div>
+  <div class="sec">layers (checkbox, opacity)</div>
   {{boxes}}
-  <div class="zoom">zoom <input id="zoom" type="range" min="100" max="800" step="25" value="100"></div>
+  <div class="sec">view</div>
+  <div class="ctl">opacity <input id="gop" type="range" min="5" max="100" value="100"></div>
+  <div class="ctl">blend <select id="blend"><option value="normal">normal</option><option value="add">additive</option></select></div>
+  <div class="btns"><button id="zin">zoom +</button><button id="zout">zoom -</button><button id="fit">fit</button></div>
+  <div class="hint">wheel to zoom at the cursor, drag to pan, pinch on touch, double-click to zoom in, f to fit</div>
 </aside>
-<main><div id="stack">{{imgs}}</div></main>
+<main id="view"><div id="stack">{{imgs}}</div><div id="zl"></div></main>
 <script>
 (function () {
-  var imgs = document.querySelectorAll('#stack img');
-  var boxes = document.querySelectorAll('aside input[type=checkbox]');
+  var view = document.getElementById('view'), st = document.getElementById('stack');
+  var imgs = st.querySelectorAll('img'), boxes = document.querySelectorAll('.row input[type=checkbox]');
+  var ops = document.querySelectorAll('.row input.op'), gop = document.getElementById('gop');
+  var s = 1, x = 0, y = 0, baseW = 1000, aspect = 0.625, moved = false;
+
+  function opacity() {
+    var g = gop.value / 100, per = {};
+    ops.forEach(function (o) { per[o.dataset.layer] = o.value / 100; });
+    imgs.forEach(function (i) { i.style.opacity = g * per[i.dataset.layer]; });
+  }
   function apply() {
     var on = {};
     boxes.forEach(function (b) { on[b.value] = b.checked; });
     imgs.forEach(function (i) { i.classList.toggle('off', !on[i.dataset.layer]); });
   }
   function preset(p) {
-    boxes.forEach(function (b) {
-      b.checked = p === '*' ? true : (p === '' ? false : b.value.indexOf(p) >= 0);
-    });
+    boxes.forEach(function (b) { b.checked = p === '*' ? true : (p === '' ? false : b.value.indexOf(p) >= 0); });
     apply();
   }
+  function draw() {
+    // resize instead of css scale so the svgs re-render sharp at every zoom
+    st.style.width = (baseW * s) + 'px';
+    st.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+    document.getElementById('zl').textContent = Math.round(s * 100) + '%';
+  }
+  function fit() {
+    var r = view.getBoundingClientRect(), pad = 16;
+    var h = baseW * aspect;
+    s = Math.min((r.width - 2 * pad) / baseW, (r.height - 2 * pad) / h);
+    x = (r.width - baseW * s) / 2; y = (r.height - h * s) / 2;
+    draw();
+  }
+  function zoomAt(f, cx, cy) {
+    var ns = Math.min(40, Math.max(0.05, s * f));
+    f = ns / s;
+    x = cx - (cx - x) * f; y = cy - (cy - y) * f; s = ns; moved = true;
+    draw();
+  }
+  function centre() { var r = view.getBoundingClientRect(); return [r.width / 2, r.height / 2]; }
+
+  view.addEventListener('wheel', function (e) {
+    e.preventDefault();
+    var r = view.getBoundingClientRect();
+    zoomAt(Math.exp(-e.deltaY * (e.deltaMode === 1 ? 0.05 : 0.0015)), e.clientX - r.left, e.clientY - r.top);
+  }, { passive: false });
+  view.addEventListener('dblclick', function (e) {
+    var r = view.getBoundingClientRect();
+    zoomAt(2, e.clientX - r.left, e.clientY - r.top);
+  });
+  // drag to pan, two pointers to pinch
+  var pts = {}, last = null, pinch = null;
+  view.addEventListener('pointerdown', function (e) {
+    view.setPointerCapture(e.pointerId); pts[e.pointerId] = [e.clientX, e.clientY];
+    view.classList.add('drag');
+  });
+  view.addEventListener('pointermove', function (e) {
+    if (!pts[e.pointerId]) { return; }
+    var prev = pts[e.pointerId]; pts[e.pointerId] = [e.clientX, e.clientY];
+    var ids = Object.keys(pts);
+    if (ids.length === 1) {
+      x += e.clientX - prev[0]; y += e.clientY - prev[1]; moved = true; draw();
+    } else if (ids.length === 2) {
+      var a = pts[ids[0]], b = pts[ids[1]], d = Math.hypot(a[0] - b[0], a[1] - b[1]);
+      var r = view.getBoundingClientRect();
+      if (pinch) { zoomAt(d / pinch, (a[0] + b[0]) / 2 - r.left, (a[1] + b[1]) / 2 - r.top); }
+      pinch = d;
+    }
+  });
+  function up(e) { delete pts[e.pointerId]; pinch = null; if (!Object.keys(pts).length) { view.classList.remove('drag'); } }
+  view.addEventListener('pointerup', up); view.addEventListener('pointercancel', up);
+
+  document.getElementById('zin').addEventListener('click', function () { var c = centre(); zoomAt(1.5, c[0], c[1]); });
+  document.getElementById('zout').addEventListener('click', function () { var c = centre(); zoomAt(1 / 1.5, c[0], c[1]); });
+  document.getElementById('fit').addEventListener('click', function () { moved = false; fit(); });
+  document.addEventListener('keydown', function (e) {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') { return; }
+    var c = centre();
+    if (e.key === 'f') { moved = false; fit(); } else if (e.key === '+' || e.key === '=') { zoomAt(1.5, c[0], c[1]); }
+    else if (e.key === '-') { zoomAt(1 / 1.5, c[0], c[1]); }
+  });
+  document.getElementById('blend').addEventListener('change', function (e) { st.classList.toggle('add', e.target.value === 'add'); });
   boxes.forEach(function (b) { b.addEventListener('change', apply); });
+  ops.forEach(function (o) { o.addEventListener('input', opacity); });
+  gop.addEventListener('input', opacity);
   document.querySelectorAll('button[data-set]').forEach(function (b) {
     b.addEventListener('click', function () { preset(b.dataset.set); });
   });
-  var z = document.getElementById('zoom'), st = document.getElementById('stack');
-  z.addEventListener('input', function () { st.style.width = 'calc(' + z.value + '% - 2rem)'; });
-  st.style.width = 'calc(100% - 2rem)';
-  preset('F_Cu');
+  // refit on resize only until the user has zoomed or panned (mobile toolbars fire resize)
+  window.addEventListener('resize', function () { if (!moved) { fit(); } });
+  var first = imgs[0];
+  function ready() { if (first.naturalWidth) { aspect = first.naturalHeight / first.naturalWidth; } fit(); }
+  if (first.complete) { ready(); } else { first.addEventListener('load', ready); }
+  preset('F_Cu'); opacity();
 })();
 </script>
 </body>
