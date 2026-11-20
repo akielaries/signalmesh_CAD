@@ -10,7 +10,11 @@ import pslib
 # complete again (incomplete ones no worse), and nothing exceeds 2.5x its span (+10 mm). otherwise
 # the board is left as it was. usage: edgefix.py <board>
 PCB = sys.argv[1]
+CHIP = sys.argv[2] if len(sys.argv) > 2 else 'U11'
 SKIP = {'+3V3', 'USBH_DM', 'USBH_DP'}
+# the user's hand-routed groups and every differential pair are never targets
+import re
+HAND = re.compile(r'^(DDR_|MEZZ_|GTP|/FPGA_GTP|SFP\d_(TD|RD)|USBH|USBHS|/MCU_IO/ETH_(TX|RX))|_[PN]$')
 WIDE = {'/STM32/VCAP': 0.3}
 log = open(PCB + '.edgefix.log', 'w')
 
@@ -23,7 +27,7 @@ def say(*a):
 
 
 def load():
-    return pslib.Router(PCB, ['U11', 'U100'])
+    return pslib.Router(PCB, ['U11', 'U100'])   # neck-down at both fine-pitch parts
 
 
 def planes_of(r):
@@ -58,7 +62,9 @@ r = load()
 planes = planes_of(r)
 targets = []
 for (x, y, hx, hy, n, lays, rnd, p) in r.bd.pads:
-    if p.GetParentFootprint().GetReference() == 'U11' and n and n not in planes and n not in SKIP \
+    if HAND.search(n or ''):
+        continue
+    if p.GetParentFootprint().GetReference() == CHIP and n and n not in planes and n not in SKIP \
             and not n.startswith('unconnected') and n not in [t[0] for t in targets] and pieces(r, n) > 1:
         targets.append((n, (x, y)))
 targets.sort(key=lambda t: span(r, t[0]))
@@ -90,7 +96,7 @@ for n, pin in targets:
                 u = 0 if L2 == 0 else max(0, min(1, ((pp[0] - xa) * dx + (pp[1] - ya) * dy) / L2))
                 if math.hypot(pp[0] - xa - u * dx, pp[1] - ya - u * dy) < 0.8:
                     blk.add(vn)
-    blk = sorted(b for b in blk if not b.startswith(('+', 'DDR_', 'MEZZ_', 'GTP')))
+    blk = sorted(b for b in blk if not b.startswith(('+', 'DDR_', 'MEZZ_', 'GTP', 'SFP0_TD', 'SFP0_RD', 'SFP1_TD', 'SFP1_RD')))
     if not blk or len(blk) > 6:
         failed.append((n, 'blockers: %d' % len(blk)))
         say('%-18s skipped (%d blockers)' % (n, len(blk)))
