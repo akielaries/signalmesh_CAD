@@ -46,7 +46,34 @@ def pick(files, suffix):
     return None
 
 
-def card(name, rel, files, has_docs=False):
+# stacking order for the layer viewer, bottom of the stack first
+LAYER_ORDER = ['B_Mask', 'B_Silkscreen', 'B_Cu', 'In6_Cu', 'In5_Cu', 'In4_Cu', 'In3_Cu', 'In2_Cu',
+               'In1_Cu', 'F_Cu', 'F_Silkscreen', 'F_Mask']
+
+
+def layer_files(d):
+    # <base>-<Layer>.svg in renders/layers, ordered bottom to top
+    if not os.path.isdir(d):
+        return []
+    found = {}
+    for f in os.listdir(d):
+        if f.endswith('.svg') and '-' in f:
+            found[f.rsplit('-', 1)[1][:-4]] = f
+    order = [k for k in LAYER_ORDER if k in found] + sorted(k for k in found if k not in LAYER_ORDER)
+    return [(k, found[k]) for k in order]
+
+
+def layers_page(name, layers, out_html):
+    imgs = ''.join(f'<img data-layer="{html.escape(k)}" src="layers/{html.escape(f)}" alt="">' for k, f in layers)
+    boxes = ''.join(f'<label><input type="checkbox" value="{html.escape(k)}">{html.escape(k.replace("_", "."))}</label>'
+                    for k, f in reversed(layers))
+    page = (LAYERS_TEMPLATE.replace('{{name}}', html.escape(name)).replace('{{imgs}}', imgs)
+            .replace('{{boxes}}', boxes))
+    with open(out_html, 'w', encoding='utf-8') as fh:
+        fh.write(page)
+
+
+def card(name, rel, files, has_docs=False, has_layers=False):
     top = pick(files, "_3d_top.png")
     bottom = pick(files, "_3d_bottom.png")
     pcb = pick(files, "_pcb.pdf")
@@ -68,6 +95,8 @@ def card(name, rel, files, has_docs=False):
         if f:
             href = html.escape(f"{rel}/{f}")
             links += f'<a href="{href}">{label}</a>'
+    if has_layers:
+        links += f'<a href="{html.escape(rel)}/layers.html">layer viewer</a>'
     if has_docs:
         links += f'<a href="{html.escape(rel)}/docs/index.html">docs</a>'
 
@@ -87,13 +116,20 @@ def build(root, out):
         os.makedirs(dst, exist_ok=True)
         files = []
         for f in os.listdir(renders):
-            shutil.copy2(os.path.join(renders, f), os.path.join(dst, f))
-            files.append(f)
+            src = os.path.join(renders, f)
+            if os.path.isdir(src):
+                shutil.copytree(src, os.path.join(dst, f), dirs_exist_ok=True)
+            else:
+                shutil.copy2(src, os.path.join(dst, f))
+                files.append(f)
+        layers = layer_files(os.path.join(dst, 'layers'))
+        if layers:
+            layers_page(name, layers, os.path.join(dst, 'layers.html'))
         dd = docs_dir(name)
         if dd:
             n = mddoc.build_docs(dd, os.path.join(dst, 'docs'), name)
             print(f"gallery: {name} docs, {n} page(s)")
-        cards.append(card(name, rel, files, has_docs=bool(dd)))
+        cards.append(card(name, rel, files, has_docs=bool(dd), has_layers=bool(layers)))
 
     body = "\n".join(cards) if cards else "<p>no renders found</p>"
     page = TEMPLATE.replace("{{cards}}", body).replace("{{count}}", str(len(boards)))
@@ -207,6 +243,82 @@ TEMPLATE = """<!doctype html>
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') { close(); }
   });
+})();
+</script>
+</body>
+</html>
+"""
+
+
+LAYERS_TEMPLATE = """<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{name}} layers</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 14px/1.4 system-ui, sans-serif; background: #0d1117; color: #e6edf3;
+         display: grid; grid-template-columns: 220px 1fr; height: 100vh; }
+  aside { padding: 1rem; border-right: 1px solid #30363d; overflow: auto; }
+  aside h1 { font-size: 1rem; margin: 0 0 .75rem; overflow-wrap: anywhere; }
+  aside a { color: #4493f8; text-decoration: none; font-size: .85rem; }
+  label { display: block; padding: .15rem 0; cursor: pointer; }
+  input { margin-right: .5rem; }
+  .btns { display: flex; flex-wrap: wrap; gap: .35rem; margin: .75rem 0; }
+  button { background: #21262d; color: #e6edf3; border: 1px solid #30363d; border-radius: 6px;
+           padding: .25rem .5rem; cursor: pointer; font-size: .8rem; }
+  button:hover { border-color: #4493f8; }
+  .zoom { margin-top: .75rem; font-size: .8rem; }
+  .zoom input { width: 100%; }
+  main { overflow: auto; background: #000; }
+  #stack { position: relative; margin: 1rem; }
+  #stack img { position: absolute; inset: 0; width: 100%; height: auto; mix-blend-mode: screen; }
+  #stack img:first-child { position: relative; }
+  #stack img.off { visibility: hidden; }
+  @media (max-width: 700px) { body { grid-template-columns: 1fr; height: auto; }
+    aside { border-right: 0; border-bottom: 1px solid #30363d; } }
+</style>
+</head>
+<body>
+<aside>
+  <h1>{{name}}</h1>
+  <a href="../index.html">back to gallery</a>
+  <div class="btns">
+    <button data-set="F_Cu">top</button>
+    <button data-set="B_Cu">bottom</button>
+    <button data-set="_Cu">all copper</button>
+    <button data-set="In">inner</button>
+    <button data-set="*">all</button>
+    <button data-set="">none</button>
+  </div>
+  {{boxes}}
+  <div class="zoom">zoom <input id="zoom" type="range" min="100" max="800" step="25" value="100"></div>
+</aside>
+<main><div id="stack">{{imgs}}</div></main>
+<script>
+(function () {
+  var imgs = document.querySelectorAll('#stack img');
+  var boxes = document.querySelectorAll('aside input[type=checkbox]');
+  function apply() {
+    var on = {};
+    boxes.forEach(function (b) { on[b.value] = b.checked; });
+    imgs.forEach(function (i) { i.classList.toggle('off', !on[i.dataset.layer]); });
+  }
+  function preset(p) {
+    boxes.forEach(function (b) {
+      b.checked = p === '*' ? true : (p === '' ? false : b.value.indexOf(p) >= 0);
+    });
+    apply();
+  }
+  boxes.forEach(function (b) { b.addEventListener('change', apply); });
+  document.querySelectorAll('button[data-set]').forEach(function (b) {
+    b.addEventListener('click', function () { preset(b.dataset.set); });
+  });
+  var z = document.getElementById('zoom'), st = document.getElementById('stack');
+  z.addEventListener('input', function () { st.style.width = 'calc(' + z.value + '% - 2rem)'; });
+  st.style.width = 'calc(100% - 2rem)';
+  preset('F_Cu');
 })();
 </script>
 </body>

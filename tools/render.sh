@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# render design pictures (schematic pdf, pcb layer pdf, 3d front/back png)
+# render design pictures (schematic pdf, pcb layer pdf, per-layer svgs,
+# 3d front/back png)
 # for the allowlisted boards below, skipping .history and _archive copies
 #
 # usage:
@@ -79,6 +80,19 @@ while IFS= read -r pcb; do
   echo "  pcb layer pdf"
   kicad-cli pcb export pdf "$pcb" --layers "$PCB_LAYERS" \
     -o "$out/${base}_pcb.pdf" >/dev/null
+
+  # one svg per layer for the gallery layer viewer: every copper layer in the
+  # stackup plus silk and mask, each with the board outline, all on the same
+  # board-sized frame so the viewer can stack them
+  echo "  layer svgs"
+  copper=$(awk '/^\t\(layers/{f=1;next} f&&/^\t\)/{exit} f' "$pcb" \
+    | grep -o '"[A-Za-z0-9.]*\.Cu"' | tr -d '"' | paste -sd,)
+  rm -rf "$out/layers"
+  mkdir -p "$out/layers"
+  kicad-cli pcb export svg "$pcb" --mode-multi --page-size-mode 2 \
+    --exclude-drawing-sheet --common-layers Edge.Cuts \
+    --layers "$copper,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask" \
+    -o "$out/layers/" >/dev/null
 
   # --use-board-stackup-colors must be passed bare and last: giving it a value
   # (=true / true) throws bad_any_cast in kicad-cli 10.0.x. without it the ci

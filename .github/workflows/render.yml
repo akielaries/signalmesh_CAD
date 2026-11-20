@@ -3,15 +3,24 @@ name: render designs
 # render the allowlisted boards (the list lives in tools/render.sh) and publish
 # a gallery to github pages. renders are build outputs, not committed to the
 # repo. each board renders in its own matrix job and is cached on the hash of
-# its kicad files + render.sh, so only boards that actually changed re-render.
+# its kicad files + render scripts, so only boards that actually changed
+# re-render. the cache is checked before the kicad image is pulled, so an
+# unchanged board's job takes seconds
 on:
   push:
     paths:
       - 'boards/**'
       - 'tools/render.sh'
+      - 'tools/ci_render.sh'
       - 'tools/gallery.py'
       - 'tools/mddoc.py'
       - '.github/workflows/render.yml'
+      # generator scripts, local checkpoints, kicad backups and per-user ui
+      # state never change a render or a doc page
+      - '!boards/**/gen/**'
+      - '!boards/**/checkpoints/**'
+      - '!boards/**/*-backups/**'
+      - '!boards/**/*.kicad_prl'
   workflow_dispatch:
 
 # newest push wins; cancel an in-flight render/deploy for the same ref
@@ -46,15 +55,11 @@ jobs:
       fail-fast: false
       matrix:
         board: ${{ fromJSON(needs.plan.outputs.boards) }}
-    container:
-      image: kicad/kicad:10.0-full
-      options: --user root
+    # no job-level container: pulling kicad/kicad:10.0-full costs minutes even
+    # when the cache hits. the image is only run (docker run) on a cache miss
     steps:
       - name: checkout
         uses: actions/checkout@v4
-
-      - name: mark workspace safe for git
-        run: git config --global --add safe.directory '*'
 
       # BOARD/vX_rY -> BOARD_vX_rY, used for cache keys, artifact names and the
       # gallery card title
@@ -62,54 +67,27 @@ jobs:
         id: slug
         run: echo "slug=$(echo '${{ matrix.board }}' | tr '/' '_')" >>"$GITHUB_OUTPUT"
 
-      # key on this board's kicad files + render.sh so an unchanged board
+      # key on this board's kicad files + render scripts so an unchanged board
       # restores instantly and skips kicad-cli entirely
       - name: cache renders
         id: cache
         uses: actions/cache@v4
         with:
           path: boards/${{ matrix.board }}/renders
-          key: renders-${{ env.RENDER_CACHE_VERSION }}-${{ steps.slug.outputs.slug }}-${{ hashFiles(format('boards/{0}/*.kicad_pcb', matrix.board), format('boards/{0}/*.kicad_sch', matrix.board), format('boards/{0}/3dmodels/**', matrix.board), 'tools/render.sh') }}
+          key: renders-${{ env.RENDER_CACHE_VERSION }}-${{ steps.slug.outputs.slug }}-${{ hashFiles(format('boards/{0}/*.kicad_pcb', matrix.board), format('boards/{0}/*.kicad_sch', matrix.board), format('boards/{0}/3dmodels/**', matrix.board), 'tools/render.sh', 'tools/ci_render.sh') }}
 
-      - name: locate stock 3d model dir
-        if: steps.cache.outputs.cache-hit != 'true'
-        # discover the real stock dir in this image and point all three model
-        # vars at it, else stock ics/passives render as flat outlines
-        run: |
-          sample=$(find /usr -type f -name 'R_0402_1005Metric.step' \
-            -path '*Resistor_SMD.3dshapes*' 2>/dev/null | head -1)
-          if [ -z "$sample" ]; then
-            echo "::error::stock 3d models not found in image"
-            exit 1
-          fi
-          stock=$(dirname "$(dirname "$sample")")
-          echo "stock 3d model dir: $stock"
-          echo "KICAD10_3DMODEL_DIR=$stock" >>"$GITHUB_ENV"
-          echo "KICAD9_3DMODEL_DIR=$stock"  >>"$GITHUB_ENV"
-          echo "KISYS3DMOD=$stock"          >>"$GITHUB_ENV"
-
-      - name: fetch custom footprint/3d library
-        if: steps.cache.outputs.cache-hit != 'true'
-        # boards reference custom models by absolute path; clone the public lib
-        # into that exact path so those models resolve
-        run: git clone --depth 1 https://github.com/akielaries/my_pcb_lib /home/akiel/trunk/pub/my_footprints
-
-      - name: install xvfb
+      - name: render board (kicad container, cache miss only)
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
-          apt-get update
-          apt-get install -y --no-install-recommends xvfb
-
-      - name: render board
-        if: steps.cache.outputs.cache-hit != 'true'
-        # 3d render needs a display; render.sh <board> filters to that board
-        run: xvfb-run -a bash tools/render.sh '${{ matrix.board }}'
+          docker run --rm --user root -v "$GITHUB_WORKSPACE:/w" -w /w \
+            kicad/kicad:10.0-full bash tools/ci_render.sh '${{ matrix.board }}'
+          sudo chown -R "$(id -u):$(id -g)" 'boards/${{ matrix.board }}/renders'
 
       - name: stage renders
         run: |
           dst="renders_staged/${{ steps.slug.outputs.slug }}"
           mkdir -p "$dst"
-          cp "boards/${{ matrix.board }}/renders/"* "$dst/"
+          cp -r "boards/${{ matrix.board }}/renders/"* "$dst/"
           ls -l "$dst"
 
       - name: upload renders artifact
