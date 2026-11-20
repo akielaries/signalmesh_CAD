@@ -220,13 +220,14 @@ class Placer:
                 continue
             if (o.IsFlipped() == f.IsFlipped() or (self.tht(o) and not f.IsFlipped())) and hit(r, self.crt(o)):
                 return False
-            # bottom parts must still clear the drill holes of tht parts
-            if f.IsFlipped() and self.tht(o) and not o.IsFlipped() == f.IsFlipped():
+            # parts on the other side must still clear tht pads (their copper is on both sides)
+            if self.tht(o) and o.IsFlipped() != f.IsFlipped():
                 for k in range(len(o.Pads())):
                     p = o.Pads()[k]
-                    if p.GetAttribute() == pcbnew.PAD_ATTRIB_PTH:
-                        px, py = p.GetPosition().x / MM, p.GetPosition().y / MM
-                        if r[0] - 0.3 < px < r[2] + 0.3 and r[1] - 0.3 < py < r[3] + 0.3:
+                    if p.GetAttribute() in (pcbnew.PAD_ATTRIB_PTH, pcbnew.PAD_ATTRIB_NPTH):
+                        pb = p.GetBoundingBox()
+                        q = (pb.GetLeft() / MM, pb.GetTop() / MM, pb.GetRight() / MM, pb.GetBottom() / MM)
+                        if hit(r, q):
                             return False
         lay = pcbnew.B_Cu if f.IsFlipped() else pcbnew.F_Cu
         for k in range(len(f.Pads())):
