@@ -27,16 +27,45 @@ def key(t):
 
 
 have = set()
+segs, vias0 = {}, {}
 ts = b.Tracks()
 for i in range(len(ts)):
-    have.add(key(ts[i]))
+    t = ts[i]
+    have.add(key(t))
+    if t.GetClass() == 'PCB_VIA':
+        vias0.setdefault(t.GetNetname(), []).append((t.GetPosition().x / MM, t.GetPosition().y / MM))
+    else:
+        segs.setdefault((t.GetNetname(), t.GetLayer()), []).append(
+            (t.GetStart().x / MM, t.GetStart().y / MM, t.GetEnd().x / MM, t.GetEnd().y / MM))
+
+
+def on_copper(net, layer, p, tol=0.03):
+    for (x1, y1, x2, y2) in segs.get((net, layer), []):
+        dx, dy = x2 - x1, y2 - y1
+        L2 = dx * dx + dy * dy
+        u = 0 if L2 == 0 else max(0, min(1, ((p[0] - x1) * dx + (p[1] - y1) * dy) / L2))
+        if ((p[0] - x1 - u * dx) ** 2 + (p[1] - y1 - u * dy) ** 2) ** 0.5 < tol:
+            return True
+    return False
+
+
+def existing(t):
+    # freerouting hands the locked copper back rounded to its 1 um grid: treat anything lying on
+    # existing same-net copper as already there
+    n = t.GetNetname()
+    if t.GetClass() == 'PCB_VIA':
+        p = (t.GetPosition().x / MM, t.GetPosition().y / MM)
+        return any(abs(p[0] - v[0]) < 0.03 and abs(p[1] - v[1]) < 0.03 for v in vias0.get(n, []))
+    a = (t.GetStart().x / MM, t.GetStart().y / MM)
+    z = (t.GetEnd().x / MM, t.GetEnd().y / MM)
+    return on_copper(n, t.GetLayer(), a) and on_copper(n, t.GetLayer(), z)
 ct = c.Tracks()
 nt = nv = 0
 nets = set()
 for i in range(len(ct)):
     t = ct[i]
     n = t.GetNetname()
-    if n not in allowed or key(t) in have or t.GetClass() == 'PCB_ARC':
+    if n not in allowed or key(t) in have or t.GetClass() == 'PCB_ARC' or existing(t):
         continue
     net = b.FindNet(n)
     if t.GetClass() == 'PCB_VIA':
