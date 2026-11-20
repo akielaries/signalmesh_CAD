@@ -62,5 +62,23 @@ for a, z in kids:
         nkept += tk[0] == 'net'
     cur = z
 out += t[cur:]
+
+# pours on routable layers (e.g. the In5 +1V0 VCCINT pour, the B.Cu +12V pour) are exported as planes,
+# which freerouting will happily route other nets across, splitting the pour. add a wire keepout with the
+# same outline for each one (vias stay allowed, so escapes through the region still work)
+SIGNAL = {'F.Cu', 'In2.Cu', 'In5.Cu', 'B.Cu'}
+ss = out.index('(structure')
+skids, _ = children(out, ss)
+keeps, last = [], None
+for a, z in skids:
+    blk = out[a:z]
+    if not blk.startswith('(plane'):
+        continue
+    last = z
+    m = re.match(r'\(plane\s+("[^"]*"|\S+)\s+\(polygon\s+(\S+)', blk)
+    if m and m.group(2) in SIGNAL:
+        keeps.append('\n    (wire_keepout "" ' + blk[blk.index('(polygon'):])
+if keeps and last:
+    out = out[:last] + ''.join(keeps) + out[last:]
 open(DST, 'w').write(out)
-print('nets kept %d, dropped %d' % (nkept, ndrop))
+print('nets kept %d, dropped %d; wire keepouts over %d pours on routable layers' % (nkept, ndrop, len(keeps)))
