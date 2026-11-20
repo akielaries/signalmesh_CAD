@@ -82,6 +82,16 @@ is fine for USB HS; for 100BASE-TX it is longer than the ideal (PHY within about
 magnetics) but works. The ESD part (U14), VBUS cap (C102) and the magnetics centre tap parts
 (R60, C113) stay at their connectors.
 
+### 12 V distribution
+
+The input path is J1, F1, D1 (TVS), Q1 (reverse-polarity FET), then the 10 mOhm Kelvin shunt R2 (on
+the bottom under Q1 and the INA219), after which the net is +12V. +12V is a B.Cu pour limited to a top
+strip (y 53.6 to 60.5, wider round U4), a strip down the front side (x 76 to 82) and the bottom-left
+power box (x 75 to 90, y 112 to 146), about 1460 mm2 instead of the whole layer. The rest of B.Cu is
+free for signals. Loads off the pour (F2 mezzanine fuse, R35, TP2) have their own trace to a via in it.
+R2's pin-out was corrected (1 and 4 force, 2 and 3 sense); before that the shunt was bypassed and the
+INA219 read zero.
+
 ### GTP lanes
 
 Coupled 100 R pairs on F.Cu (microstrip over In1 GND), In2 (stripline between In1 and In3

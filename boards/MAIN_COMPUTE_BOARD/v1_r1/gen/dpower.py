@@ -55,7 +55,8 @@ def build(d):
     R(s, '.QREV_G', 'GND', '10k')
     s.add('Device:D_Zener_Small', {'1': '.12V_PROT', '2': '.QREV_G'}, value='BZT52C10',
           fp='Diode_SMD:D_SOD-123', prefix='D')
-    s.add('Device:R_Shunt', {'1': '.12V_PROT', '2': '+12V', '3': '.ISNS_P', '4': '.ISNS_N'}, value='10m 1W',
+    # R_Shunt / WSK2512: 1 and 4 are the force (current) pads at each end, 2 and 3 the sense pads
+    s.add('Device:R_Shunt', {'1': '.12V_PROT', '2': '.ISNS_P', '3': '.ISNS_N', '4': '+12V'}, value='10m 1W',
           fp='Resistor_SMD:R_Shunt_Vishay_WSK2512_6332Metric_T1.19mm', prefix='R')
     s.add('Sensor_Energy:INA219AxD',
           {'IN+': '.ISNS_P', 'IN-': '.ISNS_N', 'VS': '+3V3', 'GND': 'GND', 'SCL': 'I2C1_SCL',
