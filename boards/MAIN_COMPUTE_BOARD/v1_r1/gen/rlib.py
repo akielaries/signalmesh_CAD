@@ -9,7 +9,7 @@ from skimage.graph import MCP_Geometric
 MM = 1e6
 G = 0.025         # grid pitch, mm
 MARGIN = 0.02     # extra over the drc clearance to absorb grid quantisation (G*sqrt2/2 ~ 0.018)
-LAYERS = {'F.Cu': pcbnew.F_Cu, 'In2.Cu': pcbnew.In2_Cu, 'In5.Cu': pcbnew.In5_Cu, 'B.Cu': pcbnew.B_Cu}
+LAYERS = {'F.Cu': pcbnew.F_Cu, 'In2.Cu': pcbnew.In2_Cu, 'In5.Cu': pcbnew.In5_Cu, 'In7.Cu': pcbnew.In7_Cu, 'B.Cu': pcbnew.B_Cu}
 BGA_RECTS = []    # (x0, y0, x1, y1, clr) regions where a reduced escape clearance applies
 TIGHT = True      # octilinear pull-tight smoothing of every path
 

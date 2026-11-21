@@ -119,7 +119,7 @@ class Router:
     def side(lays):
         return 'B.Cu' if 'B.Cu' in lays and 'F.Cu' not in lays else 'F.Cu'
 
-    def leg(self, net, a, z, w, inner=('In2.Cu',)):
+    def leg(self, net, a, z, w, inner=('In2.Cu', 'In7.Cu')):
         bd, (ra, pa, la, _), (rz, pz, lz, _) = self.bd, a, z
         for ly in ('F.Cu', 'B.Cu'):
             if ly in la and ly in lz:
@@ -143,7 +143,7 @@ class Router:
         bd.unstage(sub)
         return None, None
 
-    def net(self, net, ts, w, inner=('In2.Cu',)):
+    def net(self, net, ts, w, inner=('In2.Cu', 'In7.Cu')):
         # join ts (terminals) by a minimum spanning tree, skipping legs copper already joins
         used, edges = {0}, []
         while len(used) < len(ts):

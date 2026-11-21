@@ -1,30 +1,41 @@
 # PCB
 
-## stackup: JLC08161H-1080 (8 layers, 1.6 mm, 1 oz outer, 0.5 oz inner)
+## stackup: 10 layers, 1.6 mm (1 oz outer, 0.5 oz inner)
+
+JLCPCB does not publish its 10-layer impedance stackups on the impedance page, so this is a typical
+balanced build from their materials (core er 4.6, 7628 er 4.4, 1080 er 3.91). Before ordering, pick the
+closest JLCPCB 10-layer stackup in the order flow and re-check the widths below.
 
 | layer | role | dielectric below |
 |---|---|---|
-| F.Cu | signal (outer) | 1080 prepreg 0.0764 mm, er 3.91 |
-| In1 | GND | core 0.30 mm, er 4.41 |
-| In2 | signal, main high-speed inner layer | 7628 prepreg 0.2104 mm, er 4.40 |
-| In3 | GND | core 0.30 mm |
+| F.Cu | signal (outer) | 1080 prepreg 0.0764 mm |
+| In1 | GND | core 0.15 mm |
+| In2 | signal, main high-speed inner layer | 7628 prepreg 0.2104 mm |
+| In3 | GND | core 0.15 mm |
 | In4 | power planes, split by rail | 7628 prepreg 0.2104 mm |
-| In5 | signal, slower inner layer | core 0.30 mm |
-| In6 | GND | 1080 prepreg 0.0764 mm |
+| In5 | signal (In4 power plane above, In6 GND below) | core 0.15 mm |
+| In6 | GND | 7628 prepreg 0.2104 mm |
+| In7 | signal | core 0.15 mm |
+| In8 | GND | 1080 prepreg 0.0764 mm |
 | B.Cu | signal (outer) | |
+
+All three inner signal layers sit between a 0.15 mm core and a 0.2104 mm prepreg, so they share widths.
 
 ## impedance
 
-Widths come from a 2D finite-difference field solve of these exact cross sections
-(checked against Cohn's exact stripline and Hammerstad microstrip results).
+Widths come from a 2D finite-difference field solve of these cross sections, calibrated against
+Cohn's exact stripline result.
 
-| class | outer (F/B) | inner (In2/In5) | nets |
+| class | outer (F/B) | inner (In2/In5/In7) | nets |
 |---|---|---|---|
-| SE50 | 0.127 mm | 0.23 mm | FMC, ULPI, RMII, QSPI, clocks, I2S |
-| DDR | 0.127 mm | 0.23 mm | DDR DQ/DM/addr/cmd |
-| DIFF100 | 0.10 / 0.18 gap | 0.115 / 0.10 gap | VITA LA, GTP, SFP, DDR CK/DQS |
-| USB90 | 0.11 / 0.127 gap | - | USB HS and FS |
+| SE50 | 0.127 mm | 0.127 mm | FMC, ULPI, RMII, QSPI, clocks, I2S |
+| DDR | 0.127 mm | 0.127 mm | DDR DQ/DM/addr/cmd |
+| DIFF100 | 0.10 / 0.18 gap | 0.09 / 0.125 gap | VITA LA, GTP, SFP, DDR CK/DQS |
+| USB90 | 0.11 / 0.127 gap | 0.11 / 0.106 gap | USB HS and FS |
 | PWR | 0.4 mm min | 0.4 mm min | rails |
+
+The inner pair geometry keeps the 0.215 mm pitch the 8-layer routing used, so existing pairs were
+narrowed in place (0.115 to 0.09) with no re-routing. New inner pairs can also use 0.10 / 0.15 gap.
 
 Per-layer widths are enforced in `MAIN_COMPUTE_BOARD.kicad_dru`. Under the FPGA and
 DDR BGAs the clearance drops to 0.09 mm for escape routing (JLC 8-layer minimum). Inside

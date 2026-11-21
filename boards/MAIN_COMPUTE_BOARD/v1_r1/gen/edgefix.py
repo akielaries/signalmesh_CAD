@@ -55,7 +55,7 @@ def sane(r, n):
 
 
 def route(r, n):
-    r.net(n, r.terms(n), WIDE.get(n, 0.127), inner=('In2.Cu',))
+    r.net(n, r.terms(n), WIDE.get(n, 0.127), inner=('In2.Cu', 'In7.Cu'))
 
 
 r = load()

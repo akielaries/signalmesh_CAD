@@ -231,7 +231,7 @@ def leg(n, a, z, w):
                     r.stage(pts, n, ww, ly, st)
                     return st
                 # change layer: any routable layer to a via dropped beside the cut, then onto the cut layer
-                for ly2 in ('In2.Cu', 'B.Cu', 'F.Cu', 'In5.Cu'):
+                for ly2 in ('In2.Cu', 'In7.Cu', 'B.Cu', 'F.Cu', 'In5.Cu'):
                     if ly2 == ly:
                         continue
                     sub = []
@@ -260,7 +260,7 @@ def leg(n, a, z, w):
                     bd.unstage(sub)
             bd.unstage(st)
             return None
-    s, how = r.leg(n, a[:4], z[:4], w, inner=('In2.Cu',))
+    s, how = r.leg(n, a[:4], z[:4], w, inner=('In2.Cu', 'In7.Cu'))
     return s
 
 
@@ -361,8 +361,8 @@ if legs:
     xs_ = [l['a'][0] for l in legs] + [l['b'][0] for l in legs]
     ys_ = [l['a'][1] for l in legs] + [l['b'][1] for l in legs]
     win = (max(50.5, min(xs_) - 3), max(53.6, min(ys_) - 3), min(190.6, max(xs_) + 3), min(146.9, max(ys_) + 3))
-    left = negroute.negotiate(bd, legs, win, {'In2.Cu': 0.127, 'In5.Cu': 0.127, 'B.Cu': 0.127, 'F.Cu': 0.127},
-                              {'In2.Cu': 1.0, 'In5.Cu': 1.05, 'B.Cu': 1.15, 'F.Cu': 1.2}, iters=int(os.environ.get('NEG_ITERS', '25')))
+    left = negroute.negotiate(bd, legs, win, {'In2.Cu': 0.127, 'In7.Cu': 0.127, 'In5.Cu': 0.127, 'B.Cu': 0.127, 'F.Cu': 0.127},
+                              {'In2.Cu': 1.0, 'In7.Cu': 1.0, 'In5.Cu': 1.05, 'B.Cu': 1.15, 'F.Cu': 1.2}, iters=int(os.environ.get('NEG_ITERS', '25')))
     for l in left:
         why.setdefault(l['net'], []).append('leg %s -> %s' % (tuple(round(v, 1) for v in l['a']), tuple(round(v, 1) for v in l['b'])))
 bd.save()

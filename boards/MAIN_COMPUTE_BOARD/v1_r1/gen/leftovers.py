@@ -26,7 +26,7 @@ for n in sorted(nets):
         todo.append(n)
 print('open low-speed nets considered: %d' % len(todo))
 for n in todo:
-    r.net(n, T(n), 0.15 if n.startswith(('/POWER/', 'PG_')) else 0.127, inner=('In2.Cu', 'In5.Cu'))
+    r.net(n, T(n), 0.15 if n.startswith(('/POWER/', 'PG_')) else 0.127, inner=('In2.Cu', 'In7.Cu', 'In5.Cu'))
 r.bd.save()
 done = [n for n in todo if len(set(r.comp(n, T(n)))) == 1]
 print('completed %d: %s' % (len(done), ' '.join(done[:40])))
