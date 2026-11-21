@@ -241,7 +241,10 @@ for n in sorted(opn):
                 v = (vx, vy)
                 break
         v = v or endpoint_via(n, q)
-        if v is None:
+        if v is None and os.environ.get('R3D') and len(q[2]) == 1:
+            # fine-pitch part, no via spot: the 3d router ends on the pad itself, on its layer
+            ends.append((q[1], list(q[2])[0]))
+        elif v is None:
             nolink.append((n, q[0]))
         else:
             ends.append((v, None))
@@ -258,7 +261,12 @@ for n in sorted(opn):
         if b[1] and not a[1]:
             a, b = b, a
         leg = {'net': n, 'a': a[0], 'b': b[0]}
-        if a[1]:
+        if os.environ.get('R3D'):
+            if a[1]:
+                leg['la'] = a[1]
+            if b[1]:
+                leg['lb'] = b[1]
+        elif a[1]:
             leg['ly'] = a[1]
         legs.append(leg)
 print('legs: %d (%d pinned to an escape layer); terminals without a via spot: %d (%.0fs)'

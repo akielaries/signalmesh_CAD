@@ -68,6 +68,10 @@ def negotiate3d(bd, legs, win, width, layer_cost, via_cost=1.2, iters=20, clr=0.
             mv |= v
         CNTV += mv
         OWNV[n] = crop_store(mv)
+    ownvias = {}
+    for (vx, vy, vrr, vn) in bd.vias:
+        if vn in set(nets):
+            ownvias.setdefault(vn, []).append((vx, vy))
     log('negotiate3d: %d legs, %d nets, %d layers, window %.0fx%.0f mm, obstacles %.0fs'
         % (len(legs), len(nets), L, x1 - x0, y1 - y0, time.time() - t0))
     D = {ly: np.zeros((NY, NX), np.float32) for ly in LY}
@@ -127,6 +131,11 @@ def negotiate3d(bd, legs, win, width, layer_cost, via_cost=1.2, iters=20, clr=0.
             C[2 * k] = np.where(blk, np.inf, c)
             dmax = np.maximum(dmax, D[ly][j0:j1, i0:i1] + H[ly][j0:j1, i0:i1])
         vblk = VFIX[j0:j1, i0:i1] | ((CNTV[j0:j1, i0:i1] - uncrop(OWNV[n], j0, j1, i0, i1)) > 0)
+        kk = int(math.ceil(0.5 / G))
+        for (vx, vy) in ownvias.get(n, []):
+            jj, ii = int(round((vy - y0) / G)) - j0, int(round((vx - x0) / G)) - i0
+            if -kk <= jj < (j1 - j0) + kk and -kk <= ii < (i1 - i0) + kk:
+                vblk[max(0, jj - kk):max(0, jj + kk + 1), max(0, ii - kk):max(0, ii + kk + 1)] = True
         vc = np.where(vblk, np.inf, VC * (1.0 + pres * dmax))
         for k in range(L - 1):
             C[2 * k + 1] = vc
@@ -169,8 +178,8 @@ def negotiate3d(bd, legs, win, width, layer_cost, via_cost=1.2, iters=20, clr=0.
                 k += 1
         # a via where the route changes layer (the endpoints' own vias are not new)
         # a layer change next to an end that is already a via needs no new via; next to a pinned track end it does
-        vias = [v for v in vias if (leg.get('la') or math.hypot(v[0] - ja, v[1] - ia) > 6) and
-                (leg.get('lb') or math.hypot(v[0] - jb, v[1] - ib) > 6)]
+        vias = [v for v in vias if (leg.get('la') or math.hypot(v[0] - ja, v[1] - ia) > 20) and
+                (leg.get('lb') or math.hypot(v[0] - jb, v[1] - ib) > 20)]
         keeps = [track_keep(c, ly) for ly, c in runs if c]
         for (j, i) in vias:
             keeps += via_keeps(j, i)
