@@ -94,6 +94,20 @@ def endpoint_via(n, q):
         if math.hypot(vx - p[0], vy - p[1]) < 3.5 and len(set(r.comp(n, [q[:4], r.via_term((vx, vy))]))) == 1:
             return (vx, vy)
     st = []
+    # ball/pin grids: a dogbone at one of the four diagonal cell centres first
+    ref = name.split(':')[0]
+    h = {'U100': 0.5, 'U11': 0.4, 'U21': 0.4, 'J20': 0.635}.get(ref)
+    if h:
+        ly = r.side(lays)
+        for sx in (-1, 1):
+            for sy in (-1, 1):
+                q = (p[0] + sx * h, p[1] + sy * h)
+                if proute.via_spot_exact(bd, q[0], q[1], n) and bd.path(ly, p, q, 0.05, {n}, 0.09, margin=0.6, half_in=0.05):
+                    bd.stage_track([p, q], 0.1, n, ly, st)
+                    bd.stage_via(q[0], q[1], n, st, d=0.4)
+                    bd.commit(st)
+                    vias.setdefault(n, []).append(q)
+                    return q
     v = proute.drop_via(bd, p, n, (p[0], p[1] + 1.0), st, w=0.15, radii=(0.5, 0.65, 0.8, 1.0, 1.3, 1.6, 2.0, 2.5, 3.0, 3.5), layer=r.side(lays))
     if v:
         bd.commit(st)
