@@ -32,7 +32,7 @@
 
 # bga escape under the fpga and ddr
 (rule "BGA escape"
-	(condition "A.intersectsCourtyard('U100') || A.intersectsCourtyard('U21')")
+	(condition "A.intersectsCourtyard('U100') || A.intersectsCourtyard('U21') || A.intersectsCourtyard('U11')")
 	(constraint track_width (min 0.09))
 	(constraint clearance (min 0.09)))
 
@@ -45,3 +45,9 @@
 (rule "DAC clearance"
 	(condition "A.NetClass == 'DAC' && B.NetClass != 'DAC' && B.NetClass != 'PWR'")
 	(constraint clearance (min 0.3)))
+
+# stm32 tfbga265 escape: the 0.8 mm via field and the staggered ring just outside it
+(rule "STM32 escape"
+	(condition "A.intersectsArea('STM32_ESC')")
+	(constraint track_width (min 0.09))
+	(constraint clearance (min 0.09)))

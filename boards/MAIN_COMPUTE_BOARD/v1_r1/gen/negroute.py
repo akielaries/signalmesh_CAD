@@ -143,6 +143,18 @@ def negotiate(bd, legs, win, width, layer_cost, iters=30, clr=0.127, neck=0.10, 
         D[ly][box[0]:box[1], box[2]:box[3]] += km
 
     bad = {id(l) for l in legs if conflicted(l)}
+    # where the stuck legs collide: 2 mm bins of their overlapping cells, per layer
+    hot = {}
+    for leg in legs:
+        if id(leg) in bad and 'keep' in leg:
+            j0, j1, i0, i1 = leg['box']
+            od = D[leg['layer']][j0:j1, i0:i1] - leg['keep']
+            for (j, i) in leg['path']:
+                if od[j - j0, i - i0] > 0.5:
+                    k = (leg['layer'], int(XS[i] // 2) * 2, int(YS[j] // 2) * 2)
+                    hot[k] = hot.get(k, 0) + 1
+    top = sorted(hot.items(), key=lambda kv: -kv[1])[:12]
+    log('conflict hotspots (layer, x, y: cells): ' + '; '.join('%s %d,%d: %d' % (k[0], k[1], k[2], v) for k, v in top))
     for leg in legs:
         if id(leg) not in bad:
             tight(leg)
