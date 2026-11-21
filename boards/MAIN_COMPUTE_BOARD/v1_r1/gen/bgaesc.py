@@ -67,7 +67,11 @@ B = [(u11.Pads()[k].GetNumber(), u11.Pads()[k].GetNetname(), u11.Pads()[k].GetPo
 sig = {q[1] for q in B if live(q[1]) and q[1] not in planes}
 opn = {n for n in sig if n in before and not before[n]}
 
-# 1) rip partial copper of the open nets outside both courtyards
+# 1) rip partial copper of the open nets outside both courtyards (skipped with NO_RIP=1)
+if os.environ.get('NO_RIP'):
+    opn_rip = set()
+else:
+    opn_rip = opn
 boxes = []
 for ref in ('U11', 'U100'):
     c = bd.b.FindFootprintByReference(ref).GetCourtyard(pcbnew.F_CrtYd).BBox()
@@ -77,7 +81,7 @@ ts = bd.b.Tracks()
 kill = []
 for i in range(len(ts)):
     it = ts[i]
-    if it.GetNetname() in opn:
+    if it.GetNetname() in opn_rip:
         pts = [it.GetPosition()] if it.GetClass() == 'PCB_VIA' else [it.GetStart(), it.GetEnd()]
         if not all(inb(p.x / 1e6, p.y / 1e6) for p in pts):
             kill.append(it)

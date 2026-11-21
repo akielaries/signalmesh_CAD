@@ -10,7 +10,7 @@ from scipy.optimize import linear_sum_assignment
 # minimises total straight-line length (hungarian, crossing-free). d0-d15 (selectmap data), fmc_clk
 # (clock-capable pin) and the config pins stay fixed. output: {net now on an fpga ball: net it carries}
 b = pcbnew.LoadBoard(sys.argv[1])
-OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'fmc_swap.json')
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), sys.argv[2] if len(sys.argv) > 2 else 'fmc_swap.json')
 SETS = [['FMC_D%d' % i for i in range(16, 32)], ['FMC_A%d' % i for i in range(19)],
         ['FMC_NOE', 'FMC_NWE', 'FMC_NE1', 'FMC_NWAIT', 'FMC_NBL0', 'FMC_NBL1', 'FMC_NBL2', 'FMC_NBL3']]
 fp, sp = {}, {}
