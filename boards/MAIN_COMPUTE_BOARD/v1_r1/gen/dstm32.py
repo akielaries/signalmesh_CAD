@@ -71,11 +71,11 @@ def check_af(pins):
 
 def build(d):
     import sch
-    s = d.sheet('STM32', 'STM32H755BIT6 (LQFP208), clocks, debug, IO expander, breakout', width=640)
+    s = d.sheet('STM32', 'STM32H755XIH6 (TFBGA265), clocks, debug, IO expander, breakout', width=640)
     s.note('LDO supply mode (VOS0 480 MHz): VDDLDO=VDD, VCAP tied 2x2.2uF, VDDSMPS/VFBSMPS/VSSSMPS=GND, VLXSMPS open (RM0399 fig 22)')
     s.note('FMC bank1 NOR/PSRAM sync burst, 32-bit, non-muxed, A0-A18 (2 MB window). NL not used')
     s.note('slow controls on TCA9535 0x20 (I2C1): VADJ, mezz PG/PRSNT, PHY resets, USB host power')
-    node = sch.flat('MCU_ST_STM32H7', 'STM32H755BITx')
+    node = sch.flat('MCU_ST_STM32H7', 'STM32H755XIHx')
     pins, _ = sch.geom(node, 1)
     bad = check_af(pins)
     if bad:
@@ -87,7 +87,7 @@ def build(d):
             nets[p['num']] = PINMAP[n][0]
         elif n in ('VDD', 'VDDLDO', 'PDR_ON', 'VBAT', 'VDD33_USB', 'VDD50_USB'):
             nets[p['num']] = '+3V3'
-        elif n in ('VSS', 'VSSA', 'VSSSMPS', 'VDDSMPS', 'VFBSMPS'):
+        elif n in ('VSS', 'VSSA', 'VREF-', 'VSSSMPS', 'VDDSMPS', 'VFBSMPS'):
             nets[p['num']] = 'GND'
         elif n == 'VLXSMPS':
             nets[p['num']] = 'NC'
@@ -102,8 +102,9 @@ def build(d):
         else:
             nets[p['num']] = 'NC'
     unused = [p['name'] for p in pins if nets[p['num']] == 'NC']
-    s.add('MCU_ST_STM32H7:STM32H755BITx', nets, value='STM32H755BIT6', props={'LCSC': 'C730208'})
-    nvdd = sum(1 for p in pins if p['name'] in ('VDD', 'VDDLDO'))
+    s.add('MCU_ST_STM32H7:STM32H755XIHx', nets, value='STM32H755XIH6')
+    # one 100nF per supply ball pair group: kept at the lqfp count (21) so later references do not renumber
+    nvdd = 21
     decap(s, '+3V3', ['100nF'] * nvdd + ['4.7uF', '4.7uF', '10uF'])
     decap(s, '.VCAP', ['2.2uF', '2.2uF'])  # an4938: 2x2.2uF total, vcap pins tied
     decap(s, '+3V3', ['1uF', '100nF'])  # usb supplies

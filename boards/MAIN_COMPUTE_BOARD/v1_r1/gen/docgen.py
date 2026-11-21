@@ -39,7 +39,7 @@ source: [system.drawio](system.drawio) (open in draw.io / diagrams.net to edit)
 
 | function | part | notes |
 |---|---|---|
-| MCU | STM32H755BIT6 (LQFP208) | LDO supply mode for VOS0 480 MHz. BIT3 is not a substitute (no VOS0) |
+| MCU | STM32H755XIH6 (TFBGA265) | LDO supply mode for VOS0 480 MHz. XIH3 is not a substitute (no VOS0) |
 | FPGA | XC7A100T-2FGG484I | wire-bond plastic BGA, GTP max 6.25 Gb/s in this package |
 | memory | MT41K256M16TW-107 | DDR3L x16, 800 Mb/s with internal VREF, MIG chip select disabled |
 | boot/bitstream flash | 2x W25Q01JVZEIQ (WSON-8) | QUADSPI dual-flash, 8-bit, 256 MB memory mapped, shared BK1_NCS. Bottom side, under the STM32 |
@@ -135,7 +135,7 @@ w('pinout.md', '''
 
 Generated from the same tables that build the schematic, so these match the design.
 
-## STM32H755BIT6 (LQFP208)
+## STM32H755XIH6 (TFBGA265)
 
 FMC bank 1 runs as a synchronous NOR/PSRAM bus, 32-bit, non-multiplexed, with
 A0-A18 (2 MB window). NL/NADV is not used: the FPGA latches the address on the
@@ -335,7 +335,7 @@ Datasheet limits for the parts on this board and the clock plan the board is bui
 Sources: STM32H755 datasheet DS12919 rev 3 and RM0399 rev 5, Artix-7 DS180/DS181 v1.27,
 UG470, UG482. "Board" columns are what this design is set up to run, not just the silicon limit.
 
-## STM32H755BIT6 (dual core)
+## STM32H755XIH6 (dual core)
 
 | item | limit | notes |
 |---|---|---|
