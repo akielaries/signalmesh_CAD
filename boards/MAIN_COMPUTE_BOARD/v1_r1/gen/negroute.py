@@ -72,7 +72,7 @@ def negotiate(bd, legs, win, width, layer_cost, iters=30, clr=0.127, neck=0.10, 
         j0, j1 = max(0, min(ja, jb) - m), min(NY, max(ja, jb) + m)
         i0, i1 = max(0, min(ia, ib) - m), min(NX, max(ia, ib) + m)
         best = None
-        for ly in width:
+        for ly in ([leg['ly']] if 'ly' in leg else width):
             blocked = FIX[ly][j0:j1, i0:i1] | ((CNT[ly][j0:j1, i0:i1] - own(ly, leg['net'], j0, j1, i0, i1)) > 0)
             cost = layer_cost[ly] * (1.0 + H[ly][j0:j1, i0:i1] + pres * D[ly][j0:j1, i0:i1])
             cost = np.where(blocked, np.inf, cost)
@@ -171,7 +171,7 @@ def negotiate(bd, legs, win, width, layer_cost, iters=30, clr=0.127, neck=0.10, 
     still = []
     for leg in left:
         got = None
-        for ly in sorted(width, key=lambda l: layer_cost[l]):
+        for ly in ([leg['ly']] if 'ly' in leg else sorted(width, key=lambda l: layer_cost[l])):
             pts = bd.path(ly, leg['a'], leg['b'], width[ly] / 2, {leg['net']}, clr, margin=10.0, half_in=neck / 2)
             if pts:
                 got = (ly, pts)
