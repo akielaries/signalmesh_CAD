@@ -255,6 +255,53 @@ for n in bus:
         continue
     jobs.append((n, vs, vf))
 jobs.sort(key=lambda j: -(S.depth(*j[1]) + F.depth(*j[2])))
+if os.environ.get('ROUTER3D'):
+    # each end escapes on its own best free layer; the 3d router changes layer in the corridor as needed
+    import negroute3d
+    legs3, half = [], 0
+    for n, vs, vf in jobs:
+        ends = []
+        for chip, v, other, sides in ((S, vs, vf, ('W', 'N', 'S')), (F, vf, vs, ('E', 'S'))):
+            best = None
+            for side, p in chip.cands(v):
+                if len(p) > 1 and side not in sides:
+                    continue
+                for ly in LAYERS:
+                    c = plen(p) + abs(p[-1][0] - other[0]) + abs(p[-1][1] - other[1]) + 3 * PEN[ly]
+                    if (best is None or c < best[0]) and free(n, ly, p):
+                        best = (c, ly, p)
+            if best and len(best[2]) > 1:
+                st = []
+                bd.stage_track(best[2], W_ESC, n, best[1], st)
+                bd.commit(st)
+                ends.append((best[2][-1], best[1]))
+            else:
+                ends.append((v, None))       # no free escape: start from the dogbone via itself
+                half += 1
+        (a, la), (z, lz) = ends
+        leg = {'net': n, 'a': a, 'b': z}
+        if la:
+            leg['la'] = la
+        if lz:
+            leg['lb'] = lz
+        legs3.append(leg)
+    bd.save()
+    print('3d: %d links, %d ends without a planned escape (%.0fs)' % (len(legs3), half, time.time() - t0), flush=True)
+    ax = [l['a'][0] for l in legs3] + [l['b'][0] for l in legs3]
+    ay = [l['a'][1] for l in legs3] + [l['b'][1] for l in legs3]
+    win = (max(50.5, min(ax) - 6), max(53.6, min(ay) - 6), min(190.6, max(ax) + 6), min(146.9, max(ay) + 6))
+    L3 = ('In2.Cu', 'In7.Cu', 'In5.Cu', 'B.Cu', 'F.Cu')
+    negroute3d.negotiate3d(bd, legs3, win, {ly: 0.127 for ly in L3},
+                           {'In2.Cu': 1.0, 'In7.Cu': 1.0, 'In5.Cu': 1.05, 'B.Cu': 1.15, 'F.Cu': 1.3},
+                           via_cost=float(os.environ.get('VIA_COST', '1.2')),
+                           iters=int(os.environ.get('NEG_ITERS', '20')), log=lambda s: print(s, flush=True))
+    bd.save()
+    after = status(PCB)
+    lost = [n for n in before if before[n] and not after.get(n, False)]
+    linked = sum(1 for n in bus if len(set(r.comp(n, [t for t in r.terms(n) if t[0].startswith(('U11:', 'U100:'))]))) == 1)
+    print('bus links joined: %d of %d' % (linked, len(bus)))
+    print('complete nets: %d -> %d (lost %d) in %.0f s' % (sum(before.values()), sum(after.values()), len(lost), time.time() - t0))
+    sys.exit(0)
 plan, nofit = {}, []
 lanes = {ly: [] for ly in LAYERS}     # (stm32 boundary position, fpga boundary position) per planned link
 S_SIDES, F_SIDES = ('W', 'N', 'S'), ('E', 'S')
@@ -275,7 +322,10 @@ for n, vs, vf in jobs:
                 c = plen(pa) + plen(pb) + abs(ea[0] - eb[0]) + abs(ea[1] - eb[1]) + 3 * PEN[ly]
                 # a lane crossing another lane on the same layer cannot be routed: heavy penalty
                 ps, pf = S.bparam(sa, ea), F.bparam(sb, eb)
-                c += 200 * sum(1 for (u, w) in lanes[ly] if (ps - u) * (pf - w) < 0)
+                xc = sum(1 for (u, w) in lanes[ly] if (ps - u) * (pf - w) < 0)
+                if xc and os.environ.get('NO_CROSS'):
+                    continue
+                c += 200 * xc
                 if best is None or c < best[0]:
                     best = (c, ly, pa, pb, sa, sb)
     if not best:

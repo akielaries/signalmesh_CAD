@@ -199,7 +199,7 @@ def dump(bd, layer, a, b_, half_w, own, clr, path_png, follow=None, follow_d=Non
     im.save(path_png)
 
 
-INNER = {'In2.Cu': (0.115, 0.10), 'In5.Cu': (0.115, 0.10), 'B.Cu': (0.10, 0.18)}
+INNER = {'In2.Cu': (0.09, 0.125), 'In5.Cu': (0.09, 0.125), 'In7.Cu': (0.09, 0.125), 'B.Cu': (0.10, 0.18)}  # 10-layer stackup
 
 
 def via_spot_ok(bd, x, y, net, staged_own=(), r=0.225, clr=0.12):
@@ -212,6 +212,15 @@ def via_spot_ok(bd, x, y, net, staged_own=(), r=0.225, clr=0.12):
         if math.hypot(vx - x, vy - y) < 0.2 + 0.26:
             return False
     return True
+
+
+def via_spot_exact(bd, x, y, net, r=0.2, clr=0.09, min_pitch=0.5):
+    # exact test at the point itself (via_spot_ok tests a 0.2 mm box, too coarse for ball fields)
+    for ly in rlib.LAYERS:
+        bl, xs, ys = bd.grid(ly, (x - 0.01, y - 0.01, x + 0.01, y + 0.01), r, {net}, clr, pours=False)
+        if bl.any():
+            return False
+    return all(math.hypot(vx - x, vy - y) >= min_pitch for (vx, vy, vr, n) in bd.vias)
 
 
 def existing_via(bd, p, net, maxd=0.9):

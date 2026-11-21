@@ -267,8 +267,16 @@ if legs:
     ax = [l['a'][0] for l in legs] + [l['b'][0] for l in legs]
     ay = [l['a'][1] for l in legs] + [l['b'][1] for l in legs]
     win = (max(50.5, min(ax) - 3), max(53.6, min(ay) - 3), min(190.6, max(ax) + 3), min(146.9, max(ay) + 3))
-    negroute.negotiate(bd, legs, win, {ly: 0.127 for ly in LAYERS}, COST,
-                       iters=int(os.environ.get('NEG_ITERS', '25')), log=lambda s: print(s, flush=True))
+    if os.environ.get('R3D'):
+        import negroute3d
+        for l in legs:
+            if 'ly' in l:
+                l['la'] = l.pop('ly')
+        negroute3d.negotiate3d(bd, legs, win, {ly: 0.127 for ly in LAYERS}, COST, via_cost=float(os.environ.get('VIA_COST', '3')),
+                               iters=int(os.environ.get('NEG_ITERS', '25')), log=lambda s: print(s, flush=True))
+    else:
+        negroute.negotiate(bd, legs, win, {ly: 0.127 for ly in LAYERS}, COST,
+                           iters=int(os.environ.get('NEG_ITERS', '25')), log=lambda s: print(s, flush=True))
 bd.save()
 after = status(PCB)
 lost = [n for n in before if before[n] and not after.get(n, False)]

@@ -14,7 +14,7 @@ import rlib
 G = rlib.G
 
 
-def negotiate(bd, legs, win, width, layer_cost, iters=30, clr=0.127, neck=0.10, log=print):
+def negotiate(bd, legs, win, width, layer_cost, iters=30, clr=0.127, neck=0.10, log=print, commit_fn=None):
     x0, y0, x1, y1 = win
     NX, NY = int(round((x1 - x0) / G)) + 1, int(round((y1 - y0) / G)) + 1
     XS = x0 + np.arange(NX) * G
@@ -23,7 +23,7 @@ def negotiate(bd, legs, win, width, layer_cost, iters=30, clr=0.127, neck=0.10, 
     for r in rlib.BGA_RECTS:
         inesc[np.ix_((YS >= r[1]) & (YS <= r[3]), (XS >= r[0]) & (XS <= r[2]))] = True
     cell = lambda p: (int(round((p[1] - y0) / G)), int(round((p[0] - x0) / G)))
-    nets = sorted({l['net'] for l in legs})
+    nets = sorted({nn for l in legs for nn in l.get('nets', [l['net']])})
     t0 = time.time()
     FIX, OWN, CNT = {}, {}, {}
     for ly, w in width.items():
@@ -73,7 +73,8 @@ def negotiate(bd, legs, win, width, layer_cost, iters=30, clr=0.127, neck=0.10, 
         i0, i1 = max(0, min(ia, ib) - m), min(NX, max(ia, ib) + m)
         best = None
         for ly in ([leg['ly']] if 'ly' in leg else width):
-            blocked = FIX[ly][j0:j1, i0:i1] | ((CNT[ly][j0:j1, i0:i1] - own(ly, leg['net'], j0, j1, i0, i1)) > 0)
+            ownm = sum(own(ly, nn, j0, j1, i0, i1) for nn in leg.get('nets', [leg['net']]))
+            blocked = FIX[ly][j0:j1, i0:i1] | ((CNT[ly][j0:j1, i0:i1] - ownm) > 0)
             cost = layer_cost[ly] * (1.0 + H[ly][j0:j1, i0:i1] + pres * D[ly][j0:j1, i0:i1])
             cost = np.where(blocked, np.inf, cost)
             for (j, i) in ((ja - j0, ia - i0), (jb - j0, ib - i0)):
@@ -97,12 +98,24 @@ def negotiate(bd, legs, win, width, layer_cost, iters=30, clr=0.127, neck=0.10, 
             D[leg['layer']][b4[0]:b4[1], b4[2]:b4[3]] -= leg['keep']
             del leg['keep']
 
+    bynet = {}
+    for l in legs:
+        bynet.setdefault(l['net'], []).append(l)
+
     def conflicted(leg):
         if 'keep' not in leg:
             return True
+        sib = [l for l in bynet[leg['net']] if l is not leg and 'keep' in l and l['layer'] == leg['layer']]
+        for l in sib:
+            b4 = l['box']
+            D[l['layer']][b4[0]:b4[1], b4[2]:b4[3]] -= l['keep']
         j0, j1, i0, i1 = leg['box']
         od = D[leg['layer']][j0:j1, i0:i1] - leg['keep']
-        return any(od[j - j0, i - i0] > 0.5 for (j, i) in leg['path'])
+        bad = any(od[j - j0, i - i0] > 0.5 for (j, i) in leg['path'])
+        for l in sib:
+            b4 = l['box']
+            D[l['layer']][b4[0]:b4[1], b4[2]:b4[3]] += l['keep']
+        return bad
 
     pres = 0.5
     for it in range(iters):
@@ -124,7 +137,8 @@ def negotiate(bd, legs, win, width, layer_cost, iters=30, clr=0.127, neck=0.10, 
     def tight(leg):
         ly, net = leg['layer'], leg['net']
         rip(leg)
-        bl = FIX[ly] | ((CNT[ly] - own(ly, net, 0, NY, 0, NX)) > 0) | (D[ly] > 0.5)
+        ownm = sum(own(ly, nn, 0, NY, 0, NX) for nn in leg.get('nets', [net]))
+        bl = FIX[ly] | ((CNT[ly] - ownm) > 0) | (D[ly] > 0.5)
         for (j, i) in (cell(leg['a']), cell(leg['b'])):
             bl[max(0, j - 6):j + 7, max(0, i - 6):i + 7] = False
         pts = [(XS[i], YS[j]) for (j, i) in leg['path']]
@@ -163,13 +177,19 @@ def negotiate(bd, legs, win, width, layer_cost, iters=30, clr=0.127, neck=0.10, 
         if id(leg) in bad or 'pts' not in leg:
             left.append(leg)
             continue
+        if commit_fn:
+            if commit_fn(leg, leg['pts'], leg['layer']):
+                done += 1
+            else:
+                left.append(leg)
+            continue
         st = []
         for seg, inside in rlib.split_neck(leg['pts']):
             bd.stage_track(seg, neck if inside else width[leg['layer']], leg['net'], leg['layer'], st)
         bd.commit(st)
         done += 1
     still = []
-    for leg in left:
+    for leg in (left if not commit_fn else []):
         got = None
         for ly in ([leg['ly']] if 'ly' in leg else sorted(width, key=lambda l: layer_cost[l])):
             pts = bd.path(ly, leg['a'], leg['b'], width[ly] / 2, {leg['net']}, clr, margin=10.0, half_in=neck / 2)
@@ -186,4 +206,4 @@ def negotiate(bd, legs, win, width, layer_cost, iters=30, clr=0.127, neck=0.10, 
         bd.commit(st)
         done += 1
     log('negotiate: %d of %d legs routed' % (done, len(legs)))
-    return still
+    return still if not commit_fn else left
