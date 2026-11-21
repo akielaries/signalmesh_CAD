@@ -121,11 +121,31 @@ class Chip:
     def depth(self, x, y):
         return max(0.0, min(x - self.X0, self.XN - x, y - self.Y0, self.YN - y))
 
+    def bparam(self, side, p):
+        # position of an exit along the package boundary facing the corridor: stm32 walked anticlockwise
+        # from its north-east corner (north, west, south); fpga clockwise from its north-east corner (east,
+        # south). two links on one layer cross unless both chips see them in the same order
+        x, y = p
+        if self.ref == 'U11':
+            if side == 'N':
+                return self.Y0 - (x - self.X0)
+            if side == 'S':
+                return self.YN + (x - self.X0)
+            return y
+        if side == 'S':
+            return self.YN + (self.XN - x)
+        return y
+
+    def side_of(self, p):
+        x, y = p
+        d = {'W': abs(x - self.X0), 'E': abs(x - self.XN), 'N': abs(y - self.Y0), 'S': abs(y - self.YN)}
+        return min(d, key=d.get)
+
     def cands(self, v):
         # (side, path) on any layer; a dogbone outside the ball field needs no escape
         vx, vy = v
         if not self.inside(vx, vy):
-            return [('X', [v])]
+            return [(self.side_of(v), [v])]
         P = self.P
         out = []
         j0 = math.floor((vy - self.Y0) / P)
@@ -236,7 +256,8 @@ for n in bus:
     jobs.append((n, vs, vf))
 jobs.sort(key=lambda j: -(S.depth(*j[1]) + F.depth(*j[2])))
 plan, nofit = {}, []
-lanes = {ly: [] for ly in LAYERS}     # straight exit-to-exit segments already planned on each layer
+lanes = {ly: [] for ly in LAYERS}     # (stm32 boundary position, fpga boundary position) per planned link
+S_SIDES, F_SIDES = ('W', 'N', 'S'), ('E', 'S')
 
 
 def crosses(p, q, r_, s):
@@ -246,30 +267,31 @@ for n, vs, vf in jobs:
     cs, cf = S.cands(vs), F.cands(vf)
     best = None
     for ly in LAYERS:
-        fs = [(side, p) for side, p in cs if free(n, ly, p)]
-        ff = [(side, p) for side, p in cf if free(n, ly, p)]
+        fs = [(side, p) for side, p in cs if side in S_SIDES and free(n, ly, p)]
+        ff = [(side, p) for side, p in cf if side in F_SIDES and free(n, ly, p)]
         for sa, pa in fs:
             for sb, pb in ff:
                 ea, eb = pa[-1], pb[-1]
                 c = plen(pa) + plen(pb) + abs(ea[0] - eb[0]) + abs(ea[1] - eb[1]) + 3 * PEN[ly]
                 # a lane crossing another lane on the same layer cannot be routed: heavy penalty
-                c += 200 * sum(1 for (u, w) in lanes[ly] if crosses(ea, eb, u, w))
+                ps, pf = S.bparam(sa, ea), F.bparam(sb, eb)
+                c += 200 * sum(1 for (u, w) in lanes[ly] if (ps - u) * (pf - w) < 0)
                 if best is None or c < best[0]:
-                    best = (c, ly, pa, pb)
+                    best = (c, ly, pa, pb, sa, sb)
     if not best:
         # which end had no free escape on any layer
         sok = any(free(n, ly, p) for ly in LAYERS for side, p in cs)
         fok = any(free(n, ly, p) for ly in LAYERS for side, p in cf)
         nofit.append('%s(%s)' % (n, ('S' if not sok else '') + ('F' if not fok else '') or 'layers'))
         continue
-    _, ly, pa, pb = best
+    _, ly, pa, pb, _, _ = best
     st = []
     for p in (pa, pb):
         if len(p) > 1:
             bd.stage_track(p, W_ESC, n, ly, st)
     bd.commit(st)
     plan[n] = (ly, pa[-1], pb[-1])
-    lanes[ly].append((pa[-1], pb[-1]))
+    lanes[ly].append((S.bparam(best[4], pa[-1]), F.bparam(best[5], pb[-1])))
 bd.save()
 print('escaped both ends on one layer: %d (%s); no common layer: %d %s; no dogbone: %s (%.0fs)' % (
     len(plan), ', '.join('%s %d' % (l, sum(1 for v in plan.values() if v[0] == l)) for l in LAYERS),

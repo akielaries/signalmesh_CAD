@@ -51,3 +51,9 @@
 	(condition "A.intersectsArea('STM32_ESC')")
 	(constraint track_width (min 0.09))
 	(constraint clearance (min 0.09)))
+
+# fpga escape strips east and south of the package (bank 14/15 side), clear of the ddr to the south-west
+(rule "FPGA escape"
+	(condition "A.intersectsArea('FPGA_ESC')")
+	(constraint track_width (min 0.09))
+	(constraint clearance (min 0.09)))

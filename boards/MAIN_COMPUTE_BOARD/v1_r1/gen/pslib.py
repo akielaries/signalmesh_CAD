@@ -41,6 +41,13 @@ class Router:
             bb = self.bd.b.FindFootprintByReference(r).GetBoundingBox(False)
             boxes.append((bb.GetLeft() / MM - 0.6, bb.GetTop() / MM - 0.6, bb.GetRight() / MM + 0.6,
                           bb.GetBottom() / MM + 0.6, 0.09))
+        # escape strips beyond the packages (the STM32_ESC / FPGA_ESC rule areas): necked tracks may
+        # keep 0.09 mm there until they have spread out of the ball field
+        if 'U100' in esc_refs:
+            boxes += [(134.5, 79.5, 138.0, 108.0, 0.09), (122.0, 104.5, 138.0, 108.0, 0.09)]
+        if 'U11' in esc_refs:
+            c = self.bd.b.FindFootprintByReference('U11').GetCourtyard(pcbnew.F_CrtYd).BBox()
+            boxes.append((c.GetLeft() / MM - 3.0, c.GetTop() / MM - 3.0, c.GetRight() / MM + 3.0, c.GetBottom() / MM + 3.0, 0.09))
         rlib.BGA_RECTS[:] = boxes
         proute.ESC[:] = [r[:4] for r in boxes]
         rlib.TIGHT = True
