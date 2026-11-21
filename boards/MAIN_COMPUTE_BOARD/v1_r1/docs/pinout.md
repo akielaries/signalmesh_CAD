@@ -2,7 +2,7 @@
 
 Generated from the same tables that build the schematic, so these match the design.
 
-## STM32H755BIT6 (LQFP208)
+## STM32H755XIH6 (TFBGA265)
 
 FMC bank 1 runs as a synchronous NOR/PSRAM bus, 32-bit, non-multiplexed, with
 A0-A18 (2 MB window). NL/NADV is not used: the FPGA latches the address on the

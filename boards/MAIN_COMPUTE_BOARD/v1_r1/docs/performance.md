@@ -4,7 +4,7 @@ Datasheet limits for the parts on this board and the clock plan the board is bui
 Sources: STM32H755 datasheet DS12919 rev 3 and RM0399 rev 5, Artix-7 DS180/DS181 v1.27,
 UG470, UG482. "Board" columns are what this design is set up to run, not just the silicon limit.
 
-## STM32H755BIT6 (dual core)
+## STM32H755XIH6 (dual core)
 
 | item | limit | notes |
 |---|---|---|

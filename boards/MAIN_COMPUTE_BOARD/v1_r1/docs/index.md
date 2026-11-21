@@ -25,7 +25,7 @@ source: [system.drawio](system.drawio) (open in draw.io / diagrams.net to edit)
 
 | function | part | notes |
 |---|---|---|
-| MCU | STM32H755BIT6 (LQFP208) | LDO supply mode for VOS0 480 MHz. BIT3 is not a substitute (no VOS0) |
+| MCU | STM32H755XIH6 (TFBGA265, 14 x 14 mm, 0.8 mm pitch) | LDO supply mode for VOS0 480 MHz. XIH3 is not a substitute (no VOS0) |
 | FPGA | XC7A100T-2FGG484I | wire-bond plastic BGA, GTP max 6.25 Gb/s in this package |
 | memory | MT41K256M16TW-107 | DDR3L x16, 800 Mb/s with internal VREF, MIG chip select disabled |
 | boot/bitstream flash | 2x W25Q01JVZEIQ (WSON-8) | QUADSPI dual-flash, 8-bit, 256 MB memory mapped, shared BK1_NCS. Bottom side, under the STM32 |

@@ -14,7 +14,7 @@ source: [power.drawio](power.drawio)
 |---|---|---|---|---|
 | +12V | input | - | bucks, VITA 12P0V | 2.5 A peak |
 | +5V | LMR33630 (400 kHz, 6.8 uH) | 12V UVLO about 9.2 V | 1V0/1V8/1V35 bucks, USB host VBUS, audio | 3 A |
-| +3V3_MEZZ | LMR33630 | 12V UVLO | VITA 3P3V (up to 3 A per spec) | 3 A |
+| +3V3_MEZZ | TPS62130 from 12V | 12V UVLO | VITA 3P3V (up to 3 A per spec) | 3 A |
 | VADJ | TPS62130 from 12V | STM32 via TCA9535 P00 | FPGA banks 16/35, VITA VADJ | 3 A |
 | +1V0 | TPS62130 from 5V | PG_5V | VCCINT, VCCBRAM | 1.5-2.5 A |
 | +1V8 | TPS62130 from 5V | PG_1V0 | VCCAUX, MGT LDOs, VCCADC | 0.6 A |
