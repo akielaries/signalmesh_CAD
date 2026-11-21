@@ -4,7 +4,8 @@ import sys
 # keep only the low-speed nets in a specctra dsn for freerouting: drop the (net ...) entries and the
 # (class ...) blocks of the excluded net classes. existing wiring stays (exported as fixed)
 SRC, DST = sys.argv[1], sys.argv[2]
-DROP_CLASSES = {'PWR', 'DDR', 'DIFF100', 'USB90', 'SE50'}
+import os
+DROP_CLASSES = {'PWR', 'DDR', 'DIFF100', 'USB90'} | (set() if os.environ.get('KEEP_SE50') else {'SE50'})
 DROP_NAMES = re.compile(r'^(SYSCLK_100M|GTP_RREF|/POWER/SW_.*)$')
 t = open(SRC).read()
 
