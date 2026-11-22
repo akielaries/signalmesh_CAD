@@ -24,12 +24,29 @@ for rnd in range(12):
     if not ids:
         break
     b = pcbnew.LoadBoard(PCB)
+    # dogbones of bga balls (stub + via next to a ball of the same net) are kept even when their net is
+    # still open: they are the escape the router starts from
+    balls = {}
+    for ref in ('U11', 'U100', 'U21'):
+        f = b.FindFootprintByReference(ref)
+        if f:
+            for k in range(len(f.Pads())):
+                p = f.Pads()[k]
+                balls.setdefault(p.GetNetname(), []).append((p.GetPosition().x / MM, p.GetPosition().y / MM))
+    near_ball = lambda n, x, y: any((x - bx) ** 2 + (y - by) ** 2 < 0.95 ** 2 for bx, by in balls.get(n, []))
     ts = b.Tracks()
     kill = []
     for i in range(len(ts)):
         t = ts[i]
-        if t.m_Uuid.AsString() in ids:
-            kill.append(t)
+        if t.m_Uuid.AsString() not in ids:
+            continue
+        n = t.GetNetname()
+        if t.GetClass() == 'PCB_VIA':
+            if near_ball(n, t.GetPosition().x / MM, t.GetPosition().y / MM):
+                continue
+        elif any(near_ball(n, e.x / MM, e.y / MM) for e in (t.GetStart(), t.GetEnd())) and t.GetLength() / MM < 0.95:
+            continue
+        kill.append(t)
     for t in kill:
         b.Remove(t)
     graveyard.append(kill)
