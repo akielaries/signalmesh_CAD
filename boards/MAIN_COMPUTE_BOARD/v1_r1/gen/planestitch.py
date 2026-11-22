@@ -25,7 +25,16 @@ for i in range(len(zs)):
     z = zs[i]
     if any(l not in (pcbnew.F_Cu, pcbnew.B_Cu) for l in z.GetLayerSet().Seq()):
         inner.setdefault(z.GetNetname(), []).append(z)
-reaches = lambda n, x, y: n == 'GND' or any(z.Outline().Contains(pcbnew.VECTOR2I(int(x * MM), int(y * MM))) for z in inner.get(n, []))
+# a via must land on filled copper of its plane (inside the outline is not enough: voids and other rails)
+pcbnew.ZONE_FILLER(b).Fill([zs[i] for i in range(len(zs))])
+zs = b.Zones()
+inner = {}
+for i in range(len(zs)):
+    z = zs[i]
+    if any(l not in (pcbnew.F_Cu, pcbnew.B_Cu) for l in z.GetLayerSet().Seq()):
+        inner.setdefault(z.GetNetname(), []).append(z)
+reaches = lambda n, x, y: any(z.HitTestFilledArea(l, pcbnew.VECTOR2I(int(x * MM), int(y * MM)), int(0.1 * MM))
+                              for z in inner.get(n, []) for l in z.GetLayerSet().Seq() if l not in (pcbnew.F_Cu, pcbnew.B_Cu))
 skip_refs = [] if ALL else ['U100', 'U11', 'J20', 'U17', 'U13'] + [f.GetReference() for f in b.Footprints() if f.GetValue().startswith('MT41K')]
 dense = []
 for ref in skip_refs:

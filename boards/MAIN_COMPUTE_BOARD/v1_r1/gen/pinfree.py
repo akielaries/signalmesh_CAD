@@ -16,7 +16,7 @@ import pslib
 PCB, TARGETS = sys.argv[1], sys.argv[2:]
 HERE = os.path.dirname(os.path.abspath(__file__))
 PY = sys.executable
-REACH = 0.7
+REACH = float(os.environ.get("REACH", "0.7"))
 PROTECT = re.compile(r'^(DDR_|MEZZ_|GTP|/FPGA_GTP|SFP\d_(TD|RD)|USBH_D|USBHS)|_[PN]$|^GND$')
 LOG = open(PCB + '.pinfree.log', 'a')
 
@@ -67,7 +67,7 @@ for tgt in TARGETS:
         for (vx, vy, vr, n) in r.bd.vias:
             if n != tgt and math.hypot(vx - px, vy - py) < max(hx, hy) + REACH:
                 blk.add(n)
-    blk = sorted(b for b in blk if b not in planes and not PROTECT.search(b))[:6]
+    blk = sorted(b for b in blk if b not in planes and not PROTECT.search(b))[:int(os.environ.get("MAXBLK", "6"))]
     if not blk:
         say('%-18s no rippable blockers' % tgt)
         continue

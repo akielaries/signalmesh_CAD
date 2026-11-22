@@ -84,3 +84,343 @@ USBH_OC_N          kept: complete 433 -> 434 (ripped IOX_P14 IOX_P15 MCU_PA0 ULP
 pinfree: 24 of 94 targets improved the board
 +1V8               reverted: complete 434 -> 433 (tried +1V2_MGT /MCU_IO/ETH_RXP /POWER/EN_MGTAVTT /POWER/FB_1V8 /POWER/FB_MGTAVTT /POWER/PG_1V0) 151s
 +5V                reverted: complete 434 -> 433 (tried +5V_AUD /POWER/FB_1V0 /POWER/FB_1V8 /POWER/FB_5V /POWER/LED12 /POWER/PG_1V0) 91s
+/MCU_IO/ETH_RXN    reverted: complete 434 -> 434 (tried /MCU_IO/ETH_RBIAS /MCU_IO/ETH_RXP /MCU_IO/ETH_TXN /MCU_IO/ETH_TXP /MCU_IO/ETH_XI FDCAN1_TX) 275s
+/MCU_IO/ULPI_1V8   reverted: complete 434 -> 432 (tried /MCU_IO/ULPI_1V8A /MCU_IO/ULPI_XI /MCU_IO/ULPI_XO) 46s
+/POWER/12V_PROT    reverted: complete 434 -> 434 (tried /POWER/QREV_G) 9s
+/POWER/EN_12V      reverted: complete 434 -> 434 (tried /POWER/PG_5V) 47s
+/POWER/SS_3V3M     no rippable blockers
+/POWER/SS_VADJ     no rippable blockers
+/STM32/BOOT0       reverted: complete 434 -> 434 (tried QSPI_BK2_IO3 SC_UART_RX SC_UART_TX) 39s
+AUD_DAC_MCLK       kept: complete 434 -> 435 (ripped AUD_DAC_LRCK Net-(U24-MCLK) Net-(U24-SDIN)) 22s
+BP_TDM_DIN         reverted: complete 435 -> 435 (tried FMC_A11 SYSCLK_100M) 31s
+BP_TDM_DOUT        reverted: complete 435 -> 435 (tried +1V8 FPGA_LED2) 58s
+ETH_AVDD           reverted: complete 435 -> 432 (tried /MCU_IO/ETH_INTSEL /MCU_IO/ETH_RBIAS /MCU_IO/ETH_REGOFF /MCU_IO/ETH_TXN /MCU_IO/ETH_TXP ETH_NRST) 202s
+ETH_TXD0           kept: complete 435 -> 436 (ripped ETH_NRST ETH_TXD1 ETH_TX_EN MCU_PA0 QSPI_BK2_IO3) 40s
+FMC_A0             reverted: complete 436 -> 435 (tried FMC_A1 FMC_A3 FMC_A4 ULPI_DIR) 55s
+FMC_A1             reverted: complete 436 -> 435 (tried BP_TDM_DIN FMC_A0 FMC_A13 FMC_A3 FMC_D31) 94s
+FMC_D0             reverted: complete 436 -> 435 (tried FMC_A17 FMC_D1 FMC_D2 FPGA_IRQ4) 90s
+FMC_D10            reverted: complete 436 -> 436 (tried FMC_D11 FMC_D5 FMC_D9 FMC_NWE FPGA_CSI_B) 35s
+FMC_D13            reverted: complete 436 -> 434 (tried CONSOLE_RX CONSOLE_TX FMC_D0 FMC_D12 FMC_D15 FMC_D9) 90s
+FMC_D14            kept: complete 436 -> 437 (ripped FMC_A17 FMC_A18 FMC_D0 FMC_D11 FMC_D15 FMC_D24) 65s
+FMC_D2             reverted: complete 437 -> 436 (tried FMC_D3 FMC_NBL1 FPGA_BTN1 MCU_PA10 MCU_PC8 MCU_PD2) 73s
+FMC_D5             kept: complete 437 -> 438 (ripped FMC_A10 FMC_A9 FMC_D10 FMC_D4 FMC_D8 FMC_NE1) 44s
+FMC_NBL0           reverted: complete 438 -> 436 (tried FDCAN1_RX FDCAN1_TX FMC_D30 FMC_D31 FMC_D7 FMC_NBL1) 129s
+FMC_NBL1           reverted: complete 438 -> 438 (tried FMC_D29 FMC_D6 FMC_NBL0 FPGA_BTN1 FPGA_LED2 I2C1_SCL) 57s
+FMC_NBL2           reverted: complete 438 -> 438 (tried FMC_NBL1 I2C1_SCL ULPI_D7) 47s
+FMC_NBL3           reverted: complete 438 -> 436 (tried ETH_MDIO FMC_D28 FMC_D29 FMC_NBL1) 64s
+FMC_NOE            reverted: complete 438 -> 435 (tried FMC_CLK FMC_D12 FMC_D9 FMC_NWAIT FMC_NWE MCU_PC10) 67s
+FMC_NWE            reverted: complete 438 -> 437 (tried AUD_CLK_48K FMC_D5 FMC_NOE FMC_NWAIT MCU_PA0 QSPI_BK2_IO2) 52s
+FPGA_DONE          reverted: complete 438 -> 436 (tried FMC_A13 FPGA_IRQ5 MCU_LED0 SFP0_SDA) 63s
+FPGA_IRQ2          reverted: complete 438 -> 438 (tried ETH_TX_EN FMC_D19 FMC_D20 MCU_PA0 QSPI_BK2_IO2) 65s
+FPGA_IRQ5          reverted: complete 438 -> 438 (tried AUD_CLK_44K FMC_A14 FMC_A4 FPGA_DONE MCU_LED0 MCU_LED1) 75s
+FPGA_M1            reverted: complete 438 -> 437 (tried +1V8 /MCU_IO/ETH_TXP FPGA_M0 VADJ_PG) 177s
+FPGA_RDWR_B        reverted: complete 438 -> 438 (tried CONSOLE_TX FMC_D16 FMC_D17 FPGA_CSI_B MCU_UART_RX MCU_UART_TX) 37s
+MCU_PC6            reverted: complete 438 -> 437 (tried FMC_A15 FPGA_IRQ1 MCU_PB4 MCU_PC3 MCU_PC7 MCU_PC9) 89s
+MCU_PC7            reverted: complete 438 -> 438 (tried +5V MCU_PC6 MCU_PC8) 110s
+PMODB_IO1          reverted: complete 438 -> 438 (tried PMODB_IO2 PMODB_IO4 SC_NRST) 40s
+PMODB_IO5          reverted: complete 438 -> 438 (tried SC_NRST SFP0_SDA SFP1_MOD_ABS) 44s
+QSPI_BK1_IO3       reverted: complete 438 -> 436 (tried /STM32/HSE_IN /STM32/VCAP NRST QSPI_BK1_IO2 ULPI_RST ULPI_STP) 129s
+QSPI_BK2_IO1       kept: complete 438 -> 439 (ripped ETH_MDIO MCU_LED0 MCU_PC3 QSPI_BK2_IO0 ULPI_NXT) 26s
+QSPI_CLK           reverted: complete 439 -> 437 (tried /STM32/MCU_LED1_LED QSPI_BK1_IO0 QSPI_BK1_IO1 QSPI_BK1_IO2 ULPI_RST ULPI_STP) 73s
+QSPI_NCS           reverted: complete 439 -> 438 (tried /MCU_IO/ETH_TXP FMC_A13 FMC_A14 FMC_A15 FPGA_INIT_B FPGA_IRQ1) 63s
+SFP0_SCL           reverted: complete 439 -> 439 (tried AUD_DAC_SDIN SFP0_MOD_ABS SFP0_SDA SFP0_TX_DIS SFP0_TX_FAULT) 90s
+SFP0_TX_DIS        reverted: complete 439 -> 438 (tried FPGA_TCK SFP0_SCL SFP0_SDA SFP0_TX_FAULT) 301s
+SFP1_LOS           reverted: complete 439 -> 438 (tried AUD_CLK_44K SFP0_SDA SFP1_MOD_ABS SFP1_TX_FAULT) 107s
+SFP1_SDA           reverted: complete 439 -> 438 (tried /MCU_IO/ETH_RXP AUD_CLK_44K SFP1_MOD_ABS SFP1_SCL SFP1_TX_DIS SFP1_TX_FAULT) 294s
+SFP1_TX_DIS        reverted: complete 439 -> 439 (tried FMC_D23 SFP1_SCL SFP1_SDA SFP1_TX_FAULT) 167s
+SFP1_TX_FAULT      reverted: complete 439 -> 439 (tried SFP1_SCL SFP1_SDA SFP1_TX_DIS) 155s
+ULPI_CK            reverted: complete 439 -> 439 (tried /MCU_IO/ULPI_1V8 ETH_RXD0 MCU_PA6 STM32_DAC1_OUT1) 54s
+ULPI_D0            reverted: complete 439 -> 438 (tried STM32_DAC1_OUT1 ULPI_CK ULPI_D2) 60s
+ULPI_D1            reverted: complete 439 -> 439 (tried ETH_RXD1 MCU_PB2 ULPI_D2) 38s
+ULPI_D3            reverted: complete 439 -> 439 (tried FMC_D12 FMC_D8 NRST ULPI_D2 ULPI_D4) 86s
+ULPI_D4            reverted: complete 439 -> 439 (tried FMC_D18 ULPI_D2 ULPI_D3) 30s
+ULPI_D5            reverted: complete 439 -> 436 (tried CONSOLE_RX FMC_D16 FMC_D17 FMC_D20 ULPI_D2 ULPI_D7) 130s
+ULPI_D6            reverted: complete 439 -> 437 (tried CONSOLE_TX FMC_D16 FPGA_CSI_B FPGA_RDWR_B ULPI_D5 ULPI_D7) 97s
+ULPI_DIR           reverted: complete 439 -> 439 (tried FMC_A0 FMC_D31 FPGA_CCLK) 43s
+ULPI_NXT           reverted: complete 439 -> 439 (tried ETH_MDIO ETH_REF_CLK MCU_PA6 QSPI_BK2_IO1 ULPI_RST) 45s
+ULPI_STP           reverted: complete 439 -> 438 (tried +3V3_VDDA /MCU_IO/ULPI_1V8 ETH_MDC QSPI_BK1_IO2 QSPI_BK1_IO3 QSPI_CLK) 85s
+VCCADC             reverted: complete 439 -> 439 (tried +1V0_MGT GNDADC) 26s
+VREF_DDR           reverted: complete 439 -> 438 (tried /DDR3/DDR_ZQ) 74s
+pinfree: 5 of 60 targets improved the board
++1V8               reverted: complete 440 -> 439 (tried +1V2_MGT +5V /MCU_IO/ETH_RXP /POWER/EN_MGTAVTT /POWER/FB_1V35 /POWER/FB_1V8 /POWER/FB_MGTAVTT /POWER/PG_1V0) 216s
++5V                reverted: complete 440 -> 439 (tried +1V8 +5V_AUD /POWER/FB_1V0 /POWER/FB_1V35 /POWER/FB_1V8 /POWER/FB_5V /POWER/LED12 /POWER/PG_1V0) 113s
+/MCU_IO/ULPI_1V8   reverted: complete 440 -> 438 (tried /MCU_IO/ULPI_1V8A /MCU_IO/ULPI_RBIAS /MCU_IO/ULPI_XI /MCU_IO/ULPI_XO AUD_DAC_SCLK MCU_BTN NRST ULPI_D2) 64s
+/POWER/12V_PROT    reverted: complete 440 -> 440 (tried /POWER/QREV_G) 10s
+/POWER/EN_12V      reverted: complete 440 -> 440 (tried /POWER/PG_5V) 48s
+/POWER/SS_3V3M     no rippable blockers
+/POWER/SS_VADJ     no rippable blockers
+ETH_AVDD           reverted: complete 440 -> 436 (tried /MCU_IO/ETH_CT /MCU_IO/ETH_INTSEL /MCU_IO/ETH_RBIAS /MCU_IO/ETH_REGOFF /MCU_IO/ETH_RXP /MCU_IO/ETH_TXN /MCU_IO/ETH_TXP /MCU_IO/ETH_XI) 378s
+VCCADC             reverted: complete 440 -> 440 (tried +1V0_MGT +1V8 /MCU_IO/ETH_TXN GNDADC SFP0_TX_FAULT) 65s
+VREF_DDR           reverted: complete 440 -> 439 (tried /DDR3/DDR_ZQ) 73s
+/MCU_IO/ETH_RXN    reverted: complete 440 -> 435 (tried /MCU_IO/ETH_CT /MCU_IO/ETH_RBIAS /MCU_IO/ETH_REGOFF /MCU_IO/ETH_RXP /MCU_IO/ETH_TXN /MCU_IO/ETH_TXP /MCU_IO/ETH_XI /MCU_IO/ETH_XO) 491s
+/STM32/BOOT0       reverted: complete 440 -> 440 (tried /MCU_IO/ULPI_1V8A AUD_DAC_SDIN BP_TDM_DOUT ETH_TXD0 MCU_PA0 QSPI_BK2_IO3 SC_SWCLK SC_UART_RX) 83s
+BP_TDM_DIN         reverted: complete 440 -> 440 (tried AUD_CLK_48K FMC_A11 FMC_A3 FMC_A8 FMC_A9 SYSCLK_100M) 60s
+FMC_A0             reverted: complete 440 -> 437 (tried AUD_CLK_44K FMC_A1 FMC_A13 FMC_A2 FMC_A3 FMC_A4 FMC_A5 FMC_D31) 117s
+FMC_A1             kept: complete 440 -> 442 (ripped AUD_CLK_48K BP_TDM_DIN FMC_A0 FMC_A11 FMC_A12 FMC_A13 FMC_A14 FMC_A2) 74s
+FMC_A17            reverted: complete 442 -> 437 (tried CONSOLE_RX FMC_A11 FMC_A12 FMC_A16 FMC_A18 FMC_A3 FMC_A5 FMC_A8) 179s
+FMC_D0             kept: complete 442 -> 443 (ripped +3V3_VDDA AUD_CLK_48K BP_TDM_DOUT FMC_A16 FMC_A18 FMC_D1 FMC_D15 FMC_D19) 75s
+FMC_D10            reverted: complete 443 -> 443 (tried /STM32/VCAP FMC_A10 FMC_A9 FMC_D11 FMC_D12 FMC_D4 FMC_D5 FMC_D8) 43s
+FMC_D13            reverted: complete 443 -> 437 (tried CONSOLE_RX CONSOLE_TX FMC_A13 FMC_A14 FMC_A16 FMC_D1 FMC_D12 FMC_D14) 178s
+FMC_D2             reverted: complete 443 -> 437 (tried FMC_D0 FMC_D1 FMC_D27 FMC_D3 FMC_D6 FPGA_BTN0 FPGA_BTN1 FPGA_IRQ4) 138s
+FMC_NBL0           reverted: complete 443 -> 441 (tried /STM32/LSE_IN FDCAN1_RX FDCAN1_TX FMC_D20 FMC_D21 FMC_D29 FMC_D30 FMC_D31) 108s
+FMC_NBL1           reverted: complete 443 -> 439 (tried ETH_MDIO FDCAN1_RX FDCAN1_TX FMC_D29 FMC_D3 FMC_D6 FMC_D7 FMC_NBL0) 170s
+FMC_NBL2           reverted: complete 443 -> 442 (tried BP_TDM_DOUT ETH_MDIO FMC_D24 FMC_D25 FMC_D28 FMC_D29 FMC_NBL0 FPGA_LED1) 75s
+FMC_NBL3           reverted: complete 443 -> 440 (tried BP_TDM_DOUT ETH_MDIO FDCAN1_TX FMC_D25 FMC_D26 FMC_D27 FMC_D28 FMC_D29) 121s
+FMC_NOE            reverted: complete 443 -> 437 (tried FMC_CLK FMC_D11 FMC_D12 FMC_D24 FMC_D9 FMC_NE1 FMC_NWAIT FMC_NWE) 98s
+FMC_NWE            reverted: complete 443 -> 437 (tried FMC_CLK FMC_D4 FMC_D5 FMC_D9 FMC_NE1 FMC_NOE FMC_NWAIT FPGA_IRQ2) 94s
+FPGA_DONE          reverted: complete 443 -> 439 (tried +1V8 /FPGA_CFG/DONE_LED_K FMC_A12 FMC_A13 FMC_A14 FPGA_IRQ5 MCU_LED1 QSPI_BK2_IO1) 151s
+FPGA_IRQ2          reverted: complete 443 -> 443 (tried /STM32/VCAP AUD_CLK_48K ETH_TXD0 ETH_TXD1 ETH_TX_EN FMC_CLK FMC_D18 FMC_D19) 36s
+FPGA_IRQ5          reverted: complete 443 -> 442 (tried AUD_CLK_44K FMC_A0 FMC_A13 FMC_A14 FMC_A15 FMC_A18 FMC_A2 FMC_A4) 48s
+FPGA_M1            reverted: complete 443 -> 442 (tried +1V8 /MCU_IO/ETH_TXP FPGA_INIT_B FPGA_M0 FPGA_M2 SFP0_MOD_ABS VADJ_PG) 88s
+FPGA_RDWR_B        reverted: complete 443 -> 436 (tried /STM32/VCAP CONSOLE_TX FMC_CLK FMC_D1 FMC_D11 FMC_D16 FMC_D17 FMC_D19) 122s
+MCU_PC6            reverted: complete 443 -> 440 (tried BP_CANH FMC_A14 FMC_A15 FMC_D19 FPGA_IRQ0 FPGA_IRQ1 MCU_PA10 MCU_PA8) 98s
+PMODB_IO1          reverted: complete 443 -> 441 (tried /MCU_IO/ETH_RXP PMODA_IO2 PMODA_IO3 PMODA_IO5 PMODA_IO7 PMODA_IO8 PMODB_IO2 PMODB_IO3) 210s
+PMODB_IO5          reverted: complete 443 -> 443 (tried /MCU_IO/ETH_RXP AUD_CLK_44K FPGA_TCK FPGA_TDO PMODB_IO3 PMODB_IO4 SC_NRST SFP0_SDA) 215s
+QSPI_BK1_IO3       reverted: complete 443 -> 442 (tried +3V3_VDDA /STM32/HSE_IN /STM32/HSE_OUT /STM32/VCAP ETH_MDC FMC_A5 MCU_LED1 NRST) 88s
+QSPI_CLK           reverted: complete 443 -> 442 (tried +3V3_VDDA /STM32/MCU_LED1_LED /STM32/VCAP ETH_MDC ETH_MDIO FMC_A5 QSPI_BK1_IO0 QSPI_BK1_IO1) 90s
+QSPI_NCS           reverted: complete 443 -> 442 (tried /FPGA_CFG/DONE_LED_A /MCU_IO/ETH_TXP /STM32/VCAP FMC_A12 FMC_A13 FMC_A14 FMC_A15 FMC_D19) 125s
+SFP0_SCL           reverted: complete 443 -> 441 (tried /MCU_IO/ETH_TXP AUD_DAC_SDIN FPGA_TCK SFP0_LOS SFP0_MOD_ABS SFP0_SDA SFP0_TX_DIS SFP0_TX_FAULT) 556s
+SFP0_TX_DIS        reverted: complete 443 -> 442 (tried /MCU_IO/ETH_TXP FPGA_TCK PMODB_IO3 SFP0_LOS SFP0_MOD_ABS SFP0_SCL SFP0_SDA SFP0_TX_FAULT) 115s
+SFP1_LOS           reverted: complete 443 -> 443 (tried /MCU_IO/ETH_RXP AUD_CLK_44K FPGA_CSI_B FPGA_TDO SFP0_SDA SFP1_MOD_ABS SFP1_SCL) 207s
+SFP1_SDA           reverted: complete 443 -> 442 (tried /MCU_IO/ETH_RXP AUD_CLK_44K FMC_D18 FPGA_CSI_B PMODA_IO1 PMODA_IO3 SFP0_SDA SFP1_MOD_ABS) 192s
+SFP1_TX_DIS        reverted: complete 443 -> 439 (tried FMC_D22 FMC_D23 FMC_D26 FMC_D27 FPGA_TDI SFP0_SDA SFP1_MOD_ABS SFP1_SCL) 264s
+SFP1_TX_FAULT      reverted: complete 443 -> 440 (tried AUD_CLK_44K FMC_D23 FPGA_CSI_B FPGA_TDO SFP0_SDA SFP1_SCL SFP1_SDA SFP1_TX_DIS) 313s
+ULPI_CK            reverted: complete 443 -> 442 (tried /MCU_IO/ULPI_1V8 ETH_CRS_DV ETH_RXD0 ETH_RXD1 MCU_PA6 MCU_PC3 STM32_DAC1_OUT1 ULPI_D0) 91s
+ULPI_D0            reverted: complete 443 -> 441 (tried /MCU_IO/ULPI_XO ETH_RXD0 ETH_RXD1 FMC_A3 MCU_PA6 MCU_PC3 NRST STM32_DAC1_OUT1) 136s
+ULPI_D1            reverted: complete 443 -> 442 (tried ETH_CRS_DV ETH_RXD0 ETH_RXD1 FMC_A3 MCU_PB2 MCU_PF11 NRST STM32_DAC1_OUT1) 115s
+ULPI_D3            reverted: complete 443 -> 440 (tried FMC_D12 FMC_D18 FMC_D6 FMC_D8 FMC_D9 FPGA_CSI_B NRST QSPI_BK2_IO1) 74s
+ULPI_D4            reverted: complete 443 -> 439 (tried FMC_D12 FMC_D17 FMC_D18 FMC_D19 FMC_D8 MCU_BTN MCU_UART_TX NRST) 64s
+ULPI_D5            reverted: complete 443 -> 440 (tried CONSOLE_RX CONSOLE_TX FMC_A16 FMC_D1 FMC_D15 FMC_D16 FMC_D17 FMC_D18) 185s
+ULPI_D6            reverted: complete 443 -> 438 (tried /MCU_IO/ULPI_1V8 CONSOLE_RX CONSOLE_TX FMC_A13 FMC_D1 FMC_D13 FMC_D16 FMC_D17) 241s
+ULPI_DIR           reverted: complete 443 -> 439 (tried /MCU_IO/ULPI_1V8 FDCAN1_TX FMC_A0 FMC_A1 FMC_A3 FMC_D31 FPGA_CCLK MCU_BTN) 118s
+ULPI_NXT           reverted: complete 443 -> 439 (tried /MCU_IO/ULPI_1V8 ETH_MDIO ETH_REF_CLK MCU_LED0 MCU_PA0 MCU_PA6 MCU_PC3 QSPI_BK2_IO0) 158s
+ULPI_STP           reverted: complete 443 -> 442 (tried +3V3_VDDA /MCU_IO/ULPI_1V8 /STM32/HSE_IN ETH_MDC NRST QSPI_BK1_IO0 QSPI_BK1_IO1 QSPI_BK1_IO2) 95s
+MEZZ_LA09_P        no rippable blockers
+MEZZ_LA25_N        kept: complete 443 -> 444 (ripped I2C1_SDA) 26s
+MEZZ_LA25_P        no rippable blockers
+MEZZ_LA29_N        no rippable blockers
+MEZZ_LA29_P        reverted: complete 444 -> 444 (tried I2C1_SDA) 34s
+MEZZ_LA31_P        no rippable blockers
+MEZZ_LA32_N        reverted: complete 444 -> 444 (tried VADJ_SEL1) 28s
+pinfree: 3 of 65 targets improved the board
++1V8               reverted: complete 444 -> 444 (tried +1V2_MGT +5V /MCU_IO/ETH_RXP /POWER/EN_MGTAVTT /POWER/FB_1V8 /POWER/FB_MGTAVTT /POWER/PG_1V0 BP_TDM_BCLK) 99s
++3V3_VDDA          reverted: complete 444 -> 439 (tried /STM32/VCAP ETH_MDC FPGA_TMS MCU_PF11 NRST QSPI_BK1_IO3 QSPI_BK2_IO0 ULPI_STP) 182s
++5V                reverted: complete 444 -> 443 (tried +1V8 +5V_AUD /POWER/FB_1V0 /POWER/FB_1V8 /POWER/FB_5V /POWER/LED12 /POWER/PG_1V0 /POWER/PG_3V3) 111s
+/MCU_IO/ETH_RXN    reverted: complete 444 -> 441 (tried /MCU_IO/ETH_RBIAS /MCU_IO/ETH_RXP /MCU_IO/ETH_TXN /MCU_IO/ETH_TXP /MCU_IO/ETH_XI ETH_AVDD FDCAN1_TX) 593s
+/MCU_IO/ULPI_1V8   reverted: complete 444 -> 442 (tried /MCU_IO/ULPI_1V8A /MCU_IO/ULPI_XI /MCU_IO/ULPI_XO AUD_DAC_SCLK ULPI_D7) 65s
+/POWER/12V_PROT    reverted: complete 444 -> 444 (tried /POWER/QREV_G) 9s
+/POWER/EN_12V      reverted: complete 444 -> 444 (tried /POWER/PG_5V) 45s
+/POWER/SS_3V3M     no rippable blockers
+/POWER/SS_VADJ     no rippable blockers
+/STM32/BOOT0       reverted: complete 444 -> 444 (tried /MCU_IO/ULPI_1V8A ETH_TXD0 FMC_A0 QSPI_BK2_IO3 SC_SWCLK SC_UART_RX SC_UART_TX SWO) 92s
+BP_TDM_DIN         reverted: complete 444 -> 444 (tried FMC_A11 FMC_A3 FMC_A9 SYSCLK_100M) 30s
+ETH_AVDD           reverted: complete 444 -> 438 (tried /MCU_IO/ETH_CT /MCU_IO/ETH_INTSEL /MCU_IO/ETH_RBIAS /MCU_IO/ETH_REGOFF /MCU_IO/ETH_RXP /MCU_IO/ETH_TXN /MCU_IO/ETH_TXP /MCU_IO/ETH_XO) 454s
+FMC_A17            reverted: complete 444 -> 440 (tried BP_TDM_DOUT CONSOLE_RX FMC_A12 FMC_A16 FMC_A18 FMC_A5 FMC_D0 FMC_D1) 155s
+FMC_D10            reverted: complete 444 -> 438 (tried /STM32/VCAP FMC_A9 FMC_D11 FMC_D12 FMC_D4 FMC_D5 FMC_D9 FPGA_CSI_B) 102s
+FMC_D13            reverted: complete 444 -> 439 (tried CONSOLE_RX CONSOLE_TX FMC_A13 FMC_D12 FMC_D14 FMC_D15 FMC_D9) 169s
+FMC_D2             reverted: complete 444 -> 439 (tried FMC_D0 FMC_D27 FMC_D3 FPGA_BTN1 MCU_PA10 MCU_PC12 MCU_PC8 MCU_PC9) 111s
+FMC_NBL0           reverted: complete 444 -> 439 (tried FDCAN1_RX FDCAN1_TX FMC_D29 FMC_D30 FMC_D31 FMC_D7 FMC_D8 I2C1_SCL) 207s
+FMC_NBL1           reverted: complete 444 -> 441 (tried FMC_D29 FMC_D6 FMC_NBL0 FPGA_BTN1 FPGA_LED2 I2C1_SCL I2C1_SDA MCU_PE2) 131s
+FMC_NBL2           reverted: complete 444 -> 443 (tried FMC_D24 FMC_D29 FPGA_LED3 I2C1_SCL I2C1_SDA ULPI_D7) 98s
+FMC_NBL3           reverted: complete 444 -> 442 (tried BP_TDM_DOUT ETH_MDIO FMC_D26 FMC_D28 FMC_D29) 55s
+FMC_NOE            reverted: complete 444 -> 444 (tried FMC_CLK FMC_D12 FMC_D9 FMC_NWAIT FMC_NWE MCU_PA0 MCU_PC10 MCU_PC11) 78s
+FMC_NWE            reverted: complete 444 -> 443 (tried FMC_CLK FMC_D5 FMC_NOE FMC_NWAIT FPGA_PUDC_B MCU_PA0 QSPI_BK2_IO2 VADJ_SEL1) 83s
+FPGA_DONE          reverted: complete 444 -> 439 (tried FMC_A12 FMC_A13 FMC_A14 FPGA_IRQ5 MCU_LED1 QSPI_BK2_IO1 SFP0_SDA) 180s
+FPGA_IRQ2          reverted: complete 444 -> 444 (tried AUD_CLK_48K ETH_TXD0 ETH_TX_EN FMC_D19 FMC_D20 FPGA_CSI_B FPGA_IRQ1 I2C1_SDA) 78s
+FPGA_IRQ5          reverted: complete 444 -> 439 (tried AUD_CLK_44K FMC_A0 FMC_A13 FMC_A14 FMC_A4 FPGA_DONE MCU_LED1 QSPI_BK2_IO1) 192s
+FPGA_M1            reverted: complete 444 -> 444 (tried +1V8 /MCU_IO/ETH_TXP FPGA_M0 FPGA_M2 SFP0_MOD_ABS VADJ_PG) 71s
+FPGA_RDWR_B        reverted: complete 444 -> 438 (tried /STM32/VCAP CONSOLE_TX FMC_D11 FMC_D16 FMC_D17 FPGA_CSI_B MCU_UART_RX MCU_UART_TX) 114s
+MCU_PC6            reverted: complete 444 -> 440 (tried FMC_A15 FMC_D19 FPGA_IRQ1 MCU_PA8 MCU_PB4 MCU_PC3 MCU_PC7 MCU_PC8) 145s
+MEZZ_LA09_P        no rippable blockers
+MEZZ_LA25_P        no rippable blockers
+MEZZ_LA29_N        no rippable blockers
+MEZZ_LA29_P        no rippable blockers
+MEZZ_LA31_P        no rippable blockers
+MEZZ_LA32_N        reverted: complete 444 -> 444 (tried VADJ_SEL1) 28s
+PMODB_IO1          reverted: complete 444 -> 444 (tried PMODA_IO2 PMODA_IO3 PMODA_IO8 PMODB_IO2 PMODB_IO4 SC_NRST) 77s
+PMODB_IO5          kept: complete 444 -> 445 (ripped PMODB_IO4 SC_NRST SFP0_SDA SFP1_MOD_ABS) 37s
+QSPI_BK1_IO3       reverted: complete 445 -> 445 (tried +3V3_VDDA /STM32/HSE_IN /STM32/HSE_OUT /STM32/VCAP MCU_LED1 NRST QSPI_BK1_IO2 QSPI_CLK) 99s
+QSPI_CLK           reverted: complete 445 -> 444 (tried /STM32/MCU_LED1_LED ETH_MDC QSPI_BK1_IO0 QSPI_BK1_IO1 QSPI_BK1_IO2 QSPI_BK1_IO3 QSPI_BK2_IO0 QSPI_BK2_IO3) 50s
+QSPI_NCS           reverted: complete 445 -> 440 (tried /MCU_IO/ETH_TXP FMC_A12 FMC_A13 FMC_A14 FMC_A15 FPGA_INIT_B FPGA_IRQ0 FPGA_IRQ1) 175s
+SFP0_SCL           reverted: complete 445 -> 445 (tried AUD_DAC_SDIN SFP0_MOD_ABS SFP0_SDA SFP0_TX_DIS SFP0_TX_FAULT) 87s
+SFP0_TX_DIS        reverted: complete 445 -> 444 (tried FPGA_TCK SFP0_LOS SFP0_SCL SFP0_SDA SFP0_TX_FAULT) 118s
+SFP1_LOS           reverted: complete 445 -> 445 (tried AUD_CLK_44K SFP0_SDA SFP1_MOD_ABS) 43s
+SFP1_SDA           reverted: complete 445 -> 445 (tried /MCU_IO/ETH_RXP AUD_CLK_44K FMC_D18 PMODA_IO3 SFP1_MOD_ABS SFP1_SCL SFP1_TX_DIS SFP1_TX_FAULT) 180s
+SFP1_TX_DIS        reverted: complete 445 -> 445 (tried FMC_D23 SFP1_SCL SFP1_SDA SFP1_TX_FAULT) 162s
+SFP1_TX_FAULT      reverted: complete 445 -> 445 (tried SFP1_SCL SFP1_SDA SFP1_TX_DIS) 149s
+ULPI_CK            reverted: complete 445 -> 444 (tried /MCU_IO/ULPI_1V8 ETH_RXD0 ETH_RXD1 MCU_PA6 MCU_PC3 STM32_DAC1_OUT1 ULPI_D0) 93s
+ULPI_D0            reverted: complete 445 -> 444 (tried STM32_DAC1_OUT1 ULPI_CK ULPI_D2) 51s
+ULPI_D1            reverted: complete 445 -> 445 (tried ETH_RXD0 ETH_RXD1 MCU_PB2 NRST ULPI_D2) 51s
+ULPI_D3            reverted: complete 445 -> 445 (tried FMC_D12 FMC_D8 FMC_D9 NRST QSPI_BK2_IO1 ULPI_D2) 48s
+ULPI_D4            reverted: complete 445 -> 442 (tried FMC_D12 FMC_D17 FMC_D18 MCU_UART_TX NRST ULPI_D2) 81s
+ULPI_D5            reverted: complete 445 -> 439 (tried CONSOLE_RX CONSOLE_TX FMC_A16 FMC_D1 FMC_D16 FMC_D17 FMC_D19 FMC_D20) 135s
+ULPI_D6            kept: complete 445 -> 446 (ripped CONSOLE_RX CONSOLE_TX FMC_D1 FMC_D16 FPGA_CSI_B FPGA_RDWR_B ULPI_D2 ULPI_D7) 82s
+ULPI_DIR           kept: complete 446 -> 447 (ripped /MCU_IO/ULPI_1V8 FMC_A0 FMC_A1 FMC_D31 FPGA_CCLK MCU_BTN MCU_PE6 ULPI_RST) 76s
+ULPI_NXT           reverted: complete 447 -> 445 (tried ETH_MDIO ETH_REF_CLK MCU_PA6 MCU_PC3 QSPI_BK2_IO0 QSPI_BK2_IO1 ULPI_DIR ULPI_RST) 82s
+ULPI_STP           reverted: complete 447 -> 446 (tried +3V3_VDDA /MCU_IO/ULPI_1V8 ETH_MDC NRST QSPI_BK1_IO2 QSPI_BK1_IO3 QSPI_CLK ULPI_DIR) 130s
+VCCADC             reverted: complete 447 -> 447 (tried +1V0_MGT GNDADC SFP0_TX_FAULT) 30s
+VREF_DDR           reverted: complete 447 -> 446 (tried /DDR3/DDR_ZQ) 72s
+pinfree: 3 of 58 targets improved the board
++1V8               reverted: complete 447 -> 445 (tried +1V0_MGT +1V2_MGT +5V /MCU_IO/ETH_RXP /POWER/EN_MGTAVTT /POWER/FB_1V35 /POWER/FB_1V8 /POWER/FB_MGTAVCC) 233s
++3V3_VDDA          reverted: complete 447 -> 444 (tried /FPGA_CFG/DONE_LED_A /STM32/HSE_IN /STM32/HSE_OUT /STM32/VCAP ETH_MDC ETH_MDIO FMC_A15 FPGA_PUDC_B) 94s
++5V                reverted: complete 447 -> 447 (tried +1V8 +5V_AUD +5V_USBH /POWER/EN_MGTAVTT /POWER/FB_1V0 /POWER/FB_1V35 /POWER/FB_1V8 /POWER/FB_5V) 93s
+/MCU_IO/ETH_RXN    reverted: complete 447 -> 444 (tried /MCU_IO/ETH_CT /MCU_IO/ETH_INTSEL /MCU_IO/ETH_RBIAS /MCU_IO/ETH_REGOFF /MCU_IO/ETH_RXP /MCU_IO/ETH_TXN /MCU_IO/ETH_TXP /MCU_IO/ETH_XI) 447s
+/MCU_IO/ULPI_1V8   reverted: complete 447 -> 445 (tried +3V3_AUD /MCU_IO/ULPI_1V8A /MCU_IO/ULPI_RBIAS /MCU_IO/ULPI_XI /MCU_IO/ULPI_XO AUD_DAC_SCLK NRST STM32_DAC1_OUT1) 106s
+/POWER/12V_PROT    reverted: complete 447 -> 447 (tried /POWER/12V_FUSED /POWER/QREV_G) 10s
+/POWER/EN_12V      reverted: complete 447 -> 446 (tried /POWER/PG_5V /POWER/SW_3V3M) 50s
+/POWER/SS_3V3M     reverted: complete 447 -> 447 (tried /POWER/FB_3V3M) 10s
+/POWER/SS_VADJ     reverted: complete 447 -> 447 (tried /POWER/FB_VADJ VADJ_EN) 24s
+/STM32/BOOT0       reverted: complete 447 -> 446 (tried +12V_MEZZ /MCU_IO/ULPI_1V8A /STM32/LSE_IN AUD_DAC_SDIN BP_TDM_DOUT ETH_TXD0 ETH_TXD1 FMC_A1) 49s
+BP_TDM_DIN         reverted: complete 447 -> 441 (tried AUD_CLK_48K FMC_A1 FMC_A11 FMC_A12 FMC_A14 FMC_A3 FMC_A5 FMC_A8) 121s
+ETH_AVDD           reverted: complete 447 -> 443 (tried +3V3_SFP1 /MCU_IO/ETH_CT /MCU_IO/ETH_INTSEL /MCU_IO/ETH_RBIAS /MCU_IO/ETH_REGOFF /MCU_IO/ETH_RXP /MCU_IO/ETH_TXN /MCU_IO/ETH_TXP) 355s
+FMC_A17            reverted: complete 447 -> 446 (tried BP_TDM_DIN BP_TDM_DOUT CONSOLE_RX CONSOLE_TX FMC_A1 FMC_A11 FMC_A12 FMC_A14) 122s
+FMC_D10            kept: complete 447 -> 448 (ripped /STM32/VCAP FMC_A10 FMC_A11 FMC_A9 FMC_D1 FMC_D11 FMC_D12 FMC_D19) 71s
+FMC_D13            reverted: complete 448 -> 441 (tried CONSOLE_RX CONSOLE_TX FMC_A13 FMC_A14 FMC_A16 FMC_A18 FMC_D0 FMC_D1) 203s
+FMC_D2             reverted: complete 448 -> 443 (tried FMC_CLK FMC_D0 FMC_D1 FMC_D27 FMC_D3 FMC_D4 FMC_D6 FMC_D7) 106s
+FMC_NBL0           reverted: complete 448 -> 448 (tried /STM32/LSE_IN FDCAN1_RX FDCAN1_TX FMC_D1 FMC_D19 FMC_D20 FMC_D21 FMC_D24) 74s
+FMC_NBL1           reverted: complete 448 -> 443 (tried /STM32/LSE_IN ETH_MDIO FDCAN1_RX FDCAN1_TX FMC_D0 FMC_D1 FMC_D28 FMC_D29) 183s
+FMC_NBL2           reverted: complete 448 -> 446 (tried BP_TDM_DOUT ETH_MDIO FDCAN1_RX FDCAN1_TX FMC_A9 FMC_D21 FMC_D22 FMC_D24) 140s
+FMC_NBL3           reverted: complete 448 -> 446 (tried /STM32/LSE_IN BP_TDM_DOUT ETH_MDIO FDCAN1_TX FMC_A9 FMC_D22 FMC_D23 FMC_D24) 79s
+FMC_NOE            reverted: complete 448 -> 446 (tried /STM32/BOOT0 FMC_CLK FMC_D10 FMC_D11 FMC_D12 FMC_D14 FMC_D15 FMC_D24) 84s
+FMC_NWE            reverted: complete 448 -> 447 (tried ETH_TX_EN FMC_A14 FMC_CLK FMC_D10 FMC_D4 FMC_D5 FMC_D8 FMC_D9) 50s
+FPGA_DONE          reverted: complete 448 -> 445 (tried +1V0_MGT +1V8 /FPGA_CFG/DONE_LED_K FMC_A10 FMC_A12 FMC_A13 FMC_A14 FMC_A15) 149s
+FPGA_IRQ2          reverted: complete 448 -> 446 (tried /MCU_IO/ETH_TXN /STM32/VCAP AUD_CLK_48K ETH_TXD0 ETH_TXD1 ETH_TX_EN FMC_CLK FMC_D1) 64s
+FPGA_IRQ5          reverted: complete 448 -> 448 (tried AUD_CLK_44K FMC_A0 FMC_A12 FMC_A13 FMC_A14 FMC_A15 FMC_A18 FMC_A2) 72s
+FPGA_M1            reverted: complete 448 -> 447 (tried +1V8 /MCU_IO/ETH_TXP AUD_DAC_SDIN FPGA_INIT_B FPGA_M0 FPGA_M2 FPGA_TCK SFP0_MOD_ABS) 93s
+FPGA_RDWR_B        reverted: complete 448 -> 445 (tried /MCU_IO/ETH_TXP /STM32/VCAP CONSOLE_RX CONSOLE_TX FMC_A13 FMC_A15 FMC_A18 FMC_CLK) 196s
+MCU_PC6            reverted: complete 448 -> 443 (tried BP_CANH FMC_A13 FMC_A14 FMC_A15 FMC_D1 FMC_D2 FMC_D3 FPGA_IRQ0) 160s
+MEZZ_LA09_P        no rippable blockers
+MEZZ_LA25_P        reverted: complete 448 -> 448 (tried I2C1_SDA) 34s
+MEZZ_LA29_N        reverted: complete 448 -> 448 (tried VADJ_SEL1) 27s
+MEZZ_LA29_P        reverted: complete 448 -> 448 (tried I2C1_SDA) 34s
+MEZZ_LA31_P        no rippable blockers
+MEZZ_LA32_N        reverted: complete 448 -> 448 (tried VADJ_SEL1) 28s
+PMODB_IO1          reverted: complete 448 -> 443 (tried /MCU_IO/ETH_RXP FPGA_BTN0 PMODA_IO1 PMODA_IO2 PMODA_IO3 PMODA_IO4 PMODA_IO5 PMODA_IO6) 299s
+QSPI_BK1_IO3       reverted: complete 448 -> 448 (tried +3V3_VDDA /STM32/HSE_IN /STM32/HSE_OUT /STM32/MCU_LED1_LED /STM32/VCAP ETH_MDC FMC_A2 FMC_A4) 44s
+QSPI_CLK           reverted: complete 448 -> 448 (tried +3V3_VDDA /STM32/BOOT0 /STM32/HSE_IN /STM32/MCU_LED1_LED /STM32/VCAP ETH_MDC ETH_MDIO ETH_REF_CLK) 63s
+QSPI_NCS           reverted: complete 448 -> 445 (tried +3V3_AUD /FPGA_CFG/DONE_LED_A /MCU_IO/ETH_TXP /STM32/VCAP FMC_A12 FMC_A13 FMC_A14 FMC_A15) 249s
+SFP0_SCL           reverted: complete 448 -> 447 (tried /MCU_IO/ETH_TXP AUD_DAC_LRCK AUD_DAC_SCLK AUD_DAC_SDIN FPGA_INIT_B FPGA_M0 FPGA_TCK FPGA_TDI) 199s
+SFP0_TX_DIS        reverted: complete 448 -> 447 (tried /MCU_IO/ETH_TXP AUD_DAC_SCLK AUD_DAC_SDIN FPGA_INIT_B FPGA_M0 FPGA_TCK FPGA_TDI FPGA_TDO) 236s
+SFP1_LOS           reverted: complete 448 -> 443 (tried /MCU_IO/ETH_RXP AUD_CLK_44K FMC_D1 FMC_D18 FMC_D19 FPGA_CSI_B FPGA_TDO PMODA_IO3) 182s
+SFP1_SDA           reverted: complete 448 -> 445 (tried /MCU_IO/ETH_RXP AUD_CLK_44K FMC_D18 FMC_D19 FPGA_CSI_B MCU_UART_TX PMODA_IO1 PMODA_IO2) 155s
+SFP1_TX_DIS        reverted: complete 448 -> 445 (tried FMC_D1 FMC_D19 FMC_D21 FMC_D22 FMC_D23 FMC_D25 FMC_D26 FMC_D27) 137s
+SFP1_TX_FAULT      reverted: complete 448 -> 442 (tried AUD_CLK_44K FMC_D1 FMC_D19 FMC_D22 FMC_D23 FPGA_CSI_B FPGA_TDI FPGA_TDO) 154s
+ULPI_CK            reverted: complete 448 -> 444 (tried /MCU_IO/ULPI_1V8 ETH_CRS_DV ETH_MDIO ETH_REF_CLK ETH_RXD0 ETH_RXD1 FMC_A0 FMC_A3) 135s
+ULPI_D0            reverted: complete 448 -> 447 (tried /MCU_IO/ULPI_1V8 /MCU_IO/ULPI_XI /MCU_IO/ULPI_XO ETH_MDC ETH_RXD0 ETH_RXD1 FMC_A0 FMC_A3) 71s
+ULPI_D1            reverted: complete 448 -> 445 (tried /MCU_IO/ULPI_1V8 /MCU_IO/ULPI_XO ETH_CRS_DV ETH_RXD0 ETH_RXD1 FMC_A0 FMC_A10 FMC_A11) 87s
+ULPI_D3            reverted: complete 448 -> 444 (tried /MCU_IO/ETH_TXN /MCU_IO/ULPI_1V8 FMC_A9 FMC_D10 FMC_D12 FMC_D17 FMC_D18 FMC_D6) 102s
+ULPI_D4            reverted: complete 448 -> 443 (tried /MCU_IO/ULPI_1V8 FMC_D12 FMC_D16 FMC_D17 FMC_D18 FMC_D19 FMC_D20 FMC_D8) 91s
+ULPI_D5            reverted: complete 448 -> 443 (tried /MCU_IO/ULPI_1V8 CONSOLE_RX CONSOLE_TX FMC_A13 FMC_A16 FMC_D1 FMC_D12 FMC_D13) 230s
+ULPI_NXT           reverted: complete 448 -> 448 (tried /MCU_IO/ULPI_1V8 /STM32/MCU_LED1_LED ETH_CRS_DV ETH_MDC ETH_MDIO ETH_REF_CLK ETH_RXD0 MCU_LED0) 64s
+ULPI_STP           reverted: complete 448 -> 447 (tried +3V3_VDDA /MCU_IO/ULPI_1V8 /STM32/HSE_IN /STM32/HSE_OUT ETH_MDC ETH_MDIO FMC_A5 FPGA_TMS) 98s
+VCCADC             reverted: complete 448 -> 447 (tried +1V0_MGT +1V8 /MCU_IO/ETH_TXN FPGA_CCLK GNDADC SFP0_MOD_ABS SFP0_TX_FAULT) 82s
+VREF_DDR           reverted: complete 448 -> 446 (tried /DDR3/DDR_ZQ /DDR3/VTT_REFIN) 100s
+pinfree: 1 of 55 targets improved the board
++1V8               reverted: complete 448 -> 448 (tried +1V2_MGT +5V /MCU_IO/ETH_RXP /POWER/EN_MGTAVTT /POWER/FB_1V8 /POWER/FB_MGTAVTT /POWER/PG_1V0 BP_TDM_BCLK) 100s
++3V3_VDDA          reverted: complete 448 -> 443 (tried /STM32/VCAP ETH_MDC FPGA_TMS MCU_PF11 NRST QSPI_BK1_IO3 QSPI_BK2_IO0 ULPI_STP) 180s
++5V                reverted: complete 448 -> 447 (tried +1V8 +5V_AUD /POWER/FB_1V0 /POWER/FB_1V8 /POWER/FB_5V /POWER/LED12 /POWER/PG_1V0 /POWER/PG_3V3) 110s
+/MCU_IO/ETH_RXN    reverted: complete 448 -> 444 (tried /MCU_IO/ETH_RBIAS /MCU_IO/ETH_RXP /MCU_IO/ETH_TXN /MCU_IO/ETH_TXP /MCU_IO/ETH_XI ETH_AVDD FDCAN1_TX) 582s
+/MCU_IO/ULPI_1V8   reverted: complete 448 -> 446 (tried /MCU_IO/ULPI_1V8A /MCU_IO/ULPI_XI /MCU_IO/ULPI_XO AUD_DAC_SCLK ULPI_D7) 64s
+/POWER/12V_PROT    reverted: complete 448 -> 448 (tried /POWER/QREV_G) 9s
+/POWER/EN_12V      reverted: complete 448 -> 448 (tried /POWER/PG_5V) 46s
+/POWER/SS_3V3M     no rippable blockers
+/POWER/SS_VADJ     no rippable blockers
+/STM32/BOOT0       reverted: complete 448 -> 448 (tried /MCU_IO/ULPI_1V8A ETH_TXD0 QSPI_BK2_IO3 SC_NRST SC_SWCLK SC_UART_RX SC_UART_TX SWO) 287s
+BP_TDM_DIN         reverted: complete 448 -> 448 (tried FMC_A11 FMC_A3 SYSCLK_100M) 30s
+ETH_AVDD           reverted: complete 448 -> 442 (tried /MCU_IO/ETH_CT /MCU_IO/ETH_INTSEL /MCU_IO/ETH_RBIAS /MCU_IO/ETH_REGOFF /MCU_IO/ETH_RXP /MCU_IO/ETH_TXN /MCU_IO/ETH_TXP /MCU_IO/ETH_XO) 361s
+FMC_A17            reverted: complete 448 -> 446 (tried BP_TDM_DOUT CONSOLE_RX FMC_A12 FMC_A16 FMC_A18 FMC_A5 FMC_D0 FMC_D1) 146s
+FMC_D13            reverted: complete 448 -> 446 (tried CONSOLE_RX CONSOLE_TX FMC_A13 FMC_D10 FMC_D11 FMC_D14 FMC_D15 FMC_D9) 75s
+FMC_D2             reverted: complete 448 -> 446 (tried FMC_D0 FMC_D1 FMC_D27 FMC_D3 FPGA_BTN1 MCU_PA10 MCU_PC12 MCU_PC8) 82s
+FMC_NBL0           reverted: complete 448 -> 443 (tried FDCAN1_RX FDCAN1_TX FMC_D1 FMC_D29 FMC_D30 FMC_D31 FMC_D7 FMC_D8) 117s
+FMC_NBL1           reverted: complete 448 -> 444 (tried FMC_D1 FMC_D29 FMC_D6 FMC_NBL0 FPGA_BTN1 FPGA_LED2 I2C1_SCL I2C1_SDA) 134s
+FMC_NBL2           reverted: complete 448 -> 447 (tried FMC_A9 FMC_D24 FMC_D29 FPGA_LED3 I2C1_SCL I2C1_SDA ULPI_D7) 101s
+FMC_NBL3           reverted: complete 448 -> 446 (tried BP_TDM_DOUT ETH_MDIO FMC_A9 FMC_D26 FMC_D28 FMC_D29) 75s
+FMC_NOE            reverted: complete 448 -> 446 (tried FMC_CLK FMC_D12 FMC_D9 FMC_NWAIT FMC_NWE MCU_PA0 MCU_PC10 MCU_PC11) 74s
+FMC_NWE            reverted: complete 448 -> 444 (tried FMC_CLK FMC_D10 FMC_D5 FMC_NOE FMC_NWAIT FPGA_PUDC_B MCU_PA0 QSPI_BK2_IO2) 126s
+FPGA_DONE          reverted: complete 448 -> 445 (tried FMC_A12 FMC_A13 FMC_A14 FPGA_IRQ5 MCU_LED1 QSPI_BK2_IO1 SFP0_SDA) 150s
+FPGA_IRQ2          reverted: complete 448 -> 447 (tried AUD_CLK_48K ETH_TXD0 ETH_TX_EN FMC_D19 FMC_D20 FPGA_CSI_B FPGA_IRQ1 I2C1_SDA) 69s
+FPGA_IRQ5          reverted: complete 448 -> 443 (tried AUD_CLK_44K FMC_A0 FMC_A13 FMC_A14 FMC_A4 FPGA_DONE MCU_LED1 QSPI_BK2_IO1) 163s
+FPGA_M1            reverted: complete 448 -> 447 (tried +1V8 /MCU_IO/ETH_TXP FPGA_M0 FPGA_M2 SFP0_MOD_ABS VADJ_PG) 172s
+FPGA_RDWR_B        reverted: complete 448 -> 442 (tried /STM32/VCAP FMC_D11 FMC_D16 FMC_D17 FPGA_CSI_B MCU_UART_RX MCU_UART_TX ULPI_D6) 102s
+MCU_PC6            reverted: complete 448 -> 443 (tried FMC_A15 FMC_D1 FPGA_IRQ1 MCU_PA8 MCU_PB4 MCU_PC3 MCU_PC7 MCU_PC8) 169s
+MEZZ_LA09_P        no rippable blockers
+MEZZ_LA25_P        no rippable blockers
+MEZZ_LA29_N        no rippable blockers
+MEZZ_LA29_P        no rippable blockers
+MEZZ_LA31_P        no rippable blockers
+MEZZ_LA32_N        reverted: complete 448 -> 448 (tried VADJ_SEL1) 29s
+PMODB_IO1          reverted: complete 448 -> 448 (tried PMODA_IO2 PMODA_IO3 PMODA_IO8 PMODB_IO2 PMODB_IO4 PMODB_IO5 SC_NRST) 90s
+QSPI_BK1_IO3       reverted: complete 448 -> 447 (tried +3V3_VDDA /STM32/HSE_IN /STM32/HSE_OUT /STM32/VCAP MCU_LED1 NRST QSPI_BK1_IO2 QSPI_CLK) 88s
+QSPI_CLK           reverted: complete 448 -> 443 (tried /STM32/MCU_LED1_LED ETH_MDC QSPI_BK1_IO0 QSPI_BK1_IO1 QSPI_BK1_IO2 QSPI_BK1_IO3 QSPI_BK2_IO0 QSPI_BK2_IO3) 89s
+QSPI_NCS           reverted: complete 448 -> 442 (tried /MCU_IO/ETH_TXP FMC_A12 FMC_A13 FMC_A14 FMC_A15 FMC_D1 FPGA_INIT_B FPGA_IRQ0) 162s
+SFP0_SCL           reverted: complete 448 -> 448 (tried AUD_DAC_SDIN SFP0_MOD_ABS SFP0_SDA SFP0_TX_DIS SFP0_TX_FAULT) 117s
+SFP0_TX_DIS        reverted: complete 448 -> 447 (tried FPGA_TCK SFP0_LOS SFP0_SCL SFP0_SDA SFP0_TX_FAULT) 117s
+SFP1_LOS           reverted: complete 448 -> 448 (tried AUD_CLK_44K SFP0_SDA SFP1_MOD_ABS) 43s
+SFP1_SDA           reverted: complete 448 -> 448 (tried /MCU_IO/ETH_RXP AUD_CLK_44K FMC_D18 PMODA_IO3 SFP1_MOD_ABS SFP1_SCL SFP1_TX_DIS SFP1_TX_FAULT) 179s
+SFP1_TX_DIS        reverted: complete 448 -> 448 (tried FMC_D23 SFP1_SCL SFP1_SDA SFP1_TX_FAULT) 162s
+SFP1_TX_FAULT      reverted: complete 448 -> 448 (tried SFP1_SCL SFP1_SDA SFP1_TX_DIS) 148s
+ULPI_CK            reverted: complete 448 -> 443 (tried /MCU_IO/ULPI_1V8 ETH_RXD0 ETH_RXD1 MCU_PA6 MCU_PC3 STM32_DAC1_OUT1 ULPI_D0 ULPI_DIR) 168s
+ULPI_D0            reverted: complete 448 -> 446 (tried FMC_D31 STM32_DAC1_OUT1 ULPI_CK ULPI_D2) 67s
+ULPI_D1            reverted: complete 448 -> 447 (tried ETH_RXD0 ETH_RXD1 MCU_PB2 NRST ULPI_D2) 65s
+ULPI_D3            reverted: complete 448 -> 445 (tried FMC_D12 FMC_D8 FMC_D9 NRST QSPI_BK2_IO1 ULPI_D2) 77s
+ULPI_D4            reverted: complete 448 -> 446 (tried FMC_D12 FMC_D17 FMC_D18 MCU_UART_TX NRST ULPI_D2 ULPI_D6) 96s
+ULPI_D5            reverted: complete 448 -> 442 (tried CONSOLE_RX CONSOLE_TX FMC_A16 FMC_D16 FMC_D17 FMC_D20 FPGA_RDWR_B ULPI_D2) 162s
+ULPI_NXT           reverted: complete 448 -> 444 (tried ETH_MDIO ETH_REF_CLK MCU_PA6 MCU_PC3 QSPI_BK2_IO0 QSPI_BK2_IO1 ULPI_DIR ULPI_RST) 112s
+ULPI_STP           reverted: complete 448 -> 446 (tried +3V3_VDDA /MCU_IO/ULPI_1V8 ETH_MDC NRST QSPI_BK1_IO2 QSPI_BK1_IO3 QSPI_CLK ULPI_DIR) 135s
+VCCADC             reverted: complete 448 -> 448 (tried +1V0_MGT GNDADC SFP0_TX_FAULT) 30s
+VREF_DDR           reverted: complete 448 -> 447 (tried /DDR3/DDR_ZQ) 70s
+pinfree: 0 of 54 targets improved the board
++1V8               reverted: complete 448 -> 447 (tried +1V0_MGT +1V2_MGT +5V /MCU_IO/ETH_RXP /POWER/EN_MGTAVTT /POWER/FB_1V35 /POWER/FB_1V8 /POWER/FB_MGTAVCC) 125s
++3V3_VDDA          reverted: complete 448 -> 448 (tried /FPGA_CFG/DONE_LED_A /STM32/HSE_IN /STM32/HSE_OUT /STM32/VCAP ETH_MDC ETH_MDIO FMC_A15 FPGA_PUDC_B) 93s
++5V                reverted: complete 448 -> 448 (tried +1V8 +5V_AUD +5V_USBH /POWER/EN_MGTAVTT /POWER/FB_1V0 /POWER/FB_1V35 /POWER/FB_1V8 /POWER/FB_5V) 93s
+/MCU_IO/ETH_RXN    reverted: complete 448 -> 445 (tried /MCU_IO/ETH_CT /MCU_IO/ETH_INTSEL /MCU_IO/ETH_RBIAS /MCU_IO/ETH_REGOFF /MCU_IO/ETH_RXP /MCU_IO/ETH_TXN /MCU_IO/ETH_TXP /MCU_IO/ETH_XI) 447s
+/MCU_IO/ULPI_1V8   reverted: complete 448 -> 446 (tried +3V3_AUD /MCU_IO/ULPI_1V8A /MCU_IO/ULPI_RBIAS /MCU_IO/ULPI_XI /MCU_IO/ULPI_XO AUD_DAC_SCLK NRST STM32_DAC1_OUT1) 105s
+/POWER/12V_PROT    reverted: complete 448 -> 448 (tried /POWER/12V_FUSED /POWER/QREV_G) 10s
+/POWER/EN_12V      reverted: complete 448 -> 447 (tried /POWER/PG_5V /POWER/SW_3V3M) 50s
+/POWER/SS_3V3M     reverted: complete 448 -> 448 (tried /POWER/FB_3V3M) 10s
+/POWER/SS_VADJ     reverted: complete 448 -> 448 (tried /POWER/FB_VADJ VADJ_EN) 24s
+/STM32/BOOT0       reverted: complete 448 -> 447 (tried +12V_MEZZ /MCU_IO/ULPI_1V8A /STM32/LSE_IN AUD_DAC_SDIN BP_TDM_DOUT ETH_TXD0 ETH_TXD1 FMC_A1) 46s
+BP_TDM_DIN         reverted: complete 448 -> 441 (tried AUD_CLK_48K FMC_A1 FMC_A11 FMC_A12 FMC_A14 FMC_A3 FMC_A5 FMC_A8) 130s
+ETH_AVDD           reverted: complete 448 -> 444 (tried +3V3_SFP1 /MCU_IO/ETH_CT /MCU_IO/ETH_INTSEL /MCU_IO/ETH_RBIAS /MCU_IO/ETH_REGOFF /MCU_IO/ETH_RXP /MCU_IO/ETH_TXN /MCU_IO/ETH_TXP) 357s
+FMC_A17            reverted: complete 448 -> 444 (tried BP_TDM_DIN BP_TDM_DOUT CONSOLE_RX CONSOLE_TX FMC_A1 FMC_A11 FMC_A12 FMC_A14) 208s
+FMC_D13            reverted: complete 448 -> 441 (tried CONSOLE_RX CONSOLE_TX FMC_A13 FMC_A14 FMC_A16 FMC_A18 FMC_D0 FMC_D1) 203s
+FMC_D2             reverted: complete 448 -> 443 (tried FMC_CLK FMC_D0 FMC_D1 FMC_D27 FMC_D3 FMC_D4 FMC_D6 FMC_D7) 106s
+FMC_NBL0           reverted: complete 448 -> 448 (tried /STM32/LSE_IN FDCAN1_RX FDCAN1_TX FMC_D1 FMC_D19 FMC_D20 FMC_D21 FMC_D24) 74s
+FMC_NBL1           reverted: complete 448 -> 443 (tried /STM32/LSE_IN ETH_MDIO FDCAN1_RX FDCAN1_TX FMC_D0 FMC_D1 FMC_D28 FMC_D29) 184s
+FMC_NBL2           reverted: complete 448 -> 446 (tried BP_TDM_DOUT ETH_MDIO FDCAN1_RX FDCAN1_TX FMC_A9 FMC_D21 FMC_D22 FMC_D24) 140s
+FMC_NBL3           reverted: complete 448 -> 446 (tried /STM32/LSE_IN BP_TDM_DOUT ETH_MDIO FDCAN1_TX FMC_A9 FMC_D22 FMC_D23 FMC_D24) 79s
+FMC_NOE            reverted: complete 448 -> 446 (tried /STM32/BOOT0 FMC_CLK FMC_D10 FMC_D11 FMC_D12 FMC_D14 FMC_D15 FMC_D24) 83s
+FMC_NWE            reverted: complete 448 -> 447 (tried ETH_TX_EN FMC_A14 FMC_CLK FMC_D10 FMC_D4 FMC_D5 FMC_D8 FMC_D9) 50s
+FPGA_DONE          reverted: complete 448 -> 445 (tried +1V0_MGT +1V8 /FPGA_CFG/DONE_LED_K FMC_A10 FMC_A12 FMC_A13 FMC_A14 FMC_A15) 148s
+FPGA_IRQ2          reverted: complete 448 -> 446 (tried /MCU_IO/ETH_TXN /STM32/VCAP AUD_CLK_48K ETH_TXD0 ETH_TXD1 ETH_TX_EN FMC_CLK FMC_D1) 64s
+FPGA_IRQ5          reverted: complete 448 -> 448 (tried AUD_CLK_44K FMC_A0 FMC_A12 FMC_A13 FMC_A14 FMC_A15 FMC_A18 FMC_A2) 72s
+FPGA_M1            reverted: complete 448 -> 447 (tried +1V8 /MCU_IO/ETH_TXP AUD_DAC_SDIN FPGA_INIT_B FPGA_M0 FPGA_M2 FPGA_TCK SFP0_MOD_ABS) 93s
+FPGA_RDWR_B        reverted: complete 448 -> 445 (tried /MCU_IO/ETH_TXP /STM32/VCAP CONSOLE_RX CONSOLE_TX FMC_A13 FMC_A15 FMC_A18 FMC_CLK) 197s
+MCU_PC6            reverted: complete 448 -> 443 (tried BP_CANH FMC_A13 FMC_A14 FMC_A15 FMC_D1 FMC_D2 FMC_D3 FPGA_IRQ0) 160s
+MEZZ_LA09_P        no rippable blockers
+MEZZ_LA25_P        reverted: complete 448 -> 448 (tried I2C1_SDA) 34s
+MEZZ_LA29_N        reverted: complete 448 -> 448 (tried VADJ_SEL1) 27s
+MEZZ_LA29_P        reverted: complete 448 -> 448 (tried I2C1_SDA) 34s
+MEZZ_LA31_P        no rippable blockers
+MEZZ_LA32_N        reverted: complete 448 -> 448 (tried VADJ_SEL1) 28s
+PMODB_IO1          reverted: complete 448 -> 443 (tried /MCU_IO/ETH_RXP FPGA_BTN0 PMODA_IO1 PMODA_IO2 PMODA_IO3 PMODA_IO4 PMODA_IO5 PMODA_IO6) 300s
+QSPI_BK1_IO3       reverted: complete 448 -> 448 (tried +3V3_VDDA /STM32/HSE_IN /STM32/HSE_OUT /STM32/MCU_LED1_LED /STM32/VCAP ETH_MDC FMC_A2 FMC_A4) 45s
+QSPI_CLK           reverted: complete 448 -> 448 (tried +3V3_VDDA /STM32/BOOT0 /STM32/HSE_IN /STM32/MCU_LED1_LED /STM32/VCAP ETH_MDC ETH_MDIO ETH_REF_CLK) 64s
+QSPI_NCS           reverted: complete 448 -> 445 (tried +3V3_AUD /FPGA_CFG/DONE_LED_A /MCU_IO/ETH_TXP /STM32/VCAP FMC_A12 FMC_A13 FMC_A14 FMC_A15) 249s
+SFP0_SCL           reverted: complete 448 -> 447 (tried /MCU_IO/ETH_TXP AUD_DAC_LRCK AUD_DAC_SCLK AUD_DAC_SDIN FPGA_INIT_B FPGA_M0 FPGA_TCK FPGA_TDI) 200s
+SFP0_TX_DIS        reverted: complete 448 -> 447 (tried /MCU_IO/ETH_TXP AUD_DAC_SCLK AUD_DAC_SDIN FPGA_INIT_B FPGA_M0 FPGA_TCK FPGA_TDI FPGA_TDO) 237s
+SFP1_LOS           reverted: complete 448 -> 443 (tried /MCU_IO/ETH_RXP AUD_CLK_44K FMC_D1 FMC_D18 FMC_D19 FPGA_CSI_B FPGA_TDO PMODA_IO3) 182s
+SFP1_SDA           reverted: complete 448 -> 445 (tried /MCU_IO/ETH_RXP AUD_CLK_44K FMC_D18 FMC_D19 FPGA_CSI_B MCU_UART_TX PMODA_IO1 PMODA_IO2) 155s
+SFP1_TX_DIS        reverted: complete 448 -> 445 (tried FMC_D1 FMC_D19 FMC_D21 FMC_D22 FMC_D23 FMC_D25 FMC_D26 FMC_D27) 137s
+SFP1_TX_FAULT      reverted: complete 448 -> 442 (tried AUD_CLK_44K FMC_D1 FMC_D19 FMC_D22 FMC_D23 FPGA_CSI_B FPGA_TDI FPGA_TDO) 155s
+ULPI_CK            reverted: complete 448 -> 444 (tried /MCU_IO/ULPI_1V8 ETH_CRS_DV ETH_MDIO ETH_REF_CLK ETH_RXD0 ETH_RXD1 FMC_A0 FMC_A3) 135s
+ULPI_D0            reverted: complete 448 -> 447 (tried /MCU_IO/ULPI_1V8 /MCU_IO/ULPI_XI /MCU_IO/ULPI_XO ETH_MDC ETH_RXD0 ETH_RXD1 FMC_A0 FMC_A3) 71s
+ULPI_D1            reverted: complete 448 -> 445 (tried /MCU_IO/ULPI_1V8 /MCU_IO/ULPI_XO ETH_CRS_DV ETH_RXD0 ETH_RXD1 FMC_A0 FMC_A10 FMC_A11) 88s
+ULPI_D3            reverted: complete 448 -> 444 (tried /MCU_IO/ETH_TXN /MCU_IO/ULPI_1V8 FMC_A9 FMC_D10 FMC_D12 FMC_D17 FMC_D18 FMC_D6) 102s
+ULPI_D4            reverted: complete 448 -> 443 (tried /MCU_IO/ULPI_1V8 FMC_D12 FMC_D16 FMC_D17 FMC_D18 FMC_D19 FMC_D20 FMC_D8) 92s
+ULPI_D5            reverted: complete 448 -> 443 (tried /MCU_IO/ULPI_1V8 CONSOLE_RX CONSOLE_TX FMC_A13 FMC_A16 FMC_D1 FMC_D12 FMC_D13) 230s
+ULPI_NXT           reverted: complete 448 -> 448 (tried /MCU_IO/ULPI_1V8 /STM32/MCU_LED1_LED ETH_CRS_DV ETH_MDC ETH_MDIO ETH_REF_CLK ETH_RXD0 MCU_LED0) 64s
+ULPI_STP           reverted: complete 448 -> 447 (tried +3V3_VDDA /MCU_IO/ULPI_1V8 /STM32/HSE_IN /STM32/HSE_OUT ETH_MDC ETH_MDIO FMC_A5 FPGA_TMS) 98s
+VCCADC             reverted: complete 448 -> 447 (tried +1V0_MGT +1V8 /MCU_IO/ETH_TXN FPGA_CCLK GNDADC SFP0_MOD_ABS SFP0_TX_FAULT) 82s
+VREF_DDR           reverted: complete 448 -> 446 (tried /DDR3/DDR_ZQ /DDR3/VTT_REFIN) 100s
+pinfree: 0 of 54 targets improved the board
