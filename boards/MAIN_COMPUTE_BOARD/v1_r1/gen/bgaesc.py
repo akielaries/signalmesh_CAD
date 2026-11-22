@@ -280,7 +280,7 @@ if legs:
         for l in legs:
             if 'ly' in l:
                 l['la'] = l.pop('ly')
-        negroute3d.negotiate3d(bd, legs, win, {ly: 0.127 for ly in LAYERS}, COST, via_cost=float(os.environ.get('VIA_COST', '3')),
+        negroute3d.negotiate3d(bd, legs, win, {ly: 0.127 for ly in LAYERS}, COST, via_cost=float(os.environ.get('VIA_COST', '3')), margin=float(os.environ.get('MARGIN', '4')),
                                iters=int(os.environ.get('NEG_ITERS', '25')), log=lambda s: print(s, flush=True))
     else:
         negroute.negotiate(bd, legs, win, {ly: 0.127 for ly in LAYERS}, COST,

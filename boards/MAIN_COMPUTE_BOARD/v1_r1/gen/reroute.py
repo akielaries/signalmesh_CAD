@@ -18,7 +18,8 @@ PCB, STEP, NETS = sys.argv[1], sys.argv[2], sys.argv[3:]
 LAYERS = tuple(os.environ.get('LAYERS', 'In2.Cu,In7.Cu,In5.Cu,B.Cu,F.Cu').split(','))
 CLR = float(os.environ.get('CLR', '0.127'))
 WIDTH = float(os.environ.get('WIDTH', '0.127'))
-COST = {'In2.Cu': 1.0, 'In7.Cu': 1.0, 'In5.Cu': 1.05, 'B.Cu': 1.15, 'F.Cu': 1.2}
+COST = ({ly: 1.0 for ly in ('In2.Cu', 'In7.Cu', 'In5.Cu', 'B.Cu', 'F.Cu')} if os.environ.get('FLAT_COST') else
+        {'In2.Cu': 1.0, 'In7.Cu': 1.0, 'In5.Cu': 1.05, 'B.Cu': 1.15, 'F.Cu': 1.2})
 ESC = 3.0
 t0 = time.time()
 
@@ -156,7 +157,7 @@ if legs:
     win = (max(50.5, min(ax) - 6), max(53.6, min(ay) - 6), min(190.6, max(ax) + 6), min(146.9, max(ay) + 6))
     if os.environ.get('R3D'):
         import negroute3d
-        negroute3d.negotiate3d(bd, legs, win, {ly: WIDTH for ly in LAYERS}, {ly: COST.get(ly, 1.0) for ly in LAYERS}, via_cost=float(os.environ.get('VIA_COST', '1.2')),
+        negroute3d.negotiate3d(bd, legs, win, {ly: WIDTH for ly in LAYERS}, {ly: COST.get(ly, 1.0) for ly in LAYERS}, via_cost=float(os.environ.get('VIA_COST', '1.2')), margin=float(os.environ.get('MARGIN', '4')),
                                iters=int(os.environ.get('NEG_ITERS', '20')), clr=CLR, log=lambda s: print(s, flush=True))
     else:
         negroute.negotiate(bd, legs, win, {ly: WIDTH for ly in LAYERS}, {ly: COST.get(ly, 1.0) for ly in LAYERS},
