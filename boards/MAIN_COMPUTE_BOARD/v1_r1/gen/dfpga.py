@@ -166,6 +166,17 @@ def plan():
     for nm, net in gtp.items():
         put(BYNAME[nm], net)
 
+    # flexible-net ball remap (flexmove.py): a low-speed net may move to any free 3.3 V io ball, chosen so
+    # it can escape the ball field toward where it goes
+    rsw = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'ball_remap.json')
+    if os.path.exists(rsw):
+        for net, ball in json.load(open(rsw)).items():
+            for b0 in [b0 for b0, nn in m.items() if nn == net]:
+                del m[b0]
+            if ball in m:
+                raise ValueError('remap: ball %s already carries %s' % (ball, m[ball]))
+            m[ball] = net
+
     # config bank 0 and power
     cfg = {'CCLK_0': 'FPGA_CCLK', 'PROGRAM_B_0': 'FPGA_PROGRAM_B', 'INIT_B_0': 'FPGA_INIT_B',
            'DONE_0': 'FPGA_DONE', 'M0_0': 'FPGA_M0', 'M1_0': 'FPGA_M1', 'M2_0': 'FPGA_M2', 'CFGBVS_0': '+3V3',
