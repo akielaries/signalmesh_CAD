@@ -39,6 +39,20 @@ def state():
     return r, planes, T, done
 
 
+def drc_metric():
+    # (unconnected items, rule errors) from kicad's own drc: the judge for keeping an attempt
+    import json
+    rpt = PCB + '.pf.json'
+    subprocess.run(['kicad-cli', 'pcb', 'drc', '--format', 'json', '--refill-zones', '-o', rpt, PCB],
+                   stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    d = json.load(open(rpt))
+    errs = sum(1 for v in d.get('violations', []) if not v['type'].startswith(('silk', 'track_dangling', 'via_dangling', 'text_')))
+    return len(d.get('unconnected_items', [])), errs
+
+
+USE_DRC = os.environ.get('PF_DRC', '1') == '1'
+
+
 def run(env, *args):
     e = dict(os.environ, R3D='1', FLAT_COST='1', VIA_COST='2', NEG_ITERS='20', MARGIN='8', **env)
     subprocess.run([PY, '-u', os.path.join(HERE, 'reroute.py'), PCB] + list(args), env=e, cwd=HERE,
@@ -72,6 +86,8 @@ for tgt in TARGETS:
         say('%-18s no rippable blockers' % tgt)
         continue
     before = len(done)
+    if USE_DRC:
+        u0, e0 = drc_metric()
     snap = PCB + '.pinfree.snap'
     shutil.copy(PCB, snap)
     t0 = time.time()
@@ -81,7 +97,13 @@ for tgt in TARGETS:
         group = [b for b in blk if width_of(b) == wdt]
         run({'WIDTH': wdt, 'CLR': '0.15' if wdt != '0.127' else '0.127'}, 'route', *group)
     _, _, _, done2 = state()
-    if len(done2) > before:
+    if USE_DRC:
+        u1, e1 = drc_metric()
+        good = u1 < u0 and e1 <= e0
+        before, done2 = u0, list(range(u1))     # report drc unconnected in the log line
+    else:
+        good = len(done2) > before
+    if good:
         kept += 1
         say('%-18s kept: complete %d -> %d (ripped %s) %.0fs' % (tgt, before, len(done2), ' '.join(blk), time.time() - t0))
     else:

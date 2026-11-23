@@ -73,9 +73,10 @@ the VITA connector footprint it drops to 0.10 mm, so pairs can leave the 1.27 mm
 
 ## routing status (2026-11-22)
 
-DRC with schematic parity: no clearance, short or width errors; 79 unconnected items in 57 nets (the open
-nets with their terminals are in the [routing guide](routing_guide.md)); silkscreen overlaps not yet
-cleaned (about 220, cosmetic).
+DRC with schematic parity: no clearance, short or width errors; 75 unconnected items (the open nets with
+their terminals are in the [routing guide](routing_guide.md)). Silkscreen: references moved off pads or
+hidden on dense passives (hidden ones stay on the fab layer); 47 silk items left, mostly footprint
+outlines over pads (clipped by the mask in the gerbers) and 6 at the board edge.
 
 | group | state |
 |---|---|

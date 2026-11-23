@@ -92,7 +92,7 @@ including both dogbones; the fly-by tail to each command terminator is not count
 | DDR_RAS_N | AB7 | J3 | R117 (tail 17.0 mm) | 21.92 | -4.39 | 2 / B,F | **tune** |
 | DDR_CAS_N | AA8 | K3 | R118 (tail 15.8 mm) | 22.74 | -3.57 | 1 / F,In7 | **tune** |
 | DDR_WE_N | AB8 | L3 | R119 (tail 20.8 mm) | 21.68 | -4.63 | 2 / F,In7 | **tune** |
-| DDR_CKE | R6 | K9 | R120 (tail 43.2 mm) | 32.46 | +6.15 | 0 / F | **tune** |
+| DDR_CKE | R6 | K9 | R120 (tail 31.0 mm) | 31.42 | +5.11 | 1 / F | **tune** |
 | DDR_ODT | T3 | K1 | R121 (tail 20.1 mm) | 39.67 | +13.36 | 1 / B,F | **tune** |
 
 ## reset (not matched)
