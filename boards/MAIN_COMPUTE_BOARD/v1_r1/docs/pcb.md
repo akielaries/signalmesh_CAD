@@ -71,18 +71,36 @@ the VITA connector footprint it drops to 0.10 mm, so pairs can leave the 1.27 mm
   FPGA to VITA (LA pairs). FPGA and STM32 decoupling sits on the bottom side.
 - power bottom-left, audio in its own bottom-right corner, mirrored L/R.
 
-## routing status
+## routing status (2026-11-22)
+
+DRC with schematic parity: no clearance, short or width errors; 79 unconnected items in 57 nets (the open
+nets with their terminals are in the [routing guide](routing_guide.md)); silkscreen overlaps not yet
+cleaned (about 220, cosmetic).
 
 | group | state |
 |---|---|
-| GTP transceivers: SFP, VITA DP, reference clocks | routed, skew matched |
-| DDR3 byte lanes, address/command, CK | mostly routed, finishing by hand: see [DDR3 routing](ddr_routing.md) |
-| VITA LA pairs and clocks | 10 of 36 pairs routed; the rest by hand (2.8 mm gap between the connector and the FPGA's top banks) |
-| FMC and FPGA config | 49 of 73 nets routed after the pin swap; the rest by hand |
-| QSPI | 4 of 10 routed (BK1_IO2/IO3, BK2_IO0/IO1); CLK, NCS, BK1_IO0/IO1, BK2_IO2/IO3 by hand |
-| ULPI | USB3300 moved beside the STM32 (bottom, below it): D0, D1, D3 routed at 9-17 mm; CK, D2, D4-D7, DIR, NXT, STP, RST by hand (all short now); USB HS pair routed on In2, 116 mm |
-| RMII and MDIO | LAN8742 moved beside the STM32 (bottom, under its upper right): REF_CLK 35 mm, TX_EN 22 mm, MDC 33 mm routed; CRS_DV, RXD0, RXD1, TXD0, TXD1, MDIO, NRST by hand (all short now); both MDI pairs to the RJ45 (about 105 mm, 100 R) by hand |
-| low-speed and power | autorouter, then cleanup |
+| GTP transceivers: SFP, VITA DP, reference clocks | routed, skew matched (table below) |
+| DDR3 | all nets connected; 12 nets outside their length window and DQS0 P/N skew 1.3 mm: see [DDR3 routing](ddr_routing.md) |
+| VITA LA pairs and clocks | 30 of 36 pairs complete; 6 halves open (LA09_P, LA25_P, LA29_P/N, LA31_P, LA32_N) at the FPGA's top rows. Most pairs are routed as loosely coupled halves (0.1 mm each, about 108 R differential), 4 as coupled pairs. P/N skew: 14 pairs within 0.25 mm, the rest up to 18 mm (no room for meanders) |
+| STM32 (FMC, config, ULPI, QSPI, misc) | 154 nets, about 25 open: FMC_NBL0-3, NOE, NWE (east edge of the BGA, facing away from the FPGA), FMC_A17/D2/D13, FPGA_DONE/IRQ2/IRQ5/RDWR_B, ULPI (8), QSPI_CLK/NCS/BK1_IO3, MCU_PC3/PC6, BOOT0 |
+| Ethernet | RMII and MDIO routed; MDI TXP/TXN/RXP routed (about 105 mm), RXN open |
+| low-speed | SFP sideband (6), BP_TDM_DIN, FPGA_M1, GTP_RREF open; the rest routed |
+| power | planes stitched; open: a few FPGA decaps and supply balls, +1V8 branch, buck control nets (EN_12V, SS_3V3M, SS_VADJ), VCCADC, VTT_DDR |
+
+How the board got here, for whoever finishes it:
+
+- the STM32 is a TFBGA265 (0.8 mm) with a full dogbone fanout. Rule areas STM32_ESC (3 mm round its
+  courtyard) and FPGA_ESC (east and south strips of the FPGA) allow 0.09 mm width and clearance so
+  tracks can neck down until they leave the ball fields.
+- parts were moved out of the STM32-FPGA corridor (decaps, config pull-ups, crystals), so most STM32
+  decaps now sit 8-12 mm north of the BGA on the bottom side. Worth pulling back closer if room appears.
+- inner plane zones use 0.15 mm clearance and 0.1 mm minimum width (was 0.2 / 0.2): at 0.2 the
+  planes could not fill between the vias under the FPGA and the supply balls there were isolated.
+- three STM32 GPIOs were moved to west-side balls: FPGA_IRQ2 PG10 -> PJ3, FPGA_DONE PK1 -> PJ4,
+  FPGA_IRQ5 PK0 -> PJ5 (firmware pin change).
+- what blocks the open STM32 nets is the ball fields themselves: their balls have no free dogbone cell
+  left near them, on the STM32 or at the FPGA end. Freeing them means moving several neighbouring
+  vias at once (push-and-shove).
 
 ### PHY placement
 

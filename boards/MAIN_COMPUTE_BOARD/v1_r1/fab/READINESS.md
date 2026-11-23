@@ -3,12 +3,12 @@
 | check | state |
 |---|---|
 | DRC errors (excluding unconnected) | 0 |
-| unconnected (DRC report, capped at 499) | 404 |
-| dangling vias / track ends (leftovers to clean before fab) | 153 |
+| unconnected (DRC report, capped at 499) | 79 |
+| dangling vias / track ends (leftovers to clean before fab) | 5 |
 | BOM lines / parts | 137 / 514 |
-| parts without an LCSC number | 511 in 135 lines |
-| placed parts top / bottom | 364 / 150 |
-| copper layers in gerbers | 8 (F.Cu, In1.Cu, In2.Cu, In3.Cu, In4.Cu, In5.Cu, In6.Cu, B.Cu) |
+| parts without an LCSC number | 512 in 136 lines |
+| placed parts top / bottom | 365 / 149 |
+| copper layers in gerbers | 10 (F.Cu, In1.Cu, In2.Cu, In3.Cu, In4.Cu, In5.Cu, In6.Cu, In7.Cu, In8.Cu, B.Cu) |
 
 Rotations in the CPL are KiCad's; JLCPCB applies per-part corrections for some packages, so check their preview before ordering. Both sides are populated, so assembly is double-sided.
 
@@ -131,6 +131,7 @@ Rotations in the CPL are KiCad's; JLCPCB applies per-part corrections for some p
 | TLV62568DBV | SOT-23-5 | 1 | U8 |
 | TLV75801 MGTAVCC 1V0 | SOT-23-5 | 1 | U9 |
 | TLV75801 MGTAVTT 1V2 | SOT-23-5 | 1 | U10 |
+| STM32H755XIH6 | TFBGA-265_14x14mm_Layout17x17_P0.8mm | 1 | U11 |
 | TCA9535PWR 0x20 | TSSOP-24_4.4x7.8mm_P0.65mm | 1 | U12 |
 | USB3300-EZK | QFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm | 1 | U13 |
 | TPS2051C | SOT-23-5 | 1 | U15 |

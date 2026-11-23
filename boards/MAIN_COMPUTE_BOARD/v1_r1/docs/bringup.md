@@ -34,6 +34,8 @@ the [hardware reference](hardware.md#test-points).
   reached from VOS1 by setting ODEN in SYSCFG_PWRCR. VOS0 (480 MHz) needs a
   suffix-6 part.
 - set USB33DEN before using either USB controller (VDD33USB is supplied externally).
+- FPGA status lines on the TFBGA265: FPGA_IRQ2 is PJ3, FPGA_DONE is PJ4, FPGA_IRQ5 is PJ5 (moved
+  from PG10, PK1, PK0 for layout); the rest are as in the [pinout](pinout.md).
 - QUADSPI runs dual-flash (DFM=1). Both flashes share BK1_NCS, so single-flash access
   (DFM=0 with FSEL) is not possible on this board. W25Q01JV: check the status register
   handling in the driver, it differs a little from Macronix parts.

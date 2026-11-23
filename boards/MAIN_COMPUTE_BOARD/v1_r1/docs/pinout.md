@@ -117,7 +117,6 @@ first FMC_CLK edge with NE1 low, and the address is held for the whole burst
 | PG7 | FPGA_IRQ0 | GPIO |
 | PG8 | FPGA_IRQ1 | GPIO |
 | PG9 | QSPI_BK2_IO2 | QUADSPI_BK2_IO2 |
-| PG10 | FPGA_IRQ2 | GPIO |
 | PG11 | ETH_TX_EN | ETH_TX_EN |
 | PG12 | ETH_TXD1 | ETH_TXD1 |
 | PG13 | ETH_TXD0 | ETH_TXD0 |
@@ -152,14 +151,15 @@ first FMC_CLK edge with NE1 low, and the address is held for the whole burst
 | PI10 | FMC_D31 | FMC_D31 |
 | PI11 | ULPI_DIR | USB_OTG_HS_ULPI_DIR |
 | PI15 | MCU_LED0 | GPIO |
+| PJ3 | FPGA_IRQ2 | GPIO |
+| PJ4 | FPGA_DONE | GPIO |
+| PJ5 | FPGA_IRQ5 | GPIO |
 | PJ6 | FPGA_IRQ4 | GPIO |
 | PJ7 | FPGA_PROGRAM_B | GPIO |
 | PJ8 | MCU_UART_TX | UART8_TX |
 | PJ9 | MCU_UART_RX | UART8_RX |
 | PJ10 | FPGA_INIT_B | GPIO |
 | PJ11 | MCU_LED1 | GPIO |
-| PK0 | FPGA_IRQ5 | GPIO |
-| PK1 | FPGA_DONE | GPIO |
 | PK2 | IOX_INT_N | GPIO |
 
 Slow controls live on the TCA9535 at I2C1 address 0x20: P00 VADJ_EN, P01/P02

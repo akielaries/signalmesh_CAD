@@ -11,6 +11,9 @@ os.makedirs(OUT, exist_ok=True)
 
 
 def w(name, text):
+    # hand-maintained after generation: never overwritten once they exist
+    if name in ('pcb.md', 'bringup.md', 'index.md') and os.path.exists(os.path.join(OUT, name)):
+        return
     open(os.path.join(OUT, name), 'w').write(text.lstrip('\n'))
 
 
