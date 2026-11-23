@@ -424,3 +424,7 @@ ULPI_STP           reverted: complete 448 -> 447 (tried +3V3_VDDA /MCU_IO/ULPI_1
 VCCADC             reverted: complete 448 -> 447 (tried +1V0_MGT +1V8 /MCU_IO/ETH_TXN FPGA_CCLK GNDADC SFP0_MOD_ABS SFP0_TX_FAULT) 82s
 VREF_DDR           reverted: complete 448 -> 446 (tried /DDR3/DDR_ZQ /DDR3/VTT_REFIN) 100s
 pinfree: 0 of 54 targets improved the board
+FPGA_IRQ2          reverted: complete 453 -> 448 (tried /STM32/VCAP AUD_CLK_48K ETH_TXD0 ETH_TXD1 ETH_TX_EN FMC_CLK FMC_D18 FMC_D19) 92s
+FPGA_IRQ5          reverted: complete 453 -> 449 (tried AUD_CLK_44K FMC_A0 FMC_A13 FMC_A14 FMC_A15 FMC_A18 FMC_A2 FMC_A4) 146s
+FPGA_DONE          reverted: complete 453 -> 449 (tried +1V8 /FPGA_CFG/DONE_LED_K FMC_A12 FMC_A13 FMC_A14 FPGA_IRQ5 MCU_LED1 QSPI_BK2_IO1) 210s
+pinfree: 0 of 3 targets improved the board
