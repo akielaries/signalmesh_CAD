@@ -52,8 +52,8 @@ PINMAP.update({
     'PH5': ('FPGA_RST_N', None),
     'PK2': ('IOX_INT_N', None), 'PC13': ('MCU_BTN', None), 'PI15': ('MCU_LED0', None), 'PJ11': ('MCU_LED1', None),
 })
-BREAKOUT = ['PA0', 'PA6', 'PA8', 'PA9', 'PA10', 'PA15', 'PB2', 'PB4', 'PC2_C', 'PC3_C', 'PC6', 'PC7',
-            'PE2', 'PE3', 'PE4', 'PE5', 'PE6', 'PF11', 'PC8', 'PC9', 'PC10', 'PC11', 'PC12', 'PD2']
+# trimmed to six for layout (the rest of the stm32 ball field was needed for routing)
+BREAKOUT = ['PE2', 'PE5', 'PE6', 'PC10', 'PC11', 'PC12']
 for p in BREAKOUT:
     PINMAP[p] = ('MCU_' + p.replace('_C', ''), None)
 
@@ -163,11 +163,11 @@ def build(d):
            'NC': 'NC', 'V_{CC}': '+3V3'}, value='24AA025E48 0x54 MAC', by='name', ref='U200')
     C(s, '+3V3', 'GND', '100nF')
 
-    # breakout header
+    # breakout header (trimmed for layout: 6 gpios plus fdcan, i2c and nrst; the rest of the 2x20 is no-connect)
     # pc8-pc12/pd2 also carry sdmmc1 if an sd card is wanted on a daughter board
-    b = ['+3V3', '+5V', 'MCU_PA0', 'MCU_PA6', 'MCU_PA8', 'MCU_PA9', 'MCU_PA10', 'MCU_PA15', 'GND', 'GND',
-         'MCU_PB2', 'MCU_PB4', 'MCU_PC2', 'MCU_PC3', 'MCU_PC6', 'MCU_PC7', 'MCU_PC8', 'MCU_PC9', 'GND', 'GND',
-         'MCU_PC10', 'MCU_PC11', 'MCU_PC12', 'MCU_PD2', 'MCU_PE2', 'MCU_PE3', 'MCU_PE4', 'MCU_PE5', 'GND', 'GND',
-         'MCU_PE6', 'MCU_PF11', 'I2C1_SCL', 'I2C1_SDA', 'FDCAN1_TX', 'FDCAN1_RX', 'NRST', 'GND', '+3V3', '+5V']
+    b = ['+3V3', '+5V', 'NC', 'NC', 'NC', 'NC', 'NC', 'NC', 'GND', 'GND',
+         'NC', 'NC', 'NC', 'NC', 'NC', 'NC', 'NC', 'NC', 'GND', 'GND',
+         'MCU_PC10', 'MCU_PC11', 'MCU_PC12', 'NC', 'MCU_PE2', 'NC', 'NC', 'MCU_PE5', 'GND', 'GND',
+         'MCU_PE6', 'NC', 'I2C1_SCL', 'I2C1_SDA', 'FDCAN1_TX', 'FDCAN1_RX', 'NRST', 'GND', '+3V3', '+5V']
     header(s, b, rows=2, value='MCU_BREAKOUT')
     return s, unused

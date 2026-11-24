@@ -64,7 +64,7 @@ the board.
 |---|---|---|
 | Pmod 2x6 socket | J16 | FPGA bank 13, Digilent 12-pin, 3.3 V |
 | Pmod 2x6 socket | J17 | FPGA bank 13 |
-| 2x20 2.54 mm | J7 | STM32 breakout: 24 GPIO (ADC, timers, SAI1, SDMMC1), I2C1, FDCAN1, NRST, 3V3, 5V |
+| 2x20 2.54 mm | J7 | STM32 breakout: 6 GPIO (PC10-PC12, PE2, PE5, PE6), I2C1, FDCAN1, NRST, 3V3, 5V; other signal pins NC (trimmed for layout) |
 | 1x6 2.54 mm | J6 | TCA9535 spare GPIO P14-P17 |
 | 1x3 2.54 mm | J11 | CAN-FD bus (also on the DIN). Solder jumper JP1 adds 120 R termination |
 
@@ -272,36 +272,36 @@ x 137 mm, y 24 mm from the front-top corner, top, `MCU_BREAKOUT`.
 |---|---|
 | 1 | +3V3 |
 | 2 | +5V |
-| 3 | MCU_PA0 |
-| 4 | MCU_PA6 |
-| 5 | MCU_PA8 |
-| 6 | MCU_PA9 |
-| 7 | MCU_PA10 |
-| 8 | MCU_PA15 |
+| 3 | NC |
+| 4 | NC |
+| 5 | NC |
+| 6 | NC |
+| 7 | NC |
+| 8 | NC |
 | 9 | GND |
 | 10 | GND |
-| 11 | MCU_PB2 |
-| 12 | MCU_PB4 |
-| 13 | MCU_PC2 |
-| 14 | MCU_PC3 |
-| 15 | MCU_PC6 |
-| 16 | MCU_PC7 |
-| 17 | MCU_PC8 |
-| 18 | MCU_PC9 |
+| 11 | NC |
+| 12 | NC |
+| 13 | NC |
+| 14 | NC |
+| 15 | NC |
+| 16 | NC |
+| 17 | NC |
+| 18 | NC |
 | 19 | GND |
 | 20 | GND |
 | 21 | MCU_PC10 |
 | 22 | MCU_PC11 |
 | 23 | MCU_PC12 |
-| 24 | MCU_PD2 |
+| 24 | NC |
 | 25 | MCU_PE2 |
-| 26 | MCU_PE3 |
-| 27 | MCU_PE4 |
+| 26 | NC |
+| 27 | NC |
 | 28 | MCU_PE5 |
 | 29 | GND |
 | 30 | GND |
 | 31 | MCU_PE6 |
-| 32 | MCU_PF11 |
+| 32 | NC |
 | 33 | I2C1_SCL |
 | 34 | I2C1_SDA |
 | 35 | FDCAN1_TX |
