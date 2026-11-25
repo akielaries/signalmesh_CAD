@@ -97,8 +97,8 @@ How the board got here, for whoever finishes it:
   decaps now sit 8-12 mm north of the BGA on the bottom side. Worth pulling back closer if room appears.
 - inner plane zones use 0.15 mm clearance and 0.1 mm minimum width (was 0.2 / 0.2): at 0.2 the
   planes could not fill between the vias under the FPGA and the supply balls there were isolated.
-- three STM32 GPIOs were moved to west-side balls: FPGA_IRQ2 PG10 -> PJ3, FPGA_DONE PK1 -> PJ4,
-  FPGA_IRQ5 PK0 -> PJ5 (firmware pin change).
+- FPGA_DONE moved to a west-side ball (PK1 -> PJ4, firmware pin change). FPGA IRQs cut from six to two
+  (IRQ0 PG7, IRQ1 PG8) and the J7 breakout trimmed to six GPIOs, both to free the STM32 ball field.
 - what blocks the open STM32 nets is the ball fields themselves: their balls have no free dogbone cell
   left near them, on the STM32 or at the FPGA end. Freeing them means moving several neighbouring
   vias at once (push-and-shove).

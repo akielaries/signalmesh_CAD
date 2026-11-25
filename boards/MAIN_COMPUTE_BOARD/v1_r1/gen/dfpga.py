@@ -82,13 +82,12 @@ def plan():
     put(io(14, r'^IO_L13P_'), 'MCU_UART_TX')
     put(io(14, r'^IO_L13N_'), 'MCU_UART_RX')
     put(io(14, r'^IO_L14N_'), 'FPGA_IRQ1')
-    put(io(14, r'^IO_L14P_'), 'FPGA_IRQ2')
 
     # bank 15: clocks, fmc address, irqs, debug, leds, backplane tdm
     put(io(15, r'^IO_L12P_'), 'SYSCLK_100M')
     put(io(15, r'^IO_L13P_'), 'AUD_CLK_48K')
     put(io(15, r'^IO_L11P_'), 'AUD_CLK_44K')
-    sigs = ['FMC_A%d' % i for i in range(19)] + ['FPGA_IRQ3', 'FPGA_IRQ4', 'FPGA_IRQ5',
+    sigs = ['FMC_A%d' % i for i in range(19)] + [None, None, None,
                                                  'SC_SWDIO', 'SC_SWCLK', 'SC_SWO', 'SC_NRST',
                                                  'SC_UART_TX', 'SC_UART_RX',
                                                  'FPGA_LED0', 'FPGA_LED1', 'FPGA_LED2', 'FPGA_LED3',
@@ -97,7 +96,8 @@ def plan():
                                                  'BP_TDM_DIN']
     free = [b for b in bank_balls(15) if b not in m]
     for b, n in zip(free, sigs):
-        put(b, n)
+        if n:
+            put(b, n)
 
     # bank 13: pmods, audio dac, sfp sideband
     sigs = (['PMODA_IO%d' % i for i in range(1, 9)] + ['PMODB_IO%d' % i for i in range(1, 9)] +

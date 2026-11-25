@@ -45,8 +45,8 @@ PINMAP.update({
     'PH0': ('.HSE_IN', 'RCC_OSC_IN'), 'PH1': ('.HSE_OUT', 'RCC_OSC_OUT'),
     'PC14': ('.LSE_IN', 'RCC_OSC32_IN'), 'PC15': ('.LSE_OUT', 'RCC_OSC32_OUT'),
     # fpga control, gpio
-    'PG7': ('FPGA_IRQ0', None), 'PG8': ('FPGA_IRQ1', None), 'PJ3': ('FPGA_IRQ2', None),
-    'PG15': ('FPGA_IRQ3', None), 'PJ6': ('FPGA_IRQ4', None), 'PJ5': ('FPGA_IRQ5', None),
+    # two irq lines (irq2-irq5 dropped for layout: the fpga raises irq0/irq1, firmware reads the cause over fmc)
+    'PG7': ('FPGA_IRQ0', None), 'PG8': ('FPGA_IRQ1', None),
     'PJ7': ('FPGA_PROGRAM_B', None), 'PJ10': ('FPGA_INIT_B', None), 'PJ4': ('FPGA_DONE', None),
     'PI8': ('FPGA_CCLK', None), 'PH6': ('FPGA_CSI_B', None), 'PH7': ('FPGA_RDWR_B', None),
     'PH5': ('FPGA_RST_N', None),
