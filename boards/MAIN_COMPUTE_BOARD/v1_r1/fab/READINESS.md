@@ -3,7 +3,7 @@
 | check | state |
 |---|---|
 | DRC errors (excluding unconnected) | 0 |
-| unconnected (DRC report, capped at 499) | 60 |
+| unconnected (DRC report, capped at 499) | 56 |
 | dangling vias / track ends (leftovers to clean before fab) | 7 |
 | BOM lines / parts | 137 / 514 |
 | parts without an LCSC number | 512 in 136 lines |
