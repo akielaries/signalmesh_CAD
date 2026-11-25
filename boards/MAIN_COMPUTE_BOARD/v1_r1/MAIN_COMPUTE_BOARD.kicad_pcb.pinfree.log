@@ -943,3 +943,20 @@ FMC_NWE            kept: complete 61 -> 60 (ripped /MCU_IO/ETH_TXN /STM32/BOOT0 
 FMC_NBL3           reverted: complete 60 -> 61 (tried +1V8 /MCU_IO/ETH_REGOFF /MCU_IO/ETH_TXN /STM32/LSE_IN /STM32/LSE_OUT BP_TDM_DOUT BP_TDM_FS BP_TDM_MCLK ETH_MDIO FDCAN1_RX FDCAN1_TX FMC_D21) 164s
 +3V3_VDDA          reverted: complete 60 -> 66 (tried /FPGA_CFG/DONE_LED_A /FPGA_IO/FPGA_LED1_LED /MCU_IO/ETH_TXP /STM32/HSE_IN /STM32/HSE_OUT /STM32/VCAP CONSOLE_TX ETH_MDC ETH_MDIO ETH_REF_CLK ETH_RXD0 FMC_A15) 282s
 pinfree: 1 of 40 targets improved the board
+ULPI_D5            reverted: complete 60 -> 62 (tried CONSOLE_RX CONSOLE_TX FMC_A16 FMC_D16 FMC_D17 FMC_D20) 104s
+/MCU_IO/ETH_RXN    reverted: complete 60 -> 63 (tried /MCU_IO/ETH_RBIAS /MCU_IO/ETH_RXP /MCU_IO/ETH_TXN /MCU_IO/ETH_TXP /MCU_IO/ETH_XI ETH_AVDD) 559s
+FMC_NBL1           reverted: complete 60 -> 60 (tried FMC_D2 FMC_D29 FMC_D6 FMC_NBL0 FMC_NBL2 FPGA_BTN1) 87s
++3V3_VDDA          reverted: complete 60 -> 60 (tried /STM32/VCAP ETH_MDC FPGA_TMS NRST QSPI_BK1_IO3 QSPI_BK2_IO0) 80s
+FMC_D13            reverted: complete 60 -> 60 (tried CONSOLE_RX CONSOLE_TX FMC_A13 FMC_D1 FMC_D10 FMC_D14) 72s
+/POWER/SS_VADJ     no rippable blockers
+FPGA_M1            reverted: complete 60 -> 62 (tried +1V8 /MCU_IO/ETH_TXP FPGA_M0 FPGA_M2 SFP0_MOD_ABS VADJ_PG) 126s
+ULPI_D3            reverted: complete 60 -> 62 (tried FMC_D12 FMC_D8 FMC_D9 NRST QSPI_BK2_IO1 ULPI_D1) 98s
+SFP0_SCL           reverted: complete 60 -> 62 (tried AUD_DAC_SDIN SFP0_MOD_ABS SFP0_SDA SFP0_TX_DIS SFP0_TX_FAULT) 203s
+MEZZ_LA31_P        no rippable blockers
+FPGA_RDWR_B        reverted: complete 60 -> 65 (tried /STM32/VCAP FMC_D10 FMC_D11 FMC_D16 FMC_D17 FPGA_CSI_B) 110s
+SFP1_TX_FAULT      reverted: complete 60 -> 60 (tried SFP1_SCL SFP1_SDA SFP1_TX_DIS) 175s
+MEZZ_LA29_P        no rippable blockers
+MEZZ_LA29_N        reverted: complete 60 -> 60 (tried I2C1_SDA) 60s
+ULPI_CK            reverted: complete 60 -> 61 (tried /MCU_IO/ULPI_1V8 ETH_RXD0 ETH_RXD1 STM32_DAC1_OUT1 ULPI_D0 ULPI_DIR) 68s
+FMC_NBL0           reverted: complete 60 -> 61 (tried /MCU_IO/ETH_TXN FDCAN1_RX FDCAN1_TX FMC_D29 FMC_D30 FMC_D31) 138s
+QSPI_NCS           reverted: complete 60 -> 64 (tried /MCU_IO/ETH_TXP FMC_A12 FMC_A13 FMC_A14 FMC_A15 FPGA_INIT_B) 135s
