@@ -71,11 +71,12 @@ the VITA connector footprint it drops to 0.10 mm, so pairs can leave the 1.27 mm
   FPGA to VITA (LA pairs). FPGA and STM32 decoupling sits on the bottom side.
 - power bottom-left, audio in its own bottom-right corner, mirrored L/R.
 
-## routing status (2026-11-22)
+## routing status (2026-11-25)
 
-DRC with schematic parity: no clearance, short or width errors; 75 unconnected items (the open nets with
-their terminals are in the [routing guide](routing_guide.md)). Silkscreen: references moved off pads or
-hidden on dense passives (hidden ones stay on the fab layer); 47 silk items left, mostly footprint
+DRC with schematic parity: no clearance, short or width errors; 45 unconnected items in 35 nets (the open
+nets with their terminals are in the [routing guide](routing_guide.md); fixes for each in the
+[handoff](handoff.md)). Silkscreen: references moved off pads or
+hidden on dense passives (hidden ones stay on the fab layer); 54 silk items left, mostly footprint
 outlines over pads (clipped by the mask in the gerbers) and 6 at the board edge.
 
 | group | state |
@@ -83,10 +84,10 @@ outlines over pads (clipped by the mask in the gerbers) and 6 at the board edge.
 | GTP transceivers: SFP, VITA DP, reference clocks | routed, skew matched (table below) |
 | DDR3 | all nets connected; 8 nets outside their length window (ODT, DQ0, A9, DM1, A3, CKE long; DQ3, A14 short) and DQS0 P/N skew 1.3 mm: see [DDR3 routing](ddr_routing.md) |
 | VITA LA pairs and clocks | 30 of 36 pairs complete; 6 halves open (LA09_P, LA25_P, LA29_P/N, LA31_P, LA32_N) at the FPGA's top rows. Most pairs are routed as loosely coupled halves (0.1 mm each, about 108 R differential), 4 as coupled pairs. P/N skew: 14 pairs within 0.25 mm, the rest up to 18 mm (no room for meanders) |
-| STM32 (FMC, config, ULPI, QSPI, misc) | 154 nets, about 25 open: FMC_NBL0-3, NOE, NWE (east edge of the BGA, facing away from the FPGA), FMC_A17/D2/D13, FPGA_DONE/IRQ2/IRQ5/RDWR_B, ULPI (8), QSPI_CLK/NCS/BK1_IO3, BOOT0 (J7 breakout trimmed to 6 GPIOs to free the STM32 ball field) |
-| Ethernet | RMII and MDIO routed; MDI TXP/TXN/RXP routed (about 105 mm), RXN open |
-| low-speed | SFP sideband (6), BP_TDM_DIN, FPGA_M1, GTP_RREF open; the rest routed |
-| power | planes stitched; open: a few FPGA decaps and supply balls, +1V8 branch, buck control nets (EN_12V, SS_3V3M, SS_VADJ), VCCADC, VTT_DDR |
+| STM32 (FMC, config, ULPI, QSPI, misc) | 16 open: FMC_NBL0, NBL1, NBL3, NOE (east edge of the BGA, facing away from the FPGA), FMC_A17, D13, FPGA_DONE, FPGA_RDWR_B, ULPI (6), QSPI_CLK, QSPI_NCS. J7 breakout trimmed to 6 GPIOs and FPGA IRQs cut to two to free the STM32 ball field |
+| Ethernet | RMII and MDIO routed; MDI pairs routed; ETH_AVDD feed to R60 open |
+| low-speed | SFP sideband (6), FPGA_M1, GTP_RREF open; the rest routed |
+| power | planes stitched; open: FPGA decaps C122, C130, C142, C144, C145 (no via spot under the FPGA), +1V8 branch FB5 to C144, +3V3 stubs, +1V35 at U22, VTT_DDR zone stitch |
 
 How the board got here, for whoever finishes it:
 

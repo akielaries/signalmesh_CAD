@@ -20,7 +20,15 @@ def stitchable(f):
         p = f.Pads()[k]
         x, y, n = p.GetPosition().x / MM, p.GetPosition().y / MM, p.GetNetname()
         spots = [(x + dx * 0.2, y + dy * 0.2) for dx in range(-5, 6) for dy in range(-5, 6) if 0.45 <= math.hypot(dx * 0.2, dy * 0.2) <= 1.0]
-        if not any(proute.via_spot_exact(rt.bd, q[0], q[1], n, r=0.2, clr=0.1) for q in spots):
+        ly = 'B.Cu' if f.IsFlipped() else 'F.Cu'
+        good = False
+        for q in spots:
+            # same test planestitch.py applies: via at 0.127 clearance and a 0.15 mm stub that clears by 0.15
+            if proute.via_spot_exact(rt.bd, q[0], q[1], n, r=0.2, clr=0.127) and \
+                    rt.bd.path(ly, (x, y), q, 0.075, {n}, 0.15, margin=1.0, half_in=0.05):
+                good = True
+                break
+        if not good:
             return False
     return True
 
@@ -41,7 +49,7 @@ for r in REFS:
     pl.rip([r])
     f.SetPosition(pcbnew.VECTOR2I(int(10 * MM), int(10 * MM)))
     try:
-        got = pl.place(r, x0, y0, bottom=f.IsFlipped(), rmax=4.0)
+        got = pl.place(r, x0, y0, bottom=f.IsFlipped(), rmax=float(__import__('os').environ.get('RMAX', '4.0')))
     except SystemExit:
         got = None
     if got:

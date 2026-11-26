@@ -1097,3 +1097,16 @@ FPGA_M1            reverted: complete 56 -> 60 (tried +1V8 /MCU_IO/ETH_RXP /MCU_
 FMC_NOE            reverted: complete 56 -> 62 (tried ETH_TXD1 ETH_TX_EN FMC_A14 FMC_CLK FMC_D1 FMC_D10 FMC_D11 FMC_D12 FMC_D14 FMC_D15 FMC_D17 FMC_D2) 121s
 /MCU_IO/ETH_RXN    reverted: complete 56 -> 61 (tried /MCU_IO/ETH_CT /MCU_IO/ETH_INTSEL /MCU_IO/ETH_RBIAS /MCU_IO/ETH_REGOFF /MCU_IO/ETH_RXP /MCU_IO/ETH_TXN /MCU_IO/ETH_TXP /MCU_IO/ETH_XI /MCU_IO/ETH_XO /STM32/LSE_IN ETH_AVDD ETH_NRST) 504s
 pinfree: 0 of 36 targets improved the board
+ULPI_D4            reverted: complete 45 -> 50 (tried FMC_D12 FMC_D17 FMC_D18 MCU_UART_TX NRST ULPI_D2) 121s
+QSPI_CLK           reverted: complete 45 -> 48 (tried /STM32/MCU_LED1_LED ETH_MDC QSPI_BK1_IO0 QSPI_BK1_IO1 QSPI_BK1_IO2 QSPI_BK1_IO3) 87s
+MEZZ_LA09_P        no rippable blockers
+FPGA_RDWR_B        reverted: complete 45 -> 49 (tried /STM32/VCAP FMC_D10 FMC_D11 FMC_D16 FMC_D17 FPGA_CSI_B) 109s
+ULPI_D0            reverted: complete 45 -> 48 (tried /MCU_IO/ULPI_1V8 FMC_D31 STM32_DAC1_OUT1 ULPI_CK ULPI_D1 ULPI_D2) 122s
+ETH_AVDD           reverted: complete 45 -> 49 (tried /MCU_IO/ETH_CT /MCU_IO/ETH_INTSEL /MCU_IO/ETH_RBIAS /MCU_IO/ETH_REGOFF /MCU_IO/ETH_RXN /MCU_IO/ETH_RXP) 450s
+FMC_NBL1           reverted: complete 45 -> 45 (tried FMC_D2 FMC_D29 FMC_D6 FMC_NBL0 FMC_NBL2 FPGA_BTN1) 104s
+ULPI_NXT           reverted: complete 45 -> 45 (tried ETH_MDIO ETH_REF_CLK QSPI_BK2_IO0 QSPI_BK2_IO1 ULPI_DIR ULPI_RST) 92s
+FMC_NOE            reverted: complete 45 -> 50 (tried FMC_A14 FMC_CLK FMC_D12 FMC_D9 FMC_NWAIT FMC_NWE) 123s
+MEZZ_LA32_N        reverted: complete 45 -> 45 (tried VADJ_SEL1) 55s
+FPGA_M1            reverted: complete 45 -> 47 (tried +1V8 /MCU_IO/ETH_TXP FPGA_M0 FPGA_M2 SFP0_MOD_ABS VADJ_PG) 213s
+SFP0_SCL           reverted: complete 45 -> 47 (tried AUD_DAC_SDIN SFP0_MOD_ABS SFP0_SDA SFP0_TX_DIS SFP0_TX_FAULT) 209s
+ULPI_D5            reverted: complete 45 -> 45 (tried CONSOLE_RX CONSOLE_TX FMC_A16 FMC_D16 FMC_D17 FMC_D20) 100s
